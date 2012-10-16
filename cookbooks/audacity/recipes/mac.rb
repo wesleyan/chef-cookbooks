@@ -24,6 +24,7 @@ dmg_package "Lame_Library_v3.98.2_for_Audacity_on_OSX.dmg" do
   checksum "5ef5dca6c6dccb06366b44f2b3fc281a496a87247d23e123e133536f929bcb56"
   action :install
   type "pkg"
+  package_id "com.sourceforge.audacity.lameLibraryForAudacity.pkg"
 end
 
 dmg_package "FFmpeg_v0.6.2_for_Audacity_on_OSX.dmg" do
@@ -34,4 +35,5 @@ dmg_package "FFmpeg_v0.6.2_for_Audacity_on_OSX.dmg" do
   checksum "1870d6f234b0f7c2b105f210511f12abb0917dd30fe852357198dbda61d696c2"
   action :install
   type "pkg"
+  package_id "com.sourceforge.audacity.ffmpegLibrariesForAudacity.pkg"
 end

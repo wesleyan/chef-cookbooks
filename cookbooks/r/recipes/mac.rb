@@ -14,4 +14,5 @@ dmg_package "R-2.15.1-signed.dmg" do
   checksum "3eae0bd7854296d19b6d638074754fb55518fea2408a4b9ab3dc5e247ef0f8dd"
   action :install
   type "pkg"
+  package_id "org.r-project.R.Leopard.fw.pkg"
 end
