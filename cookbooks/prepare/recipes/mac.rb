@@ -3,12 +3,45 @@ user "labuser" do
   home "/Users/labuser"
 end
 
+user "administrator" do
+  comment "administrator"
+  home "/Users/administrator"
+end
+
 group "admin" do
   members ['administrator', 'labuser']
 end
 
-cookbook_file "/tmp/host_utils.rb" do
-  source "host_utils.rb" 
+directory "/Users/administrator/.ssh" do
+  mode "0744"
+  owner "administrator"
+  group "staff"
+  action :create
+end
+
+cookbook_file "/Users/administrator/.ssh/authorized_keys" do
+  source "authorized_keys"
+  owner "administrator"
+  group "staff"
+  mode "0744"
+end
+
+cookbook_file "/etc/sudoers" do
+  source "sudoers"
+  owner "root"
+  group "wheel"
+  mode "0440"
+end
+
+cookbook_file "/etc/chef/client.rb"
+  source "client.rb"
+  owner "root"
+  group "wheel"
+  mode "0644"
+end
+
+cookbook_file "/tmp/host_utilities.rb" do
+  source "host_utilities.rb" 
   mode "0700"
 end
 
@@ -34,7 +67,7 @@ execute "bind to domain" do
 end
 
 
-file "/tmp/host_utils.rb" do
+file "/tmp/host_utilities.rb" do
   action :delete
 end
 
@@ -46,10 +79,10 @@ file "/tmp/bind_to_domain.rb" do
   action :delete
 end
 
-service "ScreenSharing" do
-  service_name "com.apple.screensharing"
-  action :start
-end
+# service "ScreenSharing" do
+#   service_name "com.apple.screensharing"
+#   action :start
+# end
 
 execute "change login window" do
   command "defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true"
