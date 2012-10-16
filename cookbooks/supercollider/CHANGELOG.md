@@ -1,14 +1,10 @@
-# CHANGELOG for audacity
+# CHANGELOG for supercollider
 
-This file is used to list changes made in each version of audacity.
+This file is used to list changes made in each version of supercollider.
 
 ## 0.1.0:
 
-* Initial release of audacity cookbook
-
-## 0.2.0:
-
-* Mac recipe now installs both LAME and FFmpeg plugins
+* Initial release of supercollider cookbook
 
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
