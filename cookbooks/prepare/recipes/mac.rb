@@ -26,14 +26,14 @@ cookbook_file "/Users/administrator/.ssh/authorized_keys" do
   mode "0744"
 end
 
-cookbook_file "/etc/sudoers" do
-  source "sudoers"
-  owner "root"
-  group "wheel"
-  mode "0440"
-end
+# cookbook_file "/etc/sudoers" do
+#   source "sudoers"
+#   owner "root"
+#   group "wheel"
+#   mode "0440"
+# end
 
-cookbook_file "/etc/chef/client.rb"
+cookbook_file "/etc/chef/client.rb" do
   source "client.rb"
   owner "root"
   group "wheel"
