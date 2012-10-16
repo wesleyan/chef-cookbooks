@@ -6,6 +6,10 @@ This file is used to list changes made in each version of audacity.
 
 * Initial release of audacity cookbook
 
+## 0.2.0:
+
+* Mac recipe now installs both LAME and FFmpeg plugins
+
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
 
