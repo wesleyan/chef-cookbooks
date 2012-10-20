@@ -14,5 +14,5 @@ dmg_package "adobe_photoshop_cs6-13.0.1_Install.dmg" do
   checksum "3dcae9f5aab3d0348af762743b493fe8a17fc123f674373b9afeaf632e9d6825"
   action :install
   type "pkg"
-  package_id ""
+  package_id "com.adobe.Enterprise.install.E38986C1-44B1-483A-8DDB-681205FABDFB"
 end
