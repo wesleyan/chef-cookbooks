@@ -6,7 +6,7 @@ run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]",
           "recipe[r::mac]", "recipe[rstudio::mac]", 
           "recipe[rhinoceros::mac]", "recipe[sketchup::mac]",
           "recipe[soundhack::mac]", "recipe[supercollider::mac]",
-          "recipe[photoshop::mac]", "recipe[illustrator::mac]"
+          "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]"
 #"recipe[chrome::mac]", "recipe[remotedesktop::mac]",
 
 default_attributes(
