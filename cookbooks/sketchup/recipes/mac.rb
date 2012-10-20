@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 dmg_package "SketchUpMEN.dmg" do
-  app "SketchUp 8 Installer"
+  app "SketchUp 8.0 Installer"
   volumes_dir "SketchUp 8.0 Installer.pkg"
   dmg_name "SketchUpMEN.dmg"
   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/trimble_sketchup-8/SketchUpMEN.dmg"
