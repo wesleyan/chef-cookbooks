@@ -1,7 +1,11 @@
 name "mac"
 description "mac image"
-run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]"
-#"recipe[chrome::mac]", "recipe[remotedesktop::mac]", "recipe[photoshop::mac]", "recipe[office::mac]"
+run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]", 
+          "recipe[osxupdate::mac]", "recipe[java::mac]", "recipe[itunes::mac]", 
+          "recipe[office::mac]", "recipe[unarchiver::mac]", "recipe[vlc::mac]",
+          "recipe[r::mac]", "recipe[rstudio::mac]", 
+          "recipe[rhinoceros::mac]", "recipe[sketchup::mac]"
+#"recipe[chrome::mac]", "recipe[remotedesktop::mac]",
 
 default_attributes(
 "authorization" => {
