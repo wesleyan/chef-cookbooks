@@ -14,7 +14,7 @@ run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]",
           # Audio applications
           "recipe[soundhack::mac]", "recipe[supercollider::mac]",
           # Adobe CS6 Suite
-          "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]", "recipe[dreamweaver::mac]", "recipe[flashpro::mac]", "recipe[premierepro::mac]", "recipe[aftereffects::mac]"
+          "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]", "recipe[dreamweaver::mac]", "recipe[flashpro::mac]", "recipe[premierepro::mac]", "recipe[aftereffects::mac]", "recipe[acrobat::mac]"
 #"recipe[remotedesktop::mac]",
 
 default_attributes(
