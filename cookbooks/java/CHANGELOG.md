@@ -6,6 +6,11 @@ This file is used to list changes made in each version of java.
 
 * Initial release of java cookbook
 
+## 0.2.0:
+
+* Updated Apple Java to 2012-006
+* Added Oracle Java 7 Update 9
+
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
 
