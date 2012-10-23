@@ -66,6 +66,18 @@ execute "bind to domain" do
   returns [0,-1, 78]
 end
 
+directory "/usr/local" do
+  owner "root"
+  group "wheel"
+  action :create
+end
+
+execute "set owner of /usr/local" do
+  command "sudo chown -R `whoami`:staff /usr/local"
+  action :run
+end
+
+
 
 file "/tmp/host_utilities.rb" do
   action :delete

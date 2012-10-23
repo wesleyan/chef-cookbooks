@@ -1,10 +1,9 @@
 name "macjclyons"
 description "mac image"
-run_list "recipe[dmg]", "recipe[prepare::mac]", "recipe[audacity::mac]"
-#run_list "recipe[dmg]", "recipe[chrome::mac]", "recipe[remotedesktop::mac]", "recipe[photoshop::mac]", "recipe[office::mac]"
-"authorization" => {
+run_list "recipe[prepare::mac]", "recipe[homebrew]", "recipe[sudo]", "recipe[dmg]", "recipe[dock::mac]"
+default_attributes("authorization" => {
   "sudo" => {
     "users" => ["administrator"],
     "passwordless" => true
   }
-}
+})

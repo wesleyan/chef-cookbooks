@@ -1,5 +1,6 @@
 name "mac"
 description "mac image"
+
 run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]", 
           # Core system updates
           "recipe[osxupdate::mac]", "recipe[java::mac]",
@@ -23,5 +24,4 @@ default_attributes(
     "users" => ["administrator"],
     "passwordless" => true
   }
-}
-)
+})
