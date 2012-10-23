@@ -24,5 +24,5 @@ dmg_package "xcode451cltools_10_86938200a.dmg" do
   checksum "5c8044eea293fd6c3dbddcc8fab91b91b7a2cfb8cc90c0b095a865bba10c50c8"
   action :install
   type "mpkg"
-  package_id ""
+  package_id "com.apple.pkg.DeveloperToolsCLI"
 end
