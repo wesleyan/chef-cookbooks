@@ -5,7 +5,7 @@ run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]",
           # Core system updates
           "recipe[osxupdate::mac]", "recipe[java::mac]",
           # Browsers and runtimes
-          "recipe[chrome::mac]", "recipe[firefox::mac]", "recipe[silverlight::mac]",
+          "recipe[chrome::mac]", "recipe[firefox::mac]", "recipe[flash::mac]", "recipe[silverlight::mac]",
           # Core applications
           "recipe[office::mac]", "recipe[itunes::mac]", "recipe[unarchiver::mac]", "recipe[vlc::mac]",
           # Stats applications
@@ -15,7 +15,10 @@ run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]",
           # Audio applications
           "recipe[soundhack::mac]", "recipe[supercollider::mac]",
           # Adobe CS6 Suite
-          "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]", "recipe[dreamweaver::mac]", "recipe[flashpro::mac]", "recipe[premierepro::mac]", "recipe[aftereffects::mac]", "recipe[acrobat::mac]"
+          "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]", "recipe[dreamweaver::mac]", "recipe[flashpro::mac]", "recipe[premierepro::mac]", "recipe[aftereffects::mac]", "recipe[acrobat::mac]",
+          # Development
+          "recipe[xcode::mac]"
+
 #"recipe[remotedesktop::mac]",
 
 default_attributes(
