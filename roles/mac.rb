@@ -17,7 +17,7 @@ run_list "recipe[prepare::mac]", "recipe[sudo]", "recipe[dmg]",
           # Adobe CS6 Suite
           "recipe[photoshop::mac]", "recipe[illustrator::mac]", "recipe[indesign::mac]", "recipe[dreamweaver::mac]", "recipe[flashpro::mac]", "recipe[premierepro::mac]", "recipe[aftereffects::mac]", "recipe[acrobat::mac]",
           # Development
-          "recipe[xcode::mac]"
+          "recipe[xcode::mac]", "recipe[eclipse::mac]"
 
 #"recipe[remotedesktop::mac]",
 
