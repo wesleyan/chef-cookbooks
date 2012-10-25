@@ -66,6 +66,11 @@ execute "bind to domain" do
   returns [0,-1, 78]
 end
 
+execute "spctl disable" do
+  command "spctl --master-disable"
+  action :run
+end
+
 directory "/usr/local" do
   owner "root"
   group "wheel"
