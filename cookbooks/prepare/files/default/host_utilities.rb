@@ -22,5 +22,5 @@ def prefix (name)
 end
 
 def truncate (name) 
-  name.slice(0..15)
+  name.slice(0..14)
 end
