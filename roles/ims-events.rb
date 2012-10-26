@@ -5,7 +5,7 @@ run_list "recipe[prepare::ims-events]", "recipe[sudo]", "recipe[dmg]",
           # Core system updates
           "recipe[osxupdate::mac]", "recipe[java::mac]",
           # Browsers and runtimes
-          "recipe[chrome::mac]", "recipe[firefox::mac]", "recipe[flash::mac]", "recipe[silverlight::mac]",
+          "recipe[chrome::mac]", "recipe[firefox::mac]", "recipe[silverlight::mac]",
           # Core applications
           "recipe[office::mac]", "recipe[itunes::mac]", "recipe[unarchiver::mac]", "recipe[vlc::mac]",
           # Video editing and mastering
