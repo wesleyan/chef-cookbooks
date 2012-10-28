@@ -1,25 +1,28 @@
-cookbook_file "/tmp/dockutil.py" do
-  source "dockutil.py"
-  owner "root"
-  group "wheel"
-  mode "0700"
-end
+# cookbook_file "/tmp/dockutil.py" do
+#   source "dockutil.py"
+#   owner "root"
+#   group "wheel"
+#   mode "0777"
+#   action :create
+# end
 
-cookbook_file "/tmp/com.apple.dock.plist" do
-  source "com.apple.dock.plist"
+cookbook_file "/tmp/additemtodock" do
+  source "additemtodock"
   owner "root"
   group "wheel"
-  mode "0777"
+  mode "0755"
   action :create
 end
 
-execute "convert to binary" do
-  command "plutil -convert binary1 -o '/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dock.plist' /tmp/com.apple.dock.plist"
-  action :run
-end   
-
-execute "add to dock" do
-  command "/tmp/dockutil.py --add /Applications/Safari.app --no-restart '/System/Library/User Template/English.lproj'"
-  action :run
+cookbook_file "/tmp/removeitemfromdock" do
+  source "removeitemfromdock"
+  owner "root"
+  group "wheel"
+  mode "0755"
+  action :create
 end
+
+# dock_remove "all" do
+#   all_users true
+# end
 

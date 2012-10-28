@@ -224,6 +224,8 @@ def main():
     # if allhomes option was set, get a list of home directories in the homedirectory location
     if all_homes:
         possible_homes = os.listdir(home_directories_loc)
+	
+	
         plist_paths = [ home_directories_loc+'/'+home+'/Library/Preferences/com.apple.dock.plist' for home in possible_homes if os.path.exists(home_directories_loc+'/'+home+'/Library/Preferences/com.apple.dock.plist') and os.path.exists(home_directories_loc+'/'+home+'/Desktop')]
     else: # allhomes was not specified
         # if no plist argument, then use the user's home directory dock plist, otherwise use the arguments provided

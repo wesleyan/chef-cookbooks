@@ -1,0 +1,277 @@
+#!/bin/bash
+[ -f /tmp/debug ] && set -x
+#############################
+###                       ###
+###   Add Items to Dock   ###
+###                       ###
+#############################
+#
+# Simple utility, adds item to the dock.
+
+
+###########################################
+#####  (C)2006 Henri Shustak GNU GPL  #####
+#####    Lucid Information Systems    #####
+#####   http://www.lucidsystems.org   #####
+###########################################
+
+# Additions from 0.0.7 onward (copyleft 2010) Joel Bruner - http://brunerd.com
+
+# Version History
+#				12.8.21	Stupid bug that caused prefPane's to be added as folders fixed by using bash builtin string handling to determine extensions
+#				12.7.18	Fixed issue with 10.7 where duplicate check was failing because of new CFURLString format that uses space escaping ("%20"), consolidated duplicate check code to use parameter for app or other
+#				12.5.1	A version number system that reflects the date. Added check to throttle this script if Dock is recently quit.
+#				1.1		Trim leading // for root items (duplication checking failed), only restarts dock if something is added. Does not add if dock.plist doesn't exist too.
+#				0.1.1	Now exits with error status if syntax wrong or app not found, not duplicate items [JB]
+#				0.1.0	Trim trailing / on item name [JB]
+#				0.1.0	Changed default to folder view listed by name, trim trailing / on item names [JB]
+#				0.0.9   Added support for prefPane [JB]
+#               0.0.8	Added Check for PEF executables and those without .app [JB]
+#               0.0.7   Improved 10.5 Support
+#               0.0.6   Removal Script Fixes
+#               0.0.5   Improved Alias Handling, Improved Duplicate Handling
+#               0.0.4   Fixed minor testing issues
+#               0.0.3   Minor packaging improvments
+#               0.0.2   Added minimal help function and imporved error reporting 
+#               0.0.1   Initial Release
+
+
+
+
+function check_arguments {
+
+    if [ "$num_argumnets" -lt "1" ] ; then
+        echo "WARNING ! : No argument provided. Nothing added to the Dock."
+        echo "            Usage : additemtodock [-f dockfilepath] /Applications/Safari.app"
+        exit 0
+    fi
+    
+    return 0
+       
+}
+
+function sendlog
+{
+input=${1}
+
+#system.log
+logger -t "$scriptName [$$]" $input
+#seperate update log
+echo $input
+}
+
+function check_is_duplicate {
+
+itemType=$1
+
+    #10.7 started using the _CFURLString format of file://localhost/ESCAPED%20PATH
+    #use sed to replace escaped spaces (might need more comprehensive check for other character, but this will do for now)
+    dockItemList=$(defaults read $plistpath $itemType | grep -w _CFURLString | awk 'BEGIN { FS = "\"" } ; { print $4 }' | sed 's/%20/ /g')
+    echo $dockItemList
+    application_check1=$(echo "$dockItemList" | grep "${item2add}")
+    
+    if [ -n "${application_check1}" ] ; then
+        echo "WARNING! : Item already in the dock, it will not be added again : ${item2add}"
+        # This is in the dock
+        return 1
+    else
+        # This is not in the dock 
+        return 0  
+    fi
+
+}
+
+function add_application {
+
+    #Adding Application
+    if [ -d "${item2add}" ] || [ -f "${item2add}" ] ; then
+        echo "Adding Application : ${item2add}"; let added++;
+        defaults write $plistpath persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${item2add}</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"        
+    else
+        echo "WARNING! : Could not locate Application : ${item2add}"
+    fi
+
+}
+
+function add_other {
+
+#need to add command line support for folder listing styles in (Snow) Leopard onward
+
+#displayas 
+#	0=Stack
+#	1=Folder
+
+#showas
+#	1=Fan
+#	2=Grid
+#	3=List
+#	4=Automatic
+
+#arrangement
+#	0=Name
+#	1=Name
+#	2=Date Added
+#	3=Date Modified
+#	4=Date Created
+#	5=Kind
+
+#until then hard coded values
+displayas=1
+showas=3
+arrangement=1
+
+    #Adding Other check if its a file or folder or prefpane
+    if [ -d "${item2add}" ] || [ -f "${item2add}" ]; then
+        if [ "${item2add##*.}" = "prefPane" ]; then
+            echo "Adding prefPane : ${item2add}"
+            defaults write $plistpath persistent-others -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${item2add}</string><key>_CFURLStringType</key><integer>0</integer></dict></dict><key>tile-type</key><string>file-tile</string></dict>"
+            [ $? -eq 0 ] && let added++;
+        elif [ -d "${item2add}" ]; then 
+            echo "Adding Folder : ${item2add}"
+             defaults write $plistpath persistent-others -array-add "<dict><key>tile-data</key><dict><key>arrangement</key><integer>$arrangement</integer><key>displayas</key><integer>$displayas</integer><key>file-data</key><dict><key>_CFURLString</key><string>${item2add}</string><key>_CFURLStringType</key><integer>0</integer></dict><key>showas</key><integer>$showas</integer></dict><key>tile-type</key><string>directory-tile</string></dict>"
+             [ $? -eq 0 ] && let added++;
+        else
+            echo "Adding File : ${item2add}"
+            defaults write $plistpath persistent-others -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${item2add}</string><key>_CFURLStringType</key><integer>0</integer></dict></dict><key>tile-type</key><string>file-tile</string></dict>"
+            [ $? -eq 0 ] && let added++;
+        fi      
+    else
+        echo "WARNING! : Could not locate Item : ${item2add}"
+    fi
+
+}
+
+
+function check_is_application {
+
+	#test for .app extension
+    if [ "${item2add##*.}" == ".app" ] ; then 
+        #is an app
+        return 1
+    fi
+    
+    #PEF files don't have .app extensions
+    file "${item2add}" | grep -q executable 
+    if [ $? -eq 0 ]; then
+    	# This item is an Application
+    	return 1
+	fi    
+    
+    #Cocoa applications don't necessarily have to have .app for an extension
+    file "${item2add}"/Contents/MacOS/* | grep -q executable 
+    if [ $? -eq 0 ]; then
+    	# This item is an Application
+    	return 1
+	fi
+    
+    # This item is not an Application
+    return 0
+        
+}
+
+function check_dock_status {
+#if there is no console user then this is irrelevant since Dock will not be running
+consoleUsers=$(who | grep -c console)
+#return from function
+[ ${consoleUsers:=0} -eq 0 ] && return
+
+#see how long the dock has been running or if it is running at all and wait
+#otherwise this script goes to fast when run in rapid succession and the killall Docks obliterate the changes
+dockLife=$(ps axww -O etime | grep /MacOS/[D]ock | awk '{print $2}')
+echo DockLife=$dockLife
+case ${dockLife:=0} in
+
+#Days
+#??-??:??:??)
+#;;
+#Hours
+#??:??:??)
+#
+#;;
+
+#Minutes
+??:??)
+dockMinutes=${dockLife:0:2}
+dockSeconds=${dockLife:3:2}
+
+#if the dock has been alive for less than 2 seconds wait from 2-4 seconds more
+if [ $dockMinutes -eq 0 -a $dockSeconds -lt 3 ]; then
+waitTime=$(( 5 - $dockSeconds ))
+echo Waiting $dockSeconds seconds
+#sleep $waitTime
+fi
+;;
+
+#zero, the dock was killed just now
+0)
+#sleep 5
+
+esac
+}
+
+########### LOGIC AND EXECUTION ###########
+
+# General Settings
+num_argumnets=$#
+exit_status=0
+
+# Check we are good to go
+check_arguments
+
+if [ "$1" == '-f' -a -f "$2" ]; then
+	#set path to 2nd argument
+	filepath="$2"
+	plistpath=$(echo $filepath | sed 's/.plist//')
+	#skip arguments in the for loop
+	shift 2
+	elif [ "$1" == '-f' -a ! -f "$2" ]; then
+		echo "ERROR: invalid file path provided"
+		echo "Example: additemtodock [-f dockfilepath] /Applications/Mail.app ..."
+        exit 2
+	else
+    	filepath=~/Library/Preferences/com.apple.dock.plist
+	    plistpath=com.apple.dock
+	    if [ ! -f $filepath ]; then
+	    logger "NOT FOUND, EXITING: ~/Library/Preferences/com.apple.dock.plist"
+		    exit 0
+	    fi
+	fi
+
+sendlog "Dock file is: $filepath"
+
+check_dock_status
+
+# Loop Though the arguments provided.
+for a
+do
+    #item2add="$a"
+	
+	#trim trailing /
+	item2add=$(dirname "${a}")/$(basename "${a}")
+	#trim leading // for root items
+	item2add=${item2add/\/\//\/}
+	
+    #echo "Processing Item : ${item2add}"
+
+    check_is_application
+    if [ $? == 1 ] ; then
+        check_is_duplicate persistent-apps
+        if [ $? == 0 ] ; then
+            add_application
+        fi
+    else
+        check_is_duplicate persistent-others
+        if [ $? == 0 ] ; then
+            add_other
+        fi
+    fi
+done
+
+# Restarts the Dock (any user modifiacation to the dock will be lost unless they have been saved)
+if [ ! -z "$added" ]; then 
+killall cfprefsd
+killall Dock
+sleep 2
+fi
+
+exit 0

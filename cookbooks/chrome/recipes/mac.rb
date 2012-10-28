@@ -15,3 +15,9 @@ dmg_package "googlechrome.dmg" do
   action :install
   type "app"
 end
+
+dock_add "/Applications/Google Chrome.app" do
+  all_users true
+  group "Browsers"
+end
+

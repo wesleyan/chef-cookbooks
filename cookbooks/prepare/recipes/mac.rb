@@ -10,6 +10,7 @@ end
 
 group "admin" do
   members ['administrator', 'labuser']
+  append true
 end
 
 directory "/Users/administrator/.ssh" do
@@ -17,6 +18,7 @@ directory "/Users/administrator/.ssh" do
   owner "administrator"
   group "staff"
   action :create
+  recursive true
 end
 
 cookbook_file "/Users/administrator/.ssh/authorized_keys" do
