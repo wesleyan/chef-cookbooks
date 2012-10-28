@@ -72,6 +72,14 @@ action :set do
         action :delete
       end 
       
+      directory "/Users/#{name}/Library/Preferences/" do
+        recursive true
+        owner "#{name}"
+        mode 0700
+        group "staff"
+        action :create
+      end
+      
       execute "convert to binary" do
         command "plutil -convert binary1 -o '/Users/#{name}/Library/Preferences/com.apple.desktop.plist' /tmp/com.apple.desktop.plist"
         action :run

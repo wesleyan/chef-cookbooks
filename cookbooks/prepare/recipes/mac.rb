@@ -1,11 +1,13 @@
 user "labuser" do
   comment "labuser"
   home "/Users/labuser"
+  action :create
 end
 
 user "administrator" do
   comment "administrator"
   home "/Users/administrator"
+  action :create
 end
 
 group "admin" do
@@ -59,13 +61,14 @@ end
 
 execute "change hostname" do
   command "ruby /tmp/set_hostname.rb"
+  returns [0, 1]
   action :run
 end
 
 execute "bind to domain" do
   command "ruby /tmp/bind_to_domain.rb"
   action :run
-  returns [0,-1, 78]
+  returns [0,-1, 1, 78]
 end
 
 execute "spctl disable" do
@@ -84,6 +87,10 @@ execute "set owner of /usr/local" do
   action :run
 end
 
+execute "set sleep time to never" do
+  command "pmset sleep 0"
+  action :run
+end
 
 
 file "/tmp/host_utilities.rb" do

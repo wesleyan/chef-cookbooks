@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mod-count</key>
+	<integer>1</integer>
+	<key>persistent-apps</key>
+	<array>
+		<% @apps.each do |dock_app| -%>
+		<dict>
+			<key>tile-data</key>
+			<dict>
+				<key>file-data</key>
+				<dict>
+					<key>_CFURLString</key>
+					<string>file://localhost<%= dock_app.path %></string>
+					<key>_CFURLStringType</key>
+					<integer>15</integer>
+				</dict>
+			</dict>
+		</dict>
+		<% end -%>
+	</array>
+	<key>persistent-others</key>
+	<array>
+		<% @others.each do |dock_other| -%>
+		<dict>
+			<key>tile-data</key>
+			<dict>
+				<key>arrangement</key>
+				<integer>$arrangement</integer>
+				<key>displayas</key>
+				<integer><%= dock_other.displayas %></integer>
+				<key>file-data</key>
+				<dict>
+					<key>_CFURLString</key>
+					<string><%= dock_other.path %></string>
+					<key>_CFURLStringType</key>
+					<integer>0</integer>
+				</dict>
+				<key>showas</key>
+				<integer><%= dock_other.showas %></integer>]
+			</dict>
+			<key>tile-type</key>
+			<string><%= dock_other.tile_type %></string>
+		</dict>
+		<% end -%>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
