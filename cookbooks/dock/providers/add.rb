@@ -1,3 +1,4 @@
+
 dock_others = Array.new
 dock_apps = Array.new
 
@@ -7,10 +8,19 @@ action :add do
   app = Dock::DockApp.new
   user = Dock::MacUser.new
   app.path = new_resource.name
-  dock_apps.push(app)
   generate_dock_plist(dock_apps, dock_others)
   convert_dock_plist_to_binary("/tmp/com.apple.dock.temp.plist")
-  
+  if new_resource.group
+    if IO::File.directory? "/var/generated_files/dock/groups/#{new_resource.group}"
+      link "/var/generated_files/dock/groups/#{new_resource.group}/#{IO::File.basename(app.path)}" do
+        to new_resource.name
+      end
+    end 
+  else
+      dock_apps.push(app) 
+  end
+    
+    
   if(new_resource.all_users) 
     copy_dock_plist_for_all_users
   elsif(!new_resource.all_users && new_resource.user)

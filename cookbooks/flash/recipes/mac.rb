@@ -21,7 +21,16 @@
 
 package_id = "com.adobe.pkg.FlashPlayer"
 
+
 unless system("pkgutil --pkgs=#{package_id}")
+  
+ruby_block "login window" do
+  block do
+    login_window_pid = `ps axwww | grep loginwindow`
+    puts login_window_pid.split(' ')[0]
+  end
+end
+  
   
 remote_file "/tmp/install_flash_player_osx.dmg" do
   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/adobe_flash_player-11/install_flash_player_osx.dmg"
@@ -36,7 +45,7 @@ ruby_block "attach" do
 end
 
 execute "install flash from mounted dmg" do
-  command "'/Volumes/Flash Player/Install Adobe Flash Player.app/Contents/MacOS/Adobe Flash Player Install Manager' -install"
+  command "launchctl bsexec ${process_id} '/Volumes/Flash Player/Install Adobe Flash Player.app/Contents/MacOS/Adobe Flash Player Install Manager' -install"
   user "root"
 end
 

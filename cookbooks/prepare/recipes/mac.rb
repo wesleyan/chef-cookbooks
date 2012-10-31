@@ -114,3 +114,9 @@ execute "change login window" do
   command "defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true"
   action :run
 end
+
+
+execute "restart login window" do
+  command "sudo killall loginwindow" 
+  action :run
+end

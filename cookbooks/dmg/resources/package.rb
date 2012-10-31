@@ -29,7 +29,7 @@ attribute :installed, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :package_id, :kind_of => String, :default => nil
 attribute :dmg_passphrase, :kind_of => String, :default => nil
 attribute :accept_eula, :kind_of => [TrueClass, FalseClass], :default => false
-
+attribute :sleep_after_install, :kind_of => Integer, :default => 0
 def initialize(name, run_context=nil)
   super
   @action = :install

@@ -64,10 +64,18 @@ action :install do
         ignore_failure true
       end
     when "mpkg", "pkg"
-      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target /"
+      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
+        returns [0, 1]
+      end  
     end
-
-    execute "hdiutil detach '/Volumes/#{volumes_dir}'"
+    
+    if(new_resource.sleep_after_install > 0) 
+      sleep new_resource.sleep_after_install
+    end
+    
+    execute "hdiutil detach '/Volumes/#{volumes_dir}'" do
+      retries 5
+    end
   end
 end
 

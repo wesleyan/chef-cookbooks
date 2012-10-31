@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
 dmg_package "adobe_photoshop_cs6-13.0.1_Install.dmg" do
   app "adobe_photoshop_cs6-13.0.1_Install"
   volumes_dir "adobe_photoshop_cs6-13.0.1_Install"
@@ -15,4 +16,18 @@ dmg_package "adobe_photoshop_cs6-13.0.1_Install.dmg" do
   action :install
   type "pkg"
   package_id "com.adobe.Enterprise.install.E38986C1-44B1-483A-8DDB-681205FABDFB"
+end
+
+dock_add "Adobe" do
+  all_users true
+  action :folder_create
+  show_as "grid"
+  display_as "folder"
+  arrangement "name"
+end
+
+dock_add "/Applications/Adobe Photoshop CS6/Adobe Photoshop CS6.app" do
+  all_users true
+  group "Adobe"
+  restart true
 end
