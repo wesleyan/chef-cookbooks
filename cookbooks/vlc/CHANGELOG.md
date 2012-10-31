@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of vlc.
 
+## 0.2.0:
+
+* Updated app version to 2.0.4
+* Added dock code
+
 ## 0.1.0:
 
 * Initial cookbook for VLC, installs but does not yet register filetype associations

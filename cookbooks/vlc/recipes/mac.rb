@@ -6,14 +6,14 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "vlc-2.0.3" do
+dmg_package "vlc-2.0.4" do
   app "VLC"
-  volumes_dir "vlc-2.0.3"
-  dmg_name "vlc-2.0.3"
+  volumes_dir "vlc-2.0.4"
+  dmg_name "vlc-2.0.4"
   add_to_dock true
   dock_category "Multimedia"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/vlc-2/vlc-2.0.3.dmg"
-  checksum "d0ee6c536835c837c1043dde585fe9f36aa36661fe24b3e0662bcc468f9cf143"
+  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/vlc-2/vlc-2.0.4.dmg"
+  checksum "d3770f25632aee8224ac17be383872ae05f684d69ee0f4c7e9d2b30778a8bfb5"
   action :install
   type "app"
 end
