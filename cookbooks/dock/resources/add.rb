@@ -16,16 +16,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-actions :add, :clear
+actions :add, :folder_create
 default_action :add
 
 attribute :name, :kind_of => String, :name_attribute => true
 attribute :group, :kind_of => String, :default => nil
 attribute :user, :kind_of => String, :default => nil
-
+attribute :display_as, :kind_of => String, :default => nil
+attribute :show_as, :kind_of => String, :default => nil
+attribute :arrangement, :kind_of => String, :default => nil
 # attribute :destination, :kind_of => String, :default => "/Applications"
 attribute :all_users, :kind_of => [TrueClass, FalseClass], :default => false
-
+attribute :restart, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(name, run_context=nil)
   super

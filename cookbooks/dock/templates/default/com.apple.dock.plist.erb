@@ -28,18 +28,18 @@
 			<key>tile-data</key>
 			<dict>
 				<key>arrangement</key>
-				<integer>$arrangement</integer>
+				<integer><%= dock_other.arrangement_to_i %></integer>
 				<key>displayas</key>
-				<integer><%= dock_other.displayas %></integer>
+				<integer><%= dock_other.display_as %></integer>
 				<key>file-data</key>
 				<dict>
 					<key>_CFURLString</key>
-					<string><%= dock_other.path %></string>
+					<string>file://localhost<%= dock_other.path %></string>
 					<key>_CFURLStringType</key>
-					<integer>0</integer>
+					<integer>15</integer>
 				</dict>
 				<key>showas</key>
-				<integer><%= dock_other.showas %></integer>]
+				<integer><%= dock_other.show_as %></integer>]
 			</dict>
 			<key>tile-type</key>
 			<string><%= dock_other.tile_type %></string>

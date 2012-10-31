@@ -1,61 +1,58 @@
 dock_others = Array.new
 dock_apps = Array.new
 
-def kill_cfprefsd 
-  execute "killall cfprefsd" do
-    returns [0, 1]
-  end
-end
-
-def kill_dock
-  execute "killall Dock" do
-    returns [0,1]
-  end
-end
-
-def convert_dock_plist_to_binary(plist_path) 
-   execute "convert to binary" do
-      command "plutil -convert binary1 -o '/tmp/com.apple.dock.plist' #{plist_path}"
-      action :run
-    end    
-end
-
-def copy_dock_plist_for_user(user) 
-  
-  file "/Users/#{user.username}/Library/Preferences/com.apple.dock.plist" do
-    owner #{user.username}
-    group "staff"
-    mode 0600
-    action :delete
-  end
-  execute "chown #{user.username}:staff /tmp/com.apple.dock.plist"
-  execute "chmod 600 /tmp/com.apple.dock.plist"
-  execute "cp /tmp/com.apple.dock.plist /Users/#{user.username}/Library/Preferences/com.apple.dock.plist" 
-  execute "chown #{user.username}:staff /Users/#{user.username}/Library/Preferences/com.apple.dock.plist"
-end
-  
-def generate_dock_plist(dock_apps, dock_others)
-  template "/tmp/com.apple.dock.temp.plist" do
-    source "com.apple.dock.plist.erb"
-    mode 0666
-    owner "root"
-    group "wheel"
-    variables({
-      :apps => dock_apps,
-      :others => dock_others
-    })
-  end
-end
 
 action :add do
+  
   app = Dock::DockApp.new
   user = Dock::MacUser.new
-  user.username = "jclyons"
   app.path = new_resource.name
   dock_apps.push(app)
   generate_dock_plist(dock_apps, dock_others)
   convert_dock_plist_to_binary("/tmp/com.apple.dock.temp.plist")
-  copy_dock_plist_for_user(user)
-  kill_cfprefsd
-  kill_dock
+  
+  if(new_resource.all_users) 
+    copy_dock_plist_for_all_users
+  elsif(!new_resource.all_users && new_resource.user)
+      user.username = new_resource.user
+      copy_dock_plist_for_user(user)
+  end
+  
+  if(new_resource.restart) 
+    kill_cfprefsd
+    kill_dock
+  end
+end
+
+action :folder_create do
+    folder  = Dock::DockFolder.new
+    user = Dock::MacUser.new
+    folder.path = "/var/generated_files/dock/groups/#{new_resource.name}"
+ 
+    folder.display_as = new_resource.display_as
+    folder.show_as = new_resource.show_as
+    folder.arrangement = new_resource.arrangement
+    
+    dock_others.push(folder)
+    directory folder.path do
+      owner "root"
+      group "wheel"
+      mode 0755
+      recursive true
+      action :create
+    end
+    
+    generate_dock_plist(dock_apps, dock_others)
+    convert_dock_plist_to_binary("/tmp/com.apple.dock.temp.plist")
+    if(new_resource.all_users) 
+      copy_dock_plist_for_all_users
+    elsif(!new_resource.all_users && new_resource.user)
+        user.username = new_resource.user
+        copy_dock_plist_for_user(user)
+    end
+    
+    if(new_resource.restart)
+      kill_cfprefsd
+      kill_dock
+    end
 end

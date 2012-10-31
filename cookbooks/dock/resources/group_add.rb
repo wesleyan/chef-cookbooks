@@ -1,5 +1,5 @@
-actions :add, :clear
-default_action :add
+actions :group_add, :clear
+default_action :group_add
 
 attribute :name, :kind_of => String, :name_attribute => true
 attribute :group, :kind_of => String, :default => nil
