@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of compressor.
 
+## 0.2.0
+
+* Updated app version to 4.0.5
+
 ## 0.1.0:
 
 * Initial release of compressor cookbook

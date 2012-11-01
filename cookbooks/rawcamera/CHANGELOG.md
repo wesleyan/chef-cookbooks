@@ -1,15 +1,11 @@
-# CHANGELOG for vlc
+# CHANGELOG for rawcamera
 
-This file is used to list changes made in each version of vlc.
-
-## 0.2.0:
-
-* Updated app version to 2.0.4
-* Added dock code
+This file is used to list changes made in each version of rawcamera.
 
 ## 0.1.0:
 
-* Initial cookbook for VLC, installs but does not yet register filetype associations
+* Initial release of rawcamera cookbook
+* Current app version: 4.01
 
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

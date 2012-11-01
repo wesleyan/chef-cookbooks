@@ -9,7 +9,7 @@ run_list "recipe[prepare::mac]", "recipe[sudo]",
           # Desktop and Dock
           "recipe[dock::mac]", "recipe[desktop_picture::mac]",
           # Core system updates
-          "recipe[osxupdate::mac]", "recipe[java::mac]", "recipe[printers::mac]",
+          "recipe[osxupdate::mac]", "recipe[java::mac]", "recipe[printers::mac]", "recipe[rawcamera::mac]",
           # Browsers and runtimes
           "recipe[chrome::mac]", "recipe[firefox::mac]", "recipe[flash::mac]", "recipe[silverlight::mac]",
           # Core applications

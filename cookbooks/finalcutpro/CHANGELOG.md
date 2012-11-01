@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of finalcutpro.
 
+## 0.2.0
+* Updated app to 10.0.6
+
 ## 0.1.0:
 
 * Initial release of finalcutpro cookbook
