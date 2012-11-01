@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+# Install package
 dmg_package "adobe_flash_professional_cs6-12.0.2_Install.dmg" do
   app "adobe_flash_professional_cs6-12.0.2_Install"
   volumes_dir "adobe_flash_professional_cs6-12.0.2_Install"
@@ -15,4 +16,20 @@ dmg_package "adobe_flash_professional_cs6-12.0.2_Install.dmg" do
   action :install
   type "pkg"
   package_id "com.adobe.Enterprise.install.C2267962-3047-468F-A7C9-141015421170"
+end
+
+# Create dock folder, if it does not exist
+dock_add "Adobe Creative Suite 6" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Adobe Flash CS6/Adobe Flash CS6.app" do
+  all_users true
+  group "Adobe Creative Suite 6"
+  restart true
 end

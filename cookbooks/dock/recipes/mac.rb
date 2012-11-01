@@ -1,4 +1,6 @@
-cookbook_file "/tmp/seticon"
+cookbook_file "/tmp/seticon.zip"
+
+execute "unzip -o /tmp/seticon.zip -d /tmp/"
 
 file "/tmp/seticon" do
   owner "root"

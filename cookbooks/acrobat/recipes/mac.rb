@@ -17,3 +17,16 @@ dmg_package "adobe_acrobat_pro_xi-11.0.dmg" do
   package_id "com.adobe.acrobat.11.viewer.app.pkg.MUI"
 end
 
+dock_add "Adobe Creative Suite 6" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
+  all_users true
+  group "Adobe Creative Suite 6"
+  restart true
+end

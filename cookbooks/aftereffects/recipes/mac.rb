@@ -16,3 +16,19 @@ dmg_package "adobe_after_effects_cs6-11.0.2_Install.dmg" do
   type "pkg"
   package_id "com.adobe.Enterprise.install.E771578B-4201-48DD-A429-742EF35760F6"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Adobe Creative Suite 6" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Adobe After Effects CS6/Adobe After Effects CS6.app" do
+  all_users true
+  group "Adobe Creative Suite 6"
+  restart true
+end

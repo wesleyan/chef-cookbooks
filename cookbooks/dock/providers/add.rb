@@ -20,8 +20,7 @@ action :add do
       dock_apps.push(app) 
   end
   if(new_resource.icon) 
-
-
+    execute "/tmp/seticon -i \"#{new_resource.icon}\" \"#{app.path}\""
   end
     
   if(new_resource.all_users) 
@@ -57,9 +56,9 @@ action :folder_create do
     end
     
     if(new_resource.icon) 
-      
-      
+      execute "/tmp/seticon -i \"#{new_resource.icon}\" \"#{folder.path}\""
     end
+   
     
     generate_dock_plist(dock_apps, dock_others)
     convert_dock_plist_to_binary("/tmp/com.apple.dock.temp.plist")

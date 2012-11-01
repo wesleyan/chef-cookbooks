@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: office
+# Recipe:: mac
+#
+# Copyright 2012, Wesleyan University
+#
+# All rights reserved - Do Not Redistribute
+
+# Install Office base
 dmg_package "Office2011" do
   app "Office Installer"
   volumes_dir "Microsoft Office 2011"
@@ -9,6 +18,7 @@ dmg_package "Office2011" do
   package_id "com.microsoft.office.en.core.pkg.14.0.0"
 end
 
+# Install Office updates
 dmg_package "Service Pack 1 Update" do
   app "Office 2011 14.1.0 Update"
   volumes_dir "Microsoft Office 2011 14.1.0 Update"
@@ -20,25 +30,33 @@ dmg_package "Service Pack 1 Update" do
   package_id "com.microsoft.office.en.core_resources.pkg.14.1.0.update"
 end
 
+# Download icon
+cookbook_file "/tmp/office.png"
 
-# dmg_package "14.2.3 Update" do 
-#     app "Office 2011 14.2.3 Update"
-#     volumes_dir "Microsoft Office 2011 14.2.3 Update"
-#     dmg_name "Office2011-1423UpdateEN"
-#     source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/microsoft_office-2011/Office2011-1423UpdateEN.dmg"
-#     checksum "90d19175102c8531882785a203b7e64aaee1036278336d9f1a15eda8d6eb79d8"
-#     action :install
-#     type "pkg"
-#     package_id "com.microsoft.office.en.core_resources.pkg.14.2.3.update"
-# end
-#   
-# dmg_package "14.2.4 Update" do
-#   app "Office 2011 14.2.4 Update"
-#   volumes_dir "Microsoft Office 2011 14.2.4 Update"
-#   dmg_name "Office2011-1424UpdateEN"
-#   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/microsoft_office-2011/Office2011-1424UpdateEN.dmg"
-#   checksum "00d6457f181713bfd3f950aa29a3697e3f8f1f7504f807083cb14ad5525526fa"
-#   action :install
-#   type "pkg"
-#   package_id "com.microsoft.office.en.core_resources.pkg.14.2.4.update"
-# end
+# Create dock folder
+dock_add "Microsoft Office 2011" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+  icon "/tmp/office.png"
+end
+
+# Add applications to dock
+dock_add "/Applications/Microsoft Office 2011/Microsoft Excel.app" do
+  all_users true
+  group "Microsoft Office 2011"
+end
+
+dock_add "/Applications/Microsoft Office 2011/Microsoft PowerPoint.app" do
+  all_users true
+  group "Microsoft Office 2011"
+end
+
+dock_add "/Applications/Microsoft Office 2011/Microsoft Word.app" do
+  all_users true
+  group "Microsoft Office 2011"
+  restart true
+end
+
