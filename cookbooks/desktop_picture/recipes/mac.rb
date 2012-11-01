@@ -1,7 +1,10 @@
 cookbook_file "/tmp/font.zip"
 # package "pkg-config"
-# package "imagemagick"
-# gem_package "rmagick"
+
+
+package "imagemagick" 
+
+gem_package "rmagick"
 
 directory "/usr/local/share/ghostscript/fonts/" do
   owner "root"
@@ -13,9 +16,9 @@ end
 
 execute "unzip -o /tmp/font.zip -d /usr/local/share/ghostscript/fonts/"
 
-# desktop_picture "/var/generated_files/background.jpg" do
-#   action :generate
-# end
+desktop_picture "/var/generated_files/background.jpg" do
+  action :generate
+end
 
 
 # desktop_picture "/Library/Desktop Pictures/Brushes.jpg"

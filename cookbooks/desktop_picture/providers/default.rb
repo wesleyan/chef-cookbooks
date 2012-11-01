@@ -25,6 +25,13 @@ action :generate do
     action :create
   end
   
+  directory "/temp" do
+    owner "root"
+    group "wheel"
+    mode "0777"
+    action :create
+  end
+  
   cookbook_file "/temp/generate_picture.rb" do
     owner "root"
     group "wheel"
