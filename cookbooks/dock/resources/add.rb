@@ -28,7 +28,8 @@ attribute :arrangement, :kind_of => String, :default => nil
 # attribute :destination, :kind_of => String, :default => "/Applications"
 attribute :all_users, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :restart, :kind_of => [TrueClass, FalseClass], :default => false
-
+attribute :cookbook, :kind_of => String, :default => "dock"
+attribute :icon, :kind_of => String, :default => nil
 def initialize(name, run_context=nil)
   super
   @action = :add

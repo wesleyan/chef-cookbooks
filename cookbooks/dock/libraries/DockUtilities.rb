@@ -98,6 +98,7 @@
 
   def generate_dock_plist(dock_apps, dock_others)
     template "/tmp/com.apple.dock.temp.plist" do
+      cookbook new_resource.cookbook
       source "com.apple.dock.plist.erb"
       mode 0666
       owner "root"

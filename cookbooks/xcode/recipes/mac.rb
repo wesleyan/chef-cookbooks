@@ -6,15 +6,15 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "xcode4510417539a.dmg" do
-  app "Xcode"
-  volumes_dir "Xcode"
-  dmg_name "xcode4510417539a"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/apple_xcode-4/xcode4510417539a.dmg"
-  checksum "4a54e6e958094ba7ce701714806f38a202427a9706dc0697bf69f25bb0c04c1d"
-  action :install
-  type "app"
-end
+# dmg_package "xcode4510417539a.dmg" do
+#   app "Xcode"
+#   volumes_dir "Xcode"
+#   dmg_name "xcode4510417539a"
+#   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/apple_xcode-4/xcode4510417539a.dmg"
+#   checksum "4a54e6e958094ba7ce701714806f38a202427a9706dc0697bf69f25bb0c04c1d"
+#   action :install
+#   type "app"
+# end
 
 dmg_package "xcode451cltools_10_86938200a.dmg" do
   app "Command Line Tools (Mountain Lion)"
@@ -26,3 +26,5 @@ dmg_package "xcode451cltools_10_86938200a.dmg" do
   type "mpkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
 end
+
+# execute "xcode-select -switch /usr/bin"

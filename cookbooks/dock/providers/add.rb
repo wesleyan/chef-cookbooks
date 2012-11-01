@@ -4,7 +4,7 @@ dock_apps = Array.new
 
 
 action :add do
-  
+
   app = Dock::DockApp.new
   user = Dock::MacUser.new
   app.path = new_resource.name
@@ -19,7 +19,10 @@ action :add do
   else
       dock_apps.push(app) 
   end
-    
+  if(new_resource.icon) 
+
+
+  end
     
   if(new_resource.all_users) 
     copy_dock_plist_for_all_users
@@ -29,6 +32,7 @@ action :add do
   end
   
   if(new_resource.restart) 
+    sleep 5
     kill_cfprefsd
     kill_dock
   end
@@ -52,6 +56,11 @@ action :folder_create do
       action :create
     end
     
+    if(new_resource.icon) 
+      
+      
+    end
+    
     generate_dock_plist(dock_apps, dock_others)
     convert_dock_plist_to_binary("/tmp/com.apple.dock.temp.plist")
     if(new_resource.all_users) 
@@ -61,7 +70,10 @@ action :folder_create do
         copy_dock_plist_for_user(user)
     end
     
+
+    
     if(new_resource.restart)
+      sleep 5
       kill_cfprefsd
       kill_dock
     end

@@ -1,3 +1,13 @@
+cookbook_file "/tmp/seticon"
+
+file "/tmp/seticon" do
+  owner "root"
+  group "wheel"
+  mode "0755"
+  action :touch
+end
+
+
 # dock_add "/Applications/TextMate.app" do
 #   all_users true
 # end

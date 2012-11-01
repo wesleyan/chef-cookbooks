@@ -21,21 +21,24 @@ action :generate do
   directory "/var/generated_files" do
     owner "root"
     group "wheel"
-    mode "0777"
+    mode 0777
     action :create
   end
   
   directory "/temp" do
     owner "root"
     group "wheel"
-    mode "0777"
     action :create
+    mode 0777
   end
   
-  cookbook_file "/temp/generate_picture.rb" do
+  cookbook_file "/temp/generate_picture.rb"
+  
+  file "/temp/generate_picture.rb" do
     owner "root"
     group "wheel"
-    mode "755"
+    mode 0755
+    action :touch
   end
   
   execute "/temp/generate_picture.rb /var/generated_files/background.jpg"  

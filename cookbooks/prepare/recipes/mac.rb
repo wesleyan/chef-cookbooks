@@ -76,16 +76,16 @@ execute "spctl disable" do
   action :run
 end
 
-directory "/usr/local" do
-  owner "root"
-  group "wheel"
-  action :create
-end
-
-execute "set owner of /usr/local" do
-  command "sudo chown -R `whoami`:staff /usr/local"
-  action :run
-end
+# directory "/usr/local" do
+#   owner "root"
+#   group "wheel"
+#   action :create
+# end
+# 
+# execute "set owner of /usr/local" do
+#   command "sudo chown -R `whoami`:staff /usr/local"
+#   action :run
+# end
 
 execute "set sleep time to never" do
   command "pmset sleep 0"
@@ -116,7 +116,7 @@ execute "change login window" do
 end
 
 
-execute "restart login window" do
-  command "sudo killall loginwindow" 
-  action :run
-end
+# execute "restart login window" do
+#   command "sudo killall loginwindow" 
+#   action :run
+# end

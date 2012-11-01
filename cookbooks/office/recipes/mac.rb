@@ -21,7 +21,6 @@ dmg_package "Service Pack 1 Update" do
 end
 
 
-<<<<<<< Updated upstream
 # dmg_package "14.2.3 Update" do 
 #     app "Office 2011 14.2.3 Update"
 #     volumes_dir "Microsoft Office 2011 14.2.3 Update"
@@ -43,34 +42,3 @@ end
 #   type "pkg"
 #   package_id "com.microsoft.office.en.core_resources.pkg.14.2.4.update"
 # end
-=======
-dmg_package "14.2.3 Update" do 
-    app "Office 2011 14.2.3 Update"
-    volumes_dir "Microsoft Office 2011 14.2.3 Update"
-    dmg_name "Office2011-1423UpdateEN"
-    source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/microsoft_office-2011/Office2011-1423UpdateEN.dmg"
-    checksum "90d19175102c8531882785a203b7e64aaee1036278336d9f1a15eda8d6eb79d8"
-    action :install
-    type "pkg"
-    sleep_after_install 5
-    package_id "com.microsoft.office.en.core_resources.pkg.14.2.3.update"
-end
-  
-
-dmg_package "14.2.4 Update" do
-  app "Office 2011 14.2.4 Update"
-  volumes_dir "Microsoft Office 2011 14.2.4 Update"
-  dmg_name "Office2011-1424UpdateEN"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/microsoft_office-2011/Office2011-1424UpdateEN.dmg"
-  checksum "00d6457f181713bfd3f950aa29a3697e3f8f1f7504f807083cb14ad5525526fa"
-  action :install
-  type "pkg"
-  package_id "com.microsoft.office.en.core_resources.pkg.14.2.4.update"
-end
-
-# execute "rm -rf '/Applications/Microsoft Office 2011'" 
-# execute "rm -rf /Library/Preferences/com.microsoft.*"
-# execute "rm -rf /Library/Preferences/"
-# execute "rm -rf '/Library/Application Support/Microsoft'"
-# execute "rm -rf /var/db/receipts/com.microsoft.office.*"
->>>>>>> Stashed changes
