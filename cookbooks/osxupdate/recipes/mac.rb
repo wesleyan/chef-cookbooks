@@ -7,16 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install Combo Update
-dmg_package "OSXUpdCombo10.8.2.dmg" do
-  app "OSXUpdCombo10.8.2"
-  volumes_dir "OS X 10.8.2 Update Combo"
-  dmg_name "OSXUpdCombo10.8.2"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/os_x_updates-10.8/OSXUpdCombo10.8.2.dmg"
-  checksum "60641d639510b7c747a22d7ec87317251c9fa3702e31a266c48609219b821bd2"
-  action :install
-  type "pkg"
-  package_id "com.apple.pkg.update.os.10.8.2.12C60.combo"
-end
+#dmg_package "OSXUpdCombo10.8.2.dmg" do
+#  app "OSXUpdCombo10.8.2"
+#  volumes_dir "OS X 10.8.2 Update Combo"
+#  dmg_name "OSXUpdCombo10.8.2"
+#  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/os_x_updates-10.8/OSXUpdCombo10.8.2.dmg"
+#  checksum "60641d639510b7c747a22d7ec87317251c9fa3702e31a266c48609219b821bd2"
+#  action :install
+#  type "pkg"
+#  package_id "com.apple.pkg.update.os.10.8.2.12C60.combo"
+#end
 
 # Install 10.8.2 variant update for new 2012 hardware
 dmg_package "OSXUpd10.8.2.dmg" do
