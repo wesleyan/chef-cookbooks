@@ -27,5 +27,5 @@ dmg_package "OSXUpd10.8.2.dmg" do
   checksum "89942e5886ea55e3b62d010b80ee996c5425c3411c3cb20493078aebe62f896c"
   action :install
   type "pkg"
-  package_id ""
+  package_id "com.apple.pkg.update.os.10.8.2.12C2034.delta"
 end
