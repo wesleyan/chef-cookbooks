@@ -31,7 +31,7 @@ action :add do
   end
   
   if(new_resource.restart) 
-    sleep 5
+    sleep 7
     kill_cfprefsd
     kill_dock
   end
@@ -79,7 +79,7 @@ action :folder_create do
 
     
     if(new_resource.restart)
-      sleep 5
+      sleep 7
       kill_cfprefsd
       kill_dock
     end
