@@ -41,12 +41,14 @@ action :folder_create do
     folder  = Dock::DockFolder.new
     user = Dock::MacUser.new
     folder.path = "/var/generated_files/dock/groups/#{new_resource.name}"
- 
+    folder.name = new_resource.name
     folder.display_as = new_resource.display_as
     folder.show_as = new_resource.show_as
     folder.arrangement = new_resource.arrangement
+    if dock_others.select {|other| other.name == new_resource.name }.length == 0
+      dock_others.push(folder)
+    end
     
-    dock_others.push(folder)
     directory folder.path do
       owner "root"
       group "wheel"
@@ -56,7 +58,12 @@ action :folder_create do
     end
     
     if(new_resource.icon) 
-      execute "/tmp/seticon -i \"#{new_resource.icon}\" \"#{folder.path}\""
+      execute "/tmp/seticon -i \"#{new_resource.icon}\" \"#{folder.path}\""  
+      
+      execute "setfile -a V \"#{folder.path}\"/Icon*" do
+        returns [0, 1]
+      end
+      
     end
    
     

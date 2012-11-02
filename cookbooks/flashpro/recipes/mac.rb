@@ -18,6 +18,10 @@ dmg_package "adobe_flash_professional_cs6-12.0.2_Install.dmg" do
   package_id "com.adobe.Enterprise.install.C2267962-3047-468F-A7C9-141015421170"
 end
 
+
+# Download icon
+cookbook_file "/tmp/adobe.png"
+
 # Create dock folder, if it does not exist
 dock_add "Adobe Creative Suite 6" do
   all_users true
@@ -25,6 +29,7 @@ dock_add "Adobe Creative Suite 6" do
   show_as "list"
   display_as "folder"
   arrangement "name"
+  icon "/tmp/adobe.png"
 end
 
 # Add icon to dock

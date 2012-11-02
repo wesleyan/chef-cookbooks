@@ -1,3 +1,8 @@
+# Mountain Lion inexplicably includes some sort of 'dockfixup' plist in /Library/Preferences that adds Notes to the User Template dock. Not very useful. Not sure why Apple does it.
+file "/Library/Preferences/com.apple.dockfixup.plist" do
+  action :delete
+end
+
 cookbook_file "/tmp/seticon.zip"
 
 execute "unzip -o /tmp/seticon.zip -d /tmp/"
@@ -8,6 +13,15 @@ file "/tmp/seticon" do
   mode "0755"
   action :touch
 end
+
+dock_add "/Applications/Launchpad.app" do
+  all_users true
+end
+
+dock_add "/Applications/Mission Control.app" do
+  all_users true
+end
+
 
 
 # dock_add "/Applications/TextMate.app" do

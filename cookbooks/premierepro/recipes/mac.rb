@@ -18,6 +18,9 @@ dmg_package "adobe_premiere_pro_cs6-6.0.2_Install.dmg" do
   package_id "com.adobe.Enterprise.install.A39ED404-FAD0-4310-8DC6-C00539826372"
 end
 
+# Download icon
+cookbook_file "/tmp/adobe.png"
+
 # Create dock folder, if it does not exist
 dock_add "Adobe Creative Suite 6" do
   all_users true
@@ -25,6 +28,7 @@ dock_add "Adobe Creative Suite 6" do
   show_as "list"
   display_as "folder"
   arrangement "name"
+  icon "/tmp/adobe.png"
 end
 
 # Add icon to dock

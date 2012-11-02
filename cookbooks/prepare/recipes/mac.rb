@@ -1,8 +1,8 @@
-user "labuser" do
-  comment "labuser"
-  home "/Users/labuser"
-  action :create
-end
+# user "labuser" do
+#   comment "labuser"
+#   home "/Users/labuser"
+#   action :create
+# end
 
 user "administrator" do
   comment "administrator"
@@ -14,6 +14,8 @@ group "admin" do
   members ['administrator', 'labuser']
   append true
 end
+
+
 
 directory "/Users/administrator/.ssh" do
   mode "0744"
