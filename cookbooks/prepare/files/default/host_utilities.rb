@@ -14,13 +14,30 @@ def machine_ip
 end
 
 def hostname_for_ip (ip)
+  begin
     Resolv.getname(ip) 
+  rescue => e
+    puts e.inspect
+    puts e.backtrace
+    ""
+  end
 end
 
 def prefix (name) 
+  begin
     name.slice(0...(name.index('.')))
+  rescue => e
+    puts.inspect
+    ""
+  end 
 end
 
 def truncate (name) 
+  begin
   name.slice(0..14)
+  rescue => e
+  puts e.inspect
+  ""
+end
+
 end

@@ -30,7 +30,7 @@ run_list "recipe[prepare::mac]",
            "recipe[vlc::mac]",
            # Adobe CS6 Suite
             "recipe[photoshop::mac]", 
-            "recipe[illustrator::mac]", 
+           "recipe[illustrator::mac]", 
           # "recipe[indesign::mac]",
           # "recipe[dreamweaver::mac]", 
           # "recipe[flashpro::mac]",

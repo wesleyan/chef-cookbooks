@@ -19,7 +19,12 @@ def flush_cache
   $?.exitstatus
 end
 
-fqdn = hostname_for_ip machine_ip
+if(hostname_for_ip machine_ip == "")
+  fqdn = "lannister.class.wesleyan.edu"
+else
+  fqdn = hostname_for_ip machine_ip
+end
+
 hostname = prefix fqdn
 
 puts "Found hostname: #{hostname} (FQDN: #{fqdn})"

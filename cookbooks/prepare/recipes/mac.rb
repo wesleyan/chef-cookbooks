@@ -95,17 +95,17 @@ execute "set sleep time to never" do
 end
 
 
-file "/tmp/host_utilities.rb" do
-  action :delete
-end
+# file "/tmp/host_utilities.rb" do
+#   action :delete
+# end
 
-file "/tmp/set_hostname.rb" do
-  action :delete
-end
+# file "/tmp/set_hostname.rb" do
+#   action :delete
+# end
 
-file "/tmp/bind_to_domain.rb" do
-  action :delete
-end
+# file "/tmp/bind_to_domain.rb" do
+#   action :delete
+# end
 
 # service "ScreenSharing" do
 #   service_name "com.apple.screensharing"
