@@ -93,6 +93,10 @@ execute "set sleep time to never" do
   action :run
 end
 
+execute "set display sleep time to never" do
+  command "pmset displaysleep 0"
+  action :run
+end
 
 # file "/tmp/host_utilities.rb" do
 #   action :delete
