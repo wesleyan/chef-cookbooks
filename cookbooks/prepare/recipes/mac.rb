@@ -16,7 +16,6 @@ group "admin" do
 end
 
 
-
 directory "/Users/administrator/.ssh" do
   mode "0744"
   owner "administrator"

@@ -1,0 +1,1 @@
+default["dock"]["regenerate"]          = true

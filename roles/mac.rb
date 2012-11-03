@@ -49,7 +49,9 @@ run_list "recipe[prepare::mac]",
           #  Development
           "recipe[eclipse::mac]", 
           "recipe[aquamacs::mac]", 
-          "recipe[macvim::mac]"
+          "recipe[macvim::mac]", 
+          "recipe[finalize::mac]"
+          
 
 #"recipe[remotedesktop::mac]"--,
 

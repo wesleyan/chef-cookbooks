@@ -3,6 +3,11 @@ file "/Library/Preferences/com.apple.dockfixup.plist" do
   action :delete
 end
 
+# if this file exists we do not want to regenerate the dock plist - it has already been generated 
+if IO::File.exist?("/tmp/dockregen.tmp") 
+  node.set['dock']['regenerate'] = false
+end
+
 cookbook_file "/tmp/seticon.zip"
 
 execute "unzip -o /tmp/seticon.zip -d /tmp/"
@@ -20,6 +25,7 @@ end
 
 dock_add "/Applications/Mission Control.app" do
   all_users true
+  restart true
 end
 
 

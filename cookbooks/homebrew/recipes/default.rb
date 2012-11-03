@@ -18,3 +18,4 @@ execute "update homebrew from github" do
   user node['homebrew']['user']
   command "/usr/local/bin/brew update || true"
 end
+
