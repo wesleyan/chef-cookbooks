@@ -19,12 +19,7 @@ def flush_cache
   $?.exitstatus
 end
 
-#if(hostname_for_ip machine_ip == "")
-  fqdn = "lannister.local"
-#else
-#  fqdn = hostname_for_ip machine_ip
-#end
-
+fqdn = hostname_for_ip machine_ip
 hostname = prefix fqdn
 
 puts "Found hostname: #{hostname} (FQDN: #{fqdn})"

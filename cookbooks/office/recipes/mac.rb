@@ -57,6 +57,6 @@ end
 dock_add "/Applications/Microsoft Office 2011/Microsoft Word.app" do
   all_users true
   group "Microsoft Office 2011"
-  restart true
+#  restart true
 end
 

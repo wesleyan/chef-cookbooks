@@ -39,23 +39,27 @@ action :install do
     end
 
     passphrase_cmd = new_resource.dmg_passphrase ? "-passphrase #{new_resource.dmg_passphrase}" : ""
-    ruby_block "attach #{dmg_file}" do
-      block do
-        software_license_agreement = system("hdiutil imageinfo #{passphrase_cmd} '#{dmg_file}' | grep -q 'Software License Agreement: true'")
-        raise "Requires EULA Acceptance; add 'accept_eula true' to package resource" if software_license_agreement && !new_resource.accept_eula
-        accept_eula_cmd = new_resource.accept_eula ? "echo Y |" : ""
-        system "#{accept_eula_cmd} hdiutil attach #{passphrase_cmd} '#{dmg_file}'"
-      end
-      not_if "hdiutil info #{passphrase_cmd} | grep -q 'image-path.*#{dmg_file}'"
-    end
-
+    if(!new_resource.already_mounted)
+        ruby_block "attach #{dmg_file}" do
+          block do
+            software_license_agreement = system("hdiutil imageinfo #{passphrase_cmd} '#{dmg_file}' | grep -q 'Software License Agreement: true'")
+            raise "Requires EULA Acceptance; add 'accept_eula true' to package resource" if software_license_agreement && !new_resource.accept_eula
+            accept_eula_cmd = new_resource.accept_eula ? "echo Y |" : ""
+            system "#{accept_eula_cmd} hdiutil attach #{passphrase_cmd} '#{dmg_file}'"
+          end
+          not_if "hdiutil info #{passphrase_cmd} | grep -q 'image-path.*#{dmg_file}'"
+        end
+    end 
+    
     case new_resource.type
     when "dir"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
-      end
+    end
+    
+    
     when "app"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
 
@@ -73,8 +77,10 @@ action :install do
       sleep new_resource.sleep_after_install
     end
     
-    execute "hdiutil detach '/Volumes/#{volumes_dir}'" do
-      retries 5
+    if(new_resource.detach)
+        execute "hdiutil detach '/Volumes/#{volumes_dir}'" do
+        retries 5
+        end
     end
   end
 end

@@ -31,5 +31,5 @@ end
 dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
   all_users true
   group "Adobe Creative Suite 6"
-  restart true
+#  restart true
 end

@@ -21,5 +21,5 @@ end
 # Add to dock
 dock_add "/Applications/Safari.app" do
   all_users true
-  restart true
+#  restart true
 end

@@ -18,7 +18,6 @@ def hostname_for_ip (ip)
     Resolv.getname(ip) 
   rescue => e
     puts e.inspect
-    puts e.backtrace
     ""
   end
 end

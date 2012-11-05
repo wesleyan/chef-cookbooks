@@ -18,5 +18,5 @@ end
 
 dock_add "/Applications/Google Chrome.app" do
   all_users true
-  restart true  
+#  restart true  
 end

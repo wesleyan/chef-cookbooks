@@ -34,5 +34,5 @@ end
 dock_add "/Applications/Adobe After Effects CS6/Adobe After Effects CS6.app" do
   all_users true
   group "Adobe Creative Suite 6"
-  restart true
+#  restart true
 end

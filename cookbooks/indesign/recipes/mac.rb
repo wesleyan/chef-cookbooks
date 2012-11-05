@@ -35,5 +35,5 @@ end
 dock_add "/Applications/Adobe InDesign CS6/Adobe InDesign CS6.app" do
   all_users true
   group "Adobe Creative Suite 6"
-  restart true
+#  restart true
 end

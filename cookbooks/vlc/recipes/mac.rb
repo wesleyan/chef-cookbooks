@@ -20,5 +20,5 @@ end
 # Add to dock
 dock_add "/Applications/VLC.app" do
   all_users true
-  restart true  
+#  restart true  
 end
