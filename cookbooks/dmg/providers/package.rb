@@ -22,15 +22,16 @@ def load_current_resource
   @dmgpkg.app(new_resource.app)
   Chef::Log.debug("Checking for application #{new_resource.app}")
   @dmgpkg.installed(installed?)
+#  @dmgpkg.mounted
 end
 
 action :install do
+  volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
+  dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
+  dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
+
   unless @dmgpkg.installed
-
-    volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
-    dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
-    dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
-
+      puts "blah"
     remote_file "#{dmg_file} - #{@dmgpkg.name}" do
       path dmg_file
       source new_resource.source
@@ -39,17 +40,20 @@ action :install do
     end
 
     passphrase_cmd = new_resource.dmg_passphrase ? "-passphrase #{new_resource.dmg_passphrase}" : ""
-    if(!new_resource.already_mounted)
-        ruby_block "attach #{dmg_file}" do
-          block do
+
+
+    ruby_block "attach #{dmg_file}" do
+      block do
+          if(!::File.directory?("/Volumes/#{volumes_dir}"))
             software_license_agreement = system("hdiutil imageinfo #{passphrase_cmd} '#{dmg_file}' | grep -q 'Software License Agreement: true'")
             raise "Requires EULA Acceptance; add 'accept_eula true' to package resource" if software_license_agreement && !new_resource.accept_eula
             accept_eula_cmd = new_resource.accept_eula ? "echo Y |" : ""
             system "#{accept_eula_cmd} hdiutil attach #{passphrase_cmd} '#{dmg_file}'"
           end
           not_if "hdiutil info #{passphrase_cmd} | grep -q 'image-path.*#{dmg_file}'"
-        end
-    end 
+      end
+    end
+    
     
     case new_resource.type
     when "dir"
@@ -76,16 +80,24 @@ action :install do
     if(new_resource.sleep_after_install > 0) 
       sleep new_resource.sleep_after_install
     end
-    
-    if(new_resource.detach)
-        execute "hdiutil detach '/Volumes/#{volumes_dir}'" do
-        retries 5
-        end
-    end
+    puts "blah2"
   end
+  
+  ruby_block "unmount" do
+     block do
+       if(::File.directory?("/Volumes/#{volumes_dir}") && new_resource.unmount)
+         system("hdiutil detach '/Volumes/#{volumes_dir}'")
+       end
+      end
+   end
 end
 
 private
+
+def mounted? 
+  # 
+  # ::File.directory?("/Volumes/#{volumes_dir}")
+end
 
 def installed?
   ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") ||

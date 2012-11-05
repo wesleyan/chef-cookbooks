@@ -30,8 +30,8 @@ attribute :package_id, :kind_of => String, :default => nil
 attribute :dmg_passphrase, :kind_of => String, :default => nil
 attribute :accept_eula, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :sleep_after_install, :kind_of => Integer, :default => 0
-attribute :detach, :kind_of => [TrueClass, FalseClass], :default => true
-attribute :already_attached, :kind_of => [TrueClass, FalseClass], :default => false
+attribute :unmount, :kind_of => [TrueClass, FalseClass], :default => true
+#attribute :already_mounted, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(name, run_context=nil)
   super
