@@ -10,7 +10,7 @@ run_list "recipe[prepare::mac]",
           "recipe[homebrew]", 
           # Desktop and Dock
           "recipe[dock::mac]", 
-          "recipe[desktop_picture::mac]",
+          #"recipe[desktop_picture::mac]",
           # Core system updates
           "recipe[osxupdate::mac]", 
           "recipe[java::mac]", 
