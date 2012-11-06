@@ -1,4 +1,4 @@
-name "macrchristensen"
+name "mac"
 description "mac image"
 
 run_list "recipe[prepare::mac]",
