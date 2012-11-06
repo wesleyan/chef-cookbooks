@@ -24,36 +24,37 @@ run_list "recipe[prepare::mac]",
           # "recipe[flash::mac]", 
           "recipe[silverlight::mac]",
           # Core applications
-           "recipe[office::mac]",
-           "recipe[itunes::mac]", 
-           "recipe[unarchiver::mac]",
-           "recipe[vlc::mac]",
-           # Adobe CS6 Suite
-            "recipe[photoshop::mac]", 
-           "recipe[illustrator::mac]", 
-          # "recipe[indesign::mac]",
-          # "recipe[dreamweaver::mac]", 
-          # "recipe[flashpro::mac]",
-          # "recipe[premierepro::mac]", 
-          # "recipe[aftereffects::mac]", 
-            "recipe[acrobat::mac]",
+          "recipe[office::mac]",
+          "recipe[itunes::mac]", 
+          "recipe[unarchiver::mac]",
+          "recipe[vlc::mac]",
+          # Adobe CS6 Suite
+          "recipe[photoshop::mac]", 
+          "recipe[illustrator::mac]", 
+          "recipe[indesign::mac]",
+          "recipe[dreamweaver::mac]", 
+          "recipe[flashpro::mac]",
+          "recipe[premierepro::mac]", 
+          "recipe[aftereffects::mac]", 
+          "recipe[acrobat::mac]",
           # Stats applications
-           "recipe[r::mac]",
-           "recipe[rstudio::mac]", 
+          "recipe[r::mac]",
+          "recipe[rstudio::mac]", 
           # 3D modeling/rendering applications
-          # "recipe[rhinoceros::mac]",
-           "recipe[sketchup::mac]",
+          "recipe[rhinoceros::mac]",
+          "recipe[sketchup::mac]",
           # Audio applications
-           "recipe[soundhack::mac]", 
-           "recipe[supercollider::mac]",
+          "recipe[soundhack::mac]", 
+          "recipe[supercollider::mac]",
+          # Music, Dance & Arts
+          "recipe[troikatronix_isadora::mac]",
           #  Development
           "recipe[eclipse::mac]", 
           "recipe[aquamacs::mac]", 
           "recipe[macvim::mac]", 
-          "recipe[finalize::mac]"
-          
+          "recipe[finalize::mac]"        
 
-#"recipe[remotedesktop::mac]"--,
+#"recipe[remotedesktop::mac]",
 
 default_attributes(
 "authorization" => {
