@@ -40,7 +40,11 @@
         action :run
       end    
   end
-
+  
+  def current_user
+    ENV['USER']
+  end
+  
   def copy_dock_plist_for_user(user) 
     # only copy if they have a home directory
    if File.directory? "/Users/#{user.username}"

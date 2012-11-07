@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install Combo Update
-#dmg_package "OSXUpdCombo10.8.2.dmg" do
+# dmg_package "OSXUpdCombo10.8.2.dmg" do
 #  app "OSXUpdCombo10.8.2"
 #  volumes_dir "OS X 10.8.2 Update Combo"
 #  dmg_name "OSXUpdCombo10.8.2"
@@ -16,7 +16,7 @@
 #  action :install
 #  type "pkg"
 #  package_id "com.apple.pkg.update.os.10.8.2.12C60.combo"
-#end
+# end
 
 # Install 10.8.2 variant update for new 2012 hardware
 dmg_package "OSXUpd10.8.2.dmg" do

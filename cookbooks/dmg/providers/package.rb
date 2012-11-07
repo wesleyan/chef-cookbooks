@@ -73,7 +73,7 @@ action :install do
       end
     when "mpkg", "pkg"
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
-        returns [0, 1]
+ #       returns [0, 1]
       end  
     end
     
