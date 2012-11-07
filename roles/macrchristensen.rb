@@ -1,4 +1,4 @@
-name "mac"
+name "macrchristensen"
 description "mac image"
 
 run_list "recipe[prepare::mac]",
@@ -15,7 +15,6 @@ run_list "recipe[prepare::mac]",
           "recipe[osxupdate::mac]", 
           "recipe[java::mac]", 
           "recipe[printers::mac]", 
-          "recipe[rawcamera::mac]",
           # Browsers
           "recipe[chrome::mac]", 
           "recipe[firefox::mac]",
@@ -24,6 +23,8 @@ run_list "recipe[prepare::mac]",
           # "recipe[flash::mac]", 
           "recipe[silverlight::mac]",
           # Core applications
+          "recipe[apple_ilife::mac]",
+          #"recipe[rawcamera::mac]",
           "recipe[office::mac]",
           "recipe[itunes::mac]", 
           "recipe[unarchiver::mac]",

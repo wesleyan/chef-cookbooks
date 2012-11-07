@@ -2,12 +2,12 @@
 
 This file is used to list changes made in each version of chrome.
 
+## 0.2.0
+
+* Added dock icon creation
+* Updated app to 23.0.1271.64
+
 ## 0.1.0:
 
 * Initial release of chrome cookbook
 * Current version is 22.0.1229.94
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
