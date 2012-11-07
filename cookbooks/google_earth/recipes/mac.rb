@@ -21,3 +21,10 @@ dmg_package "Google Earth Web Plug-in" do
   unmount true
 #  already_mounted true
 end
+
+cookbook_file "/tmp/com.google.GoogleEarthPlus.plist" 
+
+preference_copy "/tmp/com.google.GoogleEarthPlus.plist" do
+  convert_to_binary true
+  all_users true
+end

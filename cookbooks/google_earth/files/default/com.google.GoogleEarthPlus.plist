@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AlwaysUseExternalBrowser</key>
+	<false/>
+	<key>CachePath</key>
+	<string>/Users/jclyons/Library/Caches/Google Earth</string>
+	<key>ControllerEnabled</key>
+	<false/>
+	<key>ControllerMode</key>
+	<integer>2</integer>
+	<key>CsiFrameStats</key>
+	<string></string>
+	<key>FlySpeed</key>
+	<real>0.17999999999999999</real>
+	<key>GroundLevelAutoTransition</key>
+	<true/>
+	<key>InvertMouseWheel</key>
+	<false/>
+	<key>KMLPath</key>
+	<string>/Users/jclyons/Library/Application Support/Google Earth</string>
+	<key>Key</key>
+	<string>ArFrQscfBYo=</string>
+	<key>Layer.drivingDirectionsRange</key>
+	<real>100</real>
+	<key>Layer.drivingDirectionsSpeed</key>
+	<real>150</real>
+	<key>Layer.drivingDirectionsTilt</key>
+	<real>60</real>
+	<key>Layer.tourBalloonShow</key>
+	<false/>
+	<key>Layer.tourFlyTime</key>
+	<real>10</real>
+	<key>Layer.tourFlysAlongsLines</key>
+	<false/>
+	<key>Layer.tourRecordingAccuracy</key>
+	<integer>75</integer>
+	<key>Layer.tourTrackKeyframeSpacing</key>
+	<real>3</real>
+	<key>Layer.tourTrackSpeed</key>
+	<real>6</real>
+	<key>Layer.tourWaitTime</key>
+	<real>3</real>
+	<key>LogoutClean</key>
+	<false/>
+	<key>Render.PrimaryFontVersion3Weight</key>
+	<integer>75</integer>
+	<key>ReverseControls</key>
+	<false/>
+	<key>SwoopEnabled</key>
+	<true/>
+	<key>UID</key>
+	<string>/dl1cJNxT6e3yDw1KRFyKw==</string>
+	<key>UseThrownDrag</key>
+	<true/>
+	<key>UserAgreedToKeystone</key>
+	<true/>
+	<key>VID</key>
+	<string>AAAACjcuMC4xLjgyNTA=</string>
+	<key>currentVersion</key>
+	<string>7.0.1.8250</string>
+	<key>enableTips</key>
+	<false/>
+	<key>mouseWheelSpeed</key>
+	<real>1</real>
+	<key>numRuns</key>
+	<integer>1</integer>
+	<key>numRunsThisVersion</key>
+	<integer>1</integer>
+	<key>osName</key>
+	<string>Mac OS X</string>
+	<key>renderWarning-OGLsoftwareEmulated</key>
+	<false/>
+</dict>
+</plist>
