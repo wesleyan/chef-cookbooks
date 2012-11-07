@@ -2,6 +2,8 @@ cookbook_file "/tmp/font.zip"
 
 cookbook_file "/usr/bin/xcrun" 
 
+#cookbook_file "/tmp/screenresolution.zip"
+
 file "/usr/bin/xcrun" do
   owner "root"
   group "wheel"
@@ -30,6 +32,7 @@ directory "/usr/local/share/ghostscript/fonts/" do
 end
 
 execute "unzip -o /tmp/font.zip -d /usr/local/share/ghostscript/fonts/"
+# execute "unzip -o /tmp/screenresolution.zip -d /tmp/"
 
 desktop_picture "/var/generated_files/background.jpg" do
   action :generate
