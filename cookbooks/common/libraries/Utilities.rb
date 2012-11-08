@@ -146,8 +146,8 @@ def copy_plist_for_user_template(plist_path)
     end
     
   #  execute "chown #{user.username}:staff /tmp/com.apple.dock.plist"
-    execute "chmod 600 /tmp/#{basename}"
-    execute "cp /tmp/#{basename} \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\"" 
+    execute "chmod 600 #{plist_path}"
+    execute "cp #{plist_path} \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\"" 
     execute "chown root:wheel \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\""
 end
 
