@@ -7,6 +7,6 @@ file "/tmp/duti" do
 end
 
 launch_association_set_file_handler "public.html" do
-  bundle_id "com.google.Chrome"
+  bundle_id "com.apple.Safari"
   all_users true
 end
