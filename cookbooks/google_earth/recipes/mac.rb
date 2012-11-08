@@ -1,4 +1,13 @@
-dmg_package "Google Earth" do
+#
+# Cookbook Name:: google_earth
+# Recipe:: mac
+#
+# Copyright 2012, Wesleyan University
+#
+# All rights reserved - Do Not Redistribute
+#
+# Install package
+dmg_package "GoogleEarthMac-Intel-7.0.1.dmg" do
   app "Google Earth"
   volumes_dir "Google Earth"
   dmg_name "GoogleEarthMac-Intel-7.0.1.dmg"
@@ -9,8 +18,10 @@ dmg_package "Google Earth" do
   type "app"
 end
 
-dmg_package "Google Earth Web Plug-in" do
-  app "Google Earth Web Plug-in.plugin"
+# Install web plugin
+dmg_package "GoogleEarthMac-Intel-7.0.1.dmg" do
+  app "Google Earth Web Plug-in"
+>>>>>>> b2f579a40e9b5b969d57c9224287ff4e61ef883b
   volumes_dir "Google Earth"
   dmg_name "GoogleEarthMac-Intel-7.0.1.dmg"
   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/google_earth-7/GoogleEarthMac-Intel-7.0.1.dmg"
