@@ -61,20 +61,9 @@ action :install do
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
-    end
-    
-    when "custom"
-      if(new_resource.command)
-          execute new_resource.command do
-            command new_resource.command
-          end
       end
-    end
-  
-  
     when "app"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
-
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
@@ -83,6 +72,12 @@ action :install do
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
  #       returns [0, 1]
       end  
+    when "custom"
+      if(new_resource.command)
+        execute new_resource.name do
+          command new_resource.command
+        end
+      end
     end
     
     if(new_resource.sleep_after_install > 0) 
