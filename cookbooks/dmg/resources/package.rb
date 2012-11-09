@@ -30,6 +30,7 @@ attribute :package_id, :kind_of => String, :default => nil
 attribute :dmg_passphrase, :kind_of => String, :default => nil
 attribute :accept_eula, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :sleep_after_install, :kind_of => Integer, :default => 0
+attribute :command, :kind_of => String, :default => nil
 attribute :unmount, :kind_of => [TrueClass, FalseClass], :default => true
 #attribute :already_mounted, :kind_of => [TrueClass, FalseClass], :default => false
 

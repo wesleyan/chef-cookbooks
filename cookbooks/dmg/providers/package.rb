@@ -63,7 +63,15 @@ action :install do
         ignore_failure true
     end
     
-    
+    when "custom"
+      if(new_resource.command)
+          execute new_resource.command do
+            command new_resource.command
+          end
+      end
+    end
+  
+  
     when "app"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
 
