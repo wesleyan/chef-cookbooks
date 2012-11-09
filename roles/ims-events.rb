@@ -38,6 +38,9 @@ run_list  "recipe[prepare::ims-events]",
           "recipe[premierepro::mac]", 
           "recipe[aftereffects::mac]", 
           "recipe[acrobat::mac]",
+          # Video
+          "recipe[compressor::mac]",
+          "recipe[finalcutpro::mac]",
           # Finalize 
           "recipe[finalize::mac]"
 #"recipe[remotedesktop::mac]",
