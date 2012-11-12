@@ -23,4 +23,9 @@ default_attributes(
     "users" => ["administrator"],
     "passwordless" => true
   }
+
+},
+"homebrew" => {
+   "user" => "administrator"
 })
+
