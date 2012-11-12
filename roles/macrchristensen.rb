@@ -40,7 +40,8 @@ run_list "recipe[prepare::mac]",
           "recipe[acrobat::mac]",
           # Stats applications
           "recipe[r::mac]",
-          "recipe[rstudio::mac]", 
+          "recipe[rstudio::mac]",
+          "recipe[ibm_spss::mac]", 
           # 3D modeling/rendering applications
           "recipe[rhinoceros::mac]",
           "recipe[sketchup::mac]",
