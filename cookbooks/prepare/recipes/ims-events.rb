@@ -1,31 +1,27 @@
-#
-# Cookbook Name:: prepare
-# Recipe:: ims-events
-#
-# Copyright 2012, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
-#
-
-#user "labuser" do
-#  comment "labuser"
-#  home "/Users/labuser"
-#end
+# user "labuser" do
+#   comment "labuser"
+#   home "/Users/labuser"
+#   action :create
+# end
 
 user "administrator" do
   comment "administrator"
   home "/Users/administrator"
+  action :create
 end
 
 group "admin" do
   members ['administrator']
+  append true
 end
+
 
 directory "/Users/administrator/.ssh" do
   mode "0744"
   owner "administrator"
   group "staff"
   action :create
+  recursive true
 end
 
 cookbook_file "/Users/administrator/.ssh/authorized_keys" do
@@ -49,6 +45,7 @@ cookbook_file "/etc/chef/client.rb" do
   mode "0644"
 end
 
+# Download scripts
 cookbook_file "/tmp/host_utilities.rb" do
   source "host_utilities.rb" 
   mode "0700"
@@ -64,15 +61,17 @@ cookbook_file "/tmp/set_hostname.rb" do
   mode "0700"
 end
 
+# Run scripts
 execute "change hostname" do
   command "ruby /tmp/set_hostname.rb"
+  returns [0, 1]
   action :run
 end
 
 #execute "bind to domain" do
 #  command "ruby /tmp/bind_to_domain.rb"
 #  action :run
-#  returns [0,-1, 78]
+#  returns [0,-1, 1, 78]
 #end
 
 execute "spctl disable" do
@@ -80,21 +79,19 @@ execute "spctl disable" do
   action :run
 end
 
-directory "/usr/local" do
-  owner "root"
-  group "wheel"
-  action :create
-end
-
-execute "set owner of /usr/local" do
-  command "sudo chown -R `whoami`:staff /usr/local"
+execute "set sleep time to never" do
+  command "pmset sleep 0"
   action :run
 end
 
+execute "set display sleep time to never" do
+  command "pmset displaysleep 0"
+  action :run
+end
 
-
+# Delete temporary files
 file "/tmp/host_utilities.rb" do
-  action :delete
+ action :delete
 end
 
 file "/tmp/set_hostname.rb" do
@@ -105,11 +102,7 @@ end
 #  action :delete
 #end
 
-# service "ScreenSharing" do
-#   service_name "com.apple.screensharing"
-#   action :start
-# end
-
+# Change login window to user/pass
 execute "change login window" do
   command "defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true"
   action :run
