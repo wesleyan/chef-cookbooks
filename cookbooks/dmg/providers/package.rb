@@ -68,6 +68,9 @@ action :install do
         mode 0755
         ignore_failure true
       end
+      if(new_resource.receipt_id)
+        execute "touch /var/generated_files/receipts/#{new_resource.package_id}"
+      end
     when "mpkg", "pkg"
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
  #       returns [0, 1]

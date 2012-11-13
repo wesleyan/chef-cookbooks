@@ -16,9 +16,3 @@ dmg_package "googlechrome.dmg" do
   action :install
   type "app"
 end
-
-# Add shortcut to dock
-dock_add "/Applications/Google Chrome.app" do
-  all_users true
-#  restart true  
-end

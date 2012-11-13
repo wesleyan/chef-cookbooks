@@ -1,89 +1,51 @@
-# Mountain Lion inexplicably includes some sort of 'dockfixup' plist in /Library/Preferences that adds Notes to the User Template dock. Not very useful. Not sure why Apple does it.
-file "/Library/Preferences/com.apple.dockfixup.plist" do
-  action :delete
+# Dock::mac is the standard Mac dock
+
+# Create initial dock named "Mac"
+dock "Mac" do
+  action :create
 end
 
-# if this file exists we do not want to regenerate the dock plist - it has already been generated 
-if IO::File.exist?("/tmp/dockregen.tmp") 
-  node.set['dock']['regenerate'] = false
+dock_application "/Applications/Launchpad.app" do
+  dock "Mac"
+  action :add
 end
 
-cookbook_file "/tmp/seticon.zip"
-
-execute "unzip -o /tmp/seticon.zip -d /tmp/"
-
-file "/tmp/seticon" do
-  owner "root"
-  group "wheel"
-  mode "0755"
-  action :touch
+dock_application "/Applications/Mission Control.app" do
+  dock "Mac"
+  action :add
 end
 
-dock_add "/Applications/Launchpad.app" do
-  all_users true
+# Download Adobe group icon
+cookbook_file "/tmp/adobe.png"
+
+
+# # Create dock folder, if it does not exist
+dock_folder "Adobe Creative Suite 6" do
+  dock "Mac"
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+  icon "/tmp/adobe.png"
 end
 
-dock_add "/Applications/Mission Control.app" do
-  all_users true
-#  restart true
+
+# Add icon to dock
+dock_application "/Applications/Adobe Photoshop CS6/Adobe Photoshop CS6.app" do
+  dock "Mac"
+  group "Adobe Creative Suite 6"
+  action :add
 end
 
+# Add icon to dock
+dock_application "/Applications/Adobe Illustrator CS6/Adobe Illustrator.app" do
+  dock "Mac"
+  group "Adobe Creative Suite 6"
+end
 
-
-# dock_add "/Applications/TextMate.app" do
-#   all_users true
-# end
-# 
-# dock_add "/Applications/Utilities/Terminal.app" do
-#   all_users true
-# end
-# 
-# dock_add "/Applications/Google Chrome.app" do
-#   all_users true
-#   group "Browsers"
-# end
-# 
-# dock_add "/Applications/Safari.app" do
-#   all_users true
-#   group "Browsers"
-# end
-# 
-# dock_add "/Applications/Firefox.app" do
-#   all_users true
-#   group "Browsers"
-# 
-# end
-# 
-# dock_add "/Applications/Calculator.app" do
-#   all_users true
-# end
-# 
-# dock_add "Adobe" do
-#   all_users true
-#   action :folder_create
-#   show_as "grid"
-#   display_as "folder"
-#   arrangement "name"
-# end
-# 
-# dock_add "/Applications/Adobe Photoshop CS4/Adobe Photoshop CS4.app" do
-#   all_users true
-#   group "Adobe"
-# end
-# 
-# # dock_add "/Applications/Adobe InDesign CS4/Adobe InDesign CS4.app" do
-# #   all_users true
-# #   group "Adobe"
-# # end
-# 
-# dock_add "/Applications/Adobe Bridge CS4/Adobe Bridge CS4.app" do
-#   all_users true
-#   group "Adobe"
-# end
-# 
-# dock_add "/Applications/Adobe Illustrator CS4/Adobe Illustrator.app" do
-#   all_users true
-#   group "Adobe"
-#   restart true
-# end
+#Generate binary plist for dock "Mac" and copy it into place for all users
+dock_plist "/tmp/com.apple.dock.plist" do
+  dock "Mac"
+  restart true
+#  all_users true
+end
 # 
