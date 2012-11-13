@@ -15,4 +15,5 @@ dmg_package "isadoracore13fc24-std.dmg" do
   checksum "56af006265c382e72ab73d33cce141a126c79736467b0a231871cdac75661322"
   action :install
   type "pkg"
+  package_id "com.troikatronix.isadora-core-standard.application"
 end

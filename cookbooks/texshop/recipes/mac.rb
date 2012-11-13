@@ -19,7 +19,7 @@
 #end
 
 # Install MacTeX libraries (includes the latest TeXShop for now)
-dmg_package "MacTeX-20120701.dmg " do
+dmg_package "MacTeX-20120701.dmg" do
   app "MacTeX"
   volumes_dir "MacTeX"
   dmg_name "MacTeX-20120701"

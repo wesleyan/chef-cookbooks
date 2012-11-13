@@ -38,6 +38,9 @@ run_list "recipe[prepare::mac]",
           "recipe[premierepro::mac]", 
           "recipe[aftereffects::mac]", 
           "recipe[acrobat::mac]",
+          # NSM applications
+          "recipe[texshop::mac]",
+          "recipe[mrbayes::mac]",
           # Stats applications
           "recipe[r::mac]",
           "recipe[rstudio::mac]",
@@ -54,7 +57,6 @@ run_list "recipe[prepare::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs::mac]", 
           "recipe[macvim::mac]",
-          "recipe[texshop::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
