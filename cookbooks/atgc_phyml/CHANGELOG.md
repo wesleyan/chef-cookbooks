@@ -1,11 +1,10 @@
-# CHANGELOG for xcode
+# CHANGELOG for atgc_phyml
 
-This file is used to list changes made in each version of xcode.
+This file is used to list changes made in each version of atgc_phyml.
 
 ## 0.1.0:
 
-* Initial release of xcode cookbook
-* Current version: 4.5.1 / October 2012
+* Initial release of atgc_phyml
 
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

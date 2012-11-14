@@ -4,7 +4,7 @@ description "mac image"
 run_list "recipe[prepare::mac]",
           "recipe[sudo]", 
           # XCode
-          "recipe[xcode::mac]", 
+          "recipe[apple_xcode::mac]", 
           # Package providers
           "recipe[dmg]", 
           "recipe[homebrew]", 
