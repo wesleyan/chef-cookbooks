@@ -57,7 +57,7 @@ run_list "recipe[prepare::mac]",
           # Music, Dance & Arts
           "recipe[troikatronix_isadora::mac]",
           #  Development
-          #"recipe[python::mac]",
+          "recipe[python::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs::mac]", 
           "recipe[macvim::mac]",
