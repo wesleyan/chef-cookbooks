@@ -14,6 +14,11 @@ package 'git' do
   not_if "which git"
 end
 
+execute "change permissions" do
+  command "chown -R administrator /usr/local/lib"
+  command "chown -R #{node['homebrew']['user']} /usr/local/Cellar"
+end
+
 execute "update homebrew from github" do
   user node['homebrew']['user']
   command "/usr/local/bin/brew update || true"
