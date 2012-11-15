@@ -41,6 +41,7 @@ run_list "recipe[prepare::mac]",
           # NSM applications
           "recipe[texshop::mac]",
           "recipe[mrbayes::mac]",
+          "recipe[atgc_phyml::mac]",
           # Stats applications
           "recipe[r::mac]",
           "recipe[rstudio::mac]",
@@ -54,6 +55,7 @@ run_list "recipe[prepare::mac]",
           # Music, Dance & Arts
           "recipe[troikatronix_isadora::mac]",
           #  Development
+          "recipe[python::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs::mac]", 
           "recipe[macvim::mac]",

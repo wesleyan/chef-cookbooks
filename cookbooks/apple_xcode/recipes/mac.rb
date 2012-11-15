@@ -26,10 +26,10 @@ dmg_package "xcode452cltools10_86938211a.dmg" do
   checksum "7eb3f179466bf231862a98f4c65c526e0a3ccfbab9e7e97da66ccbe16e6da27d"
   action :install
   type "mpkg"
-  #package_id "com.apple.pkg.DeveloperToolsCLI"
+  package_id "com.apple.pkg.DeveloperToolsCLI"
 end
 
 # Accept Xcode license silently so homebrew will be able to properly build packages
-execute "xcodebuild -license"
+#execute "xcodebuild -license"
 
 # execute "xcode-select -switch /usr/bin"
