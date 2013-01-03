@@ -8,11 +8,11 @@
 #
 
 # Install package
-dmg_package "Firefox 16.0.2.dmg" do
+dmg_package "Firefox 17.0.1.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
-  dmg_name "Firefox 16.0.2"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/mozilla_firefox-16/Firefox%2016.0.2.dmg"
+  dmg_name "Firefox 17.0.1"
+  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/mozilla_firefox-16/Firefox%2017.0.1.dmg"
   checksum "54a76384f3a4a241fd6d7c78d98c33a85792b6fd1ff9df7de2147f3b9415db29"
   action :install
   type "app"

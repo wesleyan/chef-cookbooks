@@ -5,7 +5,7 @@ This file is used to list changes made in each version of chrome.
 ## 0.2.0
 
 * Added dock icon creation
-* Updated app to 23.0.1271.64
+* Updated app to 23.0.1271.101
 
 ## 0.1.0:
 

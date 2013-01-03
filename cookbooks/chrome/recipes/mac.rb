@@ -12,7 +12,7 @@ dmg_package "googlechrome.dmg" do
   volumes_dir "Google Chrome"
   dmg_name "googlechrome"
   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/google_chrome-23/googlechrome.dmg"
-  checksum "7118c978960cb343d2e16463a557ecbd72fc0f30e2f0bd5864dfa596358e17d3"
+  checksum "848d861c0804706f88b58da9f21d554cf68d6e522e8553eae4333e557a431d5a"
   action :install
   type "app"
 end
