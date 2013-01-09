@@ -1,14 +1,11 @@
-# CHANGELOG for unarchiver
+# CHANGELOG for aquamacs_emacs
 
-This file is used to list changes made in each version of unarchiver.
-
-## 0.2.0
-
-* Updated app to version 3.5.1
+This file is used to list changes made in each version of aquamacs.
 
 ## 0.1.0:
 
-* Initial cookbook creation
+* Initial release of aquamacs_emacs cookbook
+* Current version: 2.4
 
 - - - 
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

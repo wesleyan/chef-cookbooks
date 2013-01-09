@@ -21,7 +21,6 @@ end
 # Install web plugin
 dmg_package "GoogleEarthMac-Intel-7.0.1.dmg" do
   app "Google Earth Web Plug-in"
->>>>>>> b2f579a40e9b5b969d57c9224287ff4e61ef883b
   volumes_dir "Google Earth"
   dmg_name "GoogleEarthMac-Intel-7.0.1.dmg"
   source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/google_earth-7/GoogleEarthMac-Intel-7.0.1.dmg"
