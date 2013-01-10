@@ -18,5 +18,5 @@ dmg_package "SPSS_Statistics_21_mac_silent.dmg" do
   checksum "d5c74264d02dcca7862eb677b05e10d9c2ce82c14979ca0b0a26784f2fbaf17b"
   action :install
   type "custom"
-  command "SPSS_Statistics_Installer.bin -f /tmp/installer.properties"
+  command "SPSS_Statistics_Installer.bin' -f /tmp/installer.properties"
 end

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: illustrator
+# Cookbook Name:: adobe_illustrator_cs6
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -15,7 +15,7 @@ dmg_package "adobe_illustrator_cs6-16.0.3.dmg" do
   checksum "f4fa63d987582f0d5cd690da377a887def19272b826ceee18ea190d3606c4ef4"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.FFE0F483-5EAA-47AF-973F-11F83DD15D1B"
+  package_id "com.adobe.Enterprise.install.93E2A28A-EA2B-44A2-8D93-B5816DAAC142"
 end
 
 # Download icon

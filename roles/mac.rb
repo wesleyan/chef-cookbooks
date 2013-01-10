@@ -10,40 +10,40 @@ run_list "recipe[prepare::mac]",
           "recipe[homebrew]", 
           # Desktop and Dock
           # "recipe[preference::mac]",
-          "recipe[dock::mac]" 
-          # "recipe[desktop_picture::mac]",
+          "recipe[dock::mac]", 
+          #"recipe[desktop_picture::mac]",
           # Core system updates
           #"recipe[apple_osx_updates::mac]", 
-          #"recipe[oracle_java::mac]", 
-          #"recipe[printers::mac]", 
+          "recipe[oracle_java::mac]", 
+          "recipe[printers::mac]", 
           # "recipe[rawcamera::mac]",
           # Browsers
-          #"recipe[chrome::mac]", 
-          #"recipe[firefox::mac]",
-          #"recipe[safari::mac]", 
+          "recipe[google_chrome::mac]", 
+          "recipe[mozilla_firefox::mac]",
+          "recipe[apple_safari::mac]", 
           # Runtimes
-          # "recipe[flash::mac]", 
-          #"recipe[silverlight::mac]",
+          "recipe[adobe_flash_player::mac]", 
+          "recipe[microsoft_silverlight::mac]",
           # Core applications
-          #{}"recipe[office::mac]",
-          #{}"recipe[itunes::mac]", 
-          #{}"recipe[unarchiver::mac]",
-          #{}"recipe[vlc::mac]",
+          "recipe[microsoft_office::mac]",
+          "recipe[apple_itunes::mac]", 
+          "recipe[unarchiver::mac]",
+          "recipe[videolan_vlc::mac]",
           # Adobe CS6 Suite
-          #{}"recipe[photoshop::mac]", 
-          #{}"recipe[illustrator::mac]", 
-          #{}"recipe[indesign::mac]",
-          #{}"recipe[dreamweaver::mac]", 
-          #{}"recipe[flashpro::mac]",
-          #{}"recipe[premierepro::mac]", 
-          #{}"recipe[aftereffects::mac]", 
-          #{}"recipe[acrobat::mac]",
+          "recipe[adobe_photoshop_cs6::mac]", 
+          "recipe[adobe_illustrator_cs6::mac]", 
+          "recipe[adobe_indesign_cs6::mac]",
+          "recipe[adobe_dreamweaver_cs6::mac]", 
+          "recipe[adobe_flash_professional_cs6::mac]",
+          "recipe[adobe_premiere_pro_cs6::mac]", 
+          "recipe[adobe_after_effects_cs6::mac]", 
+          "recipe[adobe_acrobat_pro::mac]",
           # Stats applications
-          #{}"recipe[r::mac]",
-          #{}"recipe[rstudio::mac]", 
+          "recipe[gnu_r::mac]",
+          "recipe[rstudio::mac]", 
           # 3D modeling/rendering applications
-          #{}"recipe[rhinoceros::mac]",
-          #{}"recipe[sketchup::mac]",
+          "recipe[mcneel_rhinoceros::mac]",
+          "recipe[trimble_sketchup::mac]",
           # Audio applications
           #{}"recipe[soundhack::mac]", 
           #{}"recipe[supercollider::mac]",
@@ -55,7 +55,7 @@ run_list "recipe[prepare::mac]",
           #{}"recipe[macvim::mac]",
           #{}"recipe[texshop::mac]",
           # Finalize 
-          #{}"recipe[finalize::mac]"        
+          "recipe[finalize::mac]"        
 
 #"recipe[remotedesktop::mac]",
 

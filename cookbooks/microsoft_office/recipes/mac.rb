@@ -15,7 +15,7 @@ dmg_package "ms_office_2011-14.2.5" do
   checksum "0a83e1ed5113aa3c721c48d74b33e5979b59c0b2c15b141be9389ba3a6e5fc79"
   action :install
   type "mpkg"
-  package_id ""
+  package_id "com.microsoft.officeForMac20111425.Office.pkg"
 end
 
 # Install customized plist files to surpress first-run dialogues

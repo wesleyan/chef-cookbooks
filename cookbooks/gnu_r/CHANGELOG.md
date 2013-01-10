@@ -1,6 +1,11 @@
-# CHANGELOG for r
+# CHANGELOG for gnu_r
 
-This file is used to list changes made in each version of r.
+This file is used to list changes made in each version of gnu_r.
+
+## 0.2.0
+
+* Renamed to gnu_r
+* Updated to version 2.15.2
 
 ## 0.1.0:
 

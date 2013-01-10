@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: indesign
+# Cookbook Name:: adobe_indesign_cs6
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University

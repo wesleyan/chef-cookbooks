@@ -1,6 +1,11 @@
-# CHANGELOG for vlc
+# CHANGELOG for videolan_vlc
 
 This file is used to list changes made in each version of vlc.
+
+## 0.3.0
+
+* Updated app version to 2.0.5
+* Renamed cookbook
 
 ## 0.2.0:
 

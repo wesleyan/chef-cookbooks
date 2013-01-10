@@ -1,10 +1,10 @@
-# CHANGELOG for flash
+# CHANGELOG for adobe_flash_player
 
 This file is used to list changes made in each version of flash.
 
 ## 0.1.0:
 
-* Initial release of flash cookbook
+* Initial release of adobe_flash_player cookbook
 * Current version of Flash runtime: 11.4.402.287 
 
 - - - 

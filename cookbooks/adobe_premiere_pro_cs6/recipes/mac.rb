@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: premierepro
+# Cookbook Name:: adobe_premiere_pro_cs6
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University

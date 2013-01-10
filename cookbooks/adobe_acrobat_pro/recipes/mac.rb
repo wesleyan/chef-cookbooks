@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: acrobat
+# Cookbook Name:: adobe_acrobat_pro_xi
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -10,7 +10,7 @@ dmg_package "adobe_acrobat_pro_xi-11.0.dmg" do
   app "adobe_acrobat_pro_xi-11.0"
   volumes_dir "adobe_acrobat_pro_xi-11.0"
   dmg_name "adobe_acrobat_pro_xi-11.0"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/adobe_acrobat_pro_xi/adobe_acrobat_pro_xi-11.0.dmg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_acrobat_pro_xi/adobe_acrobat_pro_xi-11.0.dmg"
   checksum "ad64d83138a3c9ad74b41617f5a3b3e55470f3115806768576ebcc07c94e8822"
   action :install
   type "pkg"

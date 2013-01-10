@@ -15,7 +15,7 @@ dmg_package "adobe_dreamweaver_cs6-12.0.3.dmg" do
   checksum "0d8cd1b0f164fce1728306281a0c1825533e1abb7212736c4613a90f5b4e9afd"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.7BA62E33-4CBD-48AC-940F-9EACF5CCA5C9"
+  package_id "com.adobe.Enterprise.install.F0E755A7-73FC-42E6-8ECA-22A3FD95E008"
 end
 
 # Download icon

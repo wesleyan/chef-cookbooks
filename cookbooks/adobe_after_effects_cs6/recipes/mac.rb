@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: aftereffects
+# Cookbook Name:: adobe_after_effects_cs6
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -10,7 +10,7 @@ dmg_package "adobe_after_effects_cs6-11.0.2.dmg" do
   app "adobe_after_effects_cs6-11.0.2_Install"
   volumes_dir "adobe_after_effects_cs6-11.0.2"
   dmg_name "adobe_after_effects_cs6-11.0.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_after_effectsa_cs6/adobe_after_effects_cs6-11.0.2.dmg.dmg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_after_effects_cs6/adobe_after_effects_cs6-11.0.2.dmg"
   checksum "0d34b54b39689f35d0569bd298e6bddaa61ac32cf58bbabc44246d9465b966c9"
   action :install
   type "pkg"

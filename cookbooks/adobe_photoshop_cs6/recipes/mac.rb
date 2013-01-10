@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: photoshop
+# Cookbook Name:: adobe_photoshop_cs6
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -15,7 +15,7 @@ dmg_package "adobe_photoshop_cs6-13.0.3.dmg" do
   checksum "6ff0fd4c9649752f474ad5ddfa513c99b9680056e9aa299be3c8120bd3fd6037"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.E38986C1-44B1-483A-8DDB-681205FABDFB"
+  package_id "com.adobe.Enterprise.install.A6A953A3-576E-444D-8E18-4C99E80DB15C"
 end
 
 

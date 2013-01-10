@@ -1,6 +1,10 @@
-# CHANGELOG for itunes
+# CHANGELOG for apple_itunes
 
 This file is used to list changes made in each version of itunes.
+
+## 0.2.0
+
+* App updated to 11.0.1
 
 ## 0.1.0:
 
