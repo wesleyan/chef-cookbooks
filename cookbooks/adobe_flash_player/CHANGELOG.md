@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of flash.
 
+## 0.2.0:
+
+* Updated runtime to version 11.5.502.146
+
 ## 0.1.0:
 
 * Initial release of adobe_flash_player cookbook

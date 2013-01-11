@@ -8,11 +8,11 @@
 #
 # Need to figure out .app as an installer
 #
-dmg_package "install_flash_player_osx.dmg" do
+dmg_package "adobe_flash_player-11.5.502.146.dmg" do
   app "Install Adobe Flash Player"
   volumes_dir "Flash Player/Install Adobe Flash Player.app/Contents/MacOS"
-  dmg_name "install_flash_player_osx"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_flash_player/install_flash_player_osx.dmg"
+  dmg_name "adobe_flash_player-11.5.502.146"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_flash_player/adobe_flash_player-11.5.502.146.dmg"
   checksum "3b514c4a0956cc2c6a0f5150c16b484117f0883dc7ca73ce7d66541468e54212"
   action :install
   type "custom"
