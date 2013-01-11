@@ -1,6 +1,11 @@
-# CHANGELOG for sketchup
+# CHANGELOG for trimble_sketchup
 
 This file is used to list changes made in each version of sketchup.
+
+## 0.2.0
+
+* Renamed to trimble_sketchup
+* App keeps saying there's a new version available, but this is the latest available on the web.  Need to figure out a way to suppress.
 
 ## 0.1.0:
 
