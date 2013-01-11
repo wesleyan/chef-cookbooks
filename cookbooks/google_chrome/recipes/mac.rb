@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: chrome
+# Cookbook Name:: google_chrome
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -7,12 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install Chrome
-dmg_package "googlechrome.dmg" do
+dmg_package "googlechrome-24.0.1312.52.dmg" do
   app "Google Chrome"
   volumes_dir "Google Chrome"
-  dmg_name "googlechrome"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/google_chrome/googlechrome-23.0.1271.101.dmg"
-  checksum "848d861c0804706f88b58da9f21d554cf68d6e522e8553eae4333e557a431d5a"
+  dmg_name "googlechrome-24.0.1312.52"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/google_chrome/googlechrome-24.0.1312.52.dmg"
+  checksum "76fbd234ac3f110ae20f5352691584a1c1b7e19acc91b488df1b74d8398e1934"
   action :install
   type "app"
 end

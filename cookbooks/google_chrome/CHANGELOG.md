@@ -1,6 +1,11 @@
-# CHANGELOG for chrome
+# CHANGELOG for google_chrome
 
 This file is used to list changes made in each version of chrome.
+
+## 0.3.0:
+
+* Renamed to google_chrome
+* Updated app to 24.0.1312.52
 
 ## 0.2.0
 
