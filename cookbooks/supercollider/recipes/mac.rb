@@ -6,12 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "SuperCollider-3.5.6-OSX-universal.dmg" do
+dmg_package "SuperCollider-3.6.2-OSX-universal.dmg" do
   app "SuperCollider"
   volumes_dir "SuperCollider"
-  dmg_name "SuperCollider-3.5.6-OSX-universal"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/supercollider-3/SuperCollider-3.5.6-OSX-universal.dmg"
-  checksum "4246884546fd02b9156fffb120ff1d4a4c85db483d46d26fa1d6abab273a8ccf"
+  dmg_name "SuperCollider-3.6.2-OSX-universal"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/supercollider/SuperCollider-3.6.2-OSX-universal.dmg"
+  checksum "109866f7970f3caa41830620e370c5b3e70bba37ccdb97dee40b62307941666a"
   action :install
   type "dir"
 end
