@@ -12,11 +12,12 @@ run_list "recipe[prepare::mac]",
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
           #"recipe[desktop_picture::mac]",
-          # Core system updates
+          # Core system updates and applications
           #"recipe[apple_osx_updates::mac]", 
           "recipe[oracle_java::mac]", 
           "recipe[printers::mac]", 
-          # "recipe[rawcamera::mac]",
+          "recipe[sassafras_k2::mac]",
+          "recipe[cls_labstats::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
@@ -27,6 +28,7 @@ run_list "recipe[prepare::mac]",
           # Core applications
           "recipe[microsoft_office::mac]",
           "recipe[apple_itunes::mac]", 
+          "recipe[apple_ilife::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
           # Adobe CS6 Suite
@@ -40,20 +42,27 @@ run_list "recipe[prepare::mac]",
           "recipe[adobe_acrobat_pro::mac]",
           # Stats applications
           "recipe[gnu_r::mac]",
-          "recipe[rstudio::mac]", 
+          "recipe[rstudio::mac]",
+          # Uncomment when building an image from scratch until we have our own receipt system for custom installers
+          #"recipe[ibm_spss::mac]", 
           # 3D modeling/rendering applications
+          "recipe[google_earth::mac]",
           "recipe[mcneel_rhinoceros::mac]",
           "recipe[trimble_sketchup::mac]",
           # Audio applications
-          #{}"recipe[soundhack::mac]", 
-          #{}"recipe[supercollider::mac]",
+          "recipe[audacity::mac]",
+          "recipe[tomerbe_soundhack::mac]", 
+          "recipe[supercollider::mac]",
           # Music, Dance & Arts
-          #{}"recipe[troikatronix_isadora::mac]",
-          #  Development
-          #{}"recipe[eclipse::mac]", 
-          #{}"recipe[aquamacs::mac]", 
-          #{}"recipe[macvim::mac]",
-          #{}"recipe[texshop::mac]",
+          #"recipe[troikatronix_isadora::mac]",
+          # Natural Sciences & Mathematics
+          "recipe[python::mac]",
+          "recipe[eclipse::mac]", 
+          "recipe[aquamacs_emacs::mac]", 
+          "recipe[macvim::mac]",
+          "recipe[tug_mactex::mac]",
+          "recipe[smlnj::mac]",
+          "recipe[mrbayes::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
