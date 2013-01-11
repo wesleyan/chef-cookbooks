@@ -1,7 +1,11 @@
-# CHANGELOG for rhino
+# CHANGELOG for mcneel_rhinoceros
 
 This file is used to list changes made in each version of rhino.
 
+## 0.3.0
+
+* Renamed cookbook
+* Updated to build 20130108
 
 ## 0.2.0
 

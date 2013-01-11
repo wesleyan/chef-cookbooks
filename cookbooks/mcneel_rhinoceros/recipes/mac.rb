@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: rhinoceros
+# Cookbook Name:: mcneel_rhinoceros
 # Recipe:: mac
 #
 # Copyright 2012, Wesleyan University
@@ -10,8 +10,8 @@ dmg_package "rhinoceros_wip_20130108.dmg" do
   app "Rhinoceros"
   volumes_dir "Rhinoceros"
   dmg_name "rhinoceros_wip_20130108"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/mcneel_rhinoceros-5/rhinoceros_wip_20121018.dmg"
-  checksum "177cf6a2c3854d4acc326c20db80409ce5c26f959ea6801a6562753bff748ff5"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mcneel_rhinoceros/rhinoceros_wip_20130108.dmg"
+  checksum "ccb1b3b46f7ec2369c1e07e84850435e1d918989ed14cd7779b48dc76cff90b9"
   action :install
   type "app"
   accept_eula true
