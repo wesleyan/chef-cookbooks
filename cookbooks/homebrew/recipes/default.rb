@@ -17,7 +17,7 @@ end
 execute "change permissions" do
   command "chown -R administrator /usr/local/lib"
   command "chown -R #{node['homebrew']['user']} /usr/local/Cellar"
-  only_if { File.exist? '/usr/local/Cellar' }
+  #only_if { File.exist? '/usr/local/Cellar' }
 end
 
 execute "update homebrew from github" do
