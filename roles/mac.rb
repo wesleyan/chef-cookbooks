@@ -56,13 +56,15 @@ run_list "recipe[prepare::mac]",
           # Music, Dance & Arts
           #"recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
-          "recipe[python::mac]",
+          #{}"recipe[python::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs_emacs::mac]", 
           "recipe[macvim::mac]",
           "recipe[tug_mactex::mac]",
           "recipe[smlnj::mac]",
           "recipe[mrbayes::mac]",
+          "recipe[ncbi_cn3d::mac]",
+          "recipe[graz_genesis::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
