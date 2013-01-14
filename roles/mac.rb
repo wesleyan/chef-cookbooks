@@ -57,6 +57,7 @@ run_list "recipe[prepare::mac]",
           #"recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
           #{}"recipe[python::mac]",
+          "recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs_emacs::mac]", 
           "recipe[macvim::mac]",
@@ -65,6 +66,7 @@ run_list "recipe[prepare::mac]",
           "recipe[mrbayes::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
+          "recipe[simulation_curriculum_starry_night_pro::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
