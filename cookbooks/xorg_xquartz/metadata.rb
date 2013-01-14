@@ -1,6 +1,6 @@
-maintainer       "YOUR_COMPANY_NAME"
-maintainer_email "YOUR_EMAIL"
+maintainer       "Wesleyan University"
+maintainer_email "rchristensen@wesleyan.edu"
 license          "All rights reserved"
-description      "Installs/Configures xorg_xquartz"
+description      "Installs XQuartz"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.1.0"

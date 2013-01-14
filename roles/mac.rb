@@ -56,7 +56,9 @@ run_list "recipe[prepare::mac]",
           # Music, Dance & Arts
           #"recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
-          #{}"recipe[python::mac]",
+          #"recipe[python::mac]", NOT_WORKING
+          "recipe[xorg_xquartz::mac]",
+          #"recipe[schrodinger_pymol::mac]", NOT_WORKING
           "recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs_emacs::mac]", 
