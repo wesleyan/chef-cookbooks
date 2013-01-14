@@ -14,10 +14,13 @@ package 'git' do
   not_if "which git"
 end
 
-execute "change permissions" do
+execute "change /usr/local/lib permissions" do
   command "chown -R administrator /usr/local/lib"
+end
+  
+execute "change cellar permissions" do
   command "chown -R #{node['homebrew']['user']} /usr/local/Cellar"
-  #only_if { File.exist? '/usr/local/Cellar' }
+  only_if { File.exist? '/usr/local/Cellar' }
 end
 
 execute "update homebrew from github" do

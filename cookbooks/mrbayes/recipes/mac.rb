@@ -17,6 +17,7 @@ package "mrbayes" do
   version "3.2.1"
 end
 
+# Legacy binary install, keeping here just-in-case.
 #dmg_package "MrBayes-3.2.1_installer_MAC.dmg" do
 #  app "MrBayes-3.2.1_installer_MAC"
 #  volumes_dir "MrBayes"
