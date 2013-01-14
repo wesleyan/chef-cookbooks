@@ -19,12 +19,12 @@ dmg_package "JavaForOSX2012-006" do
 end
 
 # Installs Java 7 web plugin for Browsers
-dmg_package "jre-7u10-macosx-x64.dmg" do
-  app "Java 7 Update 10"
-  volumes_dir "Java 7 Update 10"
-  dmg_name "jre-7u10-macosx-x64"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/oracle_java/jre-7u10-macosx-x64.dmg"
-  checksum "1dbfc35fc8a7e9f1a9c1840baf9e0bc81b0f3b8ac2fe75745aa44d58821e580f"
+dmg_package "jre-7u11-macosx-x64.dmg" do
+  app "Java 7 Update 11"
+  volumes_dir "Java 7 Update 11"
+  dmg_name "jre-7u11-macosx-x64"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/oracle_java/jre-7u11-macosx-x64.dmg"
+  checksum "089410645d13b2dd9e6e1551cc7ea0e74d4a26c4f5d50eb7f8a780ff25ac8b71"
   action :install
   type "pkg"
   package_id "com.oracle.jre"

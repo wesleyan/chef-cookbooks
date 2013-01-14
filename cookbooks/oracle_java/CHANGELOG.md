@@ -1,17 +1,16 @@
-# CHANGELOG for java
+# CHANGELOG for oracle_java
 
-This file is used to list changes made in each version of java.
+This file is used to list changes made in each version of oracle_java.
 
-## 0.1.0:
+## 0.3.0: 
 
-* Initial release of java cookbook
+* Updated Oracle Java to 7.0u11 to patch zero-day exploit.
 
 ## 0.2.0:
 
 * Updated Apple Java to 2012-006
 * Added Oracle Java 7 Update 9
 
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
+## 0.1.0:
 
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
+* Initial release of java cookbook

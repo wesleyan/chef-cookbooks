@@ -1,6 +1,6 @@
 Description
 ===========
-Installs Java for OS X, both JRE from Apple and the web plugin from Oracle
+Installs Java for OS X, updating to the latest 6.0 JRE from Apple and the 7.0 web plugin from Oracle
 
 Requirements
 ============
