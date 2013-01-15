@@ -57,6 +57,7 @@ run_list "recipe[prepare::mac]",
           "recipe[supercollider::mac]",
           # Music, Dance & Arts
           #"recipe[troikatronix_isadora::mac]",
+          "recipe[autodesk_autocad::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
           #"recipe[python::mac]", NOT_WORKING
