@@ -40,6 +40,8 @@ run_list "recipe[prepare::mac]",
           "recipe[adobe_premiere_pro_cs6::mac]", 
           "recipe[adobe_after_effects_cs6::mac]", 
           "recipe[adobe_acrobat_pro::mac]",
+          # Research
+          "recipe[chnm_zotero::mac]",
           # Stats applications
           "recipe[gnu_r::mac]",
           "recipe[rstudio::mac]",
@@ -56,6 +58,7 @@ run_list "recipe[prepare::mac]",
           # Music, Dance & Arts
           #"recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
+          "recipe[ccp4::mac]",
           #"recipe[python::mac]", NOT_WORKING
           "recipe[xorg_xquartz::mac]",
           #"recipe[schrodinger_pymol::mac]", NOT_WORKING

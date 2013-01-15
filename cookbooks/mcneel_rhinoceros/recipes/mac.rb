@@ -14,6 +14,5 @@ dmg_package "rhinoceros_wip_20130108.dmg" do
   checksum "ccb1b3b46f7ec2369c1e07e84850435e1d918989ed14cd7779b48dc76cff90b9"
   action :install
   type "app"
-  accept_eula true
 end
 
