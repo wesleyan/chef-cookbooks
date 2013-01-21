@@ -49,6 +49,7 @@ run_list "recipe[prepare::mac]",
           #"recipe[ibm_spss::mac]", 
           # 3D modeling/rendering applications
           "recipe[google_earth::mac]",
+          "recipe[autodesk_autocad::mac]",
           "recipe[mcneel_rhinoceros::mac]",
           "recipe[trimble_sketchup::mac]",
           # Audio applications
