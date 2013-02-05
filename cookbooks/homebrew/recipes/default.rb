@@ -16,6 +16,7 @@ end
 
 execute "change /usr/local/lib permissions" do
   command "chown -R administrator /usr/local/lib"
+  only_if { File.exist? '/usr/local/lib'}
 end
   
 execute "change cellar permissions" do

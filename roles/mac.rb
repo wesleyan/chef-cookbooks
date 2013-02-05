@@ -58,19 +58,18 @@ run_list "recipe[prepare::mac]",
           "recipe[supercollider::mac]",
           # Music, Dance & Arts
           #"recipe[troikatronix_isadora::mac]",
-          "recipe[autodesk_autocad::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
           #"recipe[python::mac]", NOT_WORKING
           "recipe[xorg_xquartz::mac]",
           #"recipe[schrodinger_pymol::mac]", NOT_WORKING
-          "recipe[atgc_phyml::mac]",
+          #"recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs_emacs::mac]", 
           "recipe[macvim::mac]",
           "recipe[tug_mactex::mac]",
-          "recipe[smlnj::mac]",
-          "recipe[mrbayes::mac]",
+          #"recipe[smlnj::mac]",
+          #"recipe[mrbayes::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",

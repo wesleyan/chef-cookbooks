@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of rawcamera.
 
+## 0.2.1:
+
+* Added code to modify permissions to fix the crappy package I made that makes the Office directory unreadable.
+
 ## 0.2.0:
 
 * Current app version: 14.2.5
