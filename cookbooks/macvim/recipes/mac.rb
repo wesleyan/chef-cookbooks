@@ -6,12 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "MacVim-snapshot-65.dmg" do
+dmg_package "MacVim-7.3-snapshot-66.dmg" do
   app "MacVim"
-  volumes_dir "MacVim-snapshot-65"
-  dmg_name "MacVim-snapshot-65"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/macvim-7/MacVim-snapshot-65.dmg"
-  checksum "9d8c0c7b86200d00ad45a70385650f2b13fc7f3e919d649d9e78e447519590ac"
+  volumes_dir "MacVim"
+  dmg_name "MacVim-7.3-snapshot-66"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/macvim/MacVim-7.3-snapshot-66.dmg"
+  checksum "c0422e98ee9fafd9c6dca05ee250acd4bdec1e8dfcfb012e88a4700483cddde1"
   action :install
   type "app"
 end
