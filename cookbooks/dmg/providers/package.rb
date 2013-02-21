@@ -75,7 +75,7 @@ action :install do
     when "custom"
       if(new_resource.command)
         execute new_resource.name do
-          command "/Volumes/#{volumes_dir}/#{new_resource.command}"
+          command "'/Volumes/#{volumes_dir}/#{new_resource.command}"
         end
       end
     end

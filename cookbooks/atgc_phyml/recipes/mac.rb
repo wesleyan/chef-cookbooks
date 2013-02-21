@@ -9,6 +9,9 @@
 # Include homebrew because we need it!
 include_recipe "homebrew"
 
+# Tap the homebrew science repository.
+homebrew_tap "homebrew/science"
+
 # Install PhyML via homebrew
 package "phyml" do
   version "20120412"

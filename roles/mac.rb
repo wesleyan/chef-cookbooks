@@ -4,56 +4,75 @@ description "mac image"
 run_list "recipe[prepare::mac]",
           "recipe[sudo]", 
           # XCode
-          "recipe[xcode::mac]", 
+          "recipe[apple_xcode::mac]", 
           # Package providers
           "recipe[dmg]", 
           "recipe[homebrew]", 
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
-          # "recipe[desktop_picture::mac]",
-          # Core system updates
-          "recipe[osxupdate::mac]", 
-          "recipe[java::mac]", 
+          #"recipe[desktop_picture::mac]",
+          # Core system updates and applications
+          #"recipe[apple_osx_updates::mac]", 
+          "recipe[oracle_java::mac]", 
           "recipe[printers::mac]", 
-          # "recipe[rawcamera::mac]",
+          "recipe[sassafras_k2::mac]",
+          "recipe[cls_labstats::mac]",
           # Browsers
-          "recipe[chrome::mac]", 
-          "recipe[firefox::mac]",
-          "recipe[safari::mac]", 
+          "recipe[google_chrome::mac]", 
+          "recipe[mozilla_firefox::mac]",
+          "recipe[apple_safari::mac]", 
           # Runtimes
-          # "recipe[flash::mac]", 
-          "recipe[silverlight::mac]",
+          "recipe[adobe_flash_player::mac]", 
+          "recipe[microsoft_silverlight::mac]",
           # Core applications
-          "recipe[office::mac]",
-          "recipe[itunes::mac]", 
+          "recipe[microsoft_office::mac]",
+          "recipe[apple_itunes::mac]", 
+          "recipe[apple_ilife::mac]",
           "recipe[unarchiver::mac]",
-          "recipe[vlc::mac]",
+          "recipe[videolan_vlc::mac]",
           # Adobe CS6 Suite
-          "recipe[photoshop::mac]", 
-          "recipe[illustrator::mac]", 
-          "recipe[indesign::mac]",
-          "recipe[dreamweaver::mac]", 
-          "recipe[flashpro::mac]",
-          "recipe[premierepro::mac]", 
-          "recipe[aftereffects::mac]", 
-          "recipe[acrobat::mac]",
+          "recipe[adobe_photoshop_cs6::mac]", 
+          "recipe[adobe_illustrator_cs6::mac]", 
+          "recipe[adobe_indesign_cs6::mac]",
+          "recipe[adobe_dreamweaver_cs6::mac]", 
+          "recipe[adobe_flash_professional_cs6::mac]",
+          "recipe[adobe_premiere_pro_cs6::mac]", 
+          "recipe[adobe_after_effects_cs6::mac]", 
+          "recipe[adobe_acrobat_pro::mac]",
+          # Research
+          "recipe[chnm_zotero::mac]",
           # Stats applications
-          "recipe[r::mac]",
-          "recipe[rstudio::mac]", 
+          "recipe[gnu_r::mac]",
+          "recipe[rstudio::mac]",
+          # Uncomment when building an image from scratch until we have our own receipt system for custom installers
+          #"recipe[ibm_spss::mac]", 
           # 3D modeling/rendering applications
-          "recipe[rhinoceros::mac]",
-          "recipe[sketchup::mac]",
+          "recipe[google_earth::mac]",
+          "recipe[autodesk_autocad::mac]",
+          "recipe[mcneel_rhinoceros::mac]",
+          "recipe[trimble_sketchup::mac]",
           # Audio applications
-          "recipe[soundhack::mac]", 
+          "recipe[audacity::mac]",
+          "recipe[tomerbe_soundhack::mac]", 
           "recipe[supercollider::mac]",
           # Music, Dance & Arts
-          "recipe[troikatronix_isadora::mac]",
-          #  Development
+          #"recipe[troikatronix_isadora::mac]",
+          # Natural Sciences & Mathematics
+          "recipe[ccp4::mac]",
+          #"recipe[python::mac]", NOT_WORKING
+          "recipe[xorg_xquartz::mac]",
+          #"recipe[schrodinger_pymol::mac]", NOT_WORKING
+          #"recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
-          "recipe[aquamacs::mac]", 
+          "recipe[aquamacs_emacs::mac]", 
           "recipe[macvim::mac]",
-          "recipe[texshop::mac]",
+          "recipe[tug_mactex::mac]",
+          #"recipe[smlnj::mac]",
+          #"recipe[mrbayes::mac]",
+          "recipe[ncbi_cn3d::mac]",
+          "recipe[graz_genesis::mac]",
+          "recipe[simulation_curriculum_starry_night_pro::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 

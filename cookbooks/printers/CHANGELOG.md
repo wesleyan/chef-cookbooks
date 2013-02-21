@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of printerdrv.
 
+## 0.3.0:
+
+* Updated HP drivers to version 2.13
+
+## 0.2.0:
+
+* Added Xerox (2.1.1) and Epson (2.28) packages
+
 ## 0.1.0:
 
 * Initial release of printers cookbook

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of supercollider.
 
+## 0.2.0:
+
+* Updated app to version 3.6.2
+
 ## 0.1.0:
 
 * Initial release of supercollider cookbook

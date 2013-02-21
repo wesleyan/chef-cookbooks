@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of macvim.
 
+## 0.2.0:
+
+* Updated to version 7.3-snapshot 66
+
 ## 0.1.0:
 
 * Initial release of macvim cookbook
