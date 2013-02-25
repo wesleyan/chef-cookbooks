@@ -16,3 +16,8 @@ dmg_package "XQuartz-2.7.4.dmg" do
   type "pkg"
   package_id "org.macosforge.xquartz.pkg"
 end
+
+execute "symlink x11" do
+  command "ln -s /Applications/Utilities/XQuartz.app /Applications/Utilities/X11.app"
+  not_if { File.exist?("/Applications/Utilities/X11.app") }
+end

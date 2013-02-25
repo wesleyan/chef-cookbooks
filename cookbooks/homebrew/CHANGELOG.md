@@ -1,3 +1,7 @@
+## v1.3.1:
+* Changed to use the attribute defined account, which is now by
+* default 'administrator'
+
 ## v1.3.0:
 
 * [COOK-1425] - use new json output format for formula
