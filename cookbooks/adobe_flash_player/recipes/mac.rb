@@ -8,16 +8,15 @@
 #
 # Need to figure out .app as an installer
 #
-dmg_package "adobe_flash_player-11.5.502.146.dmg" do
-  app "Install Adobe Flash Player"
-  volumes_dir "Flash Player/Install Adobe Flash Player.app/Contents/MacOS"
-  dmg_name "adobe_flash_player-11.5.502.146"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_flash_player/adobe_flash_player-11.5.502.146.dmg"
-  checksum "3b514c4a0956cc2c6a0f5150c16b484117f0883dc7ca73ce7d66541468e54212"
+dmg_package "Adobe Flash Player" do
+  app "adobe_flash_player-11.6.602.167"
+  volumes_dir "adobe_flash_player-11.6.602.167"
+  dmg_name "adobe_flash_player-11.6.602.167"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_flash_player/adobe_flash_player-11.6.602.167.dmg"
+  checksum "b35cd6c607d8b194bf6fce43eaeca6f93a17957a2240acf219d0f1255bd98ae1"
   action :install
-  type "custom"
-  command "Adobe Flash Player Install Manager' -install"
-  package_id "com.adobe.pkg.FlashPlayer"
+  type "pkg"
+  package_id "adobe_flash_player-11.6.602.167"
 end
 
 # end
