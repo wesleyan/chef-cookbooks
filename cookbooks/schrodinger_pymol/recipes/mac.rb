@@ -12,9 +12,7 @@
 include_recipe "homebrew"
 
 # Tap an auxilary python repo and install Python Megawidgets
-homebrew_tap "samueljohn/python"
-
-# Build and install Python Megawidgets
+homebrew_tap "Homebrew/homebrew-science"
 package "pmw" do
   version "1.3.3"
 end
@@ -26,3 +24,13 @@ homebrew_tap "scicalculator/pymol"
 package "pymol" do
   version "1.5"
 end
+
+# PyMOL will fail to recognize XQuartz because its timeout is too short
+# so we should launch X11.app first, and sleep for a second, and then
+# launch pymol, so we need an alias
+
+execute "alias pymol" do
+  command 'echo "alias pymol=\"open /Applications/Utilities/X11.app;sleep 1; /usr/local/bin/pymol\"" >> /etc/bashrc'
+end
+
+
