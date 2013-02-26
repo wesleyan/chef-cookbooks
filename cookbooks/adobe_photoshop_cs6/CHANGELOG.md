@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of photoshop.
 
+## 0.4.0
+* Now installs to Photoshop 13.0.4 directly
+
 ## 0.3.0
 
 * Added patch package to update Photoshop to 13.0.4 in attempt to alleviate launching issues

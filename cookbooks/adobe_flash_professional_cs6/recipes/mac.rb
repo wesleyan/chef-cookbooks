@@ -7,15 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "adobe_flash_professional_cs6-12.0.2.dmg" do
-  app "adobe_flash_professional_cs6-12.0.2_Install"
-  volumes_dir "adobe_flash_professional_cs6-12.0.2"
+dmg_package "Adobe Flash Professional CS6" do
+  app "adobe_flash_professional_cs6_Install"
+  volumes_dir "adobe_flash_professional_cs6"
   dmg_name "adobe_flash_professional_cs6-12.0.2"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_flash_professional_cs6/adobe_flash_professional_cs6-12.0.2.dmg"
-  checksum "0d17fd67f4cd3228e98d32831dc4c621c7eaed137379f12e1b500abdbdeec31f"
+  checksum "2c7b5b50600ec529c4d6e2389e47349c14b9ccfd0907f2c675a75f89bd3f7349"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.C2267962-3047-468F-A7C9-141015421170"
+  package_id "com.adobe.Enterprise.install.BD17182E-2190-476D-BDAC-6E10AE8D75B3"
 end
 
 
