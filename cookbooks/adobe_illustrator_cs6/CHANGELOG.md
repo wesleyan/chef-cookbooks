@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of illustrator.
 
+## 0.3.0:
+* Current app version: 16.0.3
+
 ## 0.2.0:
 
 * Added icon to dock
