@@ -6,15 +6,15 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "adobe_after_effects_cs6-11.0.2.dmg" do
-  app "adobe_after_effects_cs6-11.0.2_Install"
-  volumes_dir "adobe_after_effects_cs6-11.0.2"
+dmg_package "Adobe After Effects CS6" do
+  app "adobe_after_effects_cs6_Install"
+  volumes_dir "adobe_after_effects_cs6"
   dmg_name "adobe_after_effects_cs6-11.0.2"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_after_effects_cs6/adobe_after_effects_cs6-11.0.2.dmg"
-  checksum "0d34b54b39689f35d0569bd298e6bddaa61ac32cf58bbabc44246d9465b966c9"
+  checksum "d2e517e4e4c06eb3a9571c38d6057a9847874e382da4e6b3a722ff6bcd04264c"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.E771578B-4201-48DD-A429-742EF35760F6"
+  package_id "com.adobe.Enterprise.install.BA86957C-D9C2-41EB-94AB-D30411071D7B"
 end
 
 # Download icon

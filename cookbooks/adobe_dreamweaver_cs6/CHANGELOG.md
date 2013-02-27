@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of dreamweaver.
 
+## 0.3.0
+* Current app version: 12.0.3
+
 ## 0.2.0
 
 * Added icon to dock
