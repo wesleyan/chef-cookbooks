@@ -41,6 +41,7 @@ run_list  "recipe[prepare::ims-events]",
           # Video
           "recipe[apple_compressor::mac]",
           "recipe[apple_final_cut_pro::mac]",
+          "recipe[audacity::mac]",
           # Finalize 
           "recipe[finalize::mac]"
 #"recipe[remotedesktop::mac]",
