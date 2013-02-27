@@ -7,15 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "adobe_dreamweaver_cs6-12.0.3.dmg" do
+dmg_package "Adobe Dreamweaver CS6" do
   app "adobe_dreamweaver_cs6_Install"
-  volumes_dir "adobe_dreamweaver_cs6-12.0.3"
+  volumes_dir "adobe_dreamweaver_cs6"
   dmg_name "adobe_dreamweaver_cs6-12.0.3"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_dreamweaver_cs6/adobe_dreamweaver_cs6-12.0.3.dmg"
-  checksum "0d8cd1b0f164fce1728306281a0c1825533e1abb7212736c4613a90f5b4e9afd"
+  checksum "175756cff42c4b08e3b8839c2e06b7f6504f1dc1c7fb548617894265b786ccca"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.F0E755A7-73FC-42E6-8ECA-22A3FD95E008"
+  package_id "com.adobe.Enterprise.install.4EB82BB8-81B3-41AB-9FF2-831373B42DFC"
 end
 
 # Download icon

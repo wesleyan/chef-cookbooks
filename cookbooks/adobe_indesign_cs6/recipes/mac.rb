@@ -7,15 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "adobe_indesign_cs6-8.0.1.dmg" do
-  app "adobe_indesign_cs6-8.0.1_Install"
-  volumes_dir "adobe_indesign_cs6-8.0.1"
+dmg_package "Adobe InDesign CS6" do
+  app "adobe_indesign_cs6_Install"
+  volumes_dir "adobe_indesign_cs6"
   dmg_name "adobe_indesign_cs6-8.0.1"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_indesign_cs6/adobe_indesign_cs6-8.0.1.dmg"
-  checksum "59a7664c33fd3b4ec6ecefdbbdecc099fc35fa89be3471820b883ac90b6b4419"
+  checksum "a470e9390599672332da3a9f82b3f091839963e6ed540f8a6dfbc00aef1a60b4"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.E5E7BB07-9B18-46F3-B829-E516CD1F9061"
+  package_id "com.adobe.Enterprise.install.CD42F8C2-93BE-4C32-9064-C04F00977A73"
 end
 
 # Download icon

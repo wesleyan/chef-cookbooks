@@ -7,15 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "adobe_premiere_pro_cs6-6.0.2.dmg" do
-  app "adobe_premiere_pro_cs6-6.0.2_Install"
-  volumes_dir "adobe_premiere_pro_cs6-6.0.2"
-  dmg_name "adobe_premiere_pro_cs6-6.0.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_premiere_pro_cs6/adobe_premiere_pro_cs6-6.0.2.dmg"
-  checksum "c3928ea2b67c04420730d84592bdb14e293baeb876eaf8d38f5df8e96134f7f2"
+dmg_package "Adobe Premiere Pro CS6" do
+  app "adobe_premiere_pro_cs6_Install"
+  volumes_dir "adobe_premiere_pro_cs6"
+  dmg_name "adobe_premiere_pro_cs6-6.0.3"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_premiere_pro_cs6/adobe_premiere_pro_cs6-6.0.3.dmg"
+  checksum "806e8bd3817b4524998f88c00aaf648dbdc6e4e453b22637fb9c5032195e007c"
   action :install
   type "pkg"
-  package_id "com.adobe.Enterprise.install.A39ED404-FAD0-4310-8DC6-C00539826372"
+  package_id "com.adobe.Enterprise.install.C3BF3D3B-BD3F-4EEE-B978-799647D13F2A"
 end
 
 # Download icon
