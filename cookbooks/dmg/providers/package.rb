@@ -68,6 +68,7 @@ action :install do
         mode 0755
         ignore_failure true
       end
+      file "/var/db/receipts/"
     when "mpkg", "pkg"
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
  #       returns [0, 1]
@@ -103,6 +104,29 @@ def mounted?
 end
 
 def installed?
-  ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") ||
-    system("pkgutil --pkgs=#{new_resource.package_id}") || (new_resource.type == 'dir' && ::File.directory?("#{new_resource.destination}/#{new_resource.app}"))
+  # The code for comparing the plist version with the resource version works, and the below code might work, but I havne't tested it.
+  # You need to test this out by adding a version field to a resource
+  # You must also have the Plist gem installed  I added the gem_install block do the recipe, so it will install when the recipe is run.
+  # This function should return true if and only if:
+  # a) If this is an app, it exists in the /Application/ directory
+  # b) If this is a package, and it has a version field set, then return true if the version is the same as the version in the plist 
+  # c) If this is a package, and it does not have a version field set, but the receipt exists in /var/receipts/db then return true 
+  # d) If this is a dir package, and the directory to be copied into already exists, then return true
+
+   require 'plist'
+  if ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") then true
+  elsif (new_resource.type == 'dir' && ::File.directory?("#{new_resource.destination}/#{new_resource.app}")) then true
+  else 
+      if !new_resource.version
+       system("pkgutil --pkgs=#{new_resource.package_id}") 
+      else 
+        xml = `plutil -convert xml1 -o /dev/stdout /var/db/receipts/#{new_resource.package_id}.plist`
+        puts xml
+        if !xml then false end
+       result = Plist::parse_xml(xml)
+       if !result then false
+       else new_resource.version == result['PackageVersion'] ? true : false
+       end
+  end
+end
 end
