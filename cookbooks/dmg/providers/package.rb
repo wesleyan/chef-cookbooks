@@ -63,7 +63,7 @@ action :install do
         ignore_failure true
       end
       file "/var/db/receipts/#{new_resouce.package_id}.plist" do
-        content {"PackageVersion" => new_resource.version}.to_plist.dump
+        content { {"PackageVersion" => new_resource.version}.to_plist.dump }
         mode 0644 # -rw-r--r--
         owner "root"
         group "wheel"
@@ -80,7 +80,7 @@ action :install do
         ignore_failure true
       end
       file "/var/db/receipts/#{new_resource.package_id}.plist" do        
-        content {"PackageVersion" => new_resource.version}.to_plist.dump
+        content { {"PackageVersion" => new_resource.version}.to_plist.dump }
         mode 0644 # -rw-r--r--
         owner "root"
         group "wheel"
