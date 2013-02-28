@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+require 'plist'
+
 def load_current_resource
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
   @dmgpkg.app(new_resource.app)
@@ -26,6 +28,7 @@ def load_current_resource
 end
 
 action :install do
+
   volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
   dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
   dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
@@ -54,7 +57,6 @@ action :install do
       end
     end
     
-    
     case new_resource.type
     when "dir"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
@@ -62,11 +64,31 @@ action :install do
         mode 0755
         ignore_failure true
       end
+      file "/var/db/receipts/#{new_resouce.package_id}.plist" do
+        content ({"PackageVersion" => new_resource.version}).to_plist.dump
+        mode 0644 # -rw-r--r--
+        owner "root"
+        group "wheel"
+        action :create
+        only_if do
+          new_resource.version and new_resource.package_id
+        end
+      end
     when "app"
       execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
+      end
+      file "/var/db/receipts/#{new_resource.package_id}.plist" do        
+        content ({"PackageVersion" => new_resource.version}).to_plist.dump 
+        mode 0644 # -rw-r--r--
+        owner "root"
+        group "wheel"
+        action :create
+        only_if do
+          new_resource.version and new_resource.package_id
+        end
       end
     when "mpkg", "pkg"
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
@@ -103,6 +125,12 @@ def mounted?
 end
 
 def installed?
-  ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") ||
-    system("pkgutil --pkgs=#{new_resource.package_id}") || (new_resource.type == 'dir' && ::File.directory?("#{new_resource.destination}/#{new_resource.app}"))
+  if new_resource.version and new_resource.package_id
+      result = Plist::parse_xml("/var/db/receipts/#{new_resource.package_id}.plist")
+      return false unless result
+      return new_resource.version == result['PackageVersion']
+  elsif new_resource.package_id
+    return true if system("pkgutil --pkgs=#{new_resource.package_id}")
+  end
+  return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
 end
