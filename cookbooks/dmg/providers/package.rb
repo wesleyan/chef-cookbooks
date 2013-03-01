@@ -126,11 +126,17 @@ end
 
 def installed?
   if new_resource.version and new_resource.package_id
-      result = Plist::parse_xml("/var/db/receipts/#{new_resource.package_id}.plist")
-      return false unless result
-      return new_resource.version == result['PackageVersion']
+      system("plutil -convert xml1 -o /tmp/#{new_resource.package_id}.plist /var/db/receipts/#{new_resource.package_id}.plist")
+      result = Plist::parse_xml("/tmp/#{new_resource.package_id}.plist")
+	  File.delete("/tmp/#{new_resource.package_id}.plist")
+      return false unless result and result['PackageVersion'] and result['PackageVersion'] =~ /^\d+(\.\d+)+/
+	  currVersion = result['PackageVersion'].split('.')
+	  newVersion = new_resource.version.split('.')
+	  0.upto([currVersion.length,newVersion.length].min - 1) do |i|
+	    return false if currVersion[i] < newVersion[i]
+	  end
+	  return true
   elsif new_resource.package_id
-    return true if system("pkgutil --pkgs=#{new_resource.package_id}")
-  end
+    return system("pkgutil --pkgs=#{new_resource.package_id}")
   return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
 end
