@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vlc.
 
+## 0.4.0
+
+* Now sets all movies to open with VLC by default
+
 ## 0.3.0
 
 * Updated app version to 2.0.5

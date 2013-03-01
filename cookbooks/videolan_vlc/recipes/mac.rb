@@ -24,3 +24,8 @@ dock_add "/Applications/VLC.app" do
   all_users true
 #  restart true  
 end
+
+launch_association_set_file_handler "public.movie" do
+  bundle_id "org.videolan.vlc"
+  all_users true
+end
