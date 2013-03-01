@@ -1,3 +1,7 @@
+## v1.1.0:
+
+* Added version control
+
 ## v1.0.0:
 
 * [COOK-852] - Support "pkg" in addition to "mpkg" package types
