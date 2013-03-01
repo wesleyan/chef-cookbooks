@@ -133,5 +133,6 @@ def installed?
 	  return Gem::Version.new(result['PackageVersion']) >= Gem::Version.new(new_resource.version)
   elsif new_resource.package_id
     return system("pkgutil --pkgs=#{new_resource.package_id}")
+  end
   return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
 end
