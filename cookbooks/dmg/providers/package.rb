@@ -126,11 +126,11 @@ end
 
 def installed?
   if new_resource.version and new_resource.package_id
-      result = Plist::parse_xml("/var/db/receipts/#{new_resource.package_id}.plist")
-      return false unless result
-      return new_resource.version == result['PackageVersion']
+      result = Plist::parse_xml(Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`))
+      return false unless result and result['PackageVersion'] and result['PackageVersion'] =~ /^\d+(\.\d+)+$/
+      return Gem::Version.new(result['PackageVersion']) >= Gem::Version.new(new_resource.version)
   elsif new_resource.package_id
-    return true if system("pkgutil --pkgs=#{new_resource.package_id}")
+    return system("pkgutil --pkgs=#{new_resource.package_id}")
   end
   return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
 end
