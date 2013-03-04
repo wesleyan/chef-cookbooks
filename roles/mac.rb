@@ -58,7 +58,7 @@ run_list "recipe[prepare::mac]",
           "recipe[tomerbe_soundhack::mac]", 
           "recipe[supercollider::mac]",
           # Music, Dance & Arts
-#          "recipe[troikatronix_isadora::mac]",
+          "recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
           "recipe[python::mac]", 
