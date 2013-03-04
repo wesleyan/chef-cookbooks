@@ -2,12 +2,12 @@ name "mac"
 description "mac image"
 
 run_list "recipe[prepare::mac]",
-          "recipe[sudo]", 
-          # XCode
-          "recipe[apple_xcode::mac]", 
+          "recipe[sudo]",  
           # Package providers
           "recipe[dmg]", 
-          "recipe[homebrew]", 
+          "recipe[homebrew]",
+          # XCode
+          "recipe[apple_xcode::mac]",
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
