@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-require 'plist'
-
 def load_current_resource
+  chef_gem "plist"
+  require 'plist'
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
   @dmgpkg.app(new_resource.app)
   Chef::Log.debug("Checking for application #{new_resource.app}")
