@@ -98,6 +98,12 @@ execute "set display sleep time to never" do
   action :run
 end
 
+execute "enable ssh" do 
+  command "/usr/sbin/systemsetup -setremotelogin on"
+  not_if "/usr/sbin/systemsetup -getremotelogin | /usr/bin/grep On"
+  action :run
+end
+
 # file "/tmp/host_utilities.rb" do
 #   action :delete
 # end
