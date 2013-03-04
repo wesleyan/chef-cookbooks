@@ -17,6 +17,4 @@
 # limitations under the License.
 #
 
-chef_gem "plist" do
-  action :install
-end
+chef_gem "plist"

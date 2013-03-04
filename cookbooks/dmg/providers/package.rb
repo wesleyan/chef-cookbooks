@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-require 'plist'
+require "plist"
 
 def load_current_resource
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
@@ -59,35 +59,34 @@ action :install do
     
     case new_resource.type
     when "dir"
-      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
+      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
       end
-      file "/var/db/receipts/#{new_resouce.package_id}.plist" do
-        content ({"PackageVersion" => new_resource.version}).to_plist.dump
-        mode 0644 # -rw-r--r--
-        owner "root"
-        group "wheel"
-        action :create
-        only_if do
-          new_resource.version and new_resource.package_id
+      if new_resource.package_id and new_resource.version
+        file "/var/db/receipts/#{new_resouce.package_id}.plist" do
+          content ({"PackageVersion" => new_resource.version}).to_plist.dump
+          mode 0644 # -rw-r--r--
+          owner "root"
+          group "wheel"
+          action :create
         end
       end
     when "app"
-      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
+      
+      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
       end
-      file "/var/db/receipts/#{new_resource.package_id}.plist" do        
-        content ({"PackageVersion" => new_resource.version}).to_plist.dump 
-        mode 0644 # -rw-r--r--
-        owner "root"
-        group "wheel"
-        action :create
-        only_if do
-          new_resource.version and new_resource.package_id
+      if new_resource.version and new_resource.package_id
+        file "/var/db/receipts/#{new_resource.package_id}.plist" do        
+          content ({"PackageVersion" => new_resource.version}).to_plist.dump 
+          mode 0644 # -rw-r--r--
+          owner "root"
+          group "wheel"
+          action :create
         end
       end
     when "mpkg", "pkg"
@@ -125,12 +124,15 @@ def mounted?
 end
 
 def installed?
-  if new_resource.version and new_resource.package_id
+  begin
+    if new_resource.version and new_resource.package_id
       result = Plist::parse_xml(Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`))
-      return false unless result and result['PackageVersion'] and result['PackageVersion'] =~ /^\d+(\.\d+)+$/
       return Gem::Version.new(result['PackageVersion']) >= Gem::Version.new(new_resource.version)
-  elsif new_resource.package_id
-    return system("pkgutil --pkgs=#{new_resource.package_id}")
+    elsif new_resource.package_id
+      return system("pkgutil --pkgs=#{new_resource.package_id}")
+    end
+    return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
+  rescue
+    return false
   end
-  return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
 end

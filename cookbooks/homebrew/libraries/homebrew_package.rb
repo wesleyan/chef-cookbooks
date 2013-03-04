@@ -28,7 +28,9 @@ class Chef
         end
 
         def install_package(name, version)
-          brew('install', @new_resource.options, name)
+          unless brew('list').split.index name
+            brew('install', @new_resource.options, name)
+          end
         end
 
         def upgrade_package(name, version)
