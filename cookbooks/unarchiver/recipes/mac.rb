@@ -14,4 +14,5 @@ dmg_package "theunarchiver-3.6.1.dmg" do
   action :install
   type "app"
   package_id "cx.c3.theunarchiver"
+  version "3.6.1"
 end
