@@ -41,3 +41,7 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   type "pkg"
   package_id "com.apple.pkg.EPSONPrinterDrivers"
 end
+
+printers "HASLab_color_HP3800" do
+  model "drv:///sample.drv/laserjet.ppd"
+end

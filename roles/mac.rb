@@ -11,6 +11,7 @@ run_list "recipe[prepare::mac]",
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
+          "recipe[launch_association::mac]",
           #"recipe[desktop_picture::mac]",
           # Core system updates and applications
           #"recipe[apple_osx_updates::mac]", 
