@@ -125,7 +125,8 @@ end
 def installed?
   begin
     if new_resource.version and new_resource.package_id
-      result = Plist::parse_xml(Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`))
+      result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
+      result = Plist::parse_xml(result) if result.class == String
       return Gem::Version.new(result['PackageVersion']) >= Gem::Version.new(new_resource.version)
     elsif new_resource.package_id
       return system("pkgutil --pkgs=#{new_resource.package_id}")
