@@ -61,8 +61,8 @@ run_list "recipe[prepare::mac]",
           "recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
-          "recipe[python::mac]", 
           "recipe[xorg_xquartz::mac]",
+          "recipe[python::mac]", 
           "recipe[schrodinger_pymol::mac]",
           "recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
@@ -74,6 +74,10 @@ run_list "recipe[prepare::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
+          "recipe[apple_airport::mac]",
+          "recipe[hamrick_vuescan::mac]",
+          "recipe[blackboard_xythosdrive::mac]",
+          "recipe[synergy_kaleidagraph::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
