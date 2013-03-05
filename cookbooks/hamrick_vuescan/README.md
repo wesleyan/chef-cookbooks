@@ -1,6 +1,6 @@
 Description
 ===========
-Installs Roxio Toast Titanium 11 and updates!
+Installs Hamrick VueScan with Wesleyan's multi-seat license information
 
 Requirements
 ============
@@ -11,4 +11,4 @@ Attributes
 
 Usage
 =====
-Use the cookbook.
+Use the damn cookbook, bro.

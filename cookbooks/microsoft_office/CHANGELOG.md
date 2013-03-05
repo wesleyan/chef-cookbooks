@@ -1,6 +1,11 @@
 # CHANGELOG for microsoft_office
 
-This file is used to list changes made in each version of rawcamera.
+This file is used to list changes made in each version of microsoft_office.
+
+## 0.3.0:
+
+* Rebuilt package using Composer
+* Current version 14.3.1
 
 ## 0.2.1:
 

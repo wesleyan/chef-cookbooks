@@ -7,35 +7,21 @@
 # All rights reserved - Do Not Redistribute
 
 # Install Office base
-dmg_package "ms_office_2011-14.2.5" do
-  app "ms_office_2011-14.2.5"
-  volumes_dir "ms_office_2011-14.2.5"
-  dmg_name "ms_office_2011-14.2.5"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/ms_office_2011-14.2.5.dmg"
-  checksum "0a83e1ed5113aa3c721c48d74b33e5979b59c0b2c15b141be9389ba3a6e5fc79"
+dmg_package "Microsoft Office 2011 SP3" do
+  app "Microsoft Office 2011"
+  volumes_dir "Microsoft Office 2011"
+  dmg_name "microsoft_office_2011-14.3.1"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/microsoft_office_2011-14.3.1.dmg"
+  checksum "00e4663d8e0ad23bff7e3af6088903cf340982df92d7c8af9fe86f199340795d"
   action :install
-  type "mpkg"
-  package_id "com.microsoft.officeForMac20111425.Office.pkg"
-end
-
-# Install SP3 Update
-dmg_package "ms_office_2011-14.2.5" do
-  app "ms_office_2011-14.2.5"
-  volumes_dir "ms_office_2011-14.2.5"
-  dmg_name "ms_office_2011-14.2.5"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/ms_office_2011-14.2.5.dmg"
-  checksum "0a83e1ed5113aa3c721c48d74b33e5979b59c0b2c15b141be9389ba3a6e5fc79"
-  action :install
-  type "mpkg"
-  package_id "com.microsoft.office.all.core.pkg.14.3.0.update"
-end
-
-# Change permissions, since package is stupid and makes things inoperable for other users
-execute "change Office directory permissions" do
-  command "chmod -R a+xr '/Applications/Microsoft Office 2011/'"
+  type "pkg"
+  package_id "com.microsoft.office.2011"
+  #version "14.3.1"
 end
 
 # Install customized plist files to surpress first-run dialogues
+#
+# SOMEONE NEEDS TO WRITE THIS
 
 # Download icon
 cookbook_file "/tmp/office.png"
