@@ -16,3 +16,8 @@ dmg_package "theunarchiver-3.6.1.dmg" do
   package_id "cx.c3.theunarchiver"
   version "3.6.1"
 end
+
+launch_association_set_file_handler "public.archive" do
+  bundle_id "cx.c3.theunarchiver"
+  all_users true
+end
