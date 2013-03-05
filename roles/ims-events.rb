@@ -5,9 +5,9 @@ run_list  "recipe[prepare::ims-events]",
           "recipe[sudo]", 
           # Package providers
           "recipe[dmg]", 
-          "recipe[homebrew]", 
           ## Apple XCode
           "recipe[apple_xcode::mac]",
+          "recipe[homebrew]",
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
