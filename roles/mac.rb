@@ -74,6 +74,10 @@ run_list "recipe[prepare::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
+          "recipe[apple_airport::mac]",
+          "recipe[hamrick_vuescan::mac]",
+          "recipe[blackboard_xythosdrive::mac]",
+          "recipe[synergy_kaleidagraph::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
