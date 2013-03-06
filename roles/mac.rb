@@ -78,6 +78,7 @@ run_list "recipe[prepare::mac]",
           "recipe[hamrick_vuescan::mac]",
           "recipe[blackboard_xythosdrive::mac]",
           "recipe[synergy_kaleidagraph::mac]",
+	  "recipe[statacorp_stata::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
