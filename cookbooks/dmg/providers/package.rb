@@ -93,7 +93,7 @@ action :install do
  #       returns [0, 1]
       end  
       # we assume here the pkg installer already created a receipt
-      ruby_block do
+      ruby_block "Set Receipt Version" do
 	      block do
 		      currPKG = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
 		      currPKG = Plist::parse_xml(currPKG) if currPKG.class == String
