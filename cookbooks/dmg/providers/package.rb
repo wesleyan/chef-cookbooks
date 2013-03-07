@@ -92,6 +92,21 @@ action :install do
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
  #       returns [0, 1]
       end  
+      # we assume here the pkg installer already created a receipt
+      ruby_block do
+	      block do
+		      currPKG = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
+		      currPKG = Plist::parse_xml(currPKG) if currPKG.class == String
+		      currPKG['PackageVersion'] = new_resource.version
+		      f = ::File.open("/tmp/#{new_resource.package_id}.plist","w")
+		      f.puts Plist::Emit.dump(currPKG)
+		      f.close
+		      ::File.delete("/var/db/receipts/#{new_resource.package_id}.plist")
+		      system("plutil -convert binary1 -o /var/db/receipts/#{new_resource.package_id}.plist")
+		      ::File.delete("/tmp/#{new_resource.package_id}.plist")
+	      end
+	      only_if { new_resource.version and new_resource.package_id }
+      end
     when "custom"
       if(new_resource.command)
         execute new_resource.name do
