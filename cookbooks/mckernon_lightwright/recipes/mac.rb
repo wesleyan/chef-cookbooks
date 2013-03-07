@@ -22,11 +22,11 @@ directory "/Users/Shared/Lightwright" do
 	owner "root"
 	group "wheel"
 	mode 00755
-	action :create_if_missing
+	action :create
 end
 
 # Copy license file to proper location and set permissions
-cookbook_file "/Users/Shared/Lightwright 5 Registration.regi" do
+cookbook_file "/Users/Shared/Lightwright/Lightwright 5 Registration.regi" do
 	source "Lightwright 5 Registration.regi"
 	owner "root"
 	group "wheel"

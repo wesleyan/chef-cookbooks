@@ -79,6 +79,7 @@ run_list "recipe[prepare::mac]",
           "recipe[blackboard_xythosdrive::mac]",
           "recipe[synergy_kaleidagraph::mac]",
 	  "recipe[statacorp_stata::mac]",
+	  "recipe[mckernon_lightwright::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
