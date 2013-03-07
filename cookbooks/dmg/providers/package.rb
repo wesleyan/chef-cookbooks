@@ -64,7 +64,7 @@ action :install do
         ignore_failure true
       end
       if new_resource.package_id and new_resource.version
-        file "/var/db/receipts/#{new_resouce.package_id}.plist" do
+        file "/var/db/receipts/#{new_resource.package_id}.plist" do
           content ({"PackageVersion" => new_resource.version}).to_plist.dump
           mode 0644 # -rw-r--r--
           owner "root"
@@ -96,13 +96,17 @@ action :install do
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
   	      block do
-  		      currPKG = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
-		      currPKG = Plist::parse_xml(currPKG) if currPKG.class == String
-		      currPKG['PackageVersion'] = new_resource.version
+		      if ::File.exists?("/var/db/receipts/#{new_resource.package_id}.plist")
+			      currPKG = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
+			      currPKG = Plist::parse_xml(currPKG) if currPKG.class == String
+			      currPKG['PackageVersion'] = new_resource.version
+			      ::File.delete("/var/db/receipts/#{new_resource.package_id}.plist")
+		      else
+			      currPKG = {"PackageVersion"=>new_resource.version}
+		      end
 		      f = ::File.open("/tmp/#{new_resource.package_id}.plist","w")
 		      f.puts Plist::Emit.dump(currPKG)
 		      f.close
-		      ::File.delete("/var/db/receipts/#{new_resource.package_id}.plist")
 		      system("plutil -convert binary1 -o /var/db/receipts/#{new_resource.package_id}.plist /tmp/#{new_resource.package_id}.plist")
 		      ::File.delete("/tmp/#{new_resource.package_id}.plist")
 	      end
