@@ -21,7 +21,7 @@ end
 directory "/Users/Shared/Lightwright" do
 	owner "root"
 	group "wheel"
-	mode 00755
+	mode 00777
 	action :create
 end
 
