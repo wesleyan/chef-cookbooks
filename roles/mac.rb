@@ -80,6 +80,7 @@ run_list "recipe[prepare::mac]",
           "recipe[synergy_kaleidagraph::mac]",
 	  "recipe[statacorp_stata::mac]",
 	  "recipe[mckernon_lightwright::mac]",
+	  "recipe[psyscope::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
 
