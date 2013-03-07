@@ -17,6 +17,7 @@ dmg_package "Adobe Flash Player" do
   action :install
   type "pkg"
   package_id "adobe_flash_player-11.6.602.167"
+  version "11.6.602.167"
 end
 
 # end
