@@ -16,6 +16,8 @@ dmg_package "GoogleEarthMac-Intel-7.0.2.8415.dmg" do
   action :install
   unmount false
   type "app"
+  package_id "com.google.earth"
+  version "7.0.2.8415"
 end
 
 # Install web plugin
@@ -30,4 +32,6 @@ dmg_package "GoogleEarthMac-Intel-7.0.2.8415.dmg" do
   type "dir"
   unmount true
 # already_mounted true
+  package_id "com.google.earth.plugin"
+  version "7.0.2.8415"
 end

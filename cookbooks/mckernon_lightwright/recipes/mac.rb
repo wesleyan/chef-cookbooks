@@ -15,18 +15,20 @@ dmg_package "LightWright" do
   checksum "b3d87b195d25d97573fad4d43877bc0e98d1b434218101fae0564b725538df28"
   action :install
   type "mpkg"
+  package_id "com.mckernon.lightwright5.Lightwright5.pkg"
+  version "5.0.33"
 end
 
 # Created shared directory if it doesn't already exist (the mpkg might create this directory, need to check)
 directory "/Users/Shared/Lightwright" do
 	owner "root"
 	group "wheel"
-	mode 00755
-	action :create_if_missing
+	mode 00777
+	action :create
 end
 
 # Copy license file to proper location and set permissions
-cookbook_file "/Users/Shared/Lightwright 5 Registration.regi" do
+cookbook_file "/Users/Shared/Lightwright/Lightwright 5 Registration.regi" do
 	source "Lightwright 5 Registration.regi"
 	owner "root"
 	group "wheel"
