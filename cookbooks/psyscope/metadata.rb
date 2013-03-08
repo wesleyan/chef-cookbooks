@@ -1,6 +1,6 @@
 name             'psyscope'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Wesleyan University'
+maintainer_email 'mdietz@wesleyan.edu'
 license          'All rights reserved'
 description      'Installs/Configures psyscope'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
