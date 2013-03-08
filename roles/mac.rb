@@ -81,9 +81,9 @@ run_list "recipe[prepare::mac]",
 	  "recipe[statacorp_stata::mac]",
 	  "recipe[mckernon_lightwright::mac]",
 	  "recipe[psyscope::mac]",
+	  "recipe[quark_quarkxpress::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
-
 #"recipe[remotedesktop::mac]",
 
 default_attributes(
