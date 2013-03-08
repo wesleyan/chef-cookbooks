@@ -1,6 +1,6 @@
 Description
 ===========
-Installs Psyscope X.
+Installs QuarkXPress and updates.
 
 Requirements
 ============
