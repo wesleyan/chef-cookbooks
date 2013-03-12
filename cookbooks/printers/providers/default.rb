@@ -10,3 +10,7 @@ end
 action :remove do
 	system("lpadmin -x #{new_resource.name}")
 end
+
+action :set_default do
+	system("lpadmin -d #{new_resource.name}")
+end

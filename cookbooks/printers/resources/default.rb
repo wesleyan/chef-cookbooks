@@ -3,7 +3,7 @@
 # Resource:: printer
 #
 
-actions :add, :remove
+actions :add, :remove, :set_default
 
 attribute :name, :kind_of => String, :name_attribute => true
 attribute :model, :kind_of => String, :default => nil
