@@ -42,6 +42,74 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   package_id "com.apple.pkg.EPSONPrinterDrivers"
 end
 
+printers "ArtLib-HP4105" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "Allb204-HP4015-BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "awks112-bw-hp5100n" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "AWKS112-color-HP5550" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "CFA-HP5200-BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "cfalab-xerox7760gx-color" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "Fisk-HP4015BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "HAS-HP4015BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
 printers "HASLab_color_HP3800" do
   model "drv:///sample.drv/laserjet.ppd"
+end
+printers "LRC-HP4015BW2" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "PAC-HP4015BW2" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "PAC-HP4015BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "PAC-HP4015BW-2" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "PACLab_color_HPCP3505n" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "QAC-HP4015-BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "SCIC-HP4200" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "Scili-color-HPCP4520" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "scili-hpm602-bw" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "ST-HP4015-BW2" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "ST-HP4015BW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "STLab-color-HPCP3505" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+printers "UsdanLobby-RicohBW" do
+  model "drv:///sample.drv/laserjet.ppd"
+end
+
+printers "Set Default" do
+  name node['printers']['default']
+  action :set_default
 end
