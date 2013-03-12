@@ -18,6 +18,11 @@ execute "change /usr/local/lib permissions" do
   command "chown -R #{node['homebrew']['user']} /usr/local/lib"
   only_if { File.exist? '/usr/local/lib'}
 end
+
+execute "change /usr/local/etc permissions" do
+  command "chown -R #{node['homebrew']['user']} /usr/local/etc"
+  only_if { File.exist? '/usr/local/etc'}
+end
   
 execute "change cellar permissions" do
   command "chown -R #{node['homebrew']['user']} /usr/local/Cellar"
