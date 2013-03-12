@@ -2,15 +2,16 @@ name "mac"
 description "mac image"
 
 run_list "recipe[prepare::mac]",
-          "recipe[sudo]", 
-          # XCode
-          "recipe[apple_xcode::mac]", 
+          "recipe[sudo]",  
           # Package providers
           "recipe[dmg]", 
-          "recipe[homebrew]", 
+          # XCode
+          "recipe[apple_xcode::mac]",
+          "recipe[homebrew]",
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
+          "recipe[launch_association::mac]",
           #"recipe[desktop_picture::mac]",
           # Core system updates and applications
           #"recipe[apple_osx_updates::mac]", 
@@ -57,25 +58,32 @@ run_list "recipe[prepare::mac]",
           "recipe[tomerbe_soundhack::mac]", 
           "recipe[supercollider::mac]",
           # Music, Dance & Arts
-          #"recipe[troikatronix_isadora::mac]",
+          "recipe[troikatronix_isadora::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
-          #"recipe[python::mac]", NOT_WORKING
           "recipe[xorg_xquartz::mac]",
-          #"recipe[schrodinger_pymol::mac]", NOT_WORKING
-          #"recipe[atgc_phyml::mac]",
+          "recipe[python::mac]", 
+          "recipe[schrodinger_pymol::mac]",
+          "recipe[atgc_phyml::mac]",
           "recipe[eclipse::mac]", 
           "recipe[aquamacs_emacs::mac]", 
           "recipe[macvim::mac]",
           "recipe[tug_mactex::mac]",
-          #"recipe[smlnj::mac]",
-          #"recipe[mrbayes::mac]",
+          "recipe[smlnj::mac]",
+          "recipe[mrbayes::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
+          "recipe[apple_airport::mac]",
+          "recipe[hamrick_vuescan::mac]",
+          "recipe[blackboard_xythosdrive::mac]",
+          "recipe[synergy_kaleidagraph::mac]",
+	  "recipe[statacorp_stata::mac]",
+	  "recipe[mckernon_lightwright::mac]",
+	  "recipe[psyscope::mac]",
+	  "recipe[quark_quarkxpress::mac]",
           # Finalize 
           "recipe[finalize::mac]"        
-
 #"recipe[remotedesktop::mac]",
 
 default_attributes(

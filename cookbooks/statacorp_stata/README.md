@@ -1,6 +1,6 @@
 Description
 ===========
-Installs Roxio Toast Titanium 11 and updates!
+Installs Stata for OS X and Windows
 
 Requirements
 ============
@@ -11,4 +11,4 @@ Attributes
 
 Usage
 =====
-Use the cookbook.
+Use the cookbook?

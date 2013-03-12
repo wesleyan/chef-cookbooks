@@ -3,14 +3,15 @@ description "Image for IMS Events Workstations"
 
 run_list  "recipe[prepare::ims-events]",
           "recipe[sudo]", 
-          # XCode
-          "recipe[apple_xcode::mac]", 
           # Package providers
           "recipe[dmg]", 
-          "recipe[homebrew]", 
+          ## Apple XCode
+          "recipe[apple_xcode::mac]",
+          "recipe[homebrew]",
           # Desktop and Dock
           # "recipe[preference::mac]",
           "recipe[dock::mac]", 
+          "recipe[launch_association::mac]",
           # "recipe[desktop_picture::mac]",
           # Core system updates
           #"recipe[apple_osx_updates::mac]", 

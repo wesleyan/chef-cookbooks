@@ -18,6 +18,7 @@
 #
 
 def load_current_resource
+  require 'plist'
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
   @dmgpkg.app(new_resource.app)
   Chef::Log.debug("Checking for application #{new_resource.app}")
@@ -26,6 +27,7 @@ def load_current_resource
 end
 
 action :install do
+
   volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
   dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
   dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
@@ -54,24 +56,62 @@ action :install do
       end
     end
     
-    
     case new_resource.type
     when "dir"
-      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
+      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
       end
+      if new_resource.package_id and new_resource.version
+        file "/var/db/receipts/#{new_resource.package_id}.plist" do
+          content ({"PackageVersion" => new_resource.version}).to_plist.dump
+          mode 0644 # -rw-r--r--
+          owner "root"
+          group "wheel"
+          action :create
+        end
+      end
     when "app"
-      execute "cp -R '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
+      
+      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
+      end
+      if new_resource.version and new_resource.package_id
+        file "/var/db/receipts/#{new_resource.package_id}.plist" do        
+          content ({"PackageVersion" => new_resource.version}).to_plist.dump 
+          mode 0644 # -rw-r--r--
+          owner "root"
+          group "wheel"
+          action :create
+        end
       end
     when "mpkg", "pkg"
       execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
  #       returns [0, 1]
       end  
+      # we assume here the pkg installer already created a receipt
+      if (new_resource.version and new_resource.package_id)
+      ruby_block "Set Receipt Version" do
+  	      block do
+		      if ::File.exists?("/var/db/receipts/#{new_resource.package_id}.plist")
+			      currPKG = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
+			      currPKG = Plist::parse_xml(currPKG) if currPKG.class == String
+			      currPKG['PackageVersion'] = new_resource.version
+			      ::File.delete("/var/db/receipts/#{new_resource.package_id}.plist")
+		      else
+			      currPKG = {"PackageVersion"=>new_resource.version}
+		      end
+		      f = ::File.open("/tmp/#{new_resource.package_id}.plist","w")
+		      f.puts Plist::Emit.dump(currPKG)
+		      f.close
+		      system("plutil -convert binary1 -o /var/db/receipts/#{new_resource.package_id}.plist /tmp/#{new_resource.package_id}.plist")
+		      ::File.delete("/tmp/#{new_resource.package_id}.plist")
+	      end
+      end
+      end
     when "custom"
       if(new_resource.command)
         execute new_resource.name do
@@ -103,6 +143,16 @@ def mounted?
 end
 
 def installed?
-  ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app") ||
-    system("pkgutil --pkgs=#{new_resource.package_id}") || (new_resource.type == 'dir' && ::File.directory?("#{new_resource.destination}/#{new_resource.app}"))
+  begin
+    if new_resource.version and new_resource.package_id
+      result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
+      result = Plist::parse_xml(result) if result.class == String
+      return Gem::Version.new(result['PackageVersion']) >= Gem::Version.new(new_resource.version)
+    elsif new_resource.package_id
+      return system("pkgutil --pkgs=#{new_resource.package_id}")
+    end
+    return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
+  rescue
+    return false
+  end
 end
