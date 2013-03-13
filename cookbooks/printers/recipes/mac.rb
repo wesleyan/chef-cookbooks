@@ -43,67 +43,67 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
 end
 
 printers "ArtLib-HP4105" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4100 Series.gz"
 end
 printers "Allb204-HP4015-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "awks112-bw-hp5100n" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5100 Series.gz"
 end
 printers "AWKS112-color-HP5550" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet 5550.gz"
 end
 printers "CFA-HP5200-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5200 Series.gz"
 end
 printers "cfalab-xerox7760gx-color" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/Xerox Phaser 7760GX.gz"
 end
 printers "Fisk-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "HAS-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "HASLab_color_HP3800" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet 3800.gz"
 end
 printers "LRC-HP4015BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW-2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PACLab_color_HPCP3505n" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
 end
 printers "QAC-HP4015-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "SCIC-HP4200" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/hp LaserJet 4200 Series.gz"
 end
 printers "Scili-color-HPCP4520" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP4020 CP4520 Series.gz"
 end
 printers "scili-hpm602-bw" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 600 M601 M602 M603.gz"
 end
 printers "ST-HP4015-BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "ST-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "STLab-color-HPCP3505" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
 end
 printers "UsdanLobby-RicohBW" do
   model "drv:///sample.drv/laserjet.ppd"
