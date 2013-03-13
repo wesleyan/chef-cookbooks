@@ -42,68 +42,91 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   package_id "com.apple.pkg.EPSONPrinterDrivers"
 end
 
+#install Pharos drivers
+dmg_package "Pharos Printers" do
+  app "Popup"
+  volumes_dir "Pharos"
+  dmg_name "Pharos"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/pharos_printer/Pharos.dmg"
+  checksum "55fee0ca2184acae96a827af569ec910ba350a3b8e6dd4b6b5b7e5bc58abed6a"
+  action :install
+  type "pkg"
+  package_id "com.pharos.printerdrivers"
+  version "1"
+end
+
+# copies color/luster preferences
+cookbook_file "/Library/ColorSync/Profiles/DAC100 Epson 3880 Inkpress Luster Feb 2013.icc" do
+  cookbook "printers"
+  source "DAC100 Epson 3880 Inkpress Luster Feb 2013.icc"
+  mode 0666
+  owner "root"
+  group "wheel"
+  action :create
+end
+
 printers "ArtLib-HP4105" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4100 Series.gz"
 end
 printers "Allb204-HP4015-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "awks112-bw-hp5100n" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5100 Series.gz"
 end
 printers "AWKS112-color-HP5550" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet 5550.gz"
 end
 printers "CFA-HP5200-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5200 Series.gz"
 end
 printers "cfalab-xerox7760gx-color" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/Xerox Phaser 7760GX.gz"
 end
 printers "Fisk-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "HAS-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "HASLab_color_HP3800" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet 3800.gz"
 end
 printers "LRC-HP4015BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PAC-HP4015BW-2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "PACLab_color_HPCP3505n" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
 end
 printers "QAC-HP4015-BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "SCIC-HP4200" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/hp LaserJet 4200 Series.gz"
 end
 printers "Scili-color-HPCP4520" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP4020 CP4520 Series.gz"
 end
 printers "scili-hpm602-bw" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 600 M601 M602 M603.gz"
 end
 printers "ST-HP4015-BW2" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "ST-HP4015BW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end
 printers "STLab-color-HPCP3505" do
-  model "drv:///sample.drv/laserjet.ppd"
+  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
 end
 printers "UsdanLobby-RicohBW" do
   model "drv:///sample.drv/laserjet.ppd"
