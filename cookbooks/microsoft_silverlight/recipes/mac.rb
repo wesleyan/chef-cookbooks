@@ -6,13 +6,14 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "Silverlight.dmg" do
+dmg_package "Microsoft Silverlight" do
   app "Silverlight"
   volumes_dir "Silverlight"
   dmg_name "Silverlight"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_silverlight/Silverlight.dmg"
-  checksum "aac8a67e234e93f56751598cb67da6e58ebb9aaa93469dd038c9717f2490e674"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_silverlight/silverlight-5.1.20125.dmg"
+  checksum "74df4fc3ea10e029aed29a2900c9a302d17295dd2406bb2c09e09309b5f54422"
   action :install
   type "pkg"
   package_id "com.microsoft.SilverlightInstaller"
+  version "5.1.20125.0"
 end

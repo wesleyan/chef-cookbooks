@@ -2,12 +2,12 @@
 
 This file is used to list changes made in each version of silverlight.
 
+## 0.1.1:
+
+* Updated app to 5.1.20125
+* Added pkg version information, Microsoft actually uses receipts properly so no need to overwrite plist.
+
 ## 0.1.0:
 
 * Initial release of silverlight cookbook
 * Current version is 5.1.10411
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
