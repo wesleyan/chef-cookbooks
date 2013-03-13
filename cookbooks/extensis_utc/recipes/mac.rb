@@ -15,5 +15,5 @@ dmg_package "Universal Type Client" do
   checksum "7e325f7186de90dde22958a16aceca13f296be53f5aac32a88adf213c57c3fd5"
   action :install
   type "pkg"
-  package_id "com.extensis.UniversalTypeClient.universalTypeClient33.UniversalTypeClient.pkg<"
+  package_id "com.extensis.UniversalTypeClient.universalTypeClient33.UniversalTypeClient.pkg"
 end
