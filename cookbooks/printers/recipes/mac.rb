@@ -42,6 +42,29 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   package_id "com.apple.pkg.EPSONPrinterDrivers"
 end
 
+#install Pharos drivers
+dmg_package "Pharos Printers" do
+  app "Popup"
+  volumes_dir "Pharos"
+  dmg_name "Pharos"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/pharos_printer/Pharos.dmg"
+  checksum "55fee0ca2184acae96a827af569ec910ba350a3b8e6dd4b6b5b7e5bc58abed6a"
+  action :install
+  type "pkg"
+  package_id "com.pharos.printerdrivers"
+  version "1"
+end
+
+# copies color/luster preferences
+cookbook_file "/Library/ColorSync/Profiles/DAC100 Epson 3880 Inkpress Luster Feb 2013.icc" do
+  cookbook "printers"
+  source "DAC100 Epson 3880 Inkpress Luster Feb 2013.icc"
+  mode 0666
+  owner "root"
+  group "wheel"
+  action :create
+end
+
 printers "ArtLib-HP4105" do
   model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4100 Series.gz"
 end
