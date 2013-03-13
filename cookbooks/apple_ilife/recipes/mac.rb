@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install iLife '11 base package
-dmg_package "iLife11.dmg" do
+dmg_package "iLife '11" do
   app "iLife11"
   volumes_dir "iLife11"
   dmg_name "iLife11"
@@ -19,7 +19,7 @@ dmg_package "iLife11.dmg" do
 end
 
 # Install latest GarageBand update
-dmg_package "GarageBand6.0.5Update.dmg" do
+dmg_package "GarageBand Update" do
   app "GarageBand6.0.5Update"
   volumes_dir "GarageBand 6.0.5 Update (Manual)"
   dmg_name "GarageBand6.0.5Update"
@@ -31,7 +31,7 @@ dmg_package "GarageBand6.0.5Update.dmg" do
 end
 
 # Install latest iDVD update
-dmg_package "iDVD7.1.2Update.dmg" do
+dmg_package "iDVD Update" do
   app "iDVD7.1.2Update"
   volumes_dir "iDVD 7.1.2 Update"
   dmg_name "iDVD7.1.2Update"
@@ -43,7 +43,7 @@ dmg_package "iDVD7.1.2Update.dmg" do
 end
 
 # Install latest iMovie update
-dmg_package "iMovie9.0.8Update.dmg" do
+dmg_package "iMovie Update" do
   app "iMovie9.0.8Update"
   volumes_dir "iMovie 9.0.8"
   dmg_name "iMovie9.0.8Update"
@@ -55,7 +55,7 @@ dmg_package "iMovie9.0.8Update.dmg" do
 end
 
 # Install base iPhoto update (required for current updates)
-dmg_package "iPhoto9.1Update.dmg" do
+dmg_package "iPhoto Core Update" do
   app "iPhoto9.1Update"
   volumes_dir "iPhoto 9.1 Update"
   dmg_name "iPhoto9.1Update"
@@ -67,7 +67,7 @@ dmg_package "iPhoto9.1Update.dmg" do
 end
 
 # Install latest iPhoto update
-dmg_package "iPhoto9.4.2Update.dmg" do
+dmg_package "iPhoto Update" do
   app "iPhoto9.4.2Update"
   volumes_dir "iPhoto 9.4.2"
   dmg_name "iPhoto9.4.2Update"
@@ -79,7 +79,7 @@ dmg_package "iPhoto9.4.2Update.dmg" do
 end
 
 # Install latest iWeb update
-dmg_package "iWeb304.dmg" do
+dmg_package "iWeb Update" do
   app "iWeb_304"
   volumes_dir "iWeb 3.0.4 Update (Manual)"
   dmg_name "iWeb304"
@@ -91,7 +91,7 @@ dmg_package "iWeb304.dmg" do
 end
 
 # Install latest Digital Camera RAW update
-dmg_package "RAWCameraUpdate4.03.dmg" do
+dmg_package "RAW Camera Update" do
   app "RAWCameraUpdate4"
   volumes_dir "Digital Camera RAW Compatibility Update 4.03"
   dmg_name "RAWCameraUpdate4"
