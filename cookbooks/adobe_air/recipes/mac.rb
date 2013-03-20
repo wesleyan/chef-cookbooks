@@ -11,7 +11,7 @@ dmg_package "Adobe AIR" do
   app "Adobe AIR"
   volumes_dir "Adobe AIR"
   dmg_name "adobe_air-3.6.0.6090"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/adobe_air/adobe_air-3.6.0.6090.dmg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_air/adobe_air-3.6.0.6090.dmg"
   checksum "21e7f115c3be416075e65cdaaa05a31ef41c56918a24c1c501f84c68c4214321"
   action :install
   type "pkg"
