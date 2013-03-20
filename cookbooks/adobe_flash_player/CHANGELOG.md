@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of flash.
 
+## 0.3.1:
+
+* Updated runtime to version 11.6.602.180
+
 ## 0.3.0:
 
 * Updated runtime to version 11.6.602.167
@@ -14,8 +18,3 @@ This file is used to list changes made in each version of flash.
 
 * Initial release of adobe_flash_player cookbook
 * Current version of Flash runtime: 11.4.402.287 
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
