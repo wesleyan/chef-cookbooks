@@ -93,10 +93,10 @@ end
 # Install latest Digital Camera RAW update
 dmg_package "RAW Camera Update" do
   app "RAWCameraUpdate4"
-  volumes_dir "Digital Camera RAW Compatibility Update 4.03"
-  dmg_name "RAWCameraUpdate4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/RAWCameraUpdate4.03.dmg"
-  checksum "a21895288af29c336f78833c2ec0a8d3bfff3cf715b1f01bce7ce4bf9bc78c8d"
+  volumes_dir "Digital Camera RAW Compatibility Update 4.04"
+  dmg_name "RAWCameraUp4.04"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/RAWCameraUp4.04.dmg"
+  checksum "f2bebb182568b6843af920408ebc000483bbbd878655385551958dea8e8f8642"
   action :install
   type "pkg"
   package_id "com.apple.pkg.RAWCameraUpdate4"
