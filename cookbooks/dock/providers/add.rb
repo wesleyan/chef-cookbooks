@@ -63,7 +63,7 @@ action :folder_create do
     if(new_resource.icon) 
       execute "/tmp/seticon -i \"#{new_resource.icon}\" \"#{folder.path}\""  
       
-      execute "setfile -a V \"#{folder.path}\"/Icon*" do
+      execute "SetFile -a V \"#{folder.path}\"/Icon*" do
         returns [0, 1]
       end
       
