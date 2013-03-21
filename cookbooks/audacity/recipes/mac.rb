@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "Audacity Mac OSX" do
+dmg_package "Audacity" do
   app "Audacity"
   volumes_dir "Audacity 2.0.3"
   dmg_name "audacity-macosx-ub-2.0.3"
@@ -14,9 +14,11 @@ dmg_package "Audacity Mac OSX" do
   checksum "85ae417d4d532986c655b5ce634d7aceff64153d8f7ebab57ac9eb273fae58cb"
   action :install
   type "dir"
+  package_id "com.sourceforge.audacity"
+  version "2.0.3"
 end
 
-dmg_package "Lame_Library_v3.98.2_for_Audacity_on_OSX.dmg" do
+dmg_package "Lame Library for Audacity" do
   app "Lame Library v3.98.2 for Audacity"
   volumes_dir "Lame Library v3.98.2 for Audacity"
   dmg_name "Lame_Library_v3.98.2_for_Audacity_on_OSX"
@@ -27,7 +29,7 @@ dmg_package "Lame_Library_v3.98.2_for_Audacity_on_OSX.dmg" do
   package_id "com.sourceforge.audacity.lameLibraryForAudacity.pkg"
 end
 
-dmg_package "FFmpeg_v0.6.2_for_Audacity_on_OSX.dmg" do
+dmg_package "FFmpeg Library for Audacity" do
   app "FFmpeg_v0.6.2_for_Audacity_on_OSX"
   volumes_dir "FFmpeg_v0.6.2_for_Audacity_on_OSX"
   dmg_name "FFmpeg_v0.6.2_for_Audacity_on_OSX"

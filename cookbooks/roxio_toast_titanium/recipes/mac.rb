@@ -14,5 +14,7 @@ dmg_package "Roxio Toast 11 Titanium" do
   checksum "e06997333b5f03b30ee6cf5dee3dc64ec94c68f2bf342587fab7686c90c1e536"
   action :install
   type "pkg"
+  package_id "com.roxio.toast.titanium"
+  version "11.1.1072"
 end
 

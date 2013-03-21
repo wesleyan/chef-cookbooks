@@ -16,7 +16,7 @@ dmg_package "Apple Java" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.JavaForMacOSX107"
-  version "2013-002"
+  version "2013.002"
 end
 
 # Installs Java 7 web plug-in for browsers
