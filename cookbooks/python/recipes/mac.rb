@@ -9,9 +9,9 @@ include_recipe "homebrew"
 #end
 
 homebrew_tap "homebrew/dupes"
-package "tk" do
+package "tcl-tk" do
   version "8.5.13"
-  options "--enable-threads"
+  options "--enable-threads --with-x11"
 end
 
 package "python" do
