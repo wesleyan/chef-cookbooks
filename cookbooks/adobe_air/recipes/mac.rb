@@ -1,19 +1,20 @@
 #
-# Cookbook Name:: air
+# Cookbook Name:: adobe_air
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Need to figure out app as installer
-dmg_package "AdobeAIR.dmg" do
-  app ""
+# Install package, package was captured with Composer as Adobe AIR is a .app as installer because Adobe is awesome.
+dmg_package "Adobe AIR" do
+  app "Adobe AIR"
   volumes_dir "Adobe AIR"
-  dmg_name "AdobeAIR"
-  source "http://baratheon.class.wesleyan.edu/mac_os_x-10.8/adobe_air-3/AdobeAIR.dmg"
-  checksum "1e1b7c4b199ad4eb80511058e0a4215cfbfd47822e8f125f32dbc519592434d0"
+  dmg_name "adobe_air-3.6.0.6090"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_air/adobe_air-3.6.0.6090.dmg"
+  checksum "21e7f115c3be416075e65cdaaa05a31ef41c56918a24c1c501f84c68c4214321"
   action :install
-  type ""
-  package_id ""
+  type "pkg"
+  package_id "com.pkg.Adobe.AIR"
+  version "3.6.0.6090"
 end

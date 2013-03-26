@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of chrome.
 
+## 0.4.1:
+
+* Updated app to 25.0.1364.172
+
 ## 0.4.0:
 * Renamed package to Google Chrome
 * Updated app to 25.0.1364.99

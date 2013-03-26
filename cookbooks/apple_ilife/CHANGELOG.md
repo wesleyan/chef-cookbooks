@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of apple_ilife.
 
+## 0.2.1: 
+
+* Updated RAW Camera to 4.04
+
 ## 0.2.0:
 
 * Integrated apple_digital_camera_raw cookbook as it is actually a part of iLife.  Current version is 4.03

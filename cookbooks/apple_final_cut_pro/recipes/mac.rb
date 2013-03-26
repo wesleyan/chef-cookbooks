@@ -27,7 +27,7 @@ dmg_package "Final Cut Pro Supplemental Content" do
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_final_cut_pro/FCPContent-1.0.dmg"
   checksum "a68df0eafac96d2a6ae52fe7b08fb587e6c7216afe64c05210fcec01a0eb78a5"
   action :install
-  type "app"
+  type "pkg"
   package_id "com.apple.pkg.FCPContent"
 end
 
@@ -39,6 +39,6 @@ dmg_package "QuickTime Pro Codecs" do
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_final_cut_pro/ProAppsQTCodecs-1.0.dmg"
   checksum "a821012be80d35d6871dac99dc3f2cf4a76fbe5466182287b492956c34347ef2"
   action :install
-  type "app"
+  type "pkg"
   package_id "com.apple.pkg.ProAppsQTCodecs"
 end

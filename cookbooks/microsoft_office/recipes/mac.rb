@@ -10,13 +10,13 @@
 dmg_package "Microsoft Office 2011 SP3" do
   app "Microsoft Office 2011"
   volumes_dir "Microsoft Office 2011"
-  dmg_name "microsoft_office_2011-14.3.1"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/microsoft_office_2011-14.3.1.dmg"
-  checksum "00e4663d8e0ad23bff7e3af6088903cf340982df92d7c8af9fe86f199340795d"
+  dmg_name "microsoft_office_2011-14.3.2"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/microsoft_office_2011-14.3.2.dmg"
+  checksum "b05cfe37caafe40e540764831087111dfac8020ef01fdce55215b9468bff8a0d"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
-  #version "14.3.1"
+  version "14.3.2"
 end
 
 # Install customized plist files to surpress first-run dialogues

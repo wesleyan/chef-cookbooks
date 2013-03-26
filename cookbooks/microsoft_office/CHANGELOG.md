@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of microsoft_office.
 
+## 0.3.1:
+
+* Updated composer package to 14.3.2
+
 ## 0.3.0:
 
 * Rebuilt package using Composer
