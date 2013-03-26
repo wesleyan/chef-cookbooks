@@ -18,3 +18,15 @@ dmg_package "Stata" do
   package_id "com.statacorp.stata"
   version "12.1"
 end
+
+cookbook_file "Stata Skip First Run" do
+  backup false
+  mode 0600
+  path "/System/Library/User Template/English.lproj/Library/Preferences/com.stata.stata12.plist"
+  source "com.stata.stata12.plist"
+  action :create_if_missing
+end
+
+execute "Update Stata" do
+  command "/Applications/Stata/Stata.app/Contents/MacOS/Stata -q -e \"update all\""
+end
