@@ -55,6 +55,31 @@ dmg_package "Pharos Printers" do
   version "1"
 end
 
+dmg_package "Epson Drivers" do
+  app "Epson3880"
+  volumes_dir "Epson"
+  dmg_name "Epson"
+  type "mpkg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/Epson.dmg"
+  checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
+  action :install
+  package_id "com.epson.drivers.3880"
+  version "1"
+end
+
+dmg_package "Epson Drivers" do
+  app "Epson9800"
+  volumes_dir "Epson"
+  dmg_name "Epson"
+  type "mpkg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/Epson.dmg"
+  checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
+  action :install
+  package_id "com.epson.drivers.9800"
+  version "1"
+end
+
+
 # copies color/luster preferences
 cookbook_file "/Library/ColorSync/Profiles/DAC100 Epson 3880 Inkpress Luster Feb 2013.icc" do
   cookbook "printers"
