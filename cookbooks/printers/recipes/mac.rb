@@ -156,7 +156,22 @@ end
 printers "UsdanLobby-RicohBW" do
   model "drv:///sample.drv/laserjet.ppd"
 end
-
+printers "DAC100-E3880-1" do
+  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
+  action :install_no_falcon
+end
+printers "DAC100-E3880-2" do
+  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
+  action :install_no_falcon
+end
+printers "DAC100-E3880-3" do
+  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
+  action :install_no_falcon
+end
+printers "DAC100-9800" do
+  model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9800.gz"
+  action :install_no_falcon
+end
 printers "Set Default" do
   name node['printers']['default']
   action :set_default
