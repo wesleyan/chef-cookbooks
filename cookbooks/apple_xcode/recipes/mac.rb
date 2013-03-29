@@ -15,7 +15,7 @@ dmg_package "XCode 4.6.1" do
   checksum "6821e99fe1063700fb4f7ebf8db30600c1f4c7aba5fc1537ded140caaabb144a"
   action :install
   type "app"
-  package_id "com.apple.Xcode"
+  package_id "com.apple.pkg.Xcode"
   version "4.6.1"
 end
 
@@ -32,6 +32,7 @@ dmg_package "xcode-4.6-cltools-0113" do
   version "4.6.1.1303"
 end
 
+# Place plist file in default user profile, required for automated Xcode license acceptance
 cookbook_file "0313 XCode License" do
   backup false
   path "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist"
@@ -39,4 +40,5 @@ cookbook_file "0313 XCode License" do
   mode 0600
   :create
 end
+
 # execute "xcode-select -switch /usr/bin"
