@@ -36,6 +36,8 @@ run_list  "recipe[prepare::ims-events]",
           # Adobe CS6 Suite
           "recipe[adobe_acrobat_pro::mac]",
           # Video
+          "recipe[cisco_jabber_video::mac]",
+          "recipe[microsoft_skype::mac]",
           # Finalize 
           "recipe[finalize::mac]"
 #"recipe[remotedesktop::mac]",
