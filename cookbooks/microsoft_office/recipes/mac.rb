@@ -12,7 +12,7 @@ dmg_package "Microsoft Office 2011 SP3" do
   volumes_dir "Microsoft Office 2011"
   dmg_name "microsoft_office_2011-14.3.2"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/microsoft_office_2011-14.3.2.dmg"
-  checksum "b05cfe37caafe40e540764831087111dfac8020ef01fdce55215b9468bff8a0d"
+  checksum "d546e0e4cbb5bc37fbdc9ba904d7df8a08d69a2afb7323fef752d83fd4a36f05"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
