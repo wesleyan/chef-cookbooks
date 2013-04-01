@@ -173,7 +173,7 @@ printers "DAC100-E3880-3" do
 end
 printers "DAC100-9800" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9800.gz"
-  ip "129.133.125.163"
+  ip "DAC100-E9800.class.wesleyan.edu"
 end
 printers "Set Default #{node['printers']['default']}" do
   name node['printers']['default']
