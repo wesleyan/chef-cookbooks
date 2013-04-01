@@ -16,6 +16,7 @@ dmg_package "HewlettPackardPrint2.13.dmg" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.HewlettPackardPrinterDrivers"
+  version "2.13"
 end
 
 # Install Xerox drivers
@@ -28,6 +29,7 @@ end
   action :install
   type "pkg"
   package_id "com.apple.pkg.XeroxPrinterDrivers"
+  version "2.1.1"
 end
 
 # Install Epson drivers
@@ -40,6 +42,7 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.EPSONPrinterDrivers"
+  version "2.28"
 end
 
 #install Pharos drivers
@@ -158,21 +161,22 @@ printers "UsdanLobby-RicohBW" do
 end
 printers "DAC100-E3880-1" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  action :install_no_falcon
+  ip "DAC100-E3880-1.class.wesleyan.edu"
 end
 printers "DAC100-E3880-2" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  action :install_no_falcon
+  ip "DAC100-E3880-2.class.wesleyan.edu"
 end
 printers "DAC100-E3880-3" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  action :install_no_falcon
+  ip "DAC100-E3880-3.class.wesleyan.edu"
 end
 printers "DAC100-9800" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9800.gz"
-  action :install_no_falcon
+  ip "DAC100-E9800.class.wesleyan.edu"
 end
-printers "Set Default" do
+printers "Set Default #{node['printers']['default']}" do
   name node['printers']['default']
+  only_if { node['printers']['default']}
   action :set_default
 end

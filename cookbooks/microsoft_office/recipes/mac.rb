@@ -25,6 +25,11 @@ end
 
 # Download icon
 cookbook_file "/tmp/office.png"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
+
 
 # Create dock folder
 dock_add "Microsoft Office 2011" do
