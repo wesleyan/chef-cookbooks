@@ -177,5 +177,6 @@ printers "DAC100-9800" do
 end
 printers "Set Default #{node['printers']['default']}" do
   name node['printers']['default']
+  only_if { node['printers']['default']}
   action :set_default
 end
