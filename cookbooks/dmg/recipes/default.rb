@@ -18,3 +18,4 @@
 #
 
 chef_gem "plist"
+chef_gem "mixlib-versioning"
