@@ -73,7 +73,6 @@ action :install do
         end
       end
     when "app"
-      
       execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
