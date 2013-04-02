@@ -1,10 +1,11 @@
 name "mac"
 description "mac image"
 
-run_list "recipe[prepare::mac]",
-          "recipe[sudo]",  
+          # Core recipes
+run_list  "recipe[prepare::mac]",
+          "recipe[sudo]",
           # Package providers
-          "recipe[dmg]", 
+          "recipe[dmg]",
           # XCode
           "recipe[apple_xcode::mac]",
           "recipe[homebrew]",
@@ -15,16 +16,20 @@ run_list "recipe[prepare::mac]",
           #"recipe[desktop_picture::mac]",
           # Core system updates and applications
           #"recipe[apple_osx_updates::mac]", 
+          "recipe[apple_airport::mac]",
           "recipe[oracle_java::mac]", 
           "recipe[printers::mac]", 
           "recipe[sassafras_k2::mac]",
           "recipe[cls_labstats::mac]",
+          "recipe[blackboard_xythosdrive::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
-          "recipe[apple_safari::mac]", 
+          # No need for Safari recipe at this time as 6.0.3 is bundled with 10.8.3
+          #"recipe[apple_safari::mac]", 
           # Runtimes
-          "recipe[adobe_flash_player::mac]", 
+          "recipe[adobe_flash_player::mac]",
+          "recipe[adobe_air::mac]", 
           "recipe[microsoft_silverlight::mac]",
           # Core applications
           "recipe[microsoft_office::mac]",
@@ -41,24 +46,28 @@ run_list "recipe[prepare::mac]",
           "recipe[adobe_premiere_pro_cs6::mac]", 
           "recipe[adobe_after_effects_cs6::mac]", 
           "recipe[adobe_acrobat_pro::mac]",
-          # Research
+          # Social Sciences
           "recipe[chnm_zotero::mac]",
-          # Stats applications
           "recipe[gnu_r::mac]",
           "recipe[rstudio::mac]",
-          # Uncomment when building an image from scratch until we have our own receipt system for custom installers
+          "recipe[psyscope::mac]",
+          "recipe[statacorp_stata::mac]",
+          # Need to rebuild SPSS as a composer pkg
           #"recipe[ibm_spss::mac]", 
-          # 3D modeling/rendering applications
-          "recipe[google_earth::mac]",
+          # Center for the Arts
+          "recipe[apple_final_cut_pro::mac]",
+          "recipe[apple_compressor::mac]",
           "recipe[autodesk_autocad::mac]",
+          "recipe[google_earth::mac]",
           "recipe[mcneel_rhinoceros::mac]",
           "recipe[trimble_sketchup::mac]",
-          # Audio applications
           "recipe[audacity::mac]",
+          "recipe[makemusic_finale::mac]",
+          "recipe[mckernon_lightwright::mac]",
           "recipe[tomerbe_soundhack::mac]", 
           "recipe[supercollider::mac]",
-          # Music, Dance & Arts
           "recipe[troikatronix_isadora::mac]",
+          "recipe[quark_quarkxpress::mac]",
           # Natural Sciences & Mathematics
           "recipe[ccp4::mac]",
           "recipe[xorg_xquartz::mac]",
@@ -74,17 +83,16 @@ run_list "recipe[prepare::mac]",
           "recipe[ncbi_cn3d::mac]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
-          "recipe[apple_airport::mac]",
-          "recipe[hamrick_vuescan::mac]",
-          "recipe[blackboard_xythosdrive::mac]",
           "recipe[synergy_kaleidagraph::mac]",
-	  "recipe[statacorp_stata::mac]",
-	  "recipe[mckernon_lightwright::mac]",
-	  "recipe[psyscope::mac]",
-	  "recipe[quark_quarkxpress::mac]",
+          "recipe[wolfram_mathematica::mac]",
+          # To be moved to specific roles in production
+          "recipe[hamrick_vuescan::mac]",
+          "recipe[extensis_utc::mac]",
+          "recipe[apple_logic_pro::mac]",
+          "recipe[cisco_jabber_video]",
+          "recipe[microsoft_skype]",   
           # Finalize 
-          "recipe[finalize::mac]"        
-#"recipe[remotedesktop::mac]",
+          "recipe[finalize::mac]"
 
 default_attributes(
 "authorization" => {
