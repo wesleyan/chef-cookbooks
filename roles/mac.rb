@@ -85,12 +85,13 @@ run_list  "recipe[prepare::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
           "recipe[synergy_kaleidagraph::mac]",
           "recipe[wolfram_mathematica::mac]",
+          "recipe[perkinelmer_chemdraw_pro::mac]",
           # To be moved to specific roles in production
           "recipe[hamrick_vuescan::mac]",
           "recipe[extensis_utc::mac]",
           "recipe[apple_logic_pro::mac]",
-          "recipe[cisco_jabber_video]",
-          "recipe[microsoft_skype]",   
+          "recipe[cisco_jabber_video::mac]",
+          "recipe[microsoft_skype::mac]",   
           # Finalize 
           "recipe[finalize::mac]"
 
