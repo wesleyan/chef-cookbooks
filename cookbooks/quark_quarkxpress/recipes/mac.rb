@@ -10,6 +10,6 @@ dmg_package "QuarkXPress" do
 	action :install
 	type "pkg"
 	package_id "com.quark.quarkxpress"
-	version "9.5"
+	version "9.5.0"
 end
 
