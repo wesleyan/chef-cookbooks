@@ -27,7 +27,7 @@ def load_current_resource
 end
 
 action :install do
-
+  
   volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
   dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
   dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
@@ -147,7 +147,7 @@ def installed?
       require 'mixlib/versioning'
       result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
       result = Plist::parse_xml(result) if result.class == String
-      return Mixlib::Versioning.parse(result['PackageVersion']) >= MixLib::Versioning.parse(new_resource.version)
+      return Mixlib::Versioning.parse(result['PackageVersion']) >= Mixlib::Versioning.parse(new_resource.version)
     elsif new_resource.package_id
       return system("pkgutil --pkgs=#{new_resource.package_id}")
     end

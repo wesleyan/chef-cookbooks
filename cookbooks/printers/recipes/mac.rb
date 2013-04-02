@@ -16,7 +16,7 @@ dmg_package "HewlettPackardPrint2.13.dmg" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.HewlettPackardPrinterDrivers"
-  version "2.13"
+  version "2.13.0"
 end
 
 # Install Xerox drivers
@@ -42,7 +42,7 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.EPSONPrinterDrivers"
-  version "2.28"
+  version "2.28.0"
 end
 
 #install Pharos drivers
@@ -55,7 +55,7 @@ dmg_package "Pharos Printers" do
   action :install
   type "pkg"
   package_id "com.pharos.printerdrivers"
-  version "1"
+  version "1.0.0"
 end
 
 dmg_package "Epson Drivers" do
@@ -67,7 +67,7 @@ dmg_package "Epson Drivers" do
   checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
   action :install
   package_id "com.epson.drivers.3880"
-  version "1"
+  version "1.0.0"
 end
 
 dmg_package "Epson Drivers" do
@@ -79,7 +79,7 @@ dmg_package "Epson Drivers" do
   checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
   action :install
   package_id "com.epson.drivers.9800"
-  version "1"
+  version "1.0.0"
 end
 
 
