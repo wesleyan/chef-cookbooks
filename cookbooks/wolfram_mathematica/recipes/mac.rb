@@ -21,7 +21,7 @@ end
 
 # Install Browser & Spotlight plugin
 dmg_package "Wolfram Mathematica Extras" do
-  app "Mathematica"
+  app "Extras"
   volumes_dir "Mathematica"
   dmg_name "Mathematica_9.0.1_OSX_Universal"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/wolfram_mathematica/Mathematica_9.0.1_OSX_Universal.dmg"

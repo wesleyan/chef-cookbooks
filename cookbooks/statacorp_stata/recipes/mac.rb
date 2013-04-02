@@ -16,7 +16,7 @@ dmg_package "Stata" do
   action :install
   type "pkg"
   package_id "com.statacorp.stata"
-  version "12.1"
+  version "12.1.0"
 end
 
 cookbook_file "Stata Skip First Run" do

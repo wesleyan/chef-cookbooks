@@ -16,5 +16,5 @@ dmg_package "Psyscope" do
 	action :install
 	type "app"
 	package_id "com.psyscope"
-	version "10.57"
+	version "10.57.0"
 end
