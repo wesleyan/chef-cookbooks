@@ -32,6 +32,18 @@ dmg_package "xcode-4.6-cltools-0113" do
   version "4.6.1.0113"
 end
 
+dmg_package "Xcode DevSDK" do
+  app "XCode DevSDK"
+  volumes_dir "Xcode DevSDK"
+  dmg_name "xcode-devsdk"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-devsdk.dmg"
+  checksum "9381e9621bc922a6bd35b52342e9e2bff7ddb66ae5ca3b890cbf1cda6da49d44"
+  action :install
+  type "pkg"
+  package_id "com.apple.pkg.DevSDK"
+  version "4.6.1.0413"
+end
+
 # Place plist file in default user profile, required for automated Xcode license acceptance
 cookbook_file "0313 XCode License" do
   backup false
