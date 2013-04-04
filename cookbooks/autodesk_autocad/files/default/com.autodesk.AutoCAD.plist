@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ActiveNotification</key>
+	<integer>1</integer>
+	<key>ActiveNotificationNextDisplayDate</key>
+	<string>0</string>
+	<key>ActiveNotificationNextDisplayDateBeta</key>
+	<string>0</string>
+	<key>ActiveNotificationWaitTimeBeta</key>
+	<integer>2</integer>
+	<key>ActiveNotificationWaitTimeBetaFirstStartup</key>
+	<integer>0</integer>
+	<key>ActiveNotificationWaitTimeRelease</key>
+	<integer>7</integer>
+	<key>ActiveNotificationWaitTimeReleaseFirstStartup</key>
+	<integer>2</integer>
+	<key>DisplayUnexpectedCloseDialog</key>
+	<integer>1</integer>
+	<key>LastStateUpdate</key>
+	<string>6.9.1.0</string>
+	<key>LastStateUpdateBeta</key>
+	<string>UNSET</string>
+	<key>MC3Enabled</key>
+	<integer>1</integer>
+	<key>MC3OptIn</key>
+	<integer>0</integer>
+	<key>MC3OptInBeta</key>
+	<integer>0</integer>
+	<key>MC3OptInPreview</key>
+	<integer>0</integer>
+	<key>MC3ParticipationType</key>
+	<integer>0</integer>
+	<key>MC3ParticipationTypeBeta</key>
+	<integer>0</integer>
+	<key>MC3ParticipationTypePreview</key>
+	<integer>0</integer>
+	<key>MC3RePrompted</key>
+	<integer>1</integer>
+	<key>NSTreatUnknownArgumentsAsOpen</key>
+	<string>NO</string>
+	<key>NSWindow Frame AutoCAD_DocumentWindow</key>
+	<string>69 121 2240 1297 0 0 2560 1418 </string>
+	<key>NotificationRemindOn</key>
+	<integer>0</integer>
+	<key>NotificationRemindOnBeta</key>
+	<integer>1</integer>
+	<key>NotificationRemindOnPreview</key>
+	<integer>1</integer>
+	<key>ProductSpecificNotification</key>
+	<integer>1</integer>
+</dict>
+</plist>
