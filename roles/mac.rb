@@ -35,6 +35,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[microsoft_office::mac]",
           "recipe[apple_itunes::mac]", 
           "recipe[apple_ilife::mac]",
+          "recipe[apple_iwork::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
           # Adobe CS6 Suite
