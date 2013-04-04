@@ -14,4 +14,6 @@ dmg_package "eclipse-SDK-4.2.1-macosx-cocoa-x86_64.dmg" do
   checksum "f14ff4cfc8a7e788d3905afeb46e392639dc4074a87b1e060b13531b09cc4470"
   action :install
   type "dir"
+  package_id "org.eclipse.sdk"
+  version "4.2.1"
 end

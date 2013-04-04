@@ -29,7 +29,7 @@ dmg_package "xcode-4.6-cltools-0113" do
   action :install
   type "mpkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
-  version "4.6.1.1303"
+  version "4.6.1.0113"
 end
 
 # Place plist file in default user profile, required for automated Xcode license acceptance

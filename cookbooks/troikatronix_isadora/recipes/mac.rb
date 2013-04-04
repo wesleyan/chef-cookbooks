@@ -16,7 +16,7 @@ dmg_package "Troikatronix Isadora" do
   action :install
   type "pkg"
   package_id "com.troikatronix.isadora-core-sassafras.application"
-  version "1.30f26"
+  version "1.3.26"
 end
 
 # Install FreeFrame plugins
@@ -29,5 +29,5 @@ dmg_package "FreeFrame plugins for Isadora" do
   action :install
   type "pkg"
   package_id "com.troikatronix.freeframeub"
-  version "1.2"
+  version "1.2.0"
 end

@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of apple_final_cut_pro
 
+## 0.4.0:
+
+* Updated FCP to 10.0.8
+* Updated QT Pro Codecs to 1.0.2
+
 ## 0.3.0
 
 * Updated app to 10.0.7 
