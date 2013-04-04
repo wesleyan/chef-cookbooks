@@ -25,6 +25,7 @@ dock_add "/Applications/Autodesk/AutoCAD 2012/AutoCAD.app" do
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.autodesk.AutoCAD.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.autodesk.AutoCAD.R18.2.ACAD-A032.409.plist"
 
 # Insert license file
 #cookbook_file "/Applications/Autodesk/AutoCAD 2012/AutoCAD.app/Contents/licpath.lic"

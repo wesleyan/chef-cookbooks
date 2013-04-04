@@ -131,3 +131,5 @@ end
 #   command "sudo killall loginwindow" 
 #   action :run
 # end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.finder.plist"

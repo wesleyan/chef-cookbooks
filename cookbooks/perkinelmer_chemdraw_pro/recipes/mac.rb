@@ -19,22 +19,5 @@ dmg_package "ChemDraw Pro" do
   version "12.0.3"
 end
 
-# Create shared user directory
-directory "/Users/Shared/Library/Preferences" do
-  mode 00666
-  owner "root"
-  group "wheel"
-  action :create
-  recursive true
-end
-
 # Insert license file in shared user directory
-cookbook_file "ChemDraw Pro License" do
-  backup false
-  path "/Users/Shared/Library/Preferences/com.cambridgesoft.plist"
-  source "com.cambridgesoft.plist"
-  owner "root"
-  group "wheel"
-  mode 0666
-  action :create
-end
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.cambridgesoft.plist"
