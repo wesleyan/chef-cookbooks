@@ -54,6 +54,12 @@ dock_add "Adobe Creative Suite 6" do
   icon "/tmp/adobe.png"
 end
 
+# Keep Preview as the default viewer for PDFs
+launch_association_set_file_handler "com.adobe.pdf" do
+  bundle_id "com.apple.Preview"
+  all_users true
+end
+
 dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
   all_users true
   group "Adobe Creative Suite 6"
