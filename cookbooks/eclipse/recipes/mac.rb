@@ -2,18 +2,19 @@
 # Cookbook Name:: eclipse
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "eclipse-SDK-4.2.1-macosx-cocoa-x86_64.dmg" do
+# Install app, which copies directory to /Applications
+dmg_package "eclipse-SDK-4.2.2-macosx-cocoa-x86_64.dmg" do
   app "Eclipse"
   volumes_dir "Eclipse"
-  dmg_name "eclipse-SDK-4.2.1-macosx-cocoa-x86_64"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/eclipse/eclipse-SDK-4.2.1-macosx-cocoa-x86_64.dmg"
-  checksum "f14ff4cfc8a7e788d3905afeb46e392639dc4074a87b1e060b13531b09cc4470"
+  dmg_name "eclipse-SDK-4.2.2-macosx-cocoa-x86_64"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/eclipse/eclipse-SDK-4.2.2-macosx-cocoa-x86_64.dmg"
+  checksum "9503aae0e14d76404f4564abef2337f3889b1a71858b41b9091697a09443c3e3"
   action :install
   type "dir"
   package_id "org.eclipse.sdk"
-  version "4.2.1"
+  version "4.2.2"
 end
