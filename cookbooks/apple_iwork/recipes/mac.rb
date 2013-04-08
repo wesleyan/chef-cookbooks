@@ -29,3 +29,5 @@ dmg_package "iWork '09 Update" do
   type "pkg"
   package_id "com.apple.pkg.iWork_9.3_Update"
 end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iWork.Keynote.plist"
