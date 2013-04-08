@@ -6,17 +6,19 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Put installer properties file in temporary directory
-cookbook_file "/tmp/installer.properties"
 
 # Install custom package via commandline
-dmg_package "SPSS_Statistics_21_mac_silent.dmg" do
-  app "SPSS_Statistics_Installer"
-  volumes_dir "SPSSStatistics"
-  dmg_name "SPSS_Statistics_21_mac_silent"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/ibm_spss/SPSS_Statistics_21_mac_silent.dmg"
-  checksum "d5c74264d02dcca7862eb677b05e10d9c2ce82c14979ca0b0a26784f2fbaf17b"
+dmg_package "SPSS Statistics 21" do
+  app "SPSS Statistics"
+  volumes_dir "SPSS Statistics"
+  dmg_name "spss_statistics-21"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/ibm_spss/spss_statistics-21.dmg"
+  checksum "9554ac2229b06861e5b3e39f09884181c4687c6a0f6ffcb46c557b6db343dab7"
   action :install
-  type "custom"
-  command "SPSS_Statistics_Installer.bin' -f /tmp/installer.properties"
+  type "pkg"
+  package_id "com.ibm.spss.statistics"
+  version "21.0.0"
 end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.ibm.spss.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.ibm.spss-cf.plist"

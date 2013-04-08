@@ -35,3 +35,9 @@ cookbook_file "/Users/Shared/Lightwright/Lightwright 5 Registration.regi" do
 	mode 00766
 end
 
+directory "/System/Library/User Template/English.lproj/Library/Preferences/Lightwright" do
+  mode 00777
+  action :create
+end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Lightwright/Lightwright 5 Settings.pref"

@@ -31,3 +31,5 @@ dmg_package "FreeFrame plugins for Isadora" do
   package_id "com.troikatronix.freeframeub"
   version "1.2.0"
 end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Isadora Prefs 1.3.0f26.izp"

@@ -94,6 +94,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[cisco_jabber_video::mac]",
           "recipe[microsoft_skype::mac]",  
           "recipe[cycling74_max::mac]", 
+          "recipe[ibm_spss::mac]",
           # Finalize 
           "recipe[finalize::mac]"
 
