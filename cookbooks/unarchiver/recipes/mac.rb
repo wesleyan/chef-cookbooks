@@ -5,18 +5,20 @@
 # Copyright 2012, Wesleyan University
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "theunarchiver-3.6.1.dmg" do
+# Install app
+dmg_package "The Unarchiver" do
   app "The Unarchiver"
   volumes_dir "The Unarchiver"
-  dmg_name "theunarchiver-3.6.1"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/unarchiver/theunarchiver-3.6.1.dmg"
-  checksum "eaab05d1434135b1b91012d83a113a4abce0e0be717524632b5fe85c967cd658"
+  dmg_name "the_unarchiver-3.7"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/unarchiver/the_unarchiver-3.7.dmg"
+  checksum "89539d7c811b3ab0a4f1722edf654f9e32fc273277fed7734929c11c5218179a"
   action :install
   type "app"
   package_id "cx.c3.theunarchiver"
-  version "3.6.1"
+  version "3.7.0"
 end
 
+# Set the Unarchiver as the default application for most archive files
 launch_association_set_file_handler "public.archive" do
   bundle_id "cx.c3.theunarchiver"
   all_users true
