@@ -44,4 +44,6 @@ dmg_package "Xcode DevSDK" do
   version "4.6.1.0413"
 end
 
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist" do
+  mode 0644
+end
