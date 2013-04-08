@@ -6,8 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Put installer properties file in temporary directory
-cookbook_file "/tmp/installer.properties"
 
 # Install custom package via commandline
 dmg_package "SPSS Statistics 21" do
