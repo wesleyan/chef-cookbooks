@@ -18,3 +18,7 @@ dmg_package "eclipse-SDK-4.2.2-macosx-cocoa-x86_64.dmg" do
   package_id "org.eclipse.sdk"
   version "4.2.2"
 end
+
+cookbook_file "/Applications/Eclipse/Eclipse.app/Contents/MacOS/eclipse.ini" do
+  mode 0666
+end
