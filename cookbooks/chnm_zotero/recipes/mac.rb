@@ -18,3 +18,16 @@ dmg_package "Zotero-4.0.4.dmg" do
   package_id "edu.gmu.chnm.zotero"
   version "4.0.4"
 end
+
+dmg_package "Zotero Browser Plugins" do
+  app "Zotero Plugins"
+  volumes_dir "Zotero Plugins"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-Plugins.dmg"
+  checksum "3dee5ecf83adaa32a29f220fd5970ed55a45fa669a09abc44482c42dc1986af0"
+  action :install
+  type "pkg"
+  package_id "edu.gmu.chnm.zotero.plugins"
+  version "4.0.4"
+end
+
+# must be done for the firefox plugin to work, since otherwise the profile will not be set properly

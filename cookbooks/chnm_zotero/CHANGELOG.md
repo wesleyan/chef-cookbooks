@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of chnm_zotero.
 
+## 0.3.0:
+
+* Updated recipe to also install browser plugins
+
 ## 0.2.0: 
 
 * Updated app to 4.0.4
