@@ -23,11 +23,18 @@ dmg_package "Zotero Browser Plugins" do
   app "Zotero Plugins"
   volumes_dir "Zotero Plugins"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-Plugins.dmg"
-  checksum "3dee5ecf83adaa32a29f220fd5970ed55a45fa669a09abc44482c42dc1986af0"
+  checksum "de27691c8986d60ffdb7f79cd637512eeb045a1ea5f0e9a8e92c578a51cfcb3b"
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
   version "4.0.4"
 end
 
-# must be done for the firefox plugin to work, since otherwise the profile will not be set properly
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/zotero@chnm.gmu.edu.xpi" do
+  mode 0777
+end
+
+directory "/Applications/Firefox.app/Contents/MacOS/defaults/prefererences"
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/scopes.js" do
+  mode 0666
+end
