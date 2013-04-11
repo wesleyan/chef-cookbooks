@@ -17,3 +17,8 @@ dmg_package "genesis-1.7.6.dmg" do
   type "pkg"
   package_id "com.graz.Genesis.pkg"
 end
+
+cookbook_file "/tmp/genesis.zip"
+execute 'unzip /tmp/genesis.zip -d /System/Library/User\ Template/English.lproj/' do
+  creates "/System/Library/User Template/English.lproj/.genesis"
+end
