@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of graz_genesis.
 
+## 0.2.0:
+
+* Fixed license file
+
 ## 0.1.0:
 
 * Initial release of graz_genesis

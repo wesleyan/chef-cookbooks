@@ -111,12 +111,6 @@ action :install do
 	      end
       end
       end
-    when "custom"
-      if(new_resource.command)
-        execute new_resource.name do
-          command "'/Volumes/#{volumes_dir}/#{new_resource.command}"
-        end
-      end
     end
     
     if(new_resource.sleep_after_install > 0) 
