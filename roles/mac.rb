@@ -25,8 +25,7 @@ run_list  "recipe[prepare::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
-          # No need for Safari recipe at this time as 6.0.3 is bundled with 10.8.3
-          #"recipe[apple_safari::mac]", 
+          "recipe[apple_safari::mac]", 
           # Runtimes
           "recipe[adobe_flash_player::mac]",
           "recipe[adobe_air::mac]", 
