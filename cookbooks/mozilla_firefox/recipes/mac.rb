@@ -8,14 +8,16 @@
 #
 
 # Install package
-dmg_package "firefox-19.0.2.dmg" do
+dmg_package "firefox-20.0.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
-  dmg_name "firefox-19.0.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mozilla_firefox/firefox-19.0.2.dmg"
-  checksum "d17740256876df51da4d9627d837662f74690ac167886784e53a10dae807b7cf"
+  dmg_name "firefox-20.0"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mozilla_firefox/firefox-20.0.dmg"
+  checksum "4848df9d4ce810bea0fc27ed4766bbfffe6afac184c601b07931da86b028720c"
   action :install
   type "app"
+  package_id "org.mozilla.firefox"
+  version "20.0.0"
 end
 
 # Add to dock
