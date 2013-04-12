@@ -37,12 +37,17 @@ launch_association_set_file_handler "public.url" do
   all_users true
 end
 
-launch_association_set_file_handler "http" do
+launch_association_set_url_handler "http" do
   bundle_id "com.google.chrome"
   all_users true
 end
 
-launch_association_set_file_handler "https" do
+launch_association_set_url_handler "https" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_url_handler "ftp" do
   bundle_id "com.google.chrome"
   all_users true
 end
