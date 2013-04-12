@@ -24,3 +24,25 @@ dock_add "/Applications/Google Chrome.app" do
   all_users true
 #  restart true  
 end
+
+# Set Chrome to be the default browser
+
+launch_association_set_file_handler "public.html" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_file_handler "public.url" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_file_handler "http" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_file_handler "https" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
