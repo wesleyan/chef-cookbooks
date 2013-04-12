@@ -51,3 +51,13 @@ launch_association_set_url_handler "ftp" do
   bundle_id "com.google.chrome"
   all_users true
 end
+
+cookbook_file "/tmp/chrome.zip" do
+  mode 0666
+end
+
+directory "/System/Library/User Template/English.lproj/Library/Application Support"
+
+execute 'unzip /tmp/chrome.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/"' do
+  returns [0,1]
+end
