@@ -101,3 +101,5 @@ dmg_package "RAW Camera Update" do
   type "pkg"
   package_id "com.apple.pkg.RAWCameraUpdate4"
 end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iPhoto.plist"

@@ -24,3 +24,40 @@ dock_add "/Applications/Google Chrome.app" do
   all_users true
 #  restart true  
 end
+
+# Set Chrome to be the default browser
+
+launch_association_set_file_handler "public.html" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_file_handler "public.url" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_url_handler "http" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_url_handler "https" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+launch_association_set_url_handler "ftp" do
+  bundle_id "com.google.chrome"
+  all_users true
+end
+
+cookbook_file "/tmp/chrome.zip" do
+  mode 0666
+end
+
+directory "/System/Library/User Template/English.lproj/Library/Application Support"
+
+execute 'unzip /tmp/chrome.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/"' do
+  returns [0,1]
+end

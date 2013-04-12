@@ -17,3 +17,7 @@ dmg_package "Universal Type Client" do
   type "pkg"
   package_id "com.extensis.UniversalTypeClient.universalTypeClient33.UniversalTypeClient.pkg"
 end
+
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.extensis.UniversalTypeClient.plist" do
+  mode 0666
+end
