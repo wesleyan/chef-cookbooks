@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install HP drivers
-dmg_package "HewlettPackardPrint2.13.dmg" do
+dmg_package "HP Printer Drivers" do
   app "HewlettPackardPrinterDrivers"
   volumes_dir "HewlettPackard Printer Drivers"
   dmg_name "HewlettPackardPrint2.13"
@@ -20,7 +20,7 @@ dmg_package "HewlettPackardPrint2.13.dmg" do
 end
 
 # Install Xerox drivers
-  dmg_package "XeroxPrintDrivers2.1.1.dmg" do
+  dmg_package "Xerox Printer Drivers" do
   app "XeroxPrinterDrivers"
   volumes_dir "Xerox Printer Drivers"
   dmg_name "XeroxPrintDrivers2.1.1"
@@ -33,7 +33,7 @@ end
 end
 
 # Install Epson drivers
-dmg_package "EPSONPrintDriver2.28.dmg" do
+dmg_package "EPSON Printer Drivers" do
   app "EpsonPrinterDrivers"
   volumes_dir "EPSON Printer Drivers"
   dmg_name "EPSONPrintDriver2.28"
@@ -46,16 +46,16 @@ dmg_package "EPSONPrintDriver2.28.dmg" do
 end
 
 #install Pharos drivers
-dmg_package "Pharos Printers" do
+dmg_package "Pharos Printer Client" do
   app "Popup"
-  volumes_dir "Pharos"
-  dmg_name "Pharos"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/pharos_printer/Pharos.dmg"
-  checksum "55fee0ca2184acae96a827af569ec910ba350a3b8e6dd4b6b5b7e5bc58abed6a"
+  volumes_dir "Popup"
+  dmg_name "pharos_client_labs"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/pharos_printer/pharos_client_labs.dmg"
+  checksum "ad2645718be94bc7c3f2a7160df0858eac0006e31419c9ef59c4b3068b92925c"
   action :install
   type "pkg"
   package_id "com.pharos.printerdrivers"
-  version "1.0.0"
+  version "1.0.1"
 end
 
 dmg_package "Epson Drivers" do
