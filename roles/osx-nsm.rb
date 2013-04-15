@@ -1,7 +1,8 @@
 name "osx-nsm"
 description "This role is specific to machines require the software loadset for the Natural Sciences & Mathematics"
 
-run_list  "recipe[ccp4::mac]",
+run_list  "role[osx_base]",
+          "recipe[ccp4::mac]",
           "recipe[xorg_xquartz::mac]",
           "recipe[python::mac]", 
           #"recipe[schrodinger_pymol::mac]",
