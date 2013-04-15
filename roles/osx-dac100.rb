@@ -1,4 +1,4 @@
-name "dac100"
+name "osx-dac100"
 description "mac image"
 run_list "recipe[prepare::mac]","recipe[sudo]","recipe[dmg]", "recipe[printers::mac]"
 default_attributes(
