@@ -15,7 +15,7 @@ dmg_package "ESET NOD32" do
   checksum "db6c50a76b0ca3060a69c1ffe2a0bfefd213dbbbc3846287e1b45a3b6793eac1"
   action :install
   type "pkg"
-  package_id "com.cycling74.Max61.pkg"
+  package_id "com.eset.esetNod32Antivirus.pkgid.pkg"
   version "4.1.89"
 end
 
