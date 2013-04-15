@@ -1,4 +1,4 @@
-action :config do
+action :configure do
   system("/Applications/.esets/Contents/MacOS/esets_set  --section=global 'av_update_server=\"#{new_resource.av_update_server}\"'")
   system("/Applications/.esets/Contents/MacOS/esets_set  --section=global 'av_update_failsafe_username=\"#{new_resource.av_update_failsafe_username}\"'")
   system("/Applications/.esets/Contents/MacOS/esets_set  --section=global 'av_update_failsafe_password=\"#{new_resource.av_update_failsafe_password}\"'")
