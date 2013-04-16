@@ -1,7 +1,7 @@
 name "osx-ss"
 description "This role is specific to machines require the software loadset for the Social Sciences"
 
-run_list  "role[osx_base]",
+run_list  "role[osx-base]",
           "recipe[chnm_zotero::mac]",
           "recipe[gnu_r::mac]",
           "recipe[rstudio::mac]",
