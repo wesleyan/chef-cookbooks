@@ -10,7 +10,7 @@
 dmg_package "HP Printer Drivers" do
   app "HewlettPackardPrinterDrivers"
   volumes_dir "HewlettPackard Printer Drivers"
-  dmg_name "HPPrinterDrivers2.14.dmg"
+  dmg_name "HPPrinterDrivers2.14"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/hp_printer/HPPrinterDrivers2.14.dmg"
   checksum "c14f44c8e009954870ae90fdec63fea91ea1716f06a9fefc5a2cbe139c3dc9d2"
   action :install
