@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of printerdrv.
 
+## 0.5.0:
+
+* Updated HP Printer Drivers to 2.14
+* Updated Epson Printer Drivers to 2.14
+* Disabled printer sharing
+
 ## 0.4.0:
 
 * Updated Pharos Popup Client to new version to fix hostname resolution issues.
