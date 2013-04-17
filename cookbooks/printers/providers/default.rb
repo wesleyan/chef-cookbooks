@@ -4,7 +4,7 @@
 #
 
 action :add do
-  unless `lpinfo -v`.index(new_resource.name)
+  unless `lpinfo -v`.split("\n").map(|printer| printer.index(new_resource.name) and not printer.index("dnssd")).index true # to ignore bonjour printers
     if new_resource.ip
       system("lpadmin -p #{new_resource.name} -v lpd://#{new_resource.ip} -m \"#{new_resource.model}\" -D #{new_resource.name} -o printer-is-shared=false -E")
     else
