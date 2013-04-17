@@ -56,7 +56,8 @@ cookbook_file "/tmp/chrome.zip" do
   mode 0666
 end
 
-directory "/Library/Google"
-cookbook_file "/Library/Google/Google Chrome Master Preferences" do
-  mode 0666
+directory "/System/Library/User Template/English.lproj/Library/Application Support"
+
+execute 'unzip /tmp/chrome.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/"' do
+  returns [0,1]
 end
