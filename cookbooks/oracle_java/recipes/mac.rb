@@ -9,25 +9,25 @@
 # Installs system-level Java 6 Runtime for applications, disables Java 6 web plug-in
 dmg_package "Apple Java" do
   app "JavaForOSX"
-  volumes_dir "Java for OS X 2013-002"
-  dmg_name "JavaForOSX2013-002"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_java/JavaForOSX2013-002.dmg"
-  checksum "0ac0ab9bd1990add28bb1fa088fb8e59b657a09cbf5fde1c9d38eea8459760cc"
+  volumes_dir "Java for OS X 2013-003"
+  dmg_name "JavaForOSX2013-003"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_java/JavaForOSX2013-003.dmg"
+  checksum "193daf9d16ba753cb7b9160e3b3842e515575a07ac2ec06d27c21a40c30c917b"
   action :install
   type "pkg"
   package_id "com.apple.pkg.JavaForMacOSX107"
-  version "2013.2.0"
+  version "2013.3.0"
 end
 
 # Installs Java 7 web plug-in for browsers
 dmg_package "Oracle Java" do
-  app "Java 7 Update 17"
-  volumes_dir "Java 7 Update 17"
-  dmg_name "jre-7u17-macosx-x64"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/oracle_java/jre-7u17-macosx-x64.dmg"
-  checksum "7515f1296b5b9fd48db0cfcb65ccffc218f5d8ec5a6074b2acba38a3230e87be"
+  app "Java 7 Update 21"
+  volumes_dir "Java 7 Update 21"
+  dmg_name "jre-7u21-macosx-x64"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/oracle_java/jre-7u21-macosx-x64.dmg"
+  checksum "57542be9b967cf1deedde4f38ef40b93f0d679d5dde6f7b2e4ec49e5be649a5c"
   action :install
   type "pkg"
   package_id "com.oracle.jre"
-  version "7.0.17"
+  version "7.0.21"
 end
