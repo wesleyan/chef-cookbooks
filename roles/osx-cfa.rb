@@ -1,7 +1,8 @@
 name "osx-cfa"
 description "This role is specific to machines require the software loadset for the Center for the Arts"
 
-run_list  "role[osx-base]",
+          # Include the classlab role, which contains the base osx role as well
+run_list  "role[osx-classlab]",
           "recipe[apple_final_cut_pro::mac]",
           "recipe[apple_compressor::mac]",
           "recipe[apple_logic_pro::mac]",

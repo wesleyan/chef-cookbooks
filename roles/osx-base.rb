@@ -13,16 +13,12 @@ run_list  "recipe[prepare::mac]",
           #"recipe[preference::mac]",
           "recipe[dock::mac]", 
           "recipe[launch_association::mac]",
-          #"recipe[desktop_picture::mac]",
           # Core system updates and applications
           #"recipe[apple_osx_updates::mac]", 
           "recipe[apple_airport::mac]",
           "recipe[oracle_java::mac]", 
           "recipe[sassafras_k2::mac]",
           "recipe[eset_nod32::mac]",
-          "recipe[cls_labstats::mac]",
-          "recipe[blackboard_xythosdrive::mac]",
-          "recipe[printers::mac]", 
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
@@ -38,15 +34,6 @@ run_list  "recipe[prepare::mac]",
           "recipe[apple_iwork::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
-          # Adobe CS6 Suite
-          "recipe[adobe_photoshop_cs6::mac]", 
-          "recipe[adobe_illustrator_cs6::mac]", 
-          "recipe[adobe_indesign_cs6::mac]",
-          "recipe[adobe_dreamweaver_cs6::mac]", 
-          "recipe[adobe_flash_professional_cs6::mac]",
-          "recipe[adobe_premiere_pro_cs6::mac]", 
-          "recipe[adobe_after_effects_cs6::mac]", 
-          "recipe[adobe_acrobat_pro::mac]", 
           # Finalize 
           "recipe[finalize::mac]"
 
