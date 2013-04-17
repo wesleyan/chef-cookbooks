@@ -25,3 +25,17 @@ dock_add "/Applications/Firefox.app" do
   all_users true
 #  restart true
 end
+
+directory "/Applications/Firefox.app/Contents/MacOS/defaults"
+directory "/Applications/Firefox.app/Contents/MacOS/defaults/preferences"
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/defaults.js" do
+  mode 0666
+end
+
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
+  mode 0666
+end
+
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/mozilla.cfg" do
+  mode 0666
+end
