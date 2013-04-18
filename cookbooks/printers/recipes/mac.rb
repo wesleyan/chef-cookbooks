@@ -10,13 +10,13 @@
 dmg_package "HP Printer Drivers" do
   app "HewlettPackardPrinterDrivers"
   volumes_dir "HewlettPackard Printer Drivers"
-  dmg_name "HewlettPackardPrint2.13"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/hp_printer/HewlettPackardPrint2.13.dmg"
-  checksum "1a48a34dc7a9bfa415da2acdfd727d4fd80a196587cfb7b6e8cdc47ebfe8ab38"
+  dmg_name "HPPrinterDrivers2.14"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/hp_printer/HPPrinterDrivers2.14.dmg"
+  checksum "c14f44c8e009954870ae90fdec63fea91ea1716f06a9fefc5a2cbe139c3dc9d2"
   action :install
   type "pkg"
   package_id "com.apple.pkg.HewlettPackardPrinterDrivers"
-  version "2.13.0"
+  version "2.14.0"
 end
 
 # Install Xerox drivers
@@ -34,15 +34,15 @@ end
 
 # Install Epson drivers
 dmg_package "EPSON Printer Drivers" do
-  app "EpsonPrinterDrivers"
+  app "EPSONPrinterDrivers"
   volumes_dir "EPSON Printer Drivers"
-  dmg_name "EPSONPrintDriver2.28"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/EPSONPrintDriver2.28.dmg"
-  checksum "fdcedc58da55093dfe350d82caf6ea41919e0e1d12fd758457ac5a816e14041c"
+  dmg_name "EPSONPrinterDrivers2.14"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/EPSONPrinterDrivers2.14.dmg"
+  checksum "d35792be164b2952687f7adc74187f3a62b2cc730bb11baffe183988ae3d71d6"
   action :install
   type "pkg"
   package_id "com.apple.pkg.EPSONPrinterDrivers"
-  version "2.28.0"
+  version "2.14.0"
 end
 
 #install Pharos drivers
@@ -58,7 +58,7 @@ dmg_package "Pharos Printer Client" do
   version "1.0.1"
 end
 
-dmg_package "Epson Drivers" do
+dmg_package "Epson 3880 Driver" do
   app "Epson3880"
   volumes_dir "Epson"
   dmg_name "Epson"
@@ -70,7 +70,7 @@ dmg_package "Epson Drivers" do
   version "1.0.0"
 end
 
-dmg_package "Epson Drivers" do
+dmg_package "Epson 9800 Driver" do
   app "Epson9800"
   volumes_dir "Epson"
   dmg_name "Epson"

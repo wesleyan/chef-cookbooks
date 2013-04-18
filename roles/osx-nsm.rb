@@ -19,3 +19,6 @@ run_list  "role[osx-classlab]",
           "recipe[synergy_kaleidagraph::mac]",
           "recipe[wolfram_mathematica::mac]",
           "recipe[perkinelmer_chemdraw_pro::mac]"
+
+# Set SuperCollider attribute for version determination
+default_attributes("SuperCollider" => {"No-IDE" => true})

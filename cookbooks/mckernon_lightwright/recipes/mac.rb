@@ -10,13 +10,13 @@
 dmg_package "LightWright" do
   app "LW5MacInstaller"
   volumes_dir "LightWright"
-  dmg_name "lightwright-5.0.33"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mckernon_lightwright/lightwright-5.0.33.dmg"
-  checksum "b3d87b195d25d97573fad4d43877bc0e98d1b434218101fae0564b725538df28"
+  dmg_name "lightwright-5.0.34"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mckernon_lightwright/lightwright-5.0.34.dmg"
+  checksum "f2d855aac810215cd4d67da5772d8aa902432e755994ac49a91984007c45e100"
   action :install
   type "mpkg"
   package_id "com.mckernon.lightwright5.Lightwright5.pkg"
-  version "5.0.33"
+  version "5.0.34"
 end
 
 # Created shared directory if it doesn't already exist (the mpkg might create this directory, need to check)

@@ -8,4 +8,5 @@ run_list  "role[osx-base]",
           "recipe[blackboard_xythosdrive::mac]",
           "recipe[printers::mac]", 
           #"recipe[desktop_picture::mac]",
+          "recipe[chnm_zotero::mac]",
           "recipe[finalize::mac]"

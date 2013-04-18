@@ -68,14 +68,14 @@ end
 
 # Install latest iPhoto update
 dmg_package "iPhoto Update" do
-  app "iPhoto9.4.2Update"
-  volumes_dir "iPhoto 9.4.2"
-  dmg_name "iPhoto9.4.2Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iPhoto9.4.2Update.dmg"
-  checksum "d1713efac13a7686a36bc99aa3a0babd1195eb9849a5c22d82f22621791adda0"
+  app "iPhoto9.4.3Update"
+  volumes_dir "iPhoto 9.4.3"
+  dmg_name "iPhoto9.4.3Update"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iPhoto9.4.3Update.dmg"
+  checksum "faca08d74cd7f3db7c0e4842d4292b60b75e48df587369ed9d6e7a5a39a012a9"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.iPhoto9.4.2Update"
+  package_id "com.apple.pkg.iPhoto9.4.3Update"
 end
 
 # Install latest iWeb update

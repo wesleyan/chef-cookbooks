@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of apple_ilife.
 
+## 0.2.2:
+
+* Updated iPhoto to 9.4.3
+
 ## 0.2.1: 
 
 * Updated RAW Camera to 4.04
