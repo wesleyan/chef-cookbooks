@@ -13,7 +13,7 @@ cookbook_file "/Library/ColorSync/Profiles/Displays/iMac Calibrated April 18 201
   mode 0644
 end
 
-cookbook_file "/Library/ColorSync/Profiles/DAC100 Spring 2013 3880 Inkpress Luster" do
+cookbook_file "/Library/ColorSync/Profiles/DAC100 Spring 2013 3880 Inkpress Luster.icc" do
   mode 0644
 end
 
