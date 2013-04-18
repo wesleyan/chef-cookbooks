@@ -28,14 +28,15 @@ end
 
 directory "/Applications/Firefox.app/Contents/MacOS/defaults"
 directory "/Applications/Firefox.app/Contents/MacOS/defaults/preferences"
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/defaults.js" do
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/scopes.js" do
   mode 0666
+  action :create_if_missing
 end
 
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
   mode 0666
 end
 
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/mozilla.cfg" do
-  mode 0666
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/ims@extensions.wesleyan.edu.xpi" do
+  mode 0777
 end
