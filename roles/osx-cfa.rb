@@ -19,3 +19,6 @@ run_list  "role[osx-classlab]",
           "recipe[troikatronix_isadora::mac]",
           "recipe[quark_quarkxpress::mac]",
           "recipe[extensis_utc::mac]"
+
+# Set SuperCollider attribute for version determination
+default_attributes("SuperCollider" => {"No-IDE" => true})
