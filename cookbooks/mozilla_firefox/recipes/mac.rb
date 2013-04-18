@@ -37,6 +37,6 @@ cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
   mode 0666
 end
 
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/ims@extensions.wesleyan.edu.xpi" do
+cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/ims-cck@extensions.wesleyan.edu.xpi" do
   mode 0777
 end
