@@ -23,7 +23,7 @@ dmg_package "Zotero Browser Plugins" do
   app "Zotero Plugins"
   volumes_dir "Zotero Plugins"
   source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-Plugins.dmg"
-  checksum "de27691c8986d60ffdb7f79cd637512eeb045a1ea5f0e9a8e92c578a51cfcb3b"
+  checksum "5c17e5d51bf91149157a43f082f39df5a46b19c4ab107485cef054272d447d3f"
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
@@ -37,8 +37,5 @@ end
 directory "/Applications/Firefox.app/Contents/MacOS/defaults/preferences"
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/scopes.js" do
   mode 0666
-end
-
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
-  mode 0666
+  action :create_if_missing
 end
