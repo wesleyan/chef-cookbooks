@@ -22,3 +22,7 @@ end
 dock_add "/Applications/Safari.app" do
   all_users true
 end
+
+directory "/System/Library/User Template/English.lproj/Library/Safari"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.Safari.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Safari/Bookmarks.plist"
