@@ -82,17 +82,6 @@ dmg_package "Epson Drivers" do
   version "1.0.0"
 end
 
-
-# copies color/luster preferences
-cookbook_file "/Library/ColorSync/Profiles/DAC100 Epson 3880 Inkpress Luster Feb 2013.icc" do
-  cookbook "printers"
-  source "DAC100 Epson 3880 Inkpress Luster Feb 2013.icc"
-  mode 0666
-  owner "root"
-  group "wheel"
-  action :create
-end
-
 printers "ArtLib-HP4105" do
   model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4100 Series.gz"
 end
@@ -159,24 +148,9 @@ end
 printers "UsdanLobby-RicohBW" do
   model "drv:///sample.drv/laserjet.ppd"
 end
-printers "DAC100-E3880-1" do
-  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  ip "DAC100-E3880-1.class.wesleyan.edu"
-end
-printers "DAC100-E3880-2" do
-  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  ip "DAC100-E3880-2.class.wesleyan.edu"
-end
-printers "DAC100-E3880-3" do
-  model "/Library/Printers/PPDs/Contents/Resources/EPSON Epson Stylus Pro 3880.gz"
-  ip "DAC100-E3880-3.class.wesleyan.edu"
-end
-printers "DAC100-9800" do
-  model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9800.gz"
-  ip "DAC100-E9800.class.wesleyan.edu"
-end
+
 printers "Set Default #{node['printers']['default']}" do
   name node['printers']['default']
-  only_if { node['printers']['default']}
+  only_if { node['printers']['default'] and node['printers']['default'] =~ /DAC100/ }
   action :set_default
 end
