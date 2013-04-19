@@ -19,3 +19,7 @@ dmg_package "Adobe Flash Player" do
   package_id "com.adobe.pkg.FlashPlayer"
   version "11.6.602.180"
 end
+
+cookbook_file "/Library/Application Support/Macromedia/mms.cfg" do
+  mode 0644
+end
