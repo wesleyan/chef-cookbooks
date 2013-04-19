@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "R-3.0.0.dmg" do
+dmg_package "R" do
   app "R-3.0.0"
   volumes_dir "R"
   dmg_name "R-3.0.0"
