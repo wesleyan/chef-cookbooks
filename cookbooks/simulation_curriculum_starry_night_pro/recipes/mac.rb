@@ -16,3 +16,11 @@ dmg_package "starry_night_pro-6.4.3.dmg" do
   type "pkg"
   package_id "com.starrynight.StarryNightPro6.pkg"
 end
+
+
+directory "/System/Library/User Template/English.lproj/Library/Preferences/Imaginova Canada"
+directory "/System/Library/User Template/English.lproj/Library/Preferences/Imaginova Canada/Prefs"
+directory "/System/Library/User Template/English.lproj/Library/Preferences/Imaginova Canada/Prefs/Pro"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Imaginova Canada/Prefs/Pro/Prefs.txt" do
+  mode 0644
+end
