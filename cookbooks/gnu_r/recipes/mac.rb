@@ -6,13 +6,14 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "R-2.15.2.dmg" do
-  app "R-2.15.2"
+dmg_package "R-3.0.0.dmg" do
+  app "R-3.0.0"
   volumes_dir "R"
-  dmg_name "R-2.15.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/gnu_r/R-2.15.2.dmg"
-  checksum "0c6e9de8431aac50f76a7f6a7a8cec82a9186ae3f8d7f9dd4d680613df686203"
+  dmg_name "R-3.0.0"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/gnu_r/R-3.0.0.dmg"
+  checksum "b45540be6422e8aef7a98782629fcc147c67cae46f95cb721c7d8460b18c348a"
   action :install
   type "pkg"
-  package_id "org.r-project.R.Leopard.fw.pkg"
+  package_id "org.r-project.R.x86_64.fw.pkg"
+  version "3.0.0"
 end
