@@ -31,3 +31,7 @@ dmg_package "Oracle Java" do
   package_id "com.oracle.jre"
   version "7.0.21"
 end
+
+cookbook_file "/Library/Application Support/Oracle/Java/Enabled.plist" do
+  mode 0664
+end
