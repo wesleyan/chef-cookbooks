@@ -35,8 +35,8 @@ cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/zotero@chnm.g
   mode 0777
 end
 
+directory "/Applications/Firefox.app/Contents/MacOS/defaults"
 directory "/Applications/Firefox.app/Contents/MacOS/defaults/preferences"
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/scopes.js" do
-  mode 0666
-  action :create_if_missing
+  mode 0644
 end
