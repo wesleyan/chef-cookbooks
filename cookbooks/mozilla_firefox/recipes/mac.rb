@@ -26,17 +26,19 @@ dock_add "/Applications/Firefox.app" do
 #  restart true
 end
 
-directory "/Applications/Firefox.app/Contents/MacOS/defaults"
-directory "/Applications/Firefox.app/Contents/MacOS/defaults/preferences"
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/defaults/preferences/scopes.js" do
-  mode 0666
-  action :create_if_missing
-end
-
+# suppress import settings
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
   mode 0666
 end
 
-cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/ims-cck@extensions.wesleyan.edu.xpi" do
-  mode 0777
+# import CCK addon
+directory "/Applications/Firefox.app/Contents/MacOS/distribution"
+directory "/Applications/Firefox.app/Contents/MacOS/distribution/bundles"
+cookbook_file "/tmp/firefox.zip" do
+  mode 0666
 end
+execute 'unzip /tmp/firefox.zip -d "/Applications/Firefox.app/Contents/MacOS/distribution/bundles/"' do
+  returns [0,1]
+end
+
+

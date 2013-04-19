@@ -31,3 +31,7 @@ dmg_package "iWork '09 Update" do
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iWork.Keynote.plist"
+directory "/System/Library/User Template/English.lproj/Library/Preferences/ByHost"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/ByHost/com.apple.iWork.Keynote.1F88AEF2-ECEE-5B2E-82BD-94B0AE1305F1.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/ByHost/com.apple.iWork.1F88AEF2-ECEE-5B2E-82BD-94B0AE1305F1.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iWork09.plist"
