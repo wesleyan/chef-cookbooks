@@ -7,16 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install our .app!
-dmg_package "Zotero-4.0.4.dmg" do
+dmg_package "Zotero" do
   app "Zotero"
   volumes_dir "Zotero"
-  dmg_name "Zotero-4.0.4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-4.0.4.dmg"
-  checksum "79e7056c66bd4f791a22ef067c2ad9492f1fa280f3de06ace0f240059eb5099f"
+  dmg_name "Zotero-4.0.5"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-4.0.5.dmg"
+  checksum "d8509971545730e7441d7d9bcd1b166cf1a108f703a94c793e32fcd7f15427b8"
   action :install
   type "app"
   package_id "edu.gmu.chnm.zotero"
-  version "4.0.4"
+  version "4.0.5"
 end
 
 dmg_package "Zotero Browser Plugins" do
@@ -27,9 +27,10 @@ dmg_package "Zotero Browser Plugins" do
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
-  version "4.0.4"
+  version "3.0.8.1"
 end
 
+# Install Firefox add-on, current version 4.0.5
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/zotero@chnm.gmu.edu.xpi" do
   mode 0777
 end
