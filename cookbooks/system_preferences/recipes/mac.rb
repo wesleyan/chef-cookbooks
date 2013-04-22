@@ -46,3 +46,20 @@ end
 execute "Allow applications from anywhere" do
   command "spctl --master-disable"
 end
+
+cookbook_file "/tmp/cscreen"
+cookbook_file "/tmp/Resolutions.txt"
+ruby_block "Set screen resolution" do
+  block do
+    resSettings = ::File.open("/tmp/Resolutions.txt", "r").split("\n").map { |info| info.split(":") }
+    fqdn = `hostname`
+    resSettings.each do |opt|
+      if fqdn =~ Regexp.new(opt[0])
+        cmd = "/tmp/cscreen -x #{opt[1]} -y #{opt[2]}"
+        cmd << " -r #{opt[3]}" if opt[3] != "NA"
+        system(cmd)
+        break
+      end
+    end
+  end
+end
