@@ -7,29 +7,29 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install Xcode
-dmg_package "XCode 4.6.1" do
+dmg_package "XCode 4.6.2" do
   app "Xcode"
   volumes_dir "Xcode"
-  dmg_name "xcode-4.6.1"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.1.dmg"
-  checksum "6821e99fe1063700fb4f7ebf8db30600c1f4c7aba5fc1537ded140caaabb144a"
+  dmg_name "xcode-4.6.2"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.2.dmg"
+  checksum "3057224339823dae8a56943380a438065e92cff1ad4ab5a6a84f94f7a94dc035"
   action :install
   type "app"
   package_id "com.apple.pkg.Xcode"
-  version "4.6.1"
+  version "4.6.2"
 end
 
 # Install Xcode Command Line Tools
-dmg_package "xcode-4.6-cltools-0113" do
+dmg_package "xcode-4.6-cltools-0413" do
   app "Command Line Tools (Mountain Lion)"
   volumes_dir "Command Line Tools (Mountain Lion)"
-  dmg_name "xcode-4.6.1-cltools-0313"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.1-cltools-0313.dmg"
-  checksum "b92615b14b47f7f372c2e7c7d8a36524bb895108cd9c1d3853d0802ec2c97d91"
+  dmg_name "xcode-4.6.2-cltools-0413"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.1-cltools-0413.dmg"
+  checksum "309a753e0fadde2a51a5863baa272d1962bb79088184b88af39327e13bdf9fda"
   action :install
   type "mpkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
-  version "4.6.1.0113"
+  version "4.6.2.0413"
 end
 
 dmg_package "Xcode DevSDK" do
