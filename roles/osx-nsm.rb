@@ -21,16 +21,4 @@ run_list  "role[osx-classlab]",
           "recipe[perkinelmer_chemdraw_pro::mac]"
 
 # Set SuperCollider attribute for version determination
-default_attributes(
-"SuperCollider" => {
-  "No-IDE" => true
-},
-"authorization" => {
-  "sudo" => {
-    "users" => ["administrator"],
-    "passwordless" => true
-  },
-},
-"homebrew" => {
-   "user" => "administrator"
-})
+default_attributes("SuperCollider" => {"No-IDE" => true})
