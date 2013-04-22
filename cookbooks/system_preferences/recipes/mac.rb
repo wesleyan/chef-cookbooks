@@ -51,7 +51,7 @@ cookbook_file "/tmp/cscreen"
 cookbook_file "/tmp/Resolutions.txt"
 ruby_block "Set screen resolution" do
   block do
-    resSettings = ::File.open("/tmp/Resolutions.txt", "r").split("\n").map { |info| info.split(":") }
+    resSettings = ::IO.read("/tmp/Resolutions.txt").split("\n").map { |info| info.split(":") }
     fqdn = `hostname`
     resSettings.each do |opt|
       if fqdn =~ Regexp.new(opt[0])
