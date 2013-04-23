@@ -20,11 +20,11 @@ dmg_package "XCode 4.6.2" do
 end
 
 # Install Xcode Command Line Tools
-dmg_package "xcode-4.6-cltools-0413" do
+dmg_package "xcode-4.6-2-cltools-0413" do
   app "Command Line Tools (Mountain Lion)"
   volumes_dir "Command Line Tools (Mountain Lion)"
   dmg_name "xcode-4.6.2-cltools-0413"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.1-cltools-0413.dmg"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.2-cltools-0413.dmg"
   checksum "309a753e0fadde2a51a5863baa272d1962bb79088184b88af39327e13bdf9fda"
   action :install
   type "mpkg"
