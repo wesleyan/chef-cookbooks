@@ -69,11 +69,11 @@ class Chef
         end
 
         def get_version_from_formula
-    
-            brew_cmd = shell_out!("brew --prefix", :user => node['homebrew']['user'])
-   
+          # hacky change, try again when this doesn't throw a /var/root/Library/Logs error
+          #brew_cmd = shell_out!("brew --prefix", :user => node['homebrew']['user'])
+          brew_cmd = `su #{node['homebrew']['user']} -c 'brew --prefix'`
           
-          libpath = ::File.join(brew_cmd.stdout.chomp, "Library", "Homebrew")
+          libpath = ::File.join(brew_cmd.chomp, "Library", "Homebrew")
             $:.unshift(libpath)
 
           require 'global'
@@ -84,10 +84,9 @@ class Chef
 
 
         def get_response_from_command(command)
-  
-             output = shell_out!(command, :user => node['homebrew']['user'])
-             output.stdout
-    
+             output = `su #{node['homebrew']['user']} -c '#{command}'`
+             #output = shell_out!(command, :user => node['homebrew']['user'])
+             #output.stdout
         end
       end
     end
