@@ -21,7 +21,7 @@ dmg_package "QuarkXPress" do
 	source "http://baratheon.class.wesleyan.edu/os_x-10.8/quark_quarkxpress/quarkxpress.9.5.11.dmg"
 	checksum "01efe03f8d176d7a930ff262b0fee79075a6ed139b5713cdac6a939b58f38cce"
 	action :install
-	type "pkg"
+	type "mpkg"
 	package_id "com.quark.quarkxpress"
 	version "9.5.11"
 end
