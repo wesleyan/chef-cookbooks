@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ConfirmInstallation</key>
+	<true/>
+	<key>PayloadContent</key>
+	<dict>
+		<key>Challenge</key>
+		<string>f712d7f0-90c6-0130-5a9e-3c0754518ead</string>
+		<key>DeviceAttributes</key>
+		<array>
+			<string>DEVICE_NAME</string>
+			<string>UDID</string>
+			<string>IMEI</string>
+			<string>MEID</string>
+			<string>SERIAL</string>
+			<string>VERSION</string>
+			<string>PRODUCT</string>
+			<string>COMPROMISED</string>
+		</array>
+		<key>URL</key>
+		<string>https://targaryen.class.wesleyan.edu/devicemanagement/api/device/auto_join_ota_service</string>
+	</dict>
+	<key>PayloadDescription</key>
+	<string>Enrolls your devices with the management server.</string>
+	<key>PayloadDisplayName</key>
+	<string>Default Enrollment Profile</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.ota.targaryen.class.wesleyan.edu.bootstrap</string>
+	<key>PayloadOrganization</key>
+	<string>Wesleyan University</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Profile Service</string>
+	<key>PayloadUUID</key>
+	<string>f73044f0-90c6-0130-5a9f-3c0754518ead</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
