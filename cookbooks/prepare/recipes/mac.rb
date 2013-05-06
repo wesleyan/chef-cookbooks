@@ -72,6 +72,10 @@ execute "bind to domain" do
   returns [0,-1, 1, 78]
 end
 
+execute "set group bindings" do
+  command "dsconfigad -gid primaryGroupID --ggid gidNumber"
+end
+
 execute "spctl disable" do
   command "spctl --master-disable"
   action :run
