@@ -19,17 +19,27 @@ dmg_package "Microsoft Office 2011 SP3" do
   version "14.3.2"
 end
 
-# Install customized plist files to surpress first-run dialogues
-#
-# SOMEONE NEEDS TO WRITE THIS
+dmg_package "Update Office 2011-1434" do
+  app "Office 2011 14.3.4 Update"
+  volumes_dir "Microsoft Office 2011 14.3.4 Update"
+  dmg_name "Office2011-1434UpdateEN"
+  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/Office2011-1434UpdateEN.dmg"
+  checksum "892769fcdd91688ff66bddd9c5577e72cdd596420d8bd35f858a7e862f62f773"
+  action :install
+  type "pkg"
+  package_id "com.microsoft.office.2011"
+  version "14.3.4"
+end
 
-# Download icon
-cookbook_file "/tmp/office.png"
+# Install customized plist files to surpress first-run dialogues
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
 
+
+# Download icon
+cookbook_file "/tmp/office.png"
 
 # Create dock folder
 dock_add "Microsoft Office 2011" do

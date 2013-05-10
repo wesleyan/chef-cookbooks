@@ -137,3 +137,16 @@ end
 # end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.finder.plist"
+
+### Deletes inactive users
+ruby_block "Delete inactive users" do
+  block do
+    days = 14 # number of days until a user account is removed from the system
+    Dir.entries("/Users").each do |user|
+      if not (user =~ /^\./) and user != "Shared" and user != "administrator" and user != "labuser" and File.atime("/Users/#{user}") < (Time.now - days*(60*60*24))
+        system("dscl  . delete /Users/#{user}")
+        system("rm -rf /Users/#{user}")
+      end
+    end
+  end
+end
