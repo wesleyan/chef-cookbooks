@@ -23,13 +23,13 @@ end
   dmg_package "Xerox Printer Drivers" do
   app "XeroxPrinterDrivers"
   volumes_dir "Xerox Printer Drivers"
-  dmg_name "XeroxPrintDrivers2.1.1"
-  source "http://ims-chef.wesleyan.edu/os_x/xerox_printer/XeroxPrintDrivers2.1.1.dmg"
-  checksum "1196d6499d67baef2c1639d796e5a19bd642b576b195f8ef4c319e0b9da35ad2"
+  dmg_name "XeroxPrinterDrivers2.3.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/xerox_printer/XeroxPrinterDrivers2.3.dmg"
+  checksum "36c9e37bc1c7d5c3edc4273c28e6e19628de2faf2e974a0ef6fbd0fb0c70c80e"
   action :install
   type "pkg"
   package_id "com.apple.pkg.XeroxPrinterDrivers"
-  version "2.1.1"
+  version "2.3.0"
 end
 
 # Install Epson drivers

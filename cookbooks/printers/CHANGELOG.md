@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of printerdrv.
 
+## 0.5.1: 
+
+* Updated Xerox Printer Drivers to 2.3
+
 ## 0.5.0:
 
 * Updated with DAC100 specifics.
