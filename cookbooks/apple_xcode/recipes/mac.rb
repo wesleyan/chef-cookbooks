@@ -11,7 +11,7 @@ dmg_package "XCode 4.6.2" do
   app "Xcode"
   volumes_dir "Xcode"
   dmg_name "xcode-4.6.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.2.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.2.dmg"
   checksum "3057224339823dae8a56943380a438065e92cff1ad4ab5a6a84f94f7a94dc035"
   action :install
   type "app"
@@ -24,7 +24,7 @@ dmg_package "xcode-4.6-2-cltools-0413" do
   app "Command Line Tools (Mountain Lion)"
   volumes_dir "Command Line Tools (Mountain Lion)"
   dmg_name "xcode-4.6.2-cltools-0413"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.2-cltools-0413.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.2-cltools-0413.dmg"
   checksum "309a753e0fadde2a51a5863baa272d1962bb79088184b88af39327e13bdf9fda"
   action :install
   type "mpkg"
@@ -36,7 +36,7 @@ dmg_package "Xcode DevSDK" do
   app "XCode DevSDK"
   volumes_dir "Xcode DevSDK"
   dmg_name "xcode-devsdk"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-devsdk.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-devsdk.dmg"
   checksum "19061cff7c937297c309cd8c28a8821c1ba18b7b16caf291a643d801dc5347a0"
   action :install
   type "pkg"

@@ -11,7 +11,7 @@ dmg_package "safari-6.0.4.dmg" do
   app "Safari6.0.4Mountain"
   volumes_dir "Safari"
   dmg_name "safari-6.0.4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_safari/safari-6.0.4.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_safari/safari-6.0.4.dmg"
   checksum "aea490ab7a4d6bfdaaf07b826c8e8e4469dc8ad6f9e826ad19b2e458478e71df"
   action :install
   type "pkg"

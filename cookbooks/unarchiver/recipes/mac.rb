@@ -10,7 +10,7 @@ dmg_package "The Unarchiver" do
   app "The Unarchiver"
   volumes_dir "The Unarchiver"
   dmg_name "the_unarchiver-3.7"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/unarchiver/the_unarchiver-3.7.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.7.dmg"
   checksum "89539d7c811b3ab0a4f1722edf654f9e32fc273277fed7734929c11c5218179a"
   action :install
   type "app"

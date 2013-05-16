@@ -11,7 +11,7 @@
 chef_gem "mixlib-versioning"
 
 remote_file "/tmp/chef.sh" do
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/opscode_chef/chef.sh"
+  source "http://ims-chef.wesleyan.edu/os_x/opscode_chef/chef.sh"
   mode 0777
 end
 

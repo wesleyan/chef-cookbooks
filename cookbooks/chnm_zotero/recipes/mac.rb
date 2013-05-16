@@ -11,7 +11,7 @@ dmg_package "Zotero" do
   app "Zotero"
   volumes_dir "Zotero"
   dmg_name "Zotero-4.0.5"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-4.0.5.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-4.0.5.dmg"
   checksum "d8509971545730e7441d7d9bcd1b166cf1a108f703a94c793e32fcd7f15427b8"
   action :install
   type "app"
@@ -22,7 +22,7 @@ end
 dmg_package "Zotero Browser Plugins" do
   app "Zotero Plugins"
   volumes_dir "Zotero Plugins"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/chnm_zotero/Zotero-Plugins.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-Plugins.dmg"
   checksum "5c17e5d51bf91149157a43f082f39df5a46b19c4ab107485cef054272d447d3f"
   action :install
   type "pkg"

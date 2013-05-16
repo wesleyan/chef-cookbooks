@@ -12,7 +12,7 @@ dmg_package "firefox-20.0.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
   dmg_name "firefox-20.0"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/mozilla_firefox/firefox-20.0.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-20.0.dmg"
   checksum "4848df9d4ce810bea0fc27ed4766bbfffe6afac184c601b07931da86b028720c"
   action :install
   type "app"

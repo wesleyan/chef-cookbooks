@@ -11,7 +11,7 @@ dmg_package "adobe_illustrator_cs6-16.0.3.dmg" do
   app "adobe_illustrator_cs6_Install"
   volumes_dir "adobe_illustrator_cs6"
   dmg_name "adobe_illustrator_cs6-16.0.4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_illustrator_cs6/adobe_illustrator_cs6-16.0.4.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_illustrator_cs6/adobe_illustrator_cs6-16.0.4.dmg"
   checksum "ac13aa242ecc923a544d6495ea62cbaa162a2593c25d2274edefd049ff7445cf"
   action :install
   type "pkg"

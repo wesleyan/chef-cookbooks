@@ -10,7 +10,7 @@ dmg_package "Cycling74 Max" do
   app "Max 6.1 Installer"
   volumes_dir "Max61_130304_ee85fad3_keyserver"	
   dmg_name "Max61_x86_ee85fad3_keyserver.dmg"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/cycling74_max/Max61_x86_ee85fad3_keyserver.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/cycling74_max/Max61_x86_ee85fad3_keyserver.dmg"
   checksum "115f9c7be4c09248fecdd446b89458e891e1c91a39caef144327073f220d98ea"
   action :install
   type "pkg"

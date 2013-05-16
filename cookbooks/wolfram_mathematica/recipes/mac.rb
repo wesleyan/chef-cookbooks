@@ -11,7 +11,7 @@ dmg_package "Wolfram Mathematica" do
   app "Mathematica"
   volumes_dir "Mathematica"
   dmg_name "Mathematica_9.0.1_OSX_Universal"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/wolfram_mathematica/Mathematica_9.0.1_OSX_Universal.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/wolfram_mathematica/Mathematica_9.0.1_OSX_Universal.dmg"
   checksum "6f1928d7e50ffdd2bf0ac3984449129f5b9215b14bcf4a10e38f64748db2a3f6"
   action :install
   type "app"
@@ -24,7 +24,7 @@ dmg_package "Wolfram Mathematica Extras" do
   app "Extras"
   volumes_dir "Mathematica"
   dmg_name "Mathematica_9.0.1_OSX_Universal"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/wolfram_mathematica/Mathematica_9.0.1_OSX_Universal.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/wolfram_mathematica/Mathematica_9.0.1_OSX_Universal.dmg"
   checksum "6f1928d7e50ffdd2bf0ac3984449129f5b9215b14bcf4a10e38f64748db2a3f6"
   action :install
   type "pkg"

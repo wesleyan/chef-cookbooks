@@ -11,7 +11,7 @@ dmg_package "iLife '11" do
   app "iLife11"
   volumes_dir "iLife11"
   dmg_name "iLife11"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iLife11.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iLife11.dmg"
   checksum "4a1d8f7b43ec4d10a4660f03bc1b0f2386d32fe3a10dc179e53c2ae40cbe61bd"
   action :install
   type "pkg"
@@ -23,7 +23,7 @@ dmg_package "GarageBand Update" do
   app "GarageBand6.0.5Update"
   volumes_dir "GarageBand 6.0.5 Update (Manual)"
   dmg_name "GarageBand6.0.5Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/GarageBand6.0.5Update.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/GarageBand6.0.5Update.dmg"
   checksum "cc76898d307a9e41969de19ec42c369e9c1392d617149195b169d7242f45e62b"
   action :install
   type "pkg"
@@ -35,7 +35,7 @@ dmg_package "iDVD Update" do
   app "iDVD7.1.2Update"
   volumes_dir "iDVD 7.1.2 Update"
   dmg_name "iDVD7.1.2Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iDVD7.1.2Update.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iDVD7.1.2Update.dmg"
   checksum "6915ee582e54461c6416bbb5d94b98795d2879164d03a4a9f8537b3d4851532a"
   action :install
   type "pkg"
@@ -47,7 +47,7 @@ dmg_package "iMovie Update" do
   app "iMovie9.0.8Update"
   volumes_dir "iMovie 9.0.8"
   dmg_name "iMovie9.0.8Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iMovie9.0.8Update.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iMovie9.0.8Update.dmg"
   checksum "2466ed9943e7784da057dffdb6e6348c8cf7bb9cded9ba03d8c88b0e11ce80da"
   action :install
   type "pkg"
@@ -59,7 +59,7 @@ dmg_package "iPhoto Core Update" do
   app "iPhoto9.1Update"
   volumes_dir "iPhoto 9.1 Update"
   dmg_name "iPhoto9.1Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iPhoto9.1Update.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iPhoto9.1Update.dmg"
   checksum "4a2c8515aa24d77606b3b65ab010b32ade0d7a9775df432ffa8afe655977d7c7"
   action :install
   type "pkg"
@@ -71,7 +71,7 @@ dmg_package "iPhoto Update" do
   app "iPhoto9.4.3Update"
   volumes_dir "iPhoto 9.4.3"
   dmg_name "iPhoto9.4.3Update"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iPhoto9.4.3Update.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iPhoto9.4.3Update.dmg"
   checksum "faca08d74cd7f3db7c0e4842d4292b60b75e48df587369ed9d6e7a5a39a012a9"
   action :install
   type "pkg"
@@ -83,7 +83,7 @@ dmg_package "iWeb Update" do
   app "iWeb_304"
   volumes_dir "iWeb 3.0.4 Update (Manual)"
   dmg_name "iWeb304"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/iWeb304.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iWeb304.dmg"
   checksum "099daaa5569adf5387583ea8af1c0d9770373f6bc832e7072151304f9200df04"
   action :install
   type "pkg"
@@ -95,7 +95,7 @@ dmg_package "RAW Camera Update" do
   app "RAWCameraUpdate4"
   volumes_dir "Digital Camera RAW Compatibility Update 4.05"
   dmg_name "RAWCameraUpdate4.05"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_ilife/RAWCameraUpdate4.05.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/RAWCameraUpdate4.05.dmg"
   checksum "7ec55e8ab33010fb31a77e4107043868abf6650c3ad16f072da112492dde36d1"
   action :install
   type "pkg"

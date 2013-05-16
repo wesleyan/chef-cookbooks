@@ -11,7 +11,7 @@ dmg_package "HP Printer Drivers" do
   app "HewlettPackardPrinterDrivers"
   volumes_dir "HewlettPackard Printer Drivers"
   dmg_name "HPPrinterDrivers2.14"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/hp_printer/HPPrinterDrivers2.14.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/hp_printer/HPPrinterDrivers2.14.dmg"
   checksum "c14f44c8e009954870ae90fdec63fea91ea1716f06a9fefc5a2cbe139c3dc9d2"
   action :install
   type "pkg"
@@ -24,7 +24,7 @@ end
   app "XeroxPrinterDrivers"
   volumes_dir "Xerox Printer Drivers"
   dmg_name "XeroxPrintDrivers2.1.1"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/xerox_printer/XeroxPrintDrivers2.1.1.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/xerox_printer/XeroxPrintDrivers2.1.1.dmg"
   checksum "1196d6499d67baef2c1639d796e5a19bd642b576b195f8ef4c319e0b9da35ad2"
   action :install
   type "pkg"
@@ -37,7 +37,7 @@ dmg_package "EPSON Printer Drivers" do
   app "EPSONPrinterDrivers"
   volumes_dir "EPSON Printer Drivers"
   dmg_name "EPSONPrinterDrivers2.14"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/EPSONPrinterDrivers2.14.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/EPSONPrinterDrivers2.14.dmg"
   checksum "d35792be164b2952687f7adc74187f3a62b2cc730bb11baffe183988ae3d71d6"
   action :install
   type "pkg"
@@ -50,7 +50,7 @@ dmg_package "Pharos Printer Client" do
   app "Popup"
   volumes_dir "Popup"
   dmg_name "pharos_client_labs"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/pharos_printer/pharos_client_labs.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/pharos_printer/pharos_client_labs.dmg"
   checksum "ad2645718be94bc7c3f2a7160df0858eac0006e31419c9ef59c4b3068b92925c"
   action :install
   type "pkg"
@@ -63,7 +63,7 @@ dmg_package "Epson 3880 Driver" do
   volumes_dir "Epson"
   dmg_name "Epson"
   type "mpkg"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/Epson.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/Epson.dmg"
   checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
   action :install
   package_id "com.epson.drivers.3880"
@@ -75,7 +75,7 @@ dmg_package "Epson 9800 Driver" do
   volumes_dir "Epson"
   dmg_name "Epson"
   type "mpkg"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/epson_printer/Epson.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/Epson.dmg"
   checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
   action :install
   package_id "com.epson.drivers.9800"

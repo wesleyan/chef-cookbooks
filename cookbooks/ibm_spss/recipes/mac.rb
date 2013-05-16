@@ -12,7 +12,7 @@ dmg_package "SPSS Statistics 21" do
   app "SPSS Statistics"
   volumes_dir "SPSS Statistics"
   dmg_name "spss_statistics-21"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/ibm_spss/spss_statistics-21.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/ibm_spss/spss_statistics-21.dmg"
   checksum "9554ac2229b06861e5b3e39f09884181c4687c6a0f6ffcb46c557b6db343dab7"
   action :install
   type "pkg"

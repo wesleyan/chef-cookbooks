@@ -11,7 +11,7 @@ dmg_package "Cisco Jabber Video" do
   app "Jabber Video"
   volumes_dir "Jabber Video"
   dmg_name "JabberVideo4.6GA"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/cisco_jabber_video/JabberVideo4.6GA.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/cisco_jabber_video/JabberVideo4.6GA.dmg"
   checksum "71fa7785ddba911871bf08aa75b98f60493b6aead717c35ad70300113137a0c9"
   action :install
   type "app"

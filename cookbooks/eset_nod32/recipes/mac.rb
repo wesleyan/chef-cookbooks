@@ -11,7 +11,7 @@ dmg_package "ESET NOD32" do
   app "esets_remote_install"
   volumes_dir "esets_remote_install"	
   dmg_name "eset_nod32avbe-4.1.89"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/eset_nod32/eset_nod32avbe-4.1.89.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/eset_nod32/eset_nod32avbe-4.1.89.dmg"
   checksum "db6c50a76b0ca3060a69c1ffe2a0bfefd213dbbbc3846287e1b45a3b6793eac1"
   action :install
   type "pkg"

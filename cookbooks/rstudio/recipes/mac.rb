@@ -10,7 +10,7 @@ dmg_package "RStudio" do
   app "RStudio"
   volumes_dir "RStudio-0.97.336"
   dmg_name "RStudio-0.97.336"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/rstudio/RStudio-0.97.336.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/rstudio/RStudio-0.97.336.dmg"
   checksum "a197593df6fe7f81e13e6ae07ea633e4346b99f878e1d359b535edc61f940fb2"
   action :install
   type "app"

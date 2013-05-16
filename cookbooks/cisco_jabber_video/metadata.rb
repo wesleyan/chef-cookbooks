@@ -1,4 +1,4 @@
-name             'Cisco Jabber Video'
+name             'cisco_jabber_video'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'

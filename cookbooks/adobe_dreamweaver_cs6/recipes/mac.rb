@@ -11,7 +11,7 @@ dmg_package "Adobe Dreamweaver CS6" do
   app "adobe_dreamweaver_cs6_Install"
   volumes_dir "adobe_dreamweaver_cs6"
   dmg_name "adobe_dreamweaver_cs6-12.0.3"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_dreamweaver_cs6/adobe_dreamweaver_cs6-12.0.3.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_dreamweaver_cs6/adobe_dreamweaver_cs6-12.0.3.dmg"
   checksum "175756cff42c4b08e3b8839c2e06b7f6504f1dc1c7fb548617894265b786ccca"
   action :install
   type "pkg"

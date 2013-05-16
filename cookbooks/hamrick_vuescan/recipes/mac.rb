@@ -11,7 +11,7 @@ dmg_package "Hamrick VueScan" do
   app "VueScan"
   volumes_dir "VueScan"
   dmg_name "vuescan-x64-9.2.13"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/hamrick_vuescan/vuescan-x64-9.2.13.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/hamrick_vuescan/vuescan-x64-9.2.13.dmg"
   checksum "ca0f026072d49c234272469e0fe525a362ddd29d890f8005c29d5dc96cb5c080"
   action :install
   type "app"
