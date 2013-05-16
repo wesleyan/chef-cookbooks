@@ -10,11 +10,11 @@
 dmg_package "Microsoft Skype" do
   app "Skype"
   volumes_dir "Skype"
-  dmg_name "Skype_6.3.59.582"
-  source "http://ims-chef.wesleyan.edu/os_x/microsoft_skype/Skype_6.3.59.582.dmg"
-  checksum "b99d0ba3a91ba8223e384debd82da613f44e14028a9b8e9e17462ab872cbdd50"
+  dmg_name "Skype_6.4.60.833"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_skype/Skype_6.4.60.833.dmg"
+  checksum "e381966e39c0f22ff013db80d552957245067cb6fcd0abf86321cbc815d27948"
   action :install
   type "app"
   package_id "com.microsoft.skype"
-  version "6.3.59.582"
+  version "6.4.60833"
 end
