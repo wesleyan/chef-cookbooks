@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of apple_ilife.
 
+## 0.2.4:
+
+* Updated iMovie to 9.0.9
+* Updated chef package server URLs
+
 ## 0.2.3:
 
 * Updated RAW Camera to 4.05.

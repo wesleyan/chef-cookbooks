@@ -44,14 +44,14 @@ end
 
 # Install latest iMovie update
 dmg_package "iMovie Update" do
-  app "iMovie9.0.8Update"
-  volumes_dir "iMovie 9.0.8"
-  dmg_name "iMovie9.0.8Update"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iMovie9.0.8Update.dmg"
-  checksum "2466ed9943e7784da057dffdb6e6348c8cf7bb9cded9ba03d8c88b0e11ce80da"
+  app "iMovie9.0.9Update"
+  volumes_dir "iMovie 9.0.9"
+  dmg_name "iMovie9.0.9Update"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/iMovie9.0.9Update.dmg"
+  checksum "7d1d07f8037a6622ed34c58b37bcd477414da77db0bc5a0df4be8b84d13d4aac"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.iMovie9.0.8Update"
+  package_id "com.apple.pkg.iMovie9.0.9Update"
 end
 
 # Install base iPhoto update (required for current updates)
