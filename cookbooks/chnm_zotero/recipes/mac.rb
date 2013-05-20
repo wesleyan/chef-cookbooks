@@ -31,6 +31,7 @@ dmg_package "Zotero Browser Plugins" do
 end
 
 # Install Firefox add-on, current version 4.0.5
+directory "/Applications/Firefox.app/Contents/MacOS/extensions"
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/zotero@chnm.gmu.edu.xpi" do
   mode 0777
 end
