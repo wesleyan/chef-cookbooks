@@ -6,15 +6,16 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Updates chef in chef, from the installer on baratheon
-
+# Include gem for versioning
 chef_gem "mixlib-versioning"
 
+# Get chef install script from our server
 remote_file "/tmp/chef.sh" do
   source "http://ims-chef.wesleyan.edu/os_x/opscode_chef/chef.sh"
   mode 0777
 end
 
+# Run shell script to update chef-client
 opscode_chef_update "Updating version" do
-  version "11.4.2"
+  version "11.4.4"
 end
