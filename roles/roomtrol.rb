@@ -10,6 +10,11 @@ run_list  "recipe[apt]",
           "recipe[nginx::roomtrol]",
           "recipe[rvm::roomtrol]"
 default_attributes(
+"authorization" => {
+  "sudo" => {
+    "users" => ["roomtrol"],
+    "passwordless" => true
+},
 "rvm" => {
   "global_gems" => [{"name" => "bundler"},
   {"name" => "rake","version" => "0.9.2"}]
