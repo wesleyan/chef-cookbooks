@@ -1,0 +1,2 @@
+#udev rule for MiMo
+KERNEL=="fb[0-9]*", SUBSYSTEMS=="usb", ATTRS{idVendor}=="17e9", NAME="fb4", RUN+="/sbin/restart x"

@@ -35,6 +35,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[apple_iwork::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
+          "recipe[profile_manager::mac]",
           # Finalize 
           "recipe[finalize::mac]"
 
