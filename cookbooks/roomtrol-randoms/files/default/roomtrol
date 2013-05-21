@@ -1,0 +1,12 @@
+/var/log/roomtrol.log {
+rotate 5
+daily
+compress
+missingok
+notifempty
+postrotate 
+/etc/init.d/rabbitmq-server restart
+/sbin/restart roomtrol-daemon
+endscript
+}
+
