@@ -1,0 +1,206 @@
+#
+# Cookbook Name:: roomtrol-randoms
+# Recipe:: default
+
+include_recipe "apt" if [ 'debian', 'ubuntu' ].member? node[:platform]
+package "curl"
+package "git-core"
+package "unzip"
+package "avahi-daemon"
+package "avahi-utils"
+package "libavahi-compat-libdnssd-dev"
+package "vim"
+package "mg"
+package "htop"
+package "autoconf"
+package "libtool"
+package "libfcgi-dev"
+package "snmpd" # zenoss monitoring
+include_recipe "erlang"
+
+include_recipe "build-essential"
+
+cookbook_file "/tmp/couchbase-single-server-community_x86_64_1.1.2.deb"
+cookbook_file "/tmp/linux-headers-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
+cookbook_file "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
+cookbook_file "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
+
+
+package "couchdb" do
+  action :purge
+end
+
+package "couchdb-bin" do
+  action :purge
+end
+
+package "linux-headers-2.6.37_amd64" do
+  source "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
+  provider Chef::Provider::Package::Dpkg
+  options "-E"
+end
+
+package "linux-headers-2.6.37_all" do
+  source "/tmp/linux-headers-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
+  provider Chef::Provider::Package::Dpkg
+  options "-E"
+end
+
+package "linux-image-2.6.37_amd64" do
+  source "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
+  provider Chef::Provider::Package::Dpkg
+  options "-E"
+end
+
+package "couchbase-single-server" do
+  source "/tmp/couchbase-single-server-community_x86_64_1.1.2.deb"
+  provider Chef::Provider::Package::Dpkg
+  options "-E"
+end
+
+service "couchbase-server" do
+  supports :restart => true, :reload => true, :status => true
+  action :enable
+end
+
+service "rsyslog" do
+  supports :restart => true, :reload => true, :status => true
+  action :enable
+end
+
+bash "install cgi" do
+  user "root"
+  cwd "/usr/local/src"
+  code <<-EOH
+  git clone git://github.com/gnosek/fcgiwrap.git;
+  cd /usr/local/src/fcgiwrap;
+  autoreconf -i;
+  ./configure;
+  make;
+  mv fcgiwrap /usr/local/bin;
+  chmod +x /usr/local/bin/fcgiwrap;
+  rm -rf /usr/local/src/fcgiwrap
+  EOH
+end
+
+cookbook_file "/etc/init.d/fcgiwrap" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/rc.local" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/grub.d/00_header" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/default/grub" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/logrotate.d/roomtrol" do
+  owner "root"
+  group "root"
+  mode 0644
+end 
+
+bash "regenerate grub config files" do
+  user "root"
+  code "update-grub"
+end
+
+directory "/home/roomtrol/.ssh" do
+  owner "roomtrol"
+  group "roomtrol"
+  action :create
+  mode 0700
+end
+
+directory "/var/www" do
+  owner "roomtrol"
+  group "roomtrol"
+  action :create
+end
+
+cookbook_file "/home/roomtrol/.ssh/authorized_keys" do
+  owner "roomtrol"
+  group "roomtrol"
+  mode 0644
+end
+
+cookbook_file "/etc/udev/rules.d/91-udev-fb.rules" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/init/iguanaIR.conf" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/init/lirc.conf" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/init/roomtrol-daemon.conf" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/usr/local/bin/bootup_roomtrol" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/avahi/services/roomtrol.service" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/modprobe.d/blacklist.conf" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/opt/couchbase-server/etc/couchdb/local.ini" do
+  owner "root"
+  group "root"
+  mode 0755
+  notifies :restart, "service[couchbase-server]"
+end
+
+cookbook_file "/etc/snmp/snmpd.conf" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/default/snmpd" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+cookbook_file "/etc/rsyslog.conf" do
+  owner "root"
+  group "root"
+  mode 0755
+  notifies :restart, "service[rsyslog]"
+end
