@@ -49,13 +49,13 @@ end
 roleList = roles.map { |r| "\"role[#{r}]\"" }.join(', ')
 
 File.open("/scripts/roles.json", "w") { |f|
-f << '%Q{
+f << %Q{
     "default_attributes": {
         "printers": {
             "default": "#{printer}"
         }
     },
     "run_list": [ #{roleList} ]
-}'}
+}}
 
 
