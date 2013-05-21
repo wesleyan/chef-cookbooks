@@ -1,10 +1,10 @@
 name "roomtrol"
 description "Base role for roomtrol deployment"
 
-run_list  "recipe[apt::roomtrol]",
+run_list  "recipe[apt]",
           "recipe[sudo]",
           "recipe[xorg::roomtrol]",
-          "recipe[erlang::roomtrol]",
+          "recipe[erlang]",
           "recipe[rabbitmq::roomtrol]",
           "recipe[roomtrol-randoms::roomtrol]",
           "recipe[nginx::roomtrol]",
