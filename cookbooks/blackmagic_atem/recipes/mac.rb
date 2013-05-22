@@ -15,6 +15,6 @@ dmg_package "Blackmagic ATEM" do
   checksum "e6e4dbb0d17282bf7831a4be5db450d5ef29fc082952744c5971cc2f6bf9ce50"
   action :install
   type "pkg"
-  #package_id ""
-  #version "4.3.0"
+  package_id "com.blackmagic-design.Switchers"
+  version "4.0"
 end
