@@ -6,9 +6,11 @@ run_list  "recipe[apt]",
           "recipe[xorg::roomtrol]",
           "recipe[erlang]",
           "recipe[rabbitmq::roomtrol]",
+          "recipe[couchdb]",
           "recipe[roomtrol-randoms::roomtrol]",
           "recipe[nginx::roomtrol]",
           "recipe[rvm::roomtrol]"
+
 default_attributes(
 "authorization" => {
   "sudo" => {
