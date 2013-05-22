@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of chrome.
 
+## 0.5.1: 
+
+* Updated app to 27.0.1453.93
+
 ## 0.5.0:
 
 * Updated default preferences
