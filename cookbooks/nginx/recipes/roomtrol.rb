@@ -40,6 +40,24 @@ when 'package'
   include_recipe 'nginx::commons'
 end
 
+cookbook_file "/etc/nginx/nginx.conf" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/nginx/sites-enabled/default" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+cookbook_file "/etc/nginx/sites-available/default" do
+  owner "root"
+  group "root"
+  mode 0644
+end
+
 service 'nginx' do
   supports :status => true, :restart => true, :reload => true
   action :start

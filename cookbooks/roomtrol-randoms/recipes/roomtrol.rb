@@ -20,19 +20,9 @@ include_recipe "erlang"
 
 include_recipe "build-essential"
 
-cookbook_file "/tmp/couchbase-single-server-community_x86_64_1.1.2.deb"
 cookbook_file "/tmp/linux-headers-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
 cookbook_file "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
 cookbook_file "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
-
-
-package "couchdb" do
-  action :purge
-end
-
-package "couchdb-bin" do
-  action :purge
-end
 
 package "linux-headers-2.6.37_amd64" do
   source "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
@@ -50,17 +40,6 @@ package "linux-image-2.6.37_amd64" do
   source "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
   provider Chef::Provider::Package::Dpkg
   options "-E"
-end
-
-package "couchbase-single-server" do
-  source "/tmp/couchbase-single-server-community_x86_64_1.1.2.deb"
-  provider Chef::Provider::Package::Dpkg
-  options "-E"
-end
-
-service "couchbase-server" do
-  supports :restart => true, :reload => true, :status => true
-  action :enable
 end
 
 service "rsyslog" do
@@ -177,13 +156,6 @@ cookbook_file "/etc/modprobe.d/blacklist.conf" do
   owner "root"
   group "root"
   mode 0755
-end
-
-cookbook_file "/opt/couchbase-server/etc/couchdb/local.ini" do
-  owner "root"
-  group "root"
-  mode 0755
-  notifies :restart, "service[couchbase-server]"
 end
 
 cookbook_file "/etc/snmp/snmpd.conf" do
