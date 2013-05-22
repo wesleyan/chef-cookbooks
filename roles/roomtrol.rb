@@ -14,6 +14,7 @@ default_attributes(
   "sudo" => {
     "users" => ["roomtrol"],
     "passwordless" => true
+  }
 },
 "rvm" => {
   "global_gems" => [{"name" => "bundler"},
