@@ -28,7 +28,7 @@ action :unzip do
   ensure_rubyzip_gem_installed
   Chef::Log.debug("unzip #{@new_resource.source} => #{@new_resource.path} (overwrite=#{@new_resource.overwrite})")
 
-  Zip::ZipFile.open(cached_file(@new_resource.source)) do |zip|
+  Zip::ZipFile.open(cached_file(@new_resource.source, @new_resource.checksum)) do |zip|
     zip.each do |entry|
       path = ::File.join(@new_resource.path, entry.name)
       FileUtils.mkdir_p(::File.dirname(path))
@@ -84,7 +84,7 @@ def ensure_rubyzip_gem_installed
   rescue LoadError
     Chef::Log.info("Missing gem 'rubyzip'...installing now.")
     chef_gem "rubyzip" do
-      version "0.9.5"
+      version node['windows']['rubyzipversion']
     end
     require 'zip/zip'
   end
