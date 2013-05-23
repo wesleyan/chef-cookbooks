@@ -58,6 +58,9 @@ cookbook_file "/usr/lib/X11/xinit/xinitrc" do
   mode 0755
 end
 
+
+directory "/usr/lib/X11"
+directory "/usr/lib/X11/xorg.conf.d/"
 cookbook_file "/usr/lib/X11/xorg.conf.d/05-evdev.conf" do
   owner "root"
   group "root"
