@@ -2,24 +2,24 @@
 # Cookbook Name:: adobe_flash_player
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Need to figure out .app as an installer
-#
+# Install our Composer-built package.
 dmg_package "Adobe Flash Player" do
   app "Adobe Flash Player"
   volumes_dir "Adobe Flash Player"
-  dmg_name "adobe_flash_player-11.6.602.180"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.6.602.180.dmg"
-  checksum "edb3cb53f554dddee0a0f92379b73787ab9f69fd3d09ee0ac2a741cee41cbe08"
+  dmg_name "adobe_flash_player-11.7.700.202"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.7.700.202.dmg"
+  checksum "0861e31cd9110a0dc19ca33aea7cdcff5fc6f53300ad0d333c93bddad3649ff1"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "11.6.602.180"
+  version "11.7.700202"
 end
 
+# Seed file that disables automatic updates.
 cookbook_file "/Library/Application Support/Macromedia/mms.cfg" do
   mode 0644
 end
