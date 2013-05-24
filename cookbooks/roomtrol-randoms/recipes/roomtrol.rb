@@ -20,28 +20,6 @@ include_recipe "erlang"
 
 include_recipe "build-essential"
 
-cookbook_file "/tmp/linux-headers-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
-cookbook_file "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
-cookbook_file "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
-
-package "linux-headers-2.6.37_amd64" do
-  source "/tmp/linux-headers-2.6.37-02063701_2.6.37-02063701.201102181135_all.deb"
-  provider Chef::Provider::Package::Dpkg
-  options "-E"
-end
-
-package "linux-headers-2.6.37_all" do
-  source "/tmp/linux-headers-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
-  provider Chef::Provider::Package::Dpkg
-  options "-E"
-end
-
-package "linux-image-2.6.37_amd64" do
-  source "/tmp/linux-image-2.6.37-02063701-generic_2.6.37-02063701.201102181135_amd64.deb"
-  provider Chef::Provider::Package::Dpkg
-  options "-E"
-end
-
 service "rsyslog" do
   supports :restart => true, :reload => true, :status => true
   action :enable
