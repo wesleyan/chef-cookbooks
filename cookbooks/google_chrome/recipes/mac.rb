@@ -57,7 +57,7 @@ cookbook_file "/tmp/chrome.zip" do
 end
 
 directory "/System/Library/User Template/English.lproj/Library/Application Support"
-
+execute 'rm -rf /System/Library/User Template/English.lproj/Library/Application Support/Google' # to ensure this is a fresh copy
 execute 'unzip /tmp/chrome.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/"' do
   returns [0,1]
 end
