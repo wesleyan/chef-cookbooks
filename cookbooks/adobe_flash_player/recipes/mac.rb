@@ -8,11 +8,11 @@
 #
 # Install our Composer-built package.
 dmg_package "Adobe Flash Player" do
-  app "Adobe Flash Player"
-  volumes_dir "Adobe Flash Player"
+  app "Adobe Flash"
+  volumes_dir "Adobe Flash"
   dmg_name "adobe_flash_player-11.7.700.202"
   source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.7.700.202.dmg"
-  checksum "0861e31cd9110a0dc19ca33aea7cdcff5fc6f53300ad0d333c93bddad3649ff1"
+  checksum "846b4ca391ef9eacf4a7a19b9ad7d528e50293ee8d82d93d89242409188487f7"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
