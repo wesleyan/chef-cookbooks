@@ -42,4 +42,4 @@ default['couch_db']['config']['httpd']['bind_address'] = "0.0.0.0"
 
 default['couch_db']['config']['log']['level'] = "info"
 
-default['couch_db']['config']['admins']['roomtrol'] = "Pr351d3nt"
+default['couch_db']['config']['admins']['roomtrol'] = "-hashed-97f5b74e6555575d486cfba2088770bf2040f527,125a6d13bec3c02819eeb4ce80b3b2a9"
