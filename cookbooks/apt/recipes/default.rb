@@ -66,3 +66,8 @@ end
     action :create
   end
 end
+
+# this way we clear up any dependencies still unresolved
+execute "apt-get -q -y -f install" do
+  ignore_failure true
+end
