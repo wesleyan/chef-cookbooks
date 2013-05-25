@@ -10,3 +10,11 @@ run_list  "role[osx-base]",
           #"recipe[desktop_picture::mac]",
           "recipe[chnm_zotero::mac]",
           "recipe[finalize::mac]"
+
+default_attributes(
+"prepare" => {
+  # Turn on bind-to-domain 
+  "bind" => true, 
+  # Turn on delete inactive users and set the timeframe to 15 days.
+  "inactivity" => 15
+  })
