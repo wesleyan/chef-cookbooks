@@ -6,6 +6,10 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
+directory "/usr/local/include" do
+  recursive true
+end
+
 # Fixes an error in building Tkinter, when the issue linked below is resolved
 # this will no longer be necessary
 execute "Hotfix for Tkinter error (https://github.com/mxcl/homebrew/issues/19099)" do
