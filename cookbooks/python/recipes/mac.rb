@@ -8,7 +8,7 @@ end
 
 package "python" do
   version "2.7.5"
-  options "--with-brewed-tk"
+  #options "--with-brewed-tk" ( disabled until this option is fixed )
 end
 
 package "python3" do
