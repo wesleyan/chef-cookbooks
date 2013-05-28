@@ -11,14 +11,7 @@
 # Include homebrew because we need it!
 include_recipe "homebrew"
 
-# Tap an auxilary python repo and install Python Megawidgets
 homebrew_tap "Homebrew/homebrew-science"
-package "pmw" do
-  version "1.3.3"
-end
-
-# Tap a 3rd-party pymol repo and install PyMOL
-homebrew_tap "scicalculator/pymol"
 
 # Build and install PyMOL
 package "pymol" do
