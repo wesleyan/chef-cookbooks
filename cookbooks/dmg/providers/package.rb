@@ -123,7 +123,6 @@ action :install do
        if(::File.directory?("/Volumes/#{volumes_dir}") && new_resource.unmount)
          system("hdiutil detach '/Volumes/#{volumes_dir}'")
        end
-       ::File.delete(dmg_file)
       end
    end
 end
