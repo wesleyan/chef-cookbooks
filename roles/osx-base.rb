@@ -20,6 +20,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[oracle_java::mac]", 
           "recipe[sassafras_k2::mac]",
           "recipe[eset_nod32::mac]",
+          "recipe[verdiem_surveyor]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
