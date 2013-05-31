@@ -11,7 +11,7 @@ dmg_package "Adobe InDesign CS6" do
   app "adobe_indesign_cs6_Install"
   volumes_dir "adobe_indesign_cs6"
   dmg_name "adobe_indesign_cs6-8.0.1"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_indesign_cs6/adobe_indesign_cs6-8.0.1.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/adobe_indesign_cs6-8.0.1.dmg"
   checksum "a470e9390599672332da3a9f82b3f091839963e6ed540f8a6dfbc00aef1a60b4"
   action :install
   type "pkg"

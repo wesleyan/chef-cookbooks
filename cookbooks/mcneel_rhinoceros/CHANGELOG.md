@@ -2,7 +2,12 @@
 
 This file is used to list changes made in each version of rhino.
 
-## 0.3.0
+## 0.4.0:
+
+* Added versioning information
+* Updated to build 20130326
+
+## 0.3.0:
 
 * Renamed cookbook
 * Updated to build 20130108

@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of flash.
 
+## 0.4.0:
+
+* Updated runtime to version 11.7.700.202
+* Changed branding to software@wes
+* Updated chef-server URL
+* Updated README to new format
+
 ## 0.3.1:
 
 * Updated runtime to version 11.6.602.180

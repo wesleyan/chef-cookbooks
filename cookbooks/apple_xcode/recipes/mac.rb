@@ -7,30 +7,43 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install Xcode
-dmg_package "xcode-4.6.dmg" do
-  app "apple_xcode-4.6"
+dmg_package "XCode 4.6.2" do
+  app "Xcode"
   volumes_dir "Xcode"
-  dmg_name "xcode-4.6"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6.dmg"
-  checksum "38599e50b0f2fa9dcd590da8315c6c42636b877d64f87556c6d27c0eef4fbd16"
+  dmg_name "xcode-4.6.2"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.2.dmg"
+  checksum "3057224339823dae8a56943380a438065e92cff1ad4ab5a6a84f94f7a94dc035"
   action :install
-  type "pkg"
-  package_id "applexcode-4.6"
+  type "app"
+  package_id "com.apple.pkg.Xcode"
+  version "4.6.2"
 end
 
 # Install Xcode Command Line Tools
-dmg_package "xcode-4.6-cltools-0113" do
+dmg_package "xcode-4.6-2-cltools-0413" do
   app "Command Line Tools (Mountain Lion)"
   volumes_dir "Command Line Tools (Mountain Lion)"
-  dmg_name "xcode-4.6-cltools-0113"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/apple_xcode/xcode-4.6-cltools-0113.dmg"
-  checksum "cfc53d14a7e09661d4379da71ca6b73b836c3a5adcbe9b84929325cca96db8aa"
+  dmg_name "xcode-4.6.2-cltools-0413"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.2-cltools-0413.dmg"
+  checksum "309a753e0fadde2a51a5863baa272d1962bb79088184b88af39327e13bdf9fda"
   action :install
   type "mpkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
+  version "4.6.2.0413"
 end
 
-# Accept Xcode license silently so homebrew will be able to properly build packages
-#execute "xcodebuild -license"
+dmg_package "Xcode DevSDK" do
+  app "XCode DevSDK"
+  volumes_dir "Xcode DevSDK"
+  dmg_name "xcode-devsdk"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-devsdk.dmg"
+  checksum "19061cff7c937297c309cd8c28a8821c1ba18b7b16caf291a643d801dc5347a0"
+  action :install
+  type "pkg"
+  package_id "com.apple.pkg.DevSDK"
+  version "4.6.1.0413"
+end
 
-# execute "xcode-select -switch /usr/bin"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist" do
+  mode 0644
+end

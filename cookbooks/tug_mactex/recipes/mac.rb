@@ -23,7 +23,7 @@ dmg_package "MacTeX-20120701.dmg" do
   app "MacTeX"
   volumes_dir "MacTeX"
   dmg_name "MacTeX-20120701"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/tug_mactex/MacTeX-20120701.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/tug_mactex/MacTeX-20120701.dmg"
   checksum "c8b5dfc0ddc3ad412b998e4d617de0c20c36d73b1b65575fa85356f3fe2fd01c"
   action :install
   type "pkg"

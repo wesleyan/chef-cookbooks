@@ -11,17 +11,32 @@ dmg_package "Microsoft Office 2011 SP3" do
   app "Microsoft Office 2011"
   volumes_dir "Microsoft Office 2011"
   dmg_name "microsoft_office_2011-14.3.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/microsoft_office_2011/microsoft_office_2011-14.3.2.dmg"
-  checksum "b05cfe37caafe40e540764831087111dfac8020ef01fdce55215b9468bff8a0d"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/microsoft_office_2011-14.3.2.dmg"
+  checksum "d546e0e4cbb5bc37fbdc9ba904d7df8a08d69a2afb7323fef752d83fd4a36f05"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
   version "14.3.2"
 end
 
+dmg_package "Update Office 2011-1434" do
+  app "Office 2011 14.3.4 Update"
+  volumes_dir "Microsoft Office 2011 14.3.4 Update"
+  dmg_name "Office2011-1434UpdateEN"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1434UpdateEN.dmg"
+  checksum "892769fcdd91688ff66bddd9c5577e72cdd596420d8bd35f858a7e862f62f773"
+  action :install
+  type "pkg"
+  package_id "com.microsoft.office.2011"
+  version "14.3.4"
+end
+
 # Install customized plist files to surpress first-run dialogues
-#
-# SOMEONE NEEDS TO WRITE THIS
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
+
 
 # Download icon
 cookbook_file "/tmp/office.png"

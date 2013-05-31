@@ -2,44 +2,32 @@
 # Cookbook Name:: adobe_acrobat_pro_xi
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 # Install base package
-dmg_package "adobe_acrobat_pro_xi-11.0.dmg" do
+dmg_package "Adobe Acrobate Pro" do
   app "adobe_acrobat_pro_xi-11.0"
   volumes_dir "adobe_acrobat_pro_xi-11.0"
   dmg_name "adobe_acrobat_pro_xi-11.0"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_acrobat_pro_xi/adobe_acrobat_pro_xi-11.0.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/adobe_acrobat_pro_xi-11.0.dmg"
   checksum "ad64d83138a3c9ad74b41617f5a3b3e55470f3115806768576ebcc07c94e8822"
   action :install
   type "pkg"
   package_id "com.adobe.acrobat.11.viewer.app.pkg.MUI"
 end
 
-# Install first point release update, which is a dependency of all following point releases
-dmg_package "AcrobatUpd11001.dmg" do
-  app "AcrobatUpd11001"
-  volumes_dir "AcrobatUpd11001"
-  dmg_name "AcrobatUpd11001"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_acrobat_pro_xi/AcrobatUpd11001.dmg"
-  checksum "dab9ab5f9705ffde175b07205174736cb14c01755ef83ab376691fa34081feda"
+# Install latest point release update
+dmg_package "Adobe Acrobat Update" do
+  app "AcrobatUpd11003"
+  volumes_dir "AcrobatUpd11003"
+  dmg_name "AcrobatUpd11003"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11003.dmg"
+  checksum "e2260e9a30e863b40e3678a698ed2be479a0d8a4051188f0edc53822745e42ca"
   action :install
   type "pkg"
-  package_id "com.adobe.acrobat.a11.AcrobatUpd11001"
-end
-
-# Install the latest security patch
-dmg_package "AcrobatSecUpd11002.dmg" do
-  app "AcrobatSecUpd11002"
-  volumes_dir "AcrobatSecUpd11002"
-  dmg_name "AcrobatSecUpd11002"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_acrobat_pro_xi/AcrobatSecUpd11002.dmg"
-  checksum "88edf1efee233fbd1319b1ded95e766e7a942a2e843d293f248482e40f082077"
-  action :install
-  type "pkg"
-  package_id "com.adobe.acrobat.a11.AcrobatSecUpd11002"
+  package_id "com.adobe.acrobat.a11.AcrobatUpd11003"
 end
 
 # Download icon
@@ -54,8 +42,15 @@ dock_add "Adobe Creative Suite 6" do
   icon "/tmp/adobe.png"
 end
 
+# Add to dock
 dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
   all_users true
   group "Adobe Creative Suite 6"
 #  restart true
+end
+
+# Keep Preview as the default viewer for PDFs
+launch_association_set_file_handler "com.adobe.pdf" do
+  bundle_id "com.apple.Preview"
+  all_users true
 end

@@ -1,1 +1,1 @@
-default["printers"]["default"] = "ArtLib-HP4015"
+default["printers"]["default"] = nil

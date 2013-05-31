@@ -1,0 +1,53 @@
+Section "Files"
+        ModulePath   "/usr/lib/xorg/modules"
+        ModulePath   "/usr/local/lib/xorg/modules"
+        FontPath     "/usr/share/fonts/X11/misc"
+        FontPath     "/usr/share/fonts/X11/cyrillic"
+        FontPath     "/usr/share/fonts/X11/100dpi/:unscaled"
+        FontPath     "/usr/share/fonts/X11/75dpi/:unscaled"
+        FontPath     "/usr/share/fonts/X11/Type1"
+        FontPath     "/usr/share/fonts/X11/100dpi"
+        FontPath     "/usr/share/fonts/X11/75dpi"
+        FontPath     "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType"
+EndSection
+
+Section "Module"
+        Load  "glx"
+EndSection
+
+Section "InputDevice"
+        Identifier  "Keyboard0"
+        Driver      "kbd"
+EndSection
+
+Section "InputDevice"
+        Identifier "dummy"
+        Driver "void"
+        Option "Device" "/dev/input/mice"
+EndSection
+
+Section "Device"
+        Identifier      "DisplayLinkDevice"
+        Driver          "displaylink"
+        Option          "fbdev" "/dev/fb4"
+EndSection
+
+Section "Screen"
+        Identifier      "screen0"
+        Device          "DisplayLinkDevice"
+        Monitor         "monitor0"
+        SubSection "Display"
+                Depth 24
+                Modes "800x480"
+        EndSubSection
+EndSection
+
+Section "Monitor"
+        Identifier "monitor0"
+EndSection
+
+Section "ServerLayout"
+        Identifier "Default Layout"
+        Screen "screen0"
+        InputDevice "dummy"
+EndSection

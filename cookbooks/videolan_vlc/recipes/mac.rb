@@ -7,14 +7,14 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "vlc-2.0.5" do
+dmg_package "vlc-2.0.6" do
   app "VLC"
-  volumes_dir "vlc-2.0.5"
-  dmg_name "vlc-2.0.5"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/videolan_vlc/vlc-2.0.5.dmg"
-  checksum "64257a95902314248128e52b2d90e13e0475e57ad3661000ab2226c23a7395bf"
+  volumes_dir "vlc-2.0.6"
+  dmg_name "vlc-2.0.6"
+  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.0.6.dmg"
+  checksum "d6c0ee540cdb60df8976443931815ee3a502a5a01cd0df00f9e4536a0e3a32d6"
   package_id "com.videolan.vlc"
-  version "2.0.5"
+  version "2.0.6"
   action :install
   type "app"
 end

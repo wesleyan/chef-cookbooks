@@ -10,7 +10,7 @@ dmg_package "XQuartz-2.7.4.dmg" do
   app "XQuartz"
   volumes_dir "XQuartz-2.7.4"
   dmg_name "XQuartz-2.7.4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/xorg_xquartz/XQuartz-2.7.4.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/xorg_xquartz/XQuartz-2.7.4.dmg"
   checksum "3f7c156fc4b13e3f0d0e44523ef2bd3cf7ea736126616dd2da28abb31840923c"
   action :install
   type "pkg"

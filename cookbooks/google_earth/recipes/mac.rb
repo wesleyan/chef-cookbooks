@@ -11,7 +11,7 @@ dmg_package "GoogleEarthMac-Intel-7.0.2.8415.dmg" do
   app "Google Earth"
   volumes_dir "Google Earth"
   dmg_name "GoogleEarthMac-Intel-7.0.2.8415"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/google_earth/GoogleEarthMac-Intel-7.0.2.8415.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/google_earth/GoogleEarthMac-Intel-7.0.2.8415.dmg"
   checksum "228fb458ac569bc51884528d2cbdabde5df9f7c57fbe2d1d6661529a6132b67f"
   action :install
   unmount false
@@ -25,7 +25,7 @@ dmg_package "GoogleEarthMac-Intel-7.0.2.8415.dmg" do
   app "Google Earth Web Plug-in.plugin"
   volumes_dir "Google Earth"
   dmg_name "GoogleEarthMac-Intel-7.0.2.8415"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/google_earth/GoogleEarthMac-Intel-7.0.2.8415.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/google_earth/GoogleEarthMac-Intel-7.0.2.8415.dmg"
   checksum "228fb458ac569bc51884528d2cbdabde5df9f7c57fbe2d1d6661529a6132b67f"
   action :install
   destination "/Library/Internet Plug-Ins/"

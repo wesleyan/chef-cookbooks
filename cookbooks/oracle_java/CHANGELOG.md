@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of oracle_java.
 
+## 0.4.2:
+
+* Updated Oracle Java to 7.0u21.
+* Updated Apple Java to 2013-002.
+
 ## 0.4.1:
 
 * Updated Oracle Java to 7.0u17.

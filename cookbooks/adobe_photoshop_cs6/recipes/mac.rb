@@ -11,7 +11,7 @@ dmg_package "Adobe Photoshop CS6" do
   app "adobe_photoshop_cs6_Install"
   volumes_dir "adobe_photoshop_cs6"
   dmg_name "adobe_photoshop_cs6-13.0.4"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.4.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.4.dmg"
   checksum "134be16b8134a2a91276e1f89568e274b36a92e705a4753ce45603237b6e170b"
   action :install
   type "pkg"
@@ -23,7 +23,7 @@ end
 #  app "adobe_photoshop_cs6-13.0.4_Update"
 #  volumes_dir "adobe_photoshop_cs6-13.0.4-update"
 #  dmg_name "adobe_photoshop_cs6-13.0.4-update"
-#  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.4-update.dmg"
+#  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.4-update.dmg"
 #  checksum "d00ae8a2ef6deebad0e13943d6f5ae0c6c93ab561db4471603fd601bf391e791"
 #  action :install
 #  type "pkg"

@@ -2,6 +2,21 @@
 
 This file is used to list changes made in each version of printerdrv.
 
+## 0.5.1: 
+
+* Updated Xerox Printer Drivers to 2.3
+
+## 0.5.0:
+
+* Updated with DAC100 specifics.
+* Updated HP Printer Drivers to 2.14
+* Updated Epson Printer Drivers to 2.14
+* Disabled printer sharing
+
+## 0.4.0:
+
+* Updated Pharos Popup Client to new version to fix hostname resolution issues.
+
 ## 0.3.0:
 
 * Updated HP drivers to version 2.13
@@ -14,8 +29,3 @@ This file is used to list changes made in each version of printerdrv.
 
 * Initial release of printers cookbook
 * Current versions: 2.12 (HP)
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.

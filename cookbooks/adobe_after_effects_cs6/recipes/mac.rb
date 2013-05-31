@@ -10,7 +10,7 @@ dmg_package "Adobe After Effects CS6" do
   app "adobe_after_effects_cs6_Install"
   volumes_dir "adobe_after_effects_cs6"
   dmg_name "adobe_after_effects_cs6-11.0.2"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_after_effects_cs6/adobe_after_effects_cs6-11.0.2.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_after_effects_cs6/adobe_after_effects_cs6-11.0.2.dmg"
   checksum "d2e517e4e4c06eb3a9571c38d6057a9847874e382da4e6b3a722ff6bcd04264c"
   action :install
   type "pkg"

@@ -11,7 +11,7 @@ dmg_package "Adobe Premiere Pro CS6" do
   app "adobe_premiere_pro_cs6_Install"
   volumes_dir "adobe_premiere_pro_cs6"
   dmg_name "adobe_premiere_pro_cs6-6.0.3"
-  source "http://baratheon.class.wesleyan.edu/os_x-10.8/adobe_premiere_pro_cs6/adobe_premiere_pro_cs6-6.0.3.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_premiere_pro_cs6/adobe_premiere_pro_cs6-6.0.3.dmg"
   checksum "806e8bd3817b4524998f88c00aaf648dbdc6e4e453b22637fb9c5032195e007c"
   action :install
   type "pkg"
