@@ -116,7 +116,7 @@ action :install do
     if(new_resource.sleep_after_install > 0) 
       sleep new_resource.sleep_after_install
     end
-    puts "blah2"
+    ::File.delete(dmg_file)
   end
   
   ruby_block "unmount" do
