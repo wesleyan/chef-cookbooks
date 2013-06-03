@@ -47,3 +47,6 @@ end
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist" do
   mode 0644
 end
+
+cookbook_file "/tmp/accept_license"
+execute "/usr/bin/env expect -f /tmp/accept_license"
