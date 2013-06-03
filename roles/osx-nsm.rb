@@ -17,7 +17,7 @@ run_list  "role[osx-classlab]",
           "recipe[graz_genesis::mac]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
           "recipe[synergy_kaleidagraph::mac]",
-          #{}"recipe[wolfram_mathematica::mac]",
+          "recipe[wolfram_mathematica::mac]",
           "recipe[perkinelmer_chemdraw_pro::mac]"
 
 # Set SuperCollider attribute for version determination
