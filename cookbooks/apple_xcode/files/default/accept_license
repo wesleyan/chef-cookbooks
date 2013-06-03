@@ -1,0 +1,16 @@
+#!/usr/bin/env expect -f
+set timeout -1
+spawn sudo xcodebuild -license
+send "\n"
+expect {
+    "Press 'space' for more"
+    {
+        send " "
+        exp_continue
+    }
+    "By typing 'agree'"
+    {
+        send "agree\r"
+        exp_continue
+    }
+}
