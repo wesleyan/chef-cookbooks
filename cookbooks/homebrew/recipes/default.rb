@@ -52,3 +52,13 @@ ruby_block "Add homebrew binaries to system path" do
     end
   end
 end
+
+# definitely should already exist, just a check
+directory "/usr/local/include" do
+  recursive true
+end
+
+execute "Allow homebrew permissions" do
+  command "chmod 777 /usr/local/include"
+end
+
