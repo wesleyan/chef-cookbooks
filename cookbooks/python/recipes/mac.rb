@@ -6,17 +6,13 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
-# definitely should already exist, just a check
-directory "/usr/local/include" do
-	recursive true
-end
-
-execute "Temporarily modify permissions for python installation" do
-	command "chmod 777 /usr/local/include"
+execute "Allow homebrew permissions" do
+  command "chmod 777 /usr/local/include"
 end
 
 execute "Hotfix for Tkinter error (https://github.com/mxcl/homebrew/issues/19099)" do
   command "ln -s /opt/X11/include/X11 /usr/local/include/X11"
+  not_if { ::File.exists? "/usr/local/include/X11"}
 end
 
 package "python" do
@@ -26,10 +22,6 @@ end
 
 package "python3" do
   version "3.3.2"
-end
-
-execute "Restore original permissions" do
-	command "chmod 755 /usr/local/include"
 end
 
 ruby_block "Add homebrew python to system path" do
