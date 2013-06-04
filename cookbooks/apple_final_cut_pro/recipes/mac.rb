@@ -15,7 +15,7 @@ dmg_package "Final Cut Pro X" do
   checksum "8a6b723d8d663f54c5deda7584c5ecf52772d937af59edee34fed69797995b0a"
   action :install
   type "app"
-  package_id "com.apple.pkg.FinalCut"
+  package_id "com.apple.FinalCut"
   version "10.0.8"
 end
 
