@@ -6,6 +6,10 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
+execute "Temporarily modify permissions for python installation" do
+	command "chmod 777 /usr/local/include"
+end
+
 package "python" do
   version "2.7.5"
   #options "--with-brewed-tk" ( disabled until this option is fixed )
@@ -13,4 +17,22 @@ end
 
 package "python3" do
   version "3.3.2"
+end
+
+execute "Restore original permissions" do
+	command "chmod 755 /usr/local/include"
+end
+
+ruby_block "Add homebrew python to system path" do
+	block do
+		content = ''
+		::File.open("/etc/bashrc", "r") do |f|
+			content = f.read()
+		end
+		unless content =~ /export PATH=\/usr\/local\/share\/python:$PATH/
+			::File.open("/etc/bashrc", "a") do |f|
+				f.puts "export PATH=/usr/local/share/python:$PATH"
+			end
+		end
+	end
 end
