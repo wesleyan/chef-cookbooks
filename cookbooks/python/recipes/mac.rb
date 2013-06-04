@@ -6,13 +6,22 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
+# definitely should already exist, just a check
+directory "/usr/local/include" do
+	recursive true
+end
+
 execute "Temporarily modify permissions for python installation" do
 	command "chmod 777 /usr/local/include"
 end
 
+execute "Hotfix for Tkinter error (https://github.com/mxcl/homebrew/issues/19099)" do
+  command "ln -s /opt/X11/include/X11 /usr/local/include/X11"
+end
+
 package "python" do
   version "2.7.5"
-  #options "--with-brewed-tk" ( disabled until this option is fixed )
+  options "--with-brewed-tk"
 end
 
 package "python3" do
