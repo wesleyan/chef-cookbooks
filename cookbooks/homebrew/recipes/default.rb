@@ -38,3 +38,17 @@ end
 execute "clear taps" do
   command "rm -rf /usr/local/Library/Taps/*"
 end
+
+ruby_block "Add homebrew binaries to system path" do
+  block do
+    content = ''
+    ::File.open("/etc/bashrc", "r") do |f|
+      content = f.read()
+    end
+    unless content =~ /export PATH=\/usr\/local\/bin:$PATH/
+      ::File.open("/etc/bashrc", "a") do |f|
+        f.puts "export PATH=/usr/local/bin:$PATH"
+      end
+    end
+  end
+end
