@@ -1,4 +1,4 @@
-verdiem_surveyor Cookbook
+smart_notebook Cookbook
 ====================
 This cookbook installs SMART Notebook on OS X.
 
