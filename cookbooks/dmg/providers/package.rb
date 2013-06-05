@@ -23,7 +23,6 @@ def load_current_resource
   @dmgpkg.app(new_resource.app)
   Chef::Log.debug("Checking for application #{new_resource.app}")
   @dmgpkg.installed(installed?)
-#  @dmgpkg.mounted
 end
 
 action :install do
@@ -33,7 +32,6 @@ action :install do
   dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
 
   unless @dmgpkg.installed
-      puts "blah"
     remote_file "#{dmg_file} - #{@dmgpkg.name}" do
       path dmg_file
       source new_resource.source
@@ -88,9 +86,7 @@ action :install do
         end
       end
     when "mpkg", "pkg"
-      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR" do
- #       returns [0, 1]
-      end  
+      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
@@ -142,11 +138,6 @@ action :install do
 end
 
 private
-
-def mounted? 
-  # 
-  # ::File.directory?("/Volumes/#{volumes_dir}")
-end
 
 def installed?
   begin
