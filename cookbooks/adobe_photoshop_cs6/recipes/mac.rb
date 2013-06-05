@@ -19,16 +19,16 @@ dmg_package "Adobe Photoshop CS6" do
 end
 
 # Install update
-#dmg_package "adobe_photoshop_cs6-13.0.4-update.dmg" do
-#  app "adobe_photoshop_cs6-13.0.4_Update"
-#  volumes_dir "adobe_photoshop_cs6-13.0.4-update"
-#  dmg_name "adobe_photoshop_cs6-13.0.4-update"
-#  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.4-update.dmg"
-#  checksum "d00ae8a2ef6deebad0e13943d6f5ae0c6c93ab561db4471603fd601bf391e791"
-#  action :install
-#  type "pkg"
-#  package_id "com.adobe.Enterprise.install.3AF43FC0-7F50-46E3-A912-54BD0A5E09E91"
-#end
+dmg_package "Adobe Photoshop CS6 Update" do
+ app "Adobe Photoshop CS6/AdobePatchInstaller"
+ volumes_dir "Adobe Photoshop CS6"
+ dmg_name "Photoshop_CS6_13_0_5_upd"
+ source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/Photoshop_CS6_13_0_5_upd.dmg"
+ checksum "7303baf2c65587663f4af72324a2fde4d48ac821e8ab7328fb0c9d21cd469667"
+ action :install
+ type "app"
+ package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
+end
 
 # Download icon
 cookbook_file "/tmp/adobe.png"
