@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of photoshop.
 
+## 0.5.0
+
+* Updated app to version 13.0.5
+* Now installs Adobe Camera RAW update 7.4
+
 ## 0.4.0
 * Now installs to Photoshop 13.0.4 directly
 
@@ -17,4 +22,4 @@ This file is used to list changes made in each version of photoshop.
 
 ## 0.1.0:
 
-* Initial release of photoshop cookbook
+* Initial release of adobe_photoshop_cs6 cookbook

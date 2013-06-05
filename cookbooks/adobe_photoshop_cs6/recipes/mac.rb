@@ -2,11 +2,11 @@
 # Cookbook Name:: adobe_photoshop_cs6
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install package
+# Install base package
 dmg_package "Adobe Photoshop CS6" do
   app "adobe_photoshop_cs6_Install"
   volumes_dir "adobe_photoshop_cs6"
@@ -18,16 +18,28 @@ dmg_package "Adobe Photoshop CS6" do
   package_id "com.adobe.Enterprise.install.F6603D67-C55B-41CD-B95F-2D05F01D929C"
 end
 
-# Install update
+# Install package update
 dmg_package "Adobe Photoshop CS6 Update" do
- app "Adobe Photoshop CS6/AdobePatchInstaller"
- volumes_dir "Adobe Photoshop CS6"
- dmg_name "Photoshop_CS6_13_0_5_upd"
- source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/Photoshop_CS6_13_0_5_upd.dmg"
- checksum "7303baf2c65587663f4af72324a2fde4d48ac821e8ab7328fb0c9d21cd469667"
+ app "adobe_photoshop_cs6-13.0.5"
+ volumes_dir "adobe_photoshop_cs6-13.0.5"
+ dmg_name "adobe_photoshop_cs6-13.0.5"
+ source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.5.dmg"
+ checksum "c4c705a83e732906c4ce0b4aa9b4335035efe6ba4ca77bc771791e48017916c3"
+ action :install
+ type "pkg"
+ #package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
+end
+
+# Install RAW camera update
+dmg_package "Adobe Camera RAW update" do
+ app "Adobe DNG Converter"
+ volumes_dir "DNGConverter_7_4"
+ dmg_name "DNGConverter_7_4"
+ source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/DNGConverter_7_4.dmg"
+ checksum "89e66b32e0485c4745b360cddc7e51b0da22e98ae9d21035e67f818a6c792a6e"
  action :install
  type "app"
- package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
+ #package_id ""
 end
 
 # Download icon

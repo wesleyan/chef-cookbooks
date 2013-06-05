@@ -2,11 +2,11 @@
 # Cookbook Name:: adobe_indesign_cs6
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install package
+# Install base package
 dmg_package "Adobe InDesign CS6" do
   app "adobe_indesign_cs6_Install"
   volumes_dir "adobe_indesign_cs6"
@@ -17,6 +17,18 @@ dmg_package "Adobe InDesign CS6" do
   type "pkg"
   package_id "com.adobe.Enterprise.install.CD42F8C2-93BE-4C32-9064-C04F00977A73"
 end
+
+# Install Digital Publishing tools update - FIX ME
+#dmg_package "Adobe Digital Publishing Tools Update" do
+# app ""
+# volumes_dir "AdobeDigitalPublishingCS6-AutoUpdate"
+# dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
+# source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
+# checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
+# action :install
+# type "app"
+# #package_id ""
+#end
 
 # Download icon
 cookbook_file "/tmp/adobe.png"
