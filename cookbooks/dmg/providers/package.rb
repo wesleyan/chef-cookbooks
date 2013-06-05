@@ -111,6 +111,20 @@ action :install do
 	      end
       end
       end
+    when "adobe"
+      execute "Run Adobe Updater" do
+        command "/Volumes/#{volumes_dir}/#{new_resource.app}.app/Contents/MacOS/AdobePatchInstaller –mode=silent"
+      end
+    
+      if new_resource.version and new_resource.package_id
+        file "/var/db/receipts/#{new_resource.package_id}.plist" do        
+          content ({"PackageVersion" => new_resource.version}).to_plist.dump 
+          mode 0644 # -rw-r--r--
+          owner "root"
+          group "wheel"
+          action :create
+        end
+      end
     end
     
     if(new_resource.sleep_after_install > 0) 

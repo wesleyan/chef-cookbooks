@@ -26,8 +26,8 @@ dmg_package "Adobe Photoshop CS6 Update" do
  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.5.dmg"
  checksum "c4c705a83e732906c4ce0b4aa9b4335035efe6ba4ca77bc771791e48017916c3"
  action :install
- type "pkg"
- #package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
+ type "adobe"
+ package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
 end
 
 # Install RAW camera update
