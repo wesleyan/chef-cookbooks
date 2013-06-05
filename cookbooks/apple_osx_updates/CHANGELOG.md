@@ -1,12 +1,15 @@
 # CHANGELOG for osxupdate
 
-This file is used to list changes made in each version of osxupdate.
+This file is used to list changes made in each version of apple_osx_updates
+
+
+## 0.2.0:
+
+* After being dormant for quite a while due to 10.8.3 being our base image due to driver requirements, this cookbook is resurrected!
+* Updated to 10.8.4
+* Updated branding
+* Updated chef-server URL
 
 ## 0.1.0:
 
-* Initial release of osxupdate
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
+* Initial release of apple_osx_updates
