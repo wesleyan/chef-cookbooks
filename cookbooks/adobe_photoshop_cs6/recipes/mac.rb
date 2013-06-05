@@ -26,8 +26,8 @@ dmg_package "Adobe Photoshop CS6 Update" do
  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/adobe_photoshop_cs6-13.0.5.dmg"
  checksum "c4c705a83e732906c4ce0b4aa9b4335035efe6ba4ca77bc771791e48017916c3"
  action :install
- type "adobe"
- package_id "com.adobe.Enterprise.install.Photoshop-13-0-5"
+ type "pkg"
+ package_id "com.adobe.Enterprise.install.CA16D422-9100-417B-99A1-26896C579D03"
 end
 
 # Install RAW camera update
@@ -38,8 +38,8 @@ dmg_package "Adobe Camera RAW update" do
  source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/DNGConverter_7_4.dmg"
  checksum "89e66b32e0485c4745b360cddc7e51b0da22e98ae9d21035e67f818a6c792a6e"
  action :install
- type "app"
- #package_id ""
+ type "pkg"
+ package_id "com.adobe.adobeDngConverter74.AdobeDNGConverter.pkg"
 end
 
 # Download icon
