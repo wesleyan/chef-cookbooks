@@ -2,7 +2,11 @@
 
 This file is used to list changes made in each version of indesign.
 
-## 0.2.0
+## 0.3.0:
+
+* Added DPS Tools updater, v26.0
+
+## 0.2.0:
 
 * Added dock icon
 * Current app version: 8.0.1
