@@ -1,54 +1,68 @@
-Description
-===========
+7-zip Cookbook
+==============
+TODO: Enter the cookbook description here.
 
-[7-Zip](http://www.7-zip.org/) is a file archiver with a high compression ratio. This cookbook installs the full 7-zip suite of tools (GUI and CLI).
+e.g.
+This cookbook makes your favorite breakfast sandwhich.
 
 Requirements
-============
+------------
+TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-Platform
---------
-
-* Windows XP
-* Windows Vista
-* Windows Server 2003 R2
-* Windows 7
-* Windows Server 2008 (R1, R2)
-
-Cookbooks
----------
-
-* windows
+e.g.
+#### packages
+- `toaster` - 7-zip needs toaster to brown your bagel.
 
 Attributes
-==========
+----------
+TODO: List you cookbook attributes here.
 
-* `node['7-zip']['home']` - location to install 7-zip files to.  default is `%SYSTEMDRIVE%\7-zip`
+e.g.
+#### 7-zip::default
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['7-zip']['bacon']</tt></td>
+    <td>Boolean</td>
+    <td>whether to include bacon</td>
+    <td><tt>true</tt></td>
+  </tr>
+</table>
 
 Usage
-=====
+-----
+#### 7-zip::default
+TODO: Write usage instructions for each cookbook.
 
-default
--------
+e.g.
+Just include `7-zip` in your node's `run_list`:
 
-Downloads and installs 7-zip to the location specified by `node['7-zip']['home']`.  Also ensures `node['7-zip']['home']` is in the system path.
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[7-zip]"
+  ]
+}
+```
 
-License and Author
-==================
+Contributing
+------------
+TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-Author:: Seth Chisamore (<schisamo@opscode.com>)
+e.g.
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write you change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
 
-Copyright:: 2011, Opscode, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+License and Authors
+-------------------
+Authors: TODO: List authors
