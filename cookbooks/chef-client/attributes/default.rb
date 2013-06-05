@@ -74,7 +74,8 @@ when "mac_os_x","mac_os_x_server"
   # continuously with the -d and -s options, or leave
   # as "interval" if you want chef-client to be run
   # periodically by launchd
-  default["chef_client"]["launchd_mode"] = "interval"
+  default["chef_client"]["launchd_mode"] = "calendar"
+  default["chef-client"]["hour"] = 4
 when "openindiana","opensolaris","nexentacore","solaris2"
   default["chef_client"]["init_style"]  = "smf"
   default["chef_client"]["run_path"]    = "/var/run/chef"
