@@ -113,7 +113,7 @@ action :install do
       end
     when "adobe"
       execute "Run Adobe Updater" do
-        command "/Volumes/#{volumes_dir}/#{new_resource.app}.app/Contents/MacOS/AdobePatchInstaller –mode=silent"
+        command "/Volumes/AdobeDigitalPublishingCS6-AutoUpdate/AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller –-mode=silent"
       end
     
       if new_resource.version and new_resource.package_id

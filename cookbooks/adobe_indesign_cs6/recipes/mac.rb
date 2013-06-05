@@ -18,17 +18,16 @@ dmg_package "Adobe InDesign CS6" do
   package_id "com.adobe.Enterprise.install.CD42F8C2-93BE-4C32-9064-C04F00977A73"
 end
 
-# Install Digital Publishing tools update - FIX ME
-#dmg_package "Adobe Digital Publishing Tools Update" do
-# app ""
-# volumes_dir "AdobeDigitalPublishingCS6-AutoUpdate"
-# dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
-# source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
-# checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
-# action :install
-# type "app"
-# #package_id ""
-#end
+#Install Digital Publishing tools update 
+dmg_package "Adobe Digital Publishing Tools Update" do
+ dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
+ source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
+ checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
+ action :install
+ type "adobe"
+ package_id "com.adobe.Enterprise.install.InDesign-Updater"
+ version "26.0.0"
+end
 
 # Download icon
 cookbook_file "/tmp/adobe.png"
