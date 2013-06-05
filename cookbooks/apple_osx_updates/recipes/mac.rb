@@ -12,7 +12,7 @@ dmg_package "OS X Update" do
   app "OSXUpd10.8.4"
   volumes_dir "OS X 10.8.4 Update"
   dmg_name "OSXUpd10.8.4"
-  source "http://ims-chef.wesleyan.edu/os_x/os_x_updates/OSXUpd10.8.4.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_osx_updates/OSXUpd10.8.4.dmg"
   checksum "07d0a381f54911c6ae4f764452d308d439c30e0a3737ea43d1cd3dd24b205296"
   action :install
   type "pkg"
