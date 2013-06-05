@@ -5,6 +5,8 @@ begin
     roles = ["osx-base"]
     printer = "Printers"
     case n.to_s
+    when /mac/
+      case n.to_s
       when /dac100/
         roles = ["osx-dac100"]
         printer = "DAC100-E3880-1"
@@ -40,8 +42,11 @@ begin
         printer = "ST-HP4015BW"
       when /class/
         roles = ["osx-classlab"]
-      when /roomtrol/
-        roles = ["roomtrol"]
+      end
+    when /roomtrol/
+      roles = ["roomtrol"]
+    else # windows
+      roles = ["win-base"]
     end
     roles.each { |role|
       role = "role[#{role}]"
