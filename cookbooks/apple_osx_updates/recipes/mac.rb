@@ -16,5 +16,5 @@ dmg_package "OS X Update" do
   checksum "07d0a381f54911c6ae4f764452d308d439c30e0a3737ea43d1cd3dd24b205296"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.update.os.10.8.4.12E55.patch"
+  package_id "com.apple.pkg.update.os.10.8.4.12E55.delta"
 end
