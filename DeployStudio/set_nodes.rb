@@ -28,22 +28,20 @@ begin
         printer = "HAS-HP4015BW"
       when /olin/
         roles = ["osx-nsm", "osx-ss"]
-        printer = "Printers"
       when /paclab/
         roles = ["osx-ss"]
         printer = "PAC-HP4015BW"
       when /sc72/
         roles = ["osx-nsm"]
-        printer = "Printers"
       when /scili/
         roles = ["osx-nsm"]
-        printer = "Printers"
       when /stlab/
         roles = ["osx-nsm"]
         printer = "ST-HP4015BW"
       when /class/
         roles = ["osx-classlab"]
-        printer = "Printers"
+      when /roomtrol/
+        roles = ["roomtrol"]
     end
     roles.each { |role|
       role = "role[#{role}]"
