@@ -68,9 +68,7 @@ cookbook_file "/usr/lib/X11/xorg.conf.d/05-evdev.conf" do
   mode 0644
 end
 
-file "/usr/lib/X11/xorg.conf.d/99-calibration.conf" do
-    action :delete
-end
+file "/usr/lib/X11/xorg.conf.d/99-calibration.conf"
 
 cookbook_file "/etc/init/x.conf" do
   owner "root"
