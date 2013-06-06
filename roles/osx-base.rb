@@ -38,7 +38,8 @@ run_list  "recipe[prepare::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
           "recipe[profile_manager::mac]",
-	  "recipe[chef-client::service]",
+          "recipe[system_preferences::mac]",
+	        "recipe[chef-client::service]",
           "recipe[chef-client::config]",
           # Finalize 
           "recipe[finalize::mac]"
