@@ -25,7 +25,7 @@ dmg_package "Adobe Digital Publishing Tools Update" do
  checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
  action :install
  type "adobe"
- package_id "com.adobe.Enterprise.install.InDesign-Updater"
+ package_id "com.adobe.Enterprise.update.DPSTools"
  version "26.0.0"
 end
 
