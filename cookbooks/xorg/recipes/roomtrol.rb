@@ -59,17 +59,6 @@ cookbook_file "/usr/lib/X11/xinit/xinitrc" do
   mode 0755
 end
 
-
-directory "/usr/lib/X11"
-directory "/usr/lib/X11/xorg.conf.d/"
-cookbook_file "/usr/lib/X11/xorg.conf.d/05-evdev.conf" do
-  owner "root"
-  group "root"
-  mode 0644
-end
-
-file "/usr/lib/X11/xorg.conf.d/99-calibration.conf"
-
 cookbook_file "/etc/init/x.conf" do
   owner "root"
   group "root"
