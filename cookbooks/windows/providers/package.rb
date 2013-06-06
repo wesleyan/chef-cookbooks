@@ -24,6 +24,7 @@ end
 
 require 'chef/mixin/shell_out'
 require 'chef/mixin/language'
+require 'chef/version_constraint'
 
 include Chef::Mixin::ShellOut
 include Windows::Helper
@@ -43,9 +44,20 @@ action :install do
 
   if install_version
     Chef::Log.info("Installing #{@new_resource} version #{install_version}")
-    status = install_package(@new_resource.package_name, install_version)
-    if status
-      @new_resource.updated_by_last_action(true)
+    # Check to see if this has already been installed
+    f = ::File.open("#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}", 'r' if ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}"
+    currVersion = f.read().strip if f
+    version_checker = Chef::VersionConstraint.new("> #{currVersion}") if currVersion
+    if version_checker and version_checker.include?(install_version)
+      status = install_package(@new_resource.package_name, install_version)
+      if status
+        @new_resource.updated_by_last_action(true)
+        # Time to create a receipt
+        ::Dir.mkdir("#{Chef::Config[:file_cache_path]}/Receipts")
+        ::File.open("#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}", "w") do |f|
+          f.puts install_version.to_s
+        end
+      end
     end
   end
 end

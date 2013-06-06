@@ -55,6 +55,7 @@ end
 cookbook_file "/usr/lib/X11/xinit/xinitrc" do
   owner "root"
   group "root"
+  source "xinitrc.roomtrol"
   mode 0755
 end
 

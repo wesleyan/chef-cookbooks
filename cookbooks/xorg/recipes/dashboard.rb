@@ -83,6 +83,7 @@ end
 cookbook_file "/etc/X11/xinit/xinitrc" do
   owner "root"
   group "root"
+  source "xinitrc.dashboard"
   mode 0755
 end
 
