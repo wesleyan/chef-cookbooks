@@ -8,7 +8,7 @@
 #
 
 windows_package "7-Zip" do
-  source "http://ims-chef.wesleyan.edu/windows/7z920.msi"
+  source "http://ims-chef.wesleyan.edu/windows/7-zip/7z920.msi"
   version "9.20"
 end
 
