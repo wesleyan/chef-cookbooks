@@ -8,15 +8,15 @@
 #
 # Install our Composer-built package.
 dmg_package "Adobe Flash Player" do
-  app "Adobe Flash"
-  volumes_dir "Adobe Flash"
-  dmg_name "adobe_flash_player-11.7.700.202"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.7.700.202.dmg"
-  checksum "846b4ca391ef9eacf4a7a19b9ad7d528e50293ee8d82d93d89242409188487f7"
+  app "Install Adobe Flash Player"
+  volumes_dir "Flash Player"
+  dmg_name "flash_player-11.7.700.203.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/flash_player-11.7.700.203.dmg"
+  checksum "5c592e8fba24cf02cf1ad8735007352f376dfbfb0adbad7d11961689602844f5"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "11.7.700202"
+  version "11.7.700.203"
 end
 
 # Seed file that disables automatic updates.
