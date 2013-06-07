@@ -45,7 +45,7 @@ action :install do
   if install_version
     Chef::Log.info("Installing #{@new_resource} version #{install_version}")
     # Check to see if this has already been installed
-    f = ::File.open("#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}", 'r' if ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}"
+    f = ::File.open("#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}", 'r') if ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/#{new_resource}"
     currVersion = f.read().strip if f
     version_checker = Chef::VersionConstraint.new("> #{currVersion}") if currVersion
     if version_checker and version_checker.include?(install_version)
