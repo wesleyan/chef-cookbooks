@@ -23,6 +23,7 @@ end
 
 ruby_block 'Create Package Receipt' do
 	block do
+		::Dir.mkdir("#{Chef::Config[:file_cache_path]}/Receipts")
 		::File.open("#{Chef::Config[:file_cache_path]}/Receipts/Adobe Photoshop CS6", "w") do |f|
 			f << "1.0.0"
 		end
