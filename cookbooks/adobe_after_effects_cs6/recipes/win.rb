@@ -12,7 +12,7 @@ execute 'Unzip Installer' do
 end
 
 execute 'Install Adobe After Effects' do
-	command 'C:\adobe_after_effects_cs6\install.bat'
+	command 'start msiexec /qn /i C:\adobe_after_effects_cs6\Build\adobe_after_effects_cs6.msi'
 	not_if { ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/Adobe After Effects CS6" }
 end
 

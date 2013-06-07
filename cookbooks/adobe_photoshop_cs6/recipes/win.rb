@@ -12,7 +12,7 @@ execute 'Unzip Installer' do
 end
 
 execute 'Install Adobe Photoshop' do
-	command 'C:\adobe_photoshop_cs6\install.bat'
+	command 'start msiexec /qn /i C:\adobe_photoshop_cs6\Build\adobe_photoshop_cs6.msi'
 	not_if { ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/Adobe Photoshop CS6" }
 end
 

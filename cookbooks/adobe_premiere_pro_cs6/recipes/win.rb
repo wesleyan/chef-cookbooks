@@ -12,7 +12,7 @@ execute 'Unzip Installer' do
 end
 
 execute 'Install Adobe Premiere Pro' do
-	command 'C:\adobe_premiere_pro_cs6\install.bat'
+	command 'start msiexec /qn /i C:\adobe_premiere_pro_cs6\Build\adobe_premiere_pro_cs6.msi'
 	not_if { ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/Adobe Premiere Pro CS6" }
 end
 
