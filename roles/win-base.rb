@@ -1,3 +1,3 @@
 name "win-base"
 description "Base role for Windows deployment"
-run_list "recipe[windows]", "recipe[7-zip]", "recipe[videolan_vlc::win]", "recipe[python::win]", "recipe[gnu_r::win]"
+run_list "recipe[windows]", "recipe[7-zip]", "recipe[videolan_vlc::win]", "recipe[python::win]", "recipe[gnu_r::win]", "recipe[adobe_photoshop_cs6::win]"
