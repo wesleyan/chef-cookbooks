@@ -10,4 +10,5 @@ run_list "recipe[windows]",
   "recipe[adobe_illustrator_cs6::win]",
   "recipe[adobe_premiere_pro_cs6::win]",
   "recipe[notepad_plus_plus]",
-  "recipe[oracle_java::win]"
+  "recipe[oracle_java::win]",
+  "recipe[hamrick_vuescan::win]"
