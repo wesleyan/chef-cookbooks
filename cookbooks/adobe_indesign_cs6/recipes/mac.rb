@@ -20,8 +20,8 @@ end
 
 #Install Digital Publishing tools update 
 dmg_package "Adobe Digital Publishing Tools Update" do
- command "AdobePatchInstaller –-mode=silent"
- app "AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS"
+ options "–-mode=silent"
+ app "AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller"
  volumes_dir "AdobeDigitalPublishingCS6-AutoUpdate"
  dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
  source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
