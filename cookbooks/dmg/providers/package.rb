@@ -107,11 +107,8 @@ action :install do
 	      end
       end
       end
-    when "adobe"
-      execute "Run Adobe Updater" do
-        command "/Volumes/AdobeDigitalPublishingCS6-AutoUpdate/AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller –-mode=silent"
-      end
-    
+    when "custom"
+      execute "/Volumes/#{volumes_dir}/#{new_resource.app} #{new_resource.options}"
       if new_resource.version and new_resource.package_id
         file "/var/db/receipts/#{new_resource.package_id}.plist" do        
           content ({"PackageVersion" => new_resource.version}).to_plist.dump 
