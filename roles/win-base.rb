@@ -14,4 +14,6 @@ run_list "recipe[windows]",
   "recipe[adobe_dreamweaver_cs6::win]",
   "recipe[notepad_plus_plus]",
   "recipe[oracle_java::win]",
-  "recipe[hamrick_vuescan::win]"
+  "recipe[hamrick_vuescan::win]",
+  "recipe[rstudio::win]",
+  "recipe[google_chrome::win]"
