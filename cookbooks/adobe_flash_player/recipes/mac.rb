@@ -14,7 +14,7 @@ dmg_package "Adobe Flash Player" do
   source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/flash_player-11.7.700.203.dmg"
   checksum "5c592e8fba24cf02cf1ad8735007352f376dfbfb0adbad7d11961689602844f5"
   action :install
-  type "pkg"
+  type "app"
   package_id "com.adobe.pkg.FlashPlayer"
   version "11.7.700.203"
 end
