@@ -5,6 +5,7 @@ action :set_url_handler do
         final_user = cur_user
         execute "/tmp/duti -s #{new_resource.bundle_id} #{new_resource.uti}" do
           user cur_user.username
+          returns [0,2]
         end
       end
     end
@@ -12,6 +13,7 @@ action :set_url_handler do
   elsif current_user.uid >= 500 and ::File.directory?(current_user.user_dir)
     execute "/tmp/duti -s #{new_resource.bundle_id} #{new_resource.uti}" do
       user current_user.username
+      returns [0,2]
     end
   end
 end

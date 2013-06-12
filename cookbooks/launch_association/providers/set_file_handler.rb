@@ -16,6 +16,7 @@ action :set_file_handler do
       execute "/tmp/duti -s #{new_resource.bundle_id} #{uti} #{new_resource.role}" do
         command "/tmp/duti -s #{new_resource.bundle_id} #{uti} #{new_resource.role}"
         user cur_user.username
+        returns [0,2]
        end
      end
    end
@@ -25,6 +26,7 @@ action :set_file_handler do
      execute "/tmp/duti -s #{new_resource.bundle_id} #{uti} #{new_resource.role}" do
        command "/tmp/duti -s #{new_resource.bundle_id} #{uti} #{new_resource.role}"
        user current_user.username
+       returns [0,2]
       end
     end 
   end
