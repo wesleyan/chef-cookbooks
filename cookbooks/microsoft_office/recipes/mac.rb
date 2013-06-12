@@ -31,6 +31,18 @@ dmg_package "Update Office 2011-1434" do
   version "14.3.4"
 end
 
+dmg_package "Update Office 2011-1435" do
+  app "Office 2011 14.3.5 Update"
+  volumes_dir "Microsoft Office 2011 14.3.5 Update"
+  dmg_name "Office2011-1435UpdateEN"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1435UpdateEN.dmg"
+  checksum "6ddf86a7fd4cf3a3a5e0875ef5bc50178e2be0b691426e5eed997712bc9bb60e"
+  action :install
+  type "pkg"
+  package_id "com.microsoft.office.2011"
+  version "14.3.5"
+end
+
 # Install customized plist files to surpress first-run dialogues
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
