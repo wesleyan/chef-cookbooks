@@ -1,0 +1,59 @@
+{
+  "homepage" : "http://wesleyan.edu",
+  "homepage_is_newtabpage" : true,
+  "browser" : {
+    "show_home_button" : true
+  },
+  "bookmark_bar" : {
+    "show_on_all_tabs" : true
+  },
+  "distribution" : {
+    "skip_first_run_ui" : true,
+    "chrome" : true,
+    "show_welcome_page" : false,
+    "import_search_engine" : false,
+    "import_history" : false,
+    "create_all_shortcuts" : true,
+    "do_not_launch_chrome" : true,
+    "make_chrome_default" : false,
+    "suppress_first_run_bubble" : true,
+    "do_not_create_desktop_shortcut" : true,
+    "do_not_create_quick_launch_shortcut" : true,
+    "do_not_launch_chrome" : true,
+    "do_not_register_for_update_launch" : true,
+    "supress_first_run_default_browser_prompt" : true,
+    "msi" : true,
+    "import_bookmarks" : false,
+    "import_bookmarks_from_file" : "c:\\bookmarks.html"
+  },
+  "first_run_tabs" : [
+    "http://wesleyan.edu"
+  ],
+  "extensions" : {
+    "settings" : {
+      "ekhagklcjbdpajgpjgmbionohlpdbjgc" : {
+        "location" : 1,
+        "manifest" : {
+          "content_scripts" : [ {
+            "all_frames" : true,
+              "js" : [ "zotero.js", "zotero_config.js", "http.js", "zotero/connector/cachedTypes.js", "zotero/date.js", "zotero/debug.js", "zotero/openurl.js", "zotero/rdf/init.js", "zotero/rdf/uri.js", "zotero/rdf/term.js", "zotero/rdf/identity.js", "zotero/rdf/match.js", "zotero/rdf/rdfparser.js", "zotero/translation/translate.js", "zotero/connector/translate_item.js", "zotero/utilities.js", "zotero/utilities_translate.js", "inject/http.js", "inject/progressWindow.js", "inject/translator.js", "inject/translate_inject.js", "messages.js", "messaging_inject.js", "api.js", "inject/inject.js" ],
+              "matches" : [ "http://*/*", "https://*/*" ],
+              "run_at" : "document_idle"
+          } ],
+          "key" : "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDllBS5q+Z9T9tPgYwRN+/8T9wzyjo9tRo03Wy8zP2DQ5Iy+3q0Tjq2vKXGiMCxC/ZVuEMC68Ekv+jNT43VxPbEXI4dzpK1GMBqPJpAcEOB8B1ROBouQMbGGTG7fOdQVlmpdTTPVndVwysJ02CrDMn96IG2ytOq2PO7GR2xleCudQIDAQAB",
+          "name" : "Zotero Connector",
+          "permissions" : [ "http://*/*", "https://*/*", "tabs", "contextMenus" ],
+          "update_url" : "http://clients2.google.com/service/update2/crx",
+          "version" : "0.0"
+        },
+        "path" : "ekhagklcjbdpajgpjgmbionohlpdbjgc\\0.0",
+        "state" : 1
+      },
+      "granted_permissions" : {
+      "api" : [ "contextMenus", "tabs" ],
+      "explicit_host" : [ "http://*/*", "https://*/*" ],
+      "scriptable_host" : [ "http://*/*", "https://*/*" ]
+      }
+    }
+  }
+}
