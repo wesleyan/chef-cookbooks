@@ -22,3 +22,18 @@ end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.ibm.spss.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.ibm.spss-cf.plist"
+
+# Create dock folder, if it does not exist
+dock_add "Social Sciences" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/LabStats/LabStatsUserSpace.app" do
+  all_users true
+  group "Social Sciences"
+end

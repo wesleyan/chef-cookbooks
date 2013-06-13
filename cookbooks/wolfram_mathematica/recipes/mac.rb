@@ -46,3 +46,18 @@ cookbook_file "Wolfram Mathematica License" do
   mode 0644
   :create
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Mathematica.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

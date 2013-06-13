@@ -29,3 +29,18 @@ dmg_package "MacTeX-20120701.dmg" do
   type "pkg"
   package_id "org.tug.mactex.gui"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/TeX/TeXShop.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

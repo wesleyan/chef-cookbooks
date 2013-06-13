@@ -17,4 +17,5 @@ dmg_package "OS X Update" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.update.os.10.8.4.12E55.delta"
+  restart true
 end

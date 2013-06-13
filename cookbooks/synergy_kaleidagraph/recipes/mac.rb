@@ -17,3 +17,18 @@ dmg_package "Synergy KaleidaGraph" do
   package_id "com.synergy.kaleidagraph"
   version "4.1.3"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/KaleidaGraph 4.1/KaleidaGraph.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

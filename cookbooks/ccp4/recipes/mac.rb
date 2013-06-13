@@ -29,3 +29,19 @@ dmg_package "coot-0.7.0-i386.dmg" do
   type "pkg"
   package_id "ccp4.ac.uk.coot.coot.pkg"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/ccp4-6.3.0/ccp4.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+# restart true
+end

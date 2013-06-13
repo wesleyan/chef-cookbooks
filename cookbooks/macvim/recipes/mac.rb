@@ -15,3 +15,18 @@ dmg_package "MacVim-7.3-snapshot-66.dmg" do
   action :install
   type "app"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/MacVim.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

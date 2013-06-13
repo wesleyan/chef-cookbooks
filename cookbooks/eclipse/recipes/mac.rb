@@ -22,3 +22,18 @@ end
 cookbook_file "/Applications/Eclipse/Eclipse.app/Contents/MacOS/eclipse.ini" do
   mode 0666
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Eclipse/Eclipse.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

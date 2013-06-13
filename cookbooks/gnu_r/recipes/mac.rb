@@ -51,6 +51,20 @@ gnu_r_packages "update" do
 	action :update
 end
 
+# Create dock folder, if it does not exist
+dock_add "Social Sciences" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/R.app" do
+  all_users true
+  group "Social Sciences"
+end
 
 
 

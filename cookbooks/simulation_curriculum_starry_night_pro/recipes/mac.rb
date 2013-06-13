@@ -24,3 +24,18 @@ directory "/System/Library/User Template/English.lproj/Library/Preferences/Imagi
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Imaginova Canada/Prefs/Pro/Prefs.txt" do
   mode 0644
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Starry Night Pro 6.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

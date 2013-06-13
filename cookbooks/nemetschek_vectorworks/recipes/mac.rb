@@ -18,4 +18,5 @@ dmg_package "Vectorworks" do
   type "custom"
   package_id "com.nemetschek.vectorworks"
   version "2013.0.0"
+  not_if { `stat -f '%u' /dev/console`.to_i == 0 } # /dev/console reflects the current owner of the login window, which is only set to zero when no one is logged in
 end

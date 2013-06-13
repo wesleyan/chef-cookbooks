@@ -22,3 +22,18 @@ cookbook_file "/tmp/genesis.zip"
 execute 'unzip /tmp/genesis.zip -d /System/Library/User\ Template/English.lproj/' do
   creates "/System/Library/User Template/English.lproj/.genesis"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Genesis/Genesis.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
+end

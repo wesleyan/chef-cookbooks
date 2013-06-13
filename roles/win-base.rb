@@ -16,4 +16,5 @@ run_list "recipe[windows]",
   "recipe[oracle_java::win]",
   "recipe[hamrick_vuescan::win]",
   "recipe[rstudio::win]",
-  "recipe[google_chrome::win]"
+  "recipe[google_chrome::win]",
+  "recipe[nextengine_scanstudio::win]"

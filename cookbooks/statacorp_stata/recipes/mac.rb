@@ -30,3 +30,18 @@ end
 execute "Update Stata" do
   command "/Applications/Stata/Stata.app/Contents/MacOS/Stata -q -e \"update all\""
 end
+
+# Create dock folder, if it does not exist
+dock_add "Social Sciences" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Stata/Stata.app" do
+  all_users true
+  group "Social Sciences"
+end

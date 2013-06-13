@@ -33,6 +33,7 @@ attribute :sleep_after_install, :kind_of => Integer, :default => 0
 attribute :options, :kind_of => String, :default => nil
 attribute :version, :kind_of => String, :default => nil
 attribute :unmount, :kind_of => [TrueClass, FalseClass], :default => true
+attribute :restart, :kind_of => [TrueClass, FalseClass], :default => false
 #attribute :already_mounted, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(name, run_context=nil)

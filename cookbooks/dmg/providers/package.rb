@@ -123,6 +123,8 @@ action :install do
     if(new_resource.sleep_after_install > 0) 
       sleep new_resource.sleep_after_install
     end
+
+    system("/sbin/shutdown -r now") if new_resource.restart
   end
   
   ruby_block "unmount" do
