@@ -2,25 +2,25 @@
 # Cookbook Name:: apple_xcode
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 # Install Xcode
-dmg_package "XCode 4.6.2" do
+dmg_package "Apple Xcode" do
   app "Xcode"
   volumes_dir "Xcode"
-  dmg_name "xcode-4.6.2"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.2.dmg"
-  checksum "3057224339823dae8a56943380a438065e92cff1ad4ab5a6a84f94f7a94dc035"
+  dmg_name "xcode-4.6.3"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-4.6.3.dmg"
+  checksum "07c454db2e7b09c7607df33b2d1d7cd3b04cdd9dfcbf9719db0bd0b0e310b69f"
   action :install
   type "app"
   package_id "com.apple.pkg.Xcode"
-  version "4.6.2"
+  version "4.6.3"
 end
 
 # Install Xcode Command Line Tools
-dmg_package "xcode-4.6-2-cltools-0413" do
+dmg_package "Xcode Command Line Tools" do
   app "Command Line Tools (Mountain Lion)"
   volumes_dir "Command Line Tools (Mountain Lion)"
   dmg_name "xcode-4.6.2-cltools-0413"
@@ -32,6 +32,7 @@ dmg_package "xcode-4.6-2-cltools-0413" do
   version "4.6.2.0413"
 end
 
+# Is this still needed? I thought it was the old way of accepting the license.
 dmg_package "Xcode DevSDK" do
   app "XCode DevSDK"
   volumes_dir "Xcode DevSDK"

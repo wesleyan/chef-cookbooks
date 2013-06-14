@@ -2,11 +2,16 @@
 
 This file is used to list changes made in each version of xcode.
 
-## 0.3.1
+## 0.4.0:
+
+* Updated to 4.6.3
+* Now uses a custom script to accept the license, as plist varied in success from version to version.
+* Updated metadata and readme formats
+
+## 0.3.1:
 
 * Updated Xcode to 4.6.1
 * Ditched Composer package, recipe now seeds plist file for automated license acceptance
-
 
 ## 0.3.0
 
