@@ -2,19 +2,19 @@
 # Cookbook Name:: videon_vlc
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 # Install package
-dmg_package "vlc-2.0.6" do
+dmg_package "vlc-2.0.7" do
   app "VLC"
-  volumes_dir "vlc-2.0.6"
-  dmg_name "vlc-2.0.6"
-  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.0.6.dmg"
-  checksum "d6c0ee540cdb60df8976443931815ee3a502a5a01cd0df00f9e4536a0e3a32d6"
+  volumes_dir "vlc-2.0.7"
+  dmg_name "vlc-2.0.7"
+  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.0.7.dmg"
+  checksum "53b5b4786c435e0dd06597139a767cf140f0ef2b54676c8eb5ae62e0f31b3497"
   package_id "com.videolan.vlc"
-  version "2.0.6"
+  version "2.0.7"
   action :install
   type "app"
 end
