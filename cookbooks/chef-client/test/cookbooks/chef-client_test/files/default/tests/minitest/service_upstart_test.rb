@@ -1,5 +1,8 @@
 #
-# Copyright 2012, Opscode, Inc.
+# Author:: Joshua Timberman <joshua@opscode.com>
+# Cookbook Name:: chef-client_test
+#
+# Copyright 2013, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,14 +19,10 @@
 
 require File.expand_path('../support/helpers', __FILE__)
 
-describe 'chef-client::cron' do
+describe 'chef-client::config' do
   include Helpers::ChefClient
-  it 'creates the cron job for chef-client' do
-    cron("chef-client").must_exist
-  end
-
-  it 'creates the cron command' do
-    cron("chef-client").command.
-      must_match %r{/bin/sleep \d+; ([A-Za-z]+=.*) /usr/bin/chef-client &> /dev/null}
+  it 'enables and starts the upstart service' do
+    service('chef-client').must_be_running
+    file('/etc/init/chef-client.conf').must_exist
   end
 end
