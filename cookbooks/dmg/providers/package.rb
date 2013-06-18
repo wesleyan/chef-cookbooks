@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+require 'chef/version_constraint'
+
 def load_current_resource
   require 'plist'
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
@@ -141,10 +143,10 @@ private
 def installed?
   begin
     if new_resource.version and new_resource.package_id
-      require 'mixlib/versioning'
       result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
       result = Plist::parse_xml(result) if result.class == String
-      return Mixlib::Versioning.parse(result['PackageVersion']) >= Mixlib::Versioning.parse(new_resource.version)
+      version_checker = Chef::VersionConstraint.new("<= #{result['PackageVersion']}")
+      return version_checker.include? new_resource.version
     elsif new_resource.package_id
       return system("pkgutil --pkgs=#{new_resource.package_id}")
     end
