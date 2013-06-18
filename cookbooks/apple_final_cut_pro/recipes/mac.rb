@@ -16,7 +16,7 @@ dmg_package "Final Cut Pro X" do
   action :install
   type "app"
   package_id "com.apple.FinalCut"
-  version "10.0.8"
+  version "10.08"
 end
 
 # Install Supplemental content
