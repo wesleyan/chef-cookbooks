@@ -1,4 +1,4 @@
-nemetschek_vectorworks Cookbook
+handbrake Cookbook
 ====================
 This cookbook installs Verdiem's Surveyor power management software on OS X.
 
@@ -12,15 +12,15 @@ Attributes
 
 Usage
 -----
-#### nemetschek_vectorworks::mac
+#### handbrake::mac
 
-Just include `nemetschek_vectorworks:` in your node's `run_list`:
+Just include `handbrake:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[nemetschek_vectorworks::mac]"
+    "recipe[handbrake::mac]"
   ]
 }
 ```

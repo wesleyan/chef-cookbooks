@@ -78,16 +78,6 @@ execute "spctl disable" do
   command "spctl --master-disable"
 end
 
-# Changes computer sleep time interval.
-execute "set sleep time to never" do
-  command "pmset sleep 0"
-end
-
-# Changes display sleep time interval.
-execute "set display sleep time to never" do
-  command "pmset displaysleep 0"
-end
-
 # Enable ssh if only if it is not enabled.
 execute "enable ssh" do 
   command "/usr/sbin/systemsetup -setremotelogin on"
