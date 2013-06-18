@@ -24,8 +24,7 @@ run_list  "recipe[prepare::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
-          # Comment out Safari because 10.8.4 update includes latest build 6.0.5
-          #"recipe[apple_safari::mac]",
+          "recipe[apple_safari::mac]",
           # Runtimes
           "recipe[adobe_flash_player::mac]",
           "recipe[adobe_air::mac]", 

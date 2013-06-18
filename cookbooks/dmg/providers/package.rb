@@ -30,8 +30,9 @@ action :install do
   volumes_dir = new_resource.volumes_dir ? new_resource.volumes_dir : new_resource.app
   dmg_name = new_resource.dmg_name ? new_resource.dmg_name : new_resource.app
   dmg_file = "#{Chef::Config[:file_cache_path]}/#{dmg_name}.dmg"
-
+  shouldRestart = false
   unless @dmgpkg.installed
+    shouldRestart = new_resource.restart
     remote_file "#{dmg_file} - #{@dmgpkg.name}" do
       path dmg_file
       source new_resource.source
@@ -123,8 +124,6 @@ action :install do
     if(new_resource.sleep_after_install > 0) 
       sleep new_resource.sleep_after_install
     end
-
-    system("/sbin/shutdown -r now") if new_resource.restart
   end
   
   ruby_block "unmount" do
@@ -132,6 +131,7 @@ action :install do
        if(::File.directory?("/Volumes/#{volumes_dir}") && new_resource.unmount)
          system("hdiutil detach '/Volumes/#{volumes_dir}'")
        end
+       system("/sbin/shutdown -r now") if shouldRestart
       end
    end
 end

@@ -9,6 +9,7 @@ run_list  "role[osx-base]",
           "recipe[printers::mac]", 
           #"recipe[desktop_picture::mac]",
           "recipe[chnm_zotero::mac]",
+          "recipe[handbrake::mac]",
           "recipe[finalize::mac]"
 
 default_attributes(
