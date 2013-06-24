@@ -1,15 +1,40 @@
-Description
-===========
-Installs Java for OS X, updating to the latest 6.0 JRE from Apple and the 7.0 web plugin from Oracle
+oracle_java Cookbook
+====================
+This cookbook installs the latest Oracle Java Runtime Environment and the latest patchlevel of system Java from Apple.
 
 Requirements
-============
-OS X 10.7+
-64-bit Web Browser (currently only Safari and Firefox)
+------------
+#### platform
+- `OS X` - 10.8 or greater.
 
 Attributes
-==========
+----------
 
 Usage
-=====
-Run the cookbook, bro.
+-----
+#### oracle_java::mac
+
+Just include `oracle_java` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[oracle_java::mac]"
+  ]
+}
+```
+
+Contributing
+------------
+
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write you change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
+
+License and Authors
+-------------------
+Robert Christensen <rchristensen@wesleyan.edu>
