@@ -27,7 +27,8 @@ run_list  "role[osx-classlab]",
           "recipe[quark_quarkxpress::mac]",
           "recipe[extensis_utc::mac]",
           "recipe[nemetschek_vectorworks::mac]",
-          "recipe[bitnami_mamp::mac]"
+          "recipe[bitnami_mamp::mac]",
+          "recipe[sencha_touch::mac]"
 
 # Set SuperCollider attribute for version determination
 default_attributes("SuperCollider" => {"No-IDE" => true})
