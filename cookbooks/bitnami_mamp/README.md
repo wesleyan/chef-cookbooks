@@ -1,26 +1,26 @@
-oracle_java Cookbook
-====================
-This cookbook installs the latest Oracle Java Runtime Environment and the latest patchlevel of system Java from Apple.
+Description
+===========
+Installs Bitnami MAMP
 
 Requirements
 ------------
 #### platform
-- `OS X` - 10.8 or greater.
+- `OS X` - 10.6.8 or greater.
 
 Attributes
 ----------
 
 Usage
 -----
-#### oracle_java::mac
+#### blackmagic_atem::mac
 
-Just include `oracle_java` in your node's `run_list`:
+Just include `blackmagic_atem:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[oracle_java::mac]"
+    "recipe[blackmagic_atem::mac]"
   ]
 }
 ```
@@ -37,4 +37,4 @@ Contributing
 
 License and Authors
 -------------------
-Robert Christensen <rchristensen@wesleyan.edu>
+Robert Christensen <rchristensen@wesleyan.edu> 

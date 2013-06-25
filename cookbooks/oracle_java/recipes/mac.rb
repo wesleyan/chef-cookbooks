@@ -9,14 +9,14 @@
 # Installs system-level Java 6 Runtime for applications, disables Java 6 web plug-in
 dmg_package "Apple Java" do
   app "JavaForOSX"
-  volumes_dir "Java for OS X 2013-003"
-  dmg_name "JavaForOSX2013-003"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_java/JavaForOSX2013-003.dmg"
-  checksum "193daf9d16ba753cb7b9160e3b3842e515575a07ac2ec06d27c21a40c30c917b"
+  volumes_dir "Java for OS X 2013-004"
+  dmg_name "JavaForOSX2013-004"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_java/JavaForOSX2013-004.dmg"
+  checksum "b10cac904a28be56b898563756caa99c2d484da605d2f7aa12547a4850b4fda5"
   action :install
   type "pkg"
   package_id "com.apple.pkg.JavaForMacOSX107"
-  version "2013.3.0"
+  version "2013.4.0"
 end
 
 # Installs Java 7 web plug-in for browsers
