@@ -18,34 +18,10 @@ dmg_package "R" do
   version "3.0.1"
 end
 
-gnu_r_packages "RCurl"
-gnu_r_packages "twitteR"
-gnu_r_packages "doBy"
-gnu_r_packages "mvtnorm"
-gnu_r_packages "plyr"
-gnu_r_packages "stringr"
-gnu_r_packages "ggplot2"
-gnu_r_packages "XML"
-gnu_r_packages "tm"
-gnu_r_packages "wordcloud"
-gnu_r_packages "lme4"
-gnu_r_packages "nlme"
-gnu_r_packages "e1071"
-gnu_r_packages "nnet"
-gnu_r_packages "descr"
-gnu_r_packages "reshape"
-gnu_r_packages "foreign"
-gnu_r_packages "class"
-gnu_r_packages "Ecdat"
-gnu_r_packages "Psych"
-gnu_r_packages "DAAG"
-gnu_r_packages "lmtest"
-gnu_r_packages "perturb"
-gnu_r_packages "MEMSS"
-gnu_r_packages "mlmRev"
-gnu_r_packages "car"
-gnu_r_packages "ape"
-gnu_r_packages "ade4"
+%w{ RCurl twitteR doBy mvtnorm plyr stringr ggplot2 XML tm wordcloud lme4 nlme e1071 nnet
+  descr reshape foreign class Ecdat Psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
+  gnu_r_packages r_pkg
+end
 
 gnu_r_packages "update" do
 	action :update
@@ -65,11 +41,4 @@ dock_add "/Applications/R.app" do
   all_users true
   group "Social Sciences"
 end
-
-
-
-
-
-
-
 
