@@ -111,7 +111,7 @@ action :install do
       end
       end
     when "custom"
-      execute "/Volumes/#{volumes_dir}/#{new_resource.app} #{new_resource.options}"
+      execute "'/Volumes/#{volumes_dir}/#{new_resource.app}' #{new_resource.options}"
       if new_resource.version and new_resource.package_id
         file "/var/db/receipts/#{new_resource.package_id}.plist" do        
           content ({"PackageVersion" => new_resource.version}).to_plist.dump 
