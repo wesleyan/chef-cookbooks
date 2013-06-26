@@ -23,4 +23,6 @@ remote_file "#{Chef::Config[:file_cache_path]}/sencha_touch-2.2.1.zip" do
   source "http://ims-chef.wesleyan.edu/os_x/sencha_touch/sencha-touch-2.2.1.zip"
 end
 
-execute "unzip '#{Chef::Config[:file_cache_path]}/sencha_touch-2.2.1.zip' -d '/Applications/mampstack-5.4.16-0/apps/' > /dev/null"
+execute "unzip '#{Chef::Config[:file_cache_path]}/sencha_touch-2.2.1.zip' -d '/Applications/mampstack-5.4.16-0/apps/' > /dev/null" do
+  not_if { ::File.exists? '/Applications/mampstack-5.4.16-0/apps/touch-2.2.1' }
+end
