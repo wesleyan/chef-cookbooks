@@ -8,13 +8,13 @@
 #
 
 dmg_package "Sencha CMD" do
-  app "SenchaCmd"
-  volumes_dir "SenchaCmd"
+  app "Sencha Cmd"
+  volumes_dir "Sencha Cmd"
   dmg_name "senchacmd-3.1.2.342"
   source "http://ims-chef.wesleyan.edu/os_x/sencha_touch/senchacmd-3.1.2.342.dmg"
-  checksum "3b22bf3b1f1baf4edf9ca377c7bdb15b95b55803c3742c65efa3fb72b7b26fd1"
+  checksum "b2e63e8e18e0819cd02a889f4a752c5675a3a673e1bb92f66e9055165bd5d5c5"
   action :install
-  type "app"
+  type "pkg"
   package_id "com.sencha.cmd"
   version "3.1.2"
 end
