@@ -29,7 +29,8 @@ run_list  "role[osx-classlab]",
           "recipe[nemetschek_vectorworks::mac]",
           "recipe[bitnami_mamp::mac]",
           "recipe[sencha_touch::mac]",
-          "recipe[ruby_gems]"
+          "recipe[ruby_gems]",
+          "recipe[aquamacs_emacs::mac]"
 
 # Set SuperCollider attribute for version determination
 default_attributes("SuperCollider" => {"No-IDE" => true})
