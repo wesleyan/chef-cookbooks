@@ -2,18 +2,20 @@
 # Cookbook Name:: aquamacs
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "Aquamacs-Emacs-2.4.dmg" do
+dmg_package "Aquamacs-Emacs-2.5.dmg" do
   app "Aquamacs"
   volumes_dir "Aquamacs Emacs"
-  dmg_name "Aquamacs-Emacs-2.4"
-  source "http://ims-chef.wesleyan.edu/os_x/aquamacs_emacs/Aquamacs-Emacs-2.4.dmg"
-  checksum "ca4e855e1edc5fd45b8a4f113ace07e8b0e2be67ecb6a3830b71c0acc067ae1d"
+  dmg_name "Aquamacs-Emacs-2.5"
+  source "http://ims-chef.wesleyan.edu/os_x/aquamacs_emacs/Aquamacs-Emacs-2.5.dmg"
+  checksum "5857848d8d46bba43d160c02393b098a370e2156608be24b288419f668210be9"
   action :install
   type "app"
+  package_id "org.aquamacs.emacs"
+  version "2.5.0"
 end
 
 # Create dock folder, if it does not exist
