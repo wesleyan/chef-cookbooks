@@ -27,7 +27,7 @@ dmg_package "Zotero Browser Plugins" do
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
-  version "3.0.8.1"
+  version "3.0.81"
 end
 
 # Install Firefox add-on, current version 4.0.5
