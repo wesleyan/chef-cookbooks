@@ -2,6 +2,7 @@ name "win-base"
 description "Base role for Windows deployment"
 run_list "recipe[windows]",
   "recipe[powershell]",
+  "recipe[prepare::win]",
   "recipe[7-zip]",
   "recipe[videolan_vlc::win]",
   "recipe[python::win]",
