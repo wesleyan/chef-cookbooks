@@ -39,7 +39,6 @@ run_list  "recipe[prepare::mac]",
           "recipe[profile_manager::mac]",
           "recipe[system_preferences::mac]",
 	        "recipe[chef-client::launchd_service]",
-          "recipe[chef-client::config]",
           # Finalize 
           "recipe[finalize::mac]"
 
