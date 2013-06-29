@@ -4,8 +4,6 @@
 #
 
 action :change do
-  newPASSWORD = "#Cl0s3th3l00p!1"
-
   File.open("/tmp/chpass","w") do |f|
     f << %Q{
       #!/usr/bin/env expect -f
