@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of apple_ilife.
 
+## 0.2.5:
+
+* Updated RAW Camera to 4.07
+* Updated metadata/README to new standards
+
 ## 0.2.4:
 
 * Updated iMovie to 9.0.9
