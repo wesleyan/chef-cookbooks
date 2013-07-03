@@ -4,7 +4,7 @@
 #
 
 action :change do
-  File.open("/tmp/chpass","w") do |f|
+  ::File.open("/tmp/chpass","w") do |f|
     f << %Q{
       #!/usr/bin/env expect -f
       set timeout -1
@@ -24,5 +24,5 @@ action :change do
     }
   end
   system("/usr/bin/env expect -f /tmp/chpass")
-  File.delete("/tmp/chpass")
+  ::File.delete("/tmp/chpass")
 end
