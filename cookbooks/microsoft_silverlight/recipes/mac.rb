@@ -15,5 +15,5 @@ dmg_package "Microsoft Silverlight" do
   action :install
   type "pkg"
   package_id "com.microsoft.SilverlightInstaller"
-  version "5.1.20125.0"
+  version "5.1.201250"
 end
