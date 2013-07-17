@@ -16,7 +16,7 @@ dmg_package "Adobe Flash Player" do
   action :install
   type "app"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "11.7.700.203"
+  version "11.7.700203"
 end
 
 # Seed file that disables automatic updates.
