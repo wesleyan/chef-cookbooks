@@ -19,28 +19,41 @@ dmg_package "Microsoft Office 2011 SP3" do
   version "14.3.2"
 end
 
-dmg_package "Update Office 2011-1434" do
-  app "Office 2011 14.3.4 Update"
-  volumes_dir "Microsoft Office 2011 14.3.4 Update"
-  dmg_name "Office2011-1434UpdateEN"
-  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1434UpdateEN.dmg"
-  checksum "892769fcdd91688ff66bddd9c5577e72cdd596420d8bd35f858a7e862f62f773"
-  action :install
-  type "pkg"
-  package_id "com.microsoft.office.2011"
-  version "14.3.4"
-end
+#dmg_package "Update Office 2011-1434" do
+#  app "Office 2011 14.3.4 Update"
+#  volumes_dir "Microsoft Office 2011 14.3.4 Update"
+#  dmg_name "Office2011-1434UpdateEN"
+#  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1434UpdateEN.dmg"
+#  checksum "892769fcdd91688ff66bddd9c5577e72cdd596420d8bd35f858a7e862f62f773"
+#  action :install
+#  type "pkg"
+#  package_id "com.microsoft.office.2011"
+#  version "14.3.4"
+#end
 
-dmg_package "Update Office 2011-1435" do
-  app "Office 2011 14.3.5 Update"
-  volumes_dir "Microsoft Office 2011 14.3.5 Update"
-  dmg_name "Office2011-1435UpdateEN"
-  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1435UpdateEN.dmg"
-  checksum "6ddf86a7fd4cf3a3a5e0875ef5bc50178e2be0b691426e5eed997712bc9bb60e"
+#dmg_package "Update Office 2011-1435" do
+#  app "Office 2011 14.3.5 Update"
+#  volumes_dir "Microsoft Office 2011 14.3.5 Update"
+#  dmg_name "Office2011-1435UpdateEN"
+#  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1435UpdateEN.dmg"
+#  checksum "6ddf86a7fd4cf3a3a5e0875ef5bc50178e2be0b691426e5eed997712bc9bb60e"
+#  action :install
+#  type "pkg"
+#  package_id "com.microsoft.office.2011"
+#  version "14.3.5"
+#end
+
+# Install latest update.
+dmg_package "Update Office 2011 Update" do
+  app "Office 2011 14.3.6 Update"
+  volumes_dir "Microsoft Office 2011 14.3.6 Update"
+  dmg_name "Office2011-1436Update_EN-US"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1436Update_EN-US.dmg"
+  checksum "36dfc8abb3a4fd408d78910b308642482bdeb6035de88de63efdbd9e22e60e01"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
-  version "14.3.5"
+  version "14.3.6"
 end
 
 # Install customized plist files to surpress first-run dialogues
