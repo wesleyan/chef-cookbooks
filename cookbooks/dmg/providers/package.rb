@@ -90,7 +90,24 @@ action :install do
         end
       end
     when "mpkg", "pkg"
-      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      # apply user supplied choices
+      choices = new_resource.xml_choices
+      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      if choices
+        choiceHash = []
+        choices.each do |choice|
+          choiceHash << { "choiceIdentifier" => choice[0], "choiceAttribute" => choice[1], "choiceSetting" => choice[2] }
+        end
+        xmlName = "/tmp/" 
+        xmlName << (0...8).map{(65+rand(26)).chr}.join
+        xmlName << ".plist"
+        ::File.open(xmlName, "w") do |f|
+          f << PList::Emit.dump(choiceHash)
+        end
+        cmd << " -applyChoiceChangesXML '#{xmlName}'"
+      end
+      execute cmd
+      ::File.delete("#{xmlName}") if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
