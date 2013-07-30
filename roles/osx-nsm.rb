@@ -14,7 +14,7 @@ run_list  "role[osx-classlab]",
           "recipe[smlnj::mac]",
           "recipe[mrbayes::mac]",
           "recipe[ncbi_cn3d::mac]",
-          "recipe[graz_genesis::mac]",
+          #"recipe[graz_genesis::mac]", # Not needed this academic year, license expired.
           "recipe[simulation_curriculum_starry_night_pro::mac]",
           "recipe[synergy_kaleidagraph::mac]",
           "recipe[wolfram_mathematica::mac]",
