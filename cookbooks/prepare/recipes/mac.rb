@@ -84,6 +84,12 @@ execute "enable ssh" do
   not_if "/usr/sbin/systemsetup -getremotelogin | /usr/bin/grep On"
 end
 
+# Prevent machine from sleeping if a remote terminal is active, needed for remote chef commands to function, the -c option means the setting is only in effect when a machine is plugged into power.
+execute "enable ttyskeepawake" do 
+  command "/usr/bin/pmset -c ttyskeepawake 1"
+  not_if "/usr/bin/pmset -g | /usr/bin/grep 'ttyskeepawake        1'"
+end
+
 # Change login window type to standard user/password entry screen.
 execute "change login window" do
   command "defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true"
