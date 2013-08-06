@@ -62,3 +62,6 @@ execute "Allow homebrew permissions" do
   command "chmod 777 /usr/local/include"
 end
 
+execute "Ensure all brews are up to date" do
+  command "brew update"
+end
