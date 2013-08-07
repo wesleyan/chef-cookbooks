@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of hamrick_vuescan.
 
+## 0.3.0:
+
+* Updated app to 9.2.22
+* Brought metadata/README/changelog up to latest standard.
+
 ## 0.2.0:
 
 * Updated app to 9.2.13
