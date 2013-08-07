@@ -13,6 +13,7 @@ run_list  "role[osx-classlab]",
           "recipe[tug_mactex::mac]",
           "recipe[smlnj::mac]",
           "recipe[mrbayes::mac]",
+          "recipe[mathworks_matlab::mac]",
           "recipe[ncbi_cn3d::mac]",
           #"recipe[graz_genesis::mac]", # Not needed this academic year, license expired.
           "recipe[simulation_curriculum_starry_night_pro::mac]",
