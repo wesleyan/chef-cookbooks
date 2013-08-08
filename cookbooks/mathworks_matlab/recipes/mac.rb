@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+# Install our .app, built with the MATLAB installer.
 dmg_package "MathWorks MATLAB" do
   app "MATLAB_R2013a"
   volumes_dir "MATLAB"
@@ -16,4 +17,19 @@ dmg_package "MathWorks MATLAB" do
   type "app"
   package_id "com.mathworks.matlab"
   version "2013.1"
+end
+
+# Create dock folder, if it does not exist
+dock_add "Natural Sciences and Mathematics" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/MATLAB_R2013a.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
 end
