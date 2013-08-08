@@ -10,11 +10,6 @@ execute "Allow homebrew permissions" do
   command "chmod 777 /usr/local/include"
 end
 
-execute "Hotfix for Tkinter error (https://github.com/mxcl/homebrew/issues/19099)" do
-  command "ln -s /opt/X11/include/X11 /usr/local/include/X11"
-  not_if { ::File.exists? "/usr/local/include/X11"}
-end
-
 package "python" do
   version "2.7.5"
   options "--with-brewed-tk"
