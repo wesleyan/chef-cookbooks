@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: finalcutpro
+# Cookbook Name:: apple_final_cut_pro
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -10,13 +10,13 @@
 dmg_package "Final Cut Pro X" do
   app "Final Cut Pro"
   volumes_dir "Final Cut Pro"
-  dmg_name "final_cut_pro-10.0.8"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.0.8.dmg"
-  checksum "8a6b723d8d663f54c5deda7584c5ecf52772d937af59edee34fed69797995b0a"
+  dmg_name "final_cut_pro-10.0.9"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.0.9.dmg"
+  checksum "2d5ef8a9fa2c2d785a8caa6fbcfca664298c771d7606759ccf849896a055bdad"
   action :install
   type "app"
   package_id "com.apple.FinalCut"
-  version "10.0.8"
+  version "10.0.9"
 end
 
 # Install Supplemental content

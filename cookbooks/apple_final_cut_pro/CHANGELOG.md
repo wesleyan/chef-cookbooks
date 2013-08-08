@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of apple_final_cut_pro
 
+## 0.5.0:
+
+* Updated FCP to 10.0.9
+* Brought metadata/changelog/readme up to standard.
+
 ## 0.4.0:
 
 * Updated FCP to 10.0.8
