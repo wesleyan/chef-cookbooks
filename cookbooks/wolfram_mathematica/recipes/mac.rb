@@ -33,17 +33,17 @@ dmg_package "Wolfram Mathematica Extras" do
 end
 
 # Create license directory within default user profile
-directory "/System/Library/User Template/English.lproj/Library/Preferences/Mathematica/Licensing" do
-  mode 00644
+directory "/System/Library/User Template/English.lproj/Library/Mathematica/Licensing" do
+  mode 00755
   action :create
   recursive true
 end
 
 # Insert license file into default user profile
 cookbook_file "Wolfram Mathematica License" do
-  path "/System/Library/User Template/English.lproj/Library/Preferences/Mathematica/Licensing/mathpass"
+  path "/System/Library/User Template/English.lproj/Library/Mathematica/Licensing/mathpass"
   source "mathpass"
-  mode 0644
+  mode 00755
   :create
 end
 
