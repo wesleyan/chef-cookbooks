@@ -18,4 +18,7 @@ dmg_package "Apple QuickTime Pro" do
   package_id "com.apple.pkg.QuickTimePlayer7.6.6_SnowLeopard"
 end
 
-# Serialize?
+# Serialize QuickTime!
+execute "Serialize QuickTime Pro" do
+	command "defaults write /Library/Preferences/com.apple.QuickTime \"Pro Key\" -dict-add 'Name' 'Wesleyan Univ' 'Registration Key' 'L885-Z4ZN-R2J9-SNTH-FUJ3'"
+end
