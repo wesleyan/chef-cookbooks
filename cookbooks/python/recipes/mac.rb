@@ -6,10 +6,6 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
-execute "Allow homebrew permissions" do
-  command "chmod 777 /usr/local/include"
-end
-
 package "python" do
   version "2.7.5"
   options "--with-brewed-tk"
