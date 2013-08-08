@@ -15,6 +15,8 @@ dmg_package "Cisco AnyConnect VPN" do
   checksum "734b48978c4e6cacf7c0c9236c50b0fab9046b30fdb87e37dbbdf6e380e9f837"
   action :install
   type "pkg"
+  xml_choices [["Web Security", "Enabled", 0]]
   package_id "com.cisco.jabber.video"
   version "3.1.03103"
 end
+

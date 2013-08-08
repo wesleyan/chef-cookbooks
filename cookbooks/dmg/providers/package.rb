@@ -102,7 +102,7 @@ action :install do
         xmlName << (0...8).map{(65+rand(26)).chr}.join
         xmlName << ".plist"
         ::File.open(xmlName, "w") do |f|
-          f << PList::Emit.dump(choiceHash)
+          f << Plist::Emit.dump(choiceHash)
         end
         cmd << " -applyChoiceChangesXML '#{xmlName}'"
       end
