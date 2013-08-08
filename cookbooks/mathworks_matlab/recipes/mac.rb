@@ -14,5 +14,6 @@ dmg_package "MathWorks MATLAB" do
   checksum "37d8aca8a30619f09b66bcd1d6d4a925388c74b8a06287045e76ba84ca116e70"
   action :install
   type "app"
-  package_id "com.mathworks.matlab.r2013a"
+  package_id "com.mathworks.matlab"
+  version "2013.1"
 end
