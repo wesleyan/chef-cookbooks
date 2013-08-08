@@ -1,6 +1,10 @@
-# CHANGELOG for firefox
+# CHANGELOG for mozilla_firefox
 
 This file is used to list changes made in each version of firefox.
+
+## 0.4.5:
+
+* Updated app to 23.0
 
 ## 0.4.4:
 

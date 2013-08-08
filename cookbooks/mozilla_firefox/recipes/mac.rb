@@ -2,22 +2,22 @@
 # Cookbook Name:: mozilla_firefox
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 
 # Install package
-dmg_package "firefox-22.0.dmg" do
+dmg_package "firefox-23.0.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
-  dmg_name "firefox-22.0"
-  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-22.0.dmg"
-  checksum "bbbefe0e24abc9511747b4a1a858d38cd93d4e2a26ce7b6f9a73dd4001ace747"
+  dmg_name "firefox-23.0"
+  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-23.0.dmg"
+  checksum "4406cb7522c673bc400b14ea30234b434671d61fa4775d7f6405cfcebe333f4e"
   action :install
   type "app"
   package_id "org.mozilla.firefox"
-  version "22.0.0"
+  version "23.0.0"
 end
 
 # Add to dock
