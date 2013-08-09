@@ -3,13 +3,14 @@ description "Base role for OS X deployment"
 
           # Include base role.
 run_list  "role[osx-base]",
-          # Include lab specific recipes.
+          # Include class/lab specific recipes.
           "recipe[cls_labstats::mac]",
           "recipe[blackboard_xythosdrive::mac]",
           "recipe[printers::mac]", 
           #"recipe[desktop_picture::mac]",
           "recipe[chnm_zotero::mac]",
           "recipe[handbrake::mac]",
+          "recipe[turning_technologies_turningpoint::mac]",
           "recipe[finalize::mac]"
 
 default_attributes(
