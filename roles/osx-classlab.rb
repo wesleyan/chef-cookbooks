@@ -1,5 +1,5 @@
 name "osx-classlab"
-description "Base role for OS X deployment"
+description "Base role for OS X deployment in Labs and Classrooms"
 
           # Include base role.
 run_list  "role[osx-base]",
@@ -9,8 +9,9 @@ run_list  "role[osx-base]",
           "recipe[printers::mac]", 
           #"recipe[desktop_picture::mac]",
           "recipe[chnm_zotero::mac]",
-          "recipe[handbrake::mac]",
           "recipe[turning_technologies_turningpoint::mac]",
+          "recipe[thomson_reuters_endnote::mac]",
+          "recipe[handbrake::mac]",
           "recipe[finalize::mac]"
 
 default_attributes(
