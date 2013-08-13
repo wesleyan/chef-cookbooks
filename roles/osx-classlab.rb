@@ -8,9 +8,10 @@ run_list  "role[osx-base]",
           "recipe[blackboard_xythosdrive::mac]",
           "recipe[printers::mac]", 
           #"recipe[desktop_picture::mac]",
+          "recipe[artstor_oiv::mac]",
           "recipe[chnm_zotero::mac]",
-          "recipe[turning_technologies_turningpoint::mac]",
           "recipe[thomson_reuters_endnote::mac]",
+          "recipe[turning_technologies_turningpoint::mac]",
           "recipe[handbrake::mac]",
           "recipe[finalize::mac]"
 
