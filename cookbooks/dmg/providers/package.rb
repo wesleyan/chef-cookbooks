@@ -96,7 +96,7 @@ action :install do
       if choices
         choiceHash = []
         choices.each do |choice|
-          choiceHash << { "choiceIdentifier" => choice[0], "choiceAttribute" => choice[1], "choiceSetting" => choice[2] }
+          choiceHash << { "choiceIdentifier" => choice[0], "choiceAttribute" => choice[1], "attributeSetting" => choice[2] }
         end
         xmlName = "/tmp/" 
         xmlName << (0...8).map{(65+rand(26)).chr}.join
