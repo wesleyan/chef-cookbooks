@@ -68,11 +68,6 @@ execute "bind to domain" do
   returns [0,-1, 1, 78]
 end
 
-# Binds AD users to default groups
-execute "set group bindings" do
-  command "dsconfigad -gid primaryGroupID --ggid gidNumber"
-end
-
 # Disables OS X' Gatekeeper functionality, allowing us to run unsigned apps (still necessary at this point)
 execute "spctl disable" do
   command "spctl --master-disable"
