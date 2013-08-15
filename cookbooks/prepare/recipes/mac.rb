@@ -69,7 +69,7 @@ execute "bind to domain" do
 end
 
 # Disables OS X' Gatekeeper functionality, allowing us to run unsigned apps (still necessary at this point)
-execute "spctl disable" do
+execute "Disable OS X Gatekeeper" do
   command "spctl --master-disable"
 end
 
