@@ -33,4 +33,4 @@ run_list  "role[osx-classlab]",
           "recipe[aquamacs_emacs::mac]"
 
 # Set SuperCollider attribute for version determination
-default_attributes("SuperCollider" => {"No-IDE" => true})
+default_attributes("SuperCollider" => {"No-IDE" => false})
