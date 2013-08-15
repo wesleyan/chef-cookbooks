@@ -7,7 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-
 # enable keyboard, disable TimeMachine, Wireless
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.systemuiserver.plist"
 
@@ -41,7 +40,7 @@ ruby_block "Set screen resolution" do
       if fqdn =~ Regexp.new(opt[0])
         cmd = "/tmp/cscreen -x #{opt[1]} -y #{opt[2]}"
         cmd << " -r #{opt[3]}" if opt[3] != "NA"
-        system(cmd)
+        system(cmd) 
         break
       end
     end

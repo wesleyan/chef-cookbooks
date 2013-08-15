@@ -59,7 +59,7 @@ action :install do
     
     case new_resource.type
     when "dir"
-      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
+      execute "rsync --recursive --links --perms --executability --owner --group --times '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
@@ -74,7 +74,6 @@ action :install do
         end
       end
     when "app"
-      #execute "cp -fpRL '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       execute "rsync --recursive --links --perms --executability --owner --group --times '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
