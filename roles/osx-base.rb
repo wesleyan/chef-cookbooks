@@ -30,6 +30,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[adobe_air::mac]", 
           "recipe[microsoft_silverlight::mac]",
           # Core applications
+          "recipe[adobe_acrobat_pro::mac]",
           "recipe[microsoft_office::mac]",
           "recipe[apple_itunes::mac]", 
           "recipe[apple_ilife::mac]",
