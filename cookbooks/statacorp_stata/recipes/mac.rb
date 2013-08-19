@@ -8,22 +8,22 @@
 #
 # Install Stata
 dmg_package "Stata" do
-  app "Stata 12"
-  volumes_dir "Stata 12"
-  dmg_name "stata-12.1-20130225"
-  source "http://ims-chef.wesleyan.edu/os_x/statacorp_stata/stata-12.1-20130225.dmg"
-  checksum "75787fa66ce9e630cededf7939b0a5fdc8ec5d6a26b4e7ee02a8a79a38d3b21f"
+  app "Stata 13"
+  volumes_dir "Stata 13"
+  dmg_name "stata-13.0-20130812"
+  source "http://ims-chef.wesleyan.edu/os_x/statacorp_stata/stata-13.0-20130812.dmg"
+  checksum "be242e0da9481cdcc1f569b056a4471b8e3a0c49846668453e507e6310cef1a0"
   action :install
   type "pkg"
   package_id "com.statacorp.stata"
-  version "12.1.0"
+  version "13.0.0"
 end
 
 cookbook_file "Stata Skip First Run" do
   backup false
   mode 0600
   path "/System/Library/User Template/English.lproj/Library/Preferences/com.stata.stata12.plist"
-  source "com.stata.stata12.plist"
+  source "com.stata.stata13.plist"
   action :create_if_missing
 end
 
