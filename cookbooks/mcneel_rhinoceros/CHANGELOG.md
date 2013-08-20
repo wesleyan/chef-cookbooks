@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of rhino.
 
+## 0.5.0:
+
+* Updated to build 20130815
+* Brought changelog/metadata/changelog up to standard.
+
 ## 0.4.0:
 
 * Added versioning information
