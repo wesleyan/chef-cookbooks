@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of firefox.
 
+## 0.4.6:
+
+* Updated app to 23.0.1
+
 ## 0.4.5:
 
 * Updated app to 23.0
