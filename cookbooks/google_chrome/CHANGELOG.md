@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of chrome.
 
+## 0.5.3:
+
+* Updated OS X app to 29.0.1547.57.  Not enough time to care about Windows.
+
 ## 0.5.2:
 
 * Updated app to 28.0.1500.71.
