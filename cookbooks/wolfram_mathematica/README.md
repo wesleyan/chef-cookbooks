@@ -1,4 +1,4 @@
-handbrake Cookbook
+vernier_logger_pro Cookbook
 ====================
 This cookbook installs Wolfram Mathematica on OS X and Windows.
 
@@ -13,15 +13,15 @@ Attributes
 
 Usage
 -----
-#### handbrake::mac
+#### vernier_logger_pro::mac
 
-Just include `handbrake:` in your node's `run_list`:
+Just include `vernier_logger_pro:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[handbrake::mac]"
+    "recipe[vernier_logger_pro::mac]"
   ]
 }
 ```
