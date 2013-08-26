@@ -29,3 +29,15 @@ dmg_package "Apple Remote Desktop Admin Update" do
   type "pkg"
   package_id "com.apple.pkg.RemoteDesktopAdmin361"
 end
+
+dmg_package "Remote Desktop Settings" do
+  app "Remote Desktop Settings"
+  volumes_dir "Remote Desktop Settings"
+  dmg_name "Remote Desktop Settings"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/Remote Desktop Settings.dmg"
+  checksum "fe481bbbffe197c16c86faac2023a1074976ed0b2a9f21d46e25c8edf7d556a1"
+  action :install
+  type "pkg"
+  version "1.0.0"
+  package_id "com.apple.pkg.settings.RemoteDesktopAdmin"
+end
