@@ -44,6 +44,7 @@ classmac-rhh003:1024:768:60
 classmac-rlanb2:1280:800:NA
 classmac-sha107:1024:768:60
 classmac-sha201:1024:768:60
+classmac-tst101:1024:768:60
 classmac-usd104d:1024:768:60
 classmac-usd108:1920:1080:NA
 classmac-usd110:1920:1080:NA

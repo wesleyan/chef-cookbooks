@@ -30,7 +30,10 @@ execute "Remote Desktop preferences" do
 end
 
 # This block of code pulls down the cscreen binary and our resolution list; using them to set the screen resolution on a per-room basis.
-cookbook_file "/tmp/cscreen"
+cookbook_file "/tmp/cscreen" do
+  mode 0110
+end
+
 cookbook_file "/tmp/Resolutions.txt"
 ruby_block "Set screen resolution" do
   block do
