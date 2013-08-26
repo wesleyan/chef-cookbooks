@@ -101,13 +101,13 @@ action :install do
         xmlName = "/tmp/" 
         xmlName << (0...8).map{(65+rand(26)).chr}.join
         xmlName << ".plist"
-        ::File.open(xmlName, "w") do |f|
-          f << Plist::Emit.dump(choiceHash)
-        end
+        f = ::File.new(xmlName, 'w')
+        f.puts Plist::Emit.dump(choiceHash)
+        f.close
         cmd << " -applyChoiceChangesXML '#{xmlName}'"
       end
       execute cmd
-      ::File.delete("#{xmlName}") if choices
+      #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
