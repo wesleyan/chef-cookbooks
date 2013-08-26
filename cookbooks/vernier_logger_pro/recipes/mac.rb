@@ -14,7 +14,7 @@ dmg_package "Vernier Logger Pro Full" do
   source "http://ims-chef.wesleyan.edu/os_x/vernier_logger_pro/LoggerPro3.dmg"
   checksum "dd1a81768bbd1db95d006b9294b6beebf855b6d8048709c3b746c1f6ca7c73e3"
   action :install
-  type "pkg"
+  type "mpkg"
   package_id "com.vernier.installer.NewFull"
   version "3.6.0"
 end
