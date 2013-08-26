@@ -61,6 +61,9 @@ cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/c
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Excel.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Powerpoint.plist"
+cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Word.plist"
 
 
 # Download icon
