@@ -22,12 +22,12 @@ end
 dmg_package "Zotero Browser Plugins" do
   app "Zotero Plugins"
   volumes_dir "Zotero Plugins"
-  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-Plugins.dmg"
-  checksum "5c17e5d51bf91149157a43f082f39df5a46b19c4ab107485cef054272d447d3f"
+  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero Plugins1.dmg"
+  checksum "0a9ee7206c425b284fd924c68d1245227ea3e50c6937846c96092094aae882f7"
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
-  version "3.0.81"
+  version "4.0.82"
 end
 
 # Install Firefox add-on, current version 4.0.10
