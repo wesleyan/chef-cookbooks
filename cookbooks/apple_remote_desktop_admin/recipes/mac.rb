@@ -33,8 +33,8 @@ end
 dmg_package "Remote Desktop Settings" do
   app "Remote Desktop Settings"
   volumes_dir "Remote Desktop Settings"
-  dmg_name "Remote Desktop Settings"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/Remote Desktop Settings.dmg"
+  dmg_name "RemoteDesktopSettings"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopSettings.dmg"
   checksum "fe481bbbffe197c16c86faac2023a1074976ed0b2a9f21d46e25c8edf7d556a1"
   action :install
   type "pkg"

@@ -17,7 +17,9 @@ execute "Disable Software Update checks" do
 end
 
 # Turn AirPort off
-execute "networksetup -setairportpower en1 off"
+execute "networksetup -setairportpower airport off" do
+  returns [0,12]
+end
 
 ## Use our custom sshd config, which restricts remote logins to administrator account only
 cookbook_file "/etc/sshd_config" do
