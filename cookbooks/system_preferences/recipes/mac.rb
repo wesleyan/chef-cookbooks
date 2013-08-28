@@ -18,7 +18,7 @@ end
 
 # Turn AirPort off
 execute "networksetup -setairportpower airport off" do
-  returns [0,12]
+  returns [0, 10, 12]
 end
 
 ## Use our custom sshd config, which restricts remote logins to administrator account only
