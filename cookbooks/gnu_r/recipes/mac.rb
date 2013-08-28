@@ -19,7 +19,7 @@ dmg_package "R" do
 end
 
 %w{ RCurl twitteR doBy mvtnorm plyr stringr ggplot2 XML tm wordcloud lme4 nlme e1071 nnet
-  descr reshape foreign class Ecdat Psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
+  descr reshape foreign class Ecdat psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
   gnu_r_packages r_pkg
 end
 
