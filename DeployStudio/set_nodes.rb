@@ -42,6 +42,10 @@ begin
         printer = "ST-HP4015BW"
       when /class/
         roles = ["osx-classlab"]
+      when /zilkha/
+        roles = ["osx-cfa"]
+      when /crcw/
+        roles = ["osx-nsm", "osx-ss"]
       end
     when /roomtrol/
       roles = ["roomtrol"]
