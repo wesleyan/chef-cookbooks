@@ -122,15 +122,6 @@ action :install do
               }
               exp_continue
             }
-            default
-            {
-              exp_continue
-            }
-            eof
-            {
-              close
-              exit 0
-            }
         }
       }
       f.close
