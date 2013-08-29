@@ -120,7 +120,7 @@ action :install do
         }
       }
       f.close
-      execute '/usr/local/bin/expect -f /tmp/install_script'
+      execute '/usr/bin/env expect -f /tmp/install_script'
       #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
