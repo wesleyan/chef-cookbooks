@@ -109,17 +109,27 @@ action :install do
       f << %Q{
         #!/usr/bin/env expect -f
         set timeout -1
+        set count 0
         spawn #{cmd.gsub("'",'"')}
         expect {
             "Waiting for other installations to complete"
             {
+              set count [expr $count + 1]
+              if { $count > 10 } {
                 exec /sbin/shutdown -r now
                 close
                 exit 1
+              }
+              exp_continue
             }
             default
             {
               exp_continue
+            }
+            eof
+            {
+              close
+              exit 0
             }
         }
       }
