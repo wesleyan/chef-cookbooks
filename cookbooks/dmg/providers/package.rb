@@ -109,13 +109,17 @@ action :install do
       f << %Q{
         #!/usr/bin/env expect -f
         set timeout -1
-        spawn #{cmd}
+        spawn #{cmd.gsub("'",'"')}
         expect {
             "Waiting for other installations to complete"
             {
-                spawn sudo /sbin/shutdown -r now
+                exec /sbin/shutdown -r now
                 close
                 exit 1
+            }
+            default
+            {
+              exp_continue
             }
         }
       }
