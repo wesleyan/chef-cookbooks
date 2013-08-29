@@ -105,7 +105,22 @@ action :install do
         f.close
         cmd << " -applyChoiceChangesXML '#{xmlName}'"
       end
-      execute cmd
+      f = ::File.open('/tmp/install_script','w')
+      f << %Q{
+        #!/usr/bin/env expect -f
+        set timeout -1
+        spawn #{cmd}
+        expect {
+            "Waiting for other installations to complete"
+            {
+                spawn sudo /sbin/shutdown -r now
+                close
+                exit 1
+            }
+        }
+      }
+      f.close
+      execute '/usr/local/bin/expect -f /tmp/install_script'
       #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
