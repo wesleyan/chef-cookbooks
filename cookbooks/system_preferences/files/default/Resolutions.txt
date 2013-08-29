@@ -51,6 +51,10 @@ classmac-usd110:1920:1080:NA
 classmac-usd114:1024:768:60
 classmac-usd136:1024:768:60
 classmac-usd300:1024:768:60
+classmac-wyl110:1920:1080:NA
+classmac-wyl112:1920:1080:NA
+classmac-wyl113:1920:1080:NA
+classmac-wyl114:1920:1080:NA
+classmac-wyl115:1920:1080:NA
 classmac-zilkha106:1024:768:60
 dac100mac-kefka:1400:1050:60
-
