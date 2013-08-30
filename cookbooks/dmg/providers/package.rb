@@ -122,6 +122,11 @@ action :install do
               }
               exp_continue
             }
+            eof
+            {
+              catch wait reason
+              exit [lindex $reason 3]
+            }
         }
       }
       f.close
