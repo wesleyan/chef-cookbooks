@@ -28,7 +28,7 @@ end
 
 # suppress import settings
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
-  mode 0666
+  mode 0755
 end
 
 # import CCK addon
