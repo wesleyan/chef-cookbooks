@@ -17,7 +17,7 @@ dmg_package "Google Earth" do
   unmount false
   type "app"
   package_id "com.google.earth"
-  version "7.1.1.1871"
+  version "7.1.11871"
 end
 
 # Install web plugin
@@ -32,5 +32,5 @@ dmg_package "Google Earth Web Plug-in" do
   type "dir"
   unmount true
   package_id "com.google.earth.plugin"
-  version "7.1.1.1871"
+  version "7.1.11871"
 end
