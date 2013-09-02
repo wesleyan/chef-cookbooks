@@ -20,6 +20,7 @@ run_list  "role[osx-classlab]",
           "recipe[simulation_curriculum_starry_night_pro::mac]",
           "recipe[supercollider::mac]",
           "recipe[synergy_kaleidagraph::mac]",
+          "recipe[uiuc_vmd::mac]",
           "recipe[vernier_logger_pro::mac]",
           "recipe[wolfram_mathematica::mac]",
           "recipe[perkinelmer_chemdraw_pro::mac]"
