@@ -146,9 +146,15 @@ def copy_plist_for_user_template(plist_path)
     end
     
   #  execute "chown #{user.username}:staff /tmp/com.apple.dock.plist"
-    execute "chmod 600 #{plist_path}"
-    execute "cp #{plist_path} \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\"" 
-    execute "chown root:wheel \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\""
+    execute "chmod 600 #{plist_path}" do
+      returns [0,1]
+    end
+    execute "cp #{plist_path} \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\"" do
+      returns [0,1]
+    end
+    execute "chown root:wheel \"/System/Library/User Template/English.lproj/Library/Preferences/#{basename}\"" do
+      returns [0,1]
+    end
 end
 
 def touch_for_all_users(relative_path)
