@@ -6,8 +6,10 @@
   <key>Label</key>
   <string>com.opscode.chef-client</string>
 <%- if @launchd_mode == "interval" %>
-  <key>Program</key>
-  <string><%= @client_bin %></string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/chef-client</string>
+  </array>
   <key>StartInterval</key>
   <integer><%= node["chef_client"]["interval"] %></integer>
   <key>RunAtLoad</key>
