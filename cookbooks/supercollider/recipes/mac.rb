@@ -2,7 +2,7 @@
 # Cookbook Name:: supercollider
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -10,13 +10,13 @@
 dmg_package "SuperCollider" do
   app "SuperCollider"
   volumes_dir "SuperCollider"
-  dmg_name "SuperCollider-3.6.3-OSX-universal"
-  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.3-OSX-universal.dmg"
-  checksum "6c58057e46484ff4860bc46d2ab4f273fad83b9ec431213abe5bd9ecaa211c8a"
+  dmg_name "SuperCollider-3.6.5-OSX-universal"
+  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.5-OSX-universal.dmg"
+  checksum "3a942aed9d28071bd8354b387d1e436205a1c21f55667e17689d9b361af3409b"
   action :install
   type "dir"
   package_id "net.sourceforge.supercollider"
-  version "3.6.3"
+  version "3.6.5"
   not_if { node["SuperCollider"]["No-IDE"] }
 end
 
@@ -24,12 +24,12 @@ end
 dmg_package "SuperCollider No-IDE" do
   app "SuperCollider"
   volumes_dir "SuperCollider"
-  dmg_name "SuperCollider-3.6.3-OSX-universal-no-ide"
-  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.3-OSX-universal-no-ide.dmg"
-  checksum "a0e6af4766b1d68e8e1ae07718d1a44d7857036906a5bd3438c8e3bfb870a0dc"
+  dmg_name "SuperCollider-3.6.5-OSX-universal-no-ide"
+  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.5-OSX-universal-no-ide.dmg"
+  checksum "de3303c6ff62a64098174ec4029ef2a3691b2b39b56e0b4d1e10c1f6de3ca53b"
   action :install
   type "dir"
   package_id "net.sourceforge.supercollider.no-ide"
-  version "3.6.3"
+  version "3.6.5"
   only_if { node["SuperCollider"]["No-IDE"] }
 end

@@ -39,9 +39,14 @@ dock_add "Natural Sciences and Mathematics" do
   arrangement "name"
 end
 
-# Add icon to dock
+# Add ccp4 icon to dock
 dock_add "/Applications/ccp4-6.3.0/ccp4.app" do
   all_users true
   group "Natural Sciences and Mathematics"
-# restart true
+end
+
+# Add coot icon to dock
+dock_add "/Applications/coot.app" do
+  all_users true
+  group "Natural Sciences and Mathematics"
 end

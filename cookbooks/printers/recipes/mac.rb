@@ -130,12 +130,6 @@ end
 printers "SCIC-HP4200" do
   model "/Library/Printers/PPDs/Contents/Resources/hp LaserJet 4200 Series.gz"
 end
-printers "Scili-color-HPCP4520" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP4020 CP4520 Series.gz"
-end
-printers "scili-hpm602-bw" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 600 M601 M602 M603.gz"
-end
 printers "ST-HP4015-BW2" do
   model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
 end

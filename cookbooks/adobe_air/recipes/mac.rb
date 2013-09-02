@@ -16,5 +16,5 @@ dmg_package "Adobe AIR" do
   action :install
   type "pkg"
   package_id "com.pkg.Adobe.AIR"
-  version "3.6.0.6090"
+  version "3.6.06090"
 end

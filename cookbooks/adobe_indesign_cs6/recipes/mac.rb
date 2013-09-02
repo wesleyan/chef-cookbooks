@@ -19,18 +19,18 @@ dmg_package "Adobe InDesign CS6" do
 end
 
 #Install Digital Publishing tools update 
-dmg_package "Adobe Digital Publishing Tools Update" do
- options "–-mode=silent"
- app "AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller"
- volumes_dir "AdobeDigitalPublishingCS6-AutoUpdate"
- dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
- source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
- checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
- action :install
- type "custom"
- package_id "com.adobe.Enterprise.update.DPSTools"
- version "26.0.0"
-end
+#dmg_package "Adobe Digital Publishing Tools Update" do
+# options "–-mode=silent"
+# app "AdobeDigitalPublishingCS6-AutoUpdate/AdobePatchInstaller.app/Contents/MacOS/AdobePatchInstaller"
+# volumes_dir "AdobeDigitalPublishingCS6-AutoUpdate"
+# dmg_name "AdobeDigitalPublishingPatch-CS6-26.0.0"
+# source "http://ims-chef.wesleyan.edu/os_x/adobe_indesign_cs6/AdobeDigitalPublishingPatch-CS6-26.0.0.dmg"
+# checksum "6a28f66c0e9aa6047e82c8d3297d2e145962af93a4c5c74f8c371554517a4de1"
+# action :install
+# type "custom"
+# package_id "com.adobe.Enterprise.update.DPSTools"
+# version "26.0.0"
+#end
 
 # Download icon
 cookbook_file "/tmp/adobe.png"

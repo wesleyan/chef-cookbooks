@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of itunes.
 
+## 0.3.0:
+
+* App updated to 11.0.5
+* Brought metadata/changelog/readme up to standard.
+
 ## 0.2.2:
 
 * App updated to 11.0.3

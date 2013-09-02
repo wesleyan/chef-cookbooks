@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of extensis_utc.
 
+## 0.2.0:
+
+* Updated app to 3.3.1
+
 ## 0.1.0:
 
 * Initial release of extensis_utc cookbook

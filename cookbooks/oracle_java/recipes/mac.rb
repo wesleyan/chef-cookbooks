@@ -21,15 +21,15 @@ end
 
 # Installs Java 7 web plug-in for browsers
 dmg_package "Oracle Java" do
-  app "Java 7 Update 21"
-  volumes_dir "Java 7 Update 21"
-  dmg_name "jre-7u21-macosx-x64"
-  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u21-macosx-x64.dmg"
-  checksum "57542be9b967cf1deedde4f38ef40b93f0d679d5dde6f7b2e4ec49e5be649a5c"
+  app "Java 7 Update 25"
+  volumes_dir "Java 7 Update 25"
+  dmg_name "jre-7u25-macosx-x64"
+  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u25-macosx-x64.dmg"
+  checksum "b89996e10f833187d56cd7a740934dbca8232a7337e0250163f82039bacf7324"
   action :install
   type "pkg"
   package_id "com.oracle.jre"
-  version "7.0.21"
+  version "7.0.25"
 end
 
 cookbook_file "/Library/Application Support/Oracle/Java/Enabled.plist" do

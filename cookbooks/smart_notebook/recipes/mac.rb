@@ -10,11 +10,11 @@
 dmg_package "SMART Notebook" do
   app "SMART Notebook"
   volumes_dir "SMART Notebook"
-  dmg_name "SMART Notebook"
-  source "http://ims-chef.wesleyan.edu/os_x/smart_notebook/SMART-Notebook-11.1.dmg"
-  checksum "553f3a6275010f8f855702d090f2121713f621bb4959f5b8f770c1dc574a34c1"
+  dmg_name "smart_notebook-11.2.482"
+  source "http://ims-chef.wesleyan.edu/os_x/smart_notebook/smart_notebook-11.2.482.dmg"
+  checksum "e494b8ddec9c7c80f19a0ca14612828fe380a51d8b5232e0cf8c6dac788bd9af"
   action :install
   type "pkg"
-  package_id "com.smart.notebook"
-  version "11.1.1102"
+  package_id "com.smarttech.notebook.custom"
+  version "11.2.482"
 end

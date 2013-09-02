@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of apple_airport.
 
+## 0.2.1:
+
+* Updated app to 6.3.1
+
 ## 0.2.0:
 
 * Updated app to 6.3

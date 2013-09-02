@@ -6,17 +6,25 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install our Composer-built package.
+# Install our package, extracted from Adobe's custom installer .app.
 dmg_package "Adobe Flash Player" do
-  app "Install Adobe Flash Player"
-  volumes_dir "Flash Player"
-  dmg_name "flash_player-11.7.700.203.dmg"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/flash_player-11.7.700.203.dmg"
-  checksum "5c592e8fba24cf02cf1ad8735007352f376dfbfb0adbad7d11961689602844f5"
+  app "Adobe Flash Player"
+  volumes_dir "Adobe Flash Player"
+  dmg_name "adobe_flash_player-11.8.800.94"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.8.800.94.dmg"
+  checksum "d16f3ae951731b3d7a3bc900d20818557ef5cb8fe5819c97c3995df3ab08d90"
   action :install
-  type "app"
+  type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "11.7.700.203"
+  version "11.8.80094"
+end
+
+# Create directory for mms.cfg
+directory "/Library/Application Support/Macromedia" do
+  owner "root"
+  group "admin"
+  mode 00777
+  action :create
 end
 
 # Seed file that disables automatic updates.

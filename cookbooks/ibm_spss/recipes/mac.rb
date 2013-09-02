@@ -33,7 +33,7 @@ dock_add "Social Sciences" do
 end
 
 # Add icon to dock
-dock_add "/Applications/LabStats/LabStatsUserSpace.app" do
+dock_add "/Applications/IBM/SPSS/Statistics/21/SPSSStatistics.app" do
   all_users true
   group "Social Sciences"
 end

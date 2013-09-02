@@ -61,4 +61,3 @@ end
 execute "Allow homebrew permissions" do
   command "chmod 777 /usr/local/include"
 end
-

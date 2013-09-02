@@ -8,6 +8,6 @@
 #
 # Install package
 windows_package "VideoLAN VLC" do
-  source "http://ims-chef.wesleyan.edu/windows/videolan_vlc/vlc-2.0.7-win32.exe"
-  version "2.0.7"
+  source "http://ims-chef.wesleyan.edu/windows/videolan_vlc/vlc-2.0.8-win32.exe"
+  version "2.0.8"
 end

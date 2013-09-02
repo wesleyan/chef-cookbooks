@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of supercollider.
 
+## 0.4.0:
+
+* Updated to version 3.6.5
+* Brought README/metadata/changelog up to new standard
+
 ## 0.3.0: 
 
 * Updated to version 3.6.3

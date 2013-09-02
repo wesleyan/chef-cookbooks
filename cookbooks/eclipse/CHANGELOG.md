@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of eclipse.
 
+## 0.4.0:
+
+* Updated app to version 4.3.0, need to check if .ini needs updating.
+* Updated readme/metadata to new format.
+
 ## 0.3.0:
 
 * Updated eclipse.ini to utilize more available memory

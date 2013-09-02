@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of flash.
 
+
+## 0.5.0:
+
+* Updated runtime to version 11.8.800.94.
+* Switched to an extracted pkg from Adobe's installer instead of our Composer method.
+
 ## 0.4.0:
 
 * Updated runtime to version 11.7.700.202
