@@ -1,6 +1,6 @@
 awks112mac-ozymandias:1920:1080:NA
 classmac-anth6:1024:768:60
-classmac-chum106:1920:1080:NA
+classmac-chum106:1920:1080:60
 classmac-dwny100:1024:768:60
 classmac-dwny113:1024:768:60
 classmac-eassem:1024:768:60
