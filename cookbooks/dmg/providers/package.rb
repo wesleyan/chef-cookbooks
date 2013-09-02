@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+require 'chef/version_constraint'
+
 def load_current_resource
   require 'plist'
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
@@ -57,7 +59,7 @@ action :install do
     
     case new_resource.type
     when "dir"
-      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
+      execute "rsync --recursive --links --perms --executability --owner --group --times --force '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
@@ -72,7 +74,7 @@ action :install do
         end
       end
     when "app"
-      execute "cp -fR '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
+      execute "rsync --recursive --links --perms --executability --owner --group --times --force '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
@@ -87,7 +89,49 @@ action :install do
         end
       end
     when "mpkg", "pkg"
-      execute "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      # apply user supplied choices
+      choices = new_resource.xml_choices
+      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      if choices
+        choiceHash = []
+        choices.each do |choice|
+          choiceHash << { "choiceIdentifier" => choice[0], "choiceAttribute" => choice[1], "attributeSetting" => choice[2] }
+        end
+        xmlName = "/tmp/" 
+        xmlName << (0...8).map{(65+rand(26)).chr}.join
+        xmlName << ".plist"
+        f = ::File.new(xmlName, 'w')
+        f.puts Plist::Emit.dump(choiceHash)
+        f.close
+        cmd << " -applyChoiceChangesXML '#{xmlName}'"
+      end
+      f = ::File.open('/tmp/install_script','w')
+      f << %Q{
+        #!/usr/bin/env expect -f
+        set timeout -1
+        set count 0
+        spawn #{cmd.gsub("'",'"')}
+        expect {
+            "Waiting for other installations to complete"
+            {
+              set count [expr $count + 1]
+              if { $count > 10 } {
+                exec /sbin/shutdown -r now
+                close
+                exit 1
+              }
+              exp_continue
+            }
+            eof
+            {
+              catch wait reason
+              exit [lindex $reason 3]
+            }
+        }
+      }
+      f.close
+      execute '/usr/bin/env expect -f /tmp/install_script'
+      #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
@@ -109,7 +153,7 @@ action :install do
       end
       end
     when "custom"
-      execute "/Volumes/#{volumes_dir}/#{new_resource.app} #{new_resource.options}"
+      execute "'/Volumes/#{volumes_dir}/#{new_resource.app}' #{new_resource.options}"
       if new_resource.version and new_resource.package_id
         file "/var/db/receipts/#{new_resource.package_id}.plist" do        
           content ({"PackageVersion" => new_resource.version}).to_plist.dump 
@@ -141,10 +185,10 @@ private
 def installed?
   begin
     if new_resource.version and new_resource.package_id
-      require 'mixlib/versioning'
       result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
       result = Plist::parse_xml(result) if result.class == String
-      return Mixlib::Versioning.parse(result['PackageVersion']) >= Mixlib::Versioning.parse(new_resource.version)
+      version_checker = Chef::VersionConstraint.new("<= #{result['PackageVersion']}")
+      return version_checker.include? new_resource.version
     elsif new_resource.package_id
       return system("pkgutil --pkgs=#{new_resource.package_id}")
     end

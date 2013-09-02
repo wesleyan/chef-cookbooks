@@ -10,13 +10,13 @@
 dmg_package "Hamrick VueScan" do
   app "VueScan"
   volumes_dir "VueScan"
-  dmg_name "vuescan-x64-9.2.20"
-  source "http://ims-chef.wesleyan.edu/os_x/hamrick_vuescan/vuescan-x64-9.2.20.dmg"
-  checksum "3356fd525514fce980897038b5f85a8241166be37a7330b5b21c3f6013e399e0"
+  dmg_name "vuescan-x64-9.2.22"
+  source "http://ims-chef.wesleyan.edu/os_x/hamrick_vuescan/vuescan-x64-9.2.22.dmg"
+  checksum "f67895e21a5d0f7de66dc9fb6e680a7b6a6d2261e9d78612de4274c254251183"
   action :install
   type "app"
   package_id "com.hamrick.vuescan"
-  version "9.2.20"
+  version "9.2.22"
 end
 
 # Inserts VueScan license file

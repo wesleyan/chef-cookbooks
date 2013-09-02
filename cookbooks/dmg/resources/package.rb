@@ -34,6 +34,7 @@ attribute :options, :kind_of => String, :default => nil
 attribute :version, :kind_of => String, :default => nil
 attribute :unmount, :kind_of => [TrueClass, FalseClass], :default => true
 attribute :restart, :kind_of => [TrueClass, FalseClass], :default => false
+attribute :xml_choices, :kind_of => Array, :default => nil
 #attribute :already_mounted, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(name, run_context=nil)

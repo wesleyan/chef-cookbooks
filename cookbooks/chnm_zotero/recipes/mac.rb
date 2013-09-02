@@ -10,27 +10,27 @@
 dmg_package "Zotero" do
   app "Zotero"
   volumes_dir "Zotero"
-  dmg_name "Zotero-4.0.5"
-  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-4.0.5.dmg"
-  checksum "d8509971545730e7441d7d9bcd1b166cf1a108f703a94c793e32fcd7f15427b8"
+  dmg_name "Zotero-4.0.11"
+  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-4.0.11.dmg"
+  checksum "9232c75dd1ae825a2ab1744add307e0dd7f9e99d6ed6b3f052e4cc2bc8fd9cd7"
   action :install
   type "app"
   package_id "edu.gmu.chnm.zotero"
-  version "4.0.5"
+  version "4.0.11"
 end
 
 dmg_package "Zotero Browser Plugins" do
   app "Zotero Plugins"
   volumes_dir "Zotero Plugins"
-  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/Zotero-Plugins.dmg"
-  checksum "5c17e5d51bf91149157a43f082f39df5a46b19c4ab107485cef054272d447d3f"
+  source "http://ims-chef.wesleyan.edu/os_x/chnm_zotero/zotero_plugins.dmg"
+  checksum "0a9ee7206c425b284fd924c68d1245227ea3e50c6937846c96092094aae882f7"
   action :install
   type "pkg"
   package_id "edu.gmu.chnm.zotero.plugins"
-  version "3.0.8.1"
+  version "4.0.8"
 end
 
-# Install Firefox add-on, current version 4.0.5
+# Install Firefox add-on, current version 4.0.12
 directory "/Applications/Firefox.app/Contents/MacOS/extensions"
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/extensions/zotero@chnm.gmu.edu.xpi" do
   mode 0777

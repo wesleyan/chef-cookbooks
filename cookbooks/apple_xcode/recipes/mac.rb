@@ -29,7 +29,7 @@ dmg_package "Xcode Command Line Tools" do
   action :install
   type "mpkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
-  version "4.6.2.0413"
+  version "4.6.20413"
 end
 
 # Is this still needed? I thought it was the old way of accepting the license.
@@ -42,7 +42,7 @@ dmg_package "Xcode DevSDK" do
   action :install
   type "pkg"
   package_id "com.apple.pkg.DevSDK"
-  version "4.6.1.0413"
+  version "4.6.10413"
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.dt.Xcode.plist" do

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vlc.
 
+## 0.6.1:
+
+* Updated OS X and Windows to 2.0.8
+
 ## 0.6.0:
 
 * Added Windows recipe

@@ -74,6 +74,7 @@ end
 def add_group_to_user_dock(user, group)
   execute "add to user dock" do
     command "sudo -u #{user.username} /tmp/additemtodock -f \"/Users/#{user.username}/Library/Preferences/com.apple.dock.plist\" \"/var/generated_files/dock_items/#{group}\""
+    returns [0,1]
     user user.username
     action :run
   end
@@ -97,6 +98,7 @@ end
 def add_to_user_dock(user, path)
   execute "add to user dock" do
     command "/tmp/additemtodock -f \"/Users/#{user.username}/Library/Preferences/com.apple.dock.plist\" \"#{path}\""
+    returns [0,1]
     user user.username
     action :run
   end

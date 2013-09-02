@@ -1,6 +1,8 @@
 name "win-base"
 description "Base role for Windows deployment"
 run_list "recipe[windows]",
+  "recipe[powershell]",
+  "recipe[prepare::win]",
   "recipe[7-zip]",
   "recipe[videolan_vlc::win]",
   "recipe[python::win]",
@@ -17,4 +19,5 @@ run_list "recipe[windows]",
   "recipe[hamrick_vuescan::win]",
   "recipe[rstudio::win]",
   "recipe[google_chrome::win]",
-  "recipe[nextengine_scanstudio::win]"
+  #"recipe[nextengine_scanstudio::win]",
+  "recipe[printers::win]"

@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of microsoft_skype.
 
+## 0.2.1:
+
+* Updated app to 6.6.0.467
+
+## 0.2.0:
+
+* Updated app to 6.5.0.443
+* Updated readme/metadata to new standard
+
 ## 0.1.1:
 
 * Updated app to 6.4.60.833

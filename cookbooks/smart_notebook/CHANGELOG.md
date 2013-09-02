@@ -1,8 +1,14 @@
-# CHANGELOG for smart_notebook
+smart_notebook CHANGELOG
+====================================
 
-This file is used to list changes made in each version of smart_notebook.
+This file is used to list changes made in each version of the smart_notebook cookbook.
 
-## 0.1.0:
+0.2.0
+-----
+- [rchristensen] - Updated to new custom-built package based on 11.2.482
+- [rchristensen] - Updated changelog to latest standard
 
-* Initial release of smart_notebook
-* Current app version: 11.1.1102
+0.1.0
+-----
+- [mdietz] - Initial release of smart_notebook
+- [mdietz] - Current app version: 11.1.1102

@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of unarchiver.
 
+## 0.5.0:
+
+* Updated app to version 3.8
+* Updated branding, readme/metadata format.
+
 ## 0.4.0:
 
 * Updated app to version 3.7

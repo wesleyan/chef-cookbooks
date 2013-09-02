@@ -9,11 +9,11 @@
 dmg_package "Apple AirPort Utility" do
   app "AirPortUtility"
   volumes_dir "AirPortUtility"
-  dmg_name "AirPortUtility6.3"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_airport/AirPortUtility6.3.dmg"
-  checksum "1b5cc84c2063d0b068ee0b9b8e508fe98747d71ffad3174c6c5e1775c6751d55"
+  dmg_name "AirPortUtility6.3.1"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_airport/AirPortUtility6.3.1.dmg"
+  checksum "f0cfed9e0acadd22d5d1f642e8e6cf882697bc7760f588b4d35920af792bc2f4"
   action :install
   type "pkg"
   package_id "com.apple.pkg.AirPortUtility"
-  version "6.3.0"
+  version "6.3.1"
 end

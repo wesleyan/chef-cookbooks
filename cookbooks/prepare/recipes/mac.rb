@@ -68,13 +68,8 @@ execute "bind to domain" do
   returns [0,-1, 1, 78]
 end
 
-# Binds AD users to default groups
-execute "set group bindings" do
-  command "dsconfigad -gid primaryGroupID --ggid gidNumber"
-end
-
 # Disables OS X' Gatekeeper functionality, allowing us to run unsigned apps (still necessary at this point)
-execute "spctl disable" do
+execute "Disable OS X Gatekeeper" do
   command "spctl --master-disable"
 end
 
@@ -82,6 +77,12 @@ end
 execute "enable ssh" do 
   command "/usr/sbin/systemsetup -setremotelogin on"
   not_if "/usr/sbin/systemsetup -getremotelogin | /usr/bin/grep On"
+end
+
+# Prevent machine from sleeping if a remote terminal is active, needed for remote chef commands to function, the -c option means the setting is only in effect when a machine is plugged into power.
+execute "enable ttyskeepawake" do 
+  command "/usr/bin/pmset -c ttyskeepawake 1"
+  not_if "/usr/bin/pmset -g | /usr/bin/grep 'ttyskeepawake        1'"
 end
 
 # Change login window type to standard user/password entry screen.

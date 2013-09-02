@@ -1,6 +1,6 @@
 Description
 ===========
-Installs Bitnami MAMP
+Installs Bitnami MAMP stack
 
 Requirements
 ------------
@@ -12,15 +12,15 @@ Attributes
 
 Usage
 -----
-#### blackmagic_atem::mac
+#### bitnami_mamp::mac
 
-Just include `blackmagic_atem:` in your node's `run_list`:
+Just include `bitnami_mamp:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[blackmagic_atem::mac]"
+    "recipe[bitnami_mamp::mac]"
   ]
 }
 ```

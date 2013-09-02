@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of apple_osx_updates
 
+## 0.3.0:
+
+* Added Apple Security update.
+* Latest release is 2013-002.
 
 ## 0.2.0:
 

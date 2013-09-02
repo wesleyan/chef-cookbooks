@@ -1,6 +1,6 @@
 apple_airport Cookbook
 ====================
-This cookbook installs VideoLAN's VLC media player on both OS X and Windows
+This cookbook installs Apple AirPort Utility.
 
 Requirements
 ------------

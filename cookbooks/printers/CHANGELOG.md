@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of printerdrv.
 
+## 0.5.3:
+
+* Removed SciLi printers as they were decommissioned.
+* Updated metadata/README to latest standards.
+
 ## 0.5.1: 
 
 * Updated Xerox Printer Drivers to 2.3

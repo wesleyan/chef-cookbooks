@@ -12,16 +12,6 @@
   <integer><%= node["chef_client"]["interval"] %></integer>
   <key>RunAtLoad</key>
   <true/>
-<%- elsif @launchd_mode == "calendar" %>
-  <key>Program</key>
-  <string><%= @client_bin %></string>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Minute</key>
-    <integer>0</integer>
-    <key>Hour</key>
-    <integer><%= node["chef-client"]["hour"] %></integer>
-  </dict>
 <%- else %>
   <key>ProgramArguments</key>
   <array>

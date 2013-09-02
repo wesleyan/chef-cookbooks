@@ -1,6 +1,7 @@
+name			 "aquamacs_emacs"
 maintainer       "Wesleyan University"
-maintainer_email "rchristensen@wesleyan.edu"
+maintainer_email "software@wesleyan.edu"
 license          "All rights reserved"
 description      "Installs Emacs on OS X"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.1.0"
+version          "0.2.0"

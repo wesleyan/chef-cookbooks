@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of blackmagic_desktop_video.
 
+## 0.2.0:
+
+* Updated app to 9.7.7
+
 ## 0.1.0:
 
 * Initial release of blackmagic_desktop_video

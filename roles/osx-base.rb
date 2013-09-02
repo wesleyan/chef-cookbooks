@@ -30,16 +30,17 @@ run_list  "recipe[prepare::mac]",
           "recipe[adobe_air::mac]", 
           "recipe[microsoft_silverlight::mac]",
           # Core applications
+          "recipe[adobe_acrobat_pro::mac]",
           "recipe[microsoft_office::mac]",
           "recipe[apple_itunes::mac]", 
           "recipe[apple_ilife::mac]",
           "recipe[apple_iwork::mac]",
+          "recipe[cisco_anyconnect::mac]",
           "recipe[unarchiver::mac]",
           "recipe[videolan_vlc::mac]",
           "recipe[profile_manager::mac]",
           "recipe[system_preferences::mac]",
-	        "recipe[chef-client::service]",
-          "recipe[chef-client::config]",
+	        "recipe[chef-client::launchd_service]",
           # Finalize 
           "recipe[finalize::mac]"
 
