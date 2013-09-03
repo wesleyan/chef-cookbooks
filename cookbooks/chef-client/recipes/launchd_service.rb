@@ -23,10 +23,9 @@ if mac_service_supported
     )
   end
 
-  service "chef-client" do
-    service_name "com.opscode.chef-client"
-    provider Chef::Provider::Service::Macosx
-    action :start
+  system "chef-client" do
+    command "launchctl load -w /Library/LaunchDaemons/com.opscode.chef-client.plist"
+    returns [0,1]
   end
 else
   log("Mac OS X Service provider is only supported in Chef >= 0.10.10") { level :warn }
