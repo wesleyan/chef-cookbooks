@@ -54,8 +54,8 @@ dmg_package "Pharos Printer Client" do
   checksum "ad2645718be94bc7c3f2a7160df0858eac0006e31419c9ef59c4b3068b92925c"
   action :install
   type "pkg"
-  package_id "com.pharos.printerdrivers"
-  version "1.0.1"
+  #package_id "com.pharos.printerdrivers"
+  #version "1.0.1"
 end
 
 dmg_package "Epson 3880 Driver" do
