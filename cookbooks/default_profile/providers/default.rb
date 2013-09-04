@@ -1,20 +1,32 @@
-#
-# Cookbook Name:: printers
-# Provider:: printer
-#
-
 action :add do
-  if new_resource.ip
-    system("lpadmin -p #{new_resource.name} -v lpd://#{new_resource.ip} -m \"#{new_resource.model}\" -D #{new_resource.name} -o printer-is-shared=false -E")
-  else
-	  system("lpadmin -p #{new_resource.name} -v lpd://falcon.wesleyan.edu/#{new_resource.name} -m \"#{new_resource.model}\" -D #{new_resource.name} -E -o printer-is-shared=false -o HPOption_Duplexer=True -o Duplex=DuplexNoTumble -o Duplexer=Installed")
+  new_resource.file_name
+  cookbook_file "/tmp/#{new_resource.file_name}"
+  execute "cp '/tmp/#{new_resource.file_name}' '/System/Library/User Template/English.lproj/#{new_resource.path}/'"
+  get_users_list.each do |user|
+    if user.uid >= 500
+      execute "cp '/tmp/#{new_resource.file_name}' '#{user.user_dir}/#{new_resource.path}/' && chown #{user.username} '#{user.user_dir}/#{new_resource.path}/#{new_resource.file_name}'"
+    end
   end
 end
 
-action :remove do
-	system("lpadmin -x #{new_resource.name}")
-end
-
-action :set_default do
-	system("lpadmin -d #{new_resource.name}")
+def get_users_list
+  users = `dscacheutil -q user`.split("\n\n")
+  users_list = Array.new
+  for user in users do
+    userObject = Dock::MacUser.new
+    lines = user.split("\n") 
+    for line in lines 
+      if line.split(": ")[0] == "uid"
+        userObject.uid = line.split(": ")[1].to_i
+     end
+     if(line.split(": ")[0] == "name")
+       userObject.username = line.split(": ")[1]
+     end
+     if(line.split(": ")[0] == "dir")
+       userObject.user_dir = line.split(": ")[1]
+     end
+    end
+    users_list.push(userObject)
+  end
+  users_list
 end

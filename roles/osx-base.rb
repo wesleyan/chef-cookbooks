@@ -3,6 +3,7 @@ description "Base role for OS X deployment"
 
           # Core recipes
 run_list  "recipe[prepare::mac]",
+          "recipe[default_profile::mac]",
           "recipe[sudo]",
           "recipe[opscode_chef::mac]",
           # Package providers

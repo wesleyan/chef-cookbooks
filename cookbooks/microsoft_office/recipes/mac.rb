@@ -57,13 +57,34 @@ dmg_package "Update Office 2011 Update" do
 end
 
 # Install customized plist files to surpress first-run dialogues
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Excel.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Powerpoint.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Word.plist"
+default_profile "com.microsoft.autoupdate2.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.error_reporting.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.office.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.office.setupassistant.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Excel.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Powerpoint.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Word.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
 
 
 # Download icon

@@ -1,4 +1,4 @@
-# CHANGELOG for printers
+# CHANGELOG for default_profile
 
 This file is used to list changes made in each version of default_profile.
 
