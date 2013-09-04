@@ -8,11 +8,11 @@
 #
 # Install our .app
 dmg_package "UCSF Chimera" do
-  app ""
-  volumes_dir ""
+  app "Chimera"
+  volumes_dir "ChimeraInstaller"
   dmg_name "chimera-1.8-mac64"
   source "http://ims-chef.wesleyan.edu/os_x/ucsf_chimera/chimera-1.8-mac64.dmg"
-  checksum ""
+  checksum "14e35135abb5bd117b8846eae3cdd907161d3ab77b9bb8995be98938c818e764"
   action :install
   type "app"
   package_id "edu.ucsf.chimera"
@@ -29,7 +29,7 @@ dock_add "Natural Sciences and Mathematics" do
 end
 
 # Add icon to dock
-dock_add "/Applications/VMD 1.9.1.app" do
+dock_add "/Applications/Chimera.app" do
   all_users true
   group "Natural Sciences and Mathematics"
 end
