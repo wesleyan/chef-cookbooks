@@ -32,3 +32,7 @@ remote_directory node['chef_handler']['handler_path'] do
   action :nothing
 end.run_action(:create)
 
+chef_handler "Setting default handler to email" do
+  source "chef/handler/emailme"
+  action :enable
+end
