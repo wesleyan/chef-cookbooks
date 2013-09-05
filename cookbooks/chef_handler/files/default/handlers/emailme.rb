@@ -9,7 +9,7 @@ module Wesleyan
 		def initialize
 			options = { :address              => 'mail-int.post.wesleyan.edu',
             			:port                 => 587,
-            			:domain               => node.name,
+            			:domain               => 'wesleyan.edu',
             			:user_name            => 'chef',
             			:password             => '59B@DrbA6$5C@Sdp',
             			:authentication       => 'plain',
@@ -24,11 +24,14 @@ module Wesleyan
 
 		def report
 			if run_status.failed?
+				name = node.name
+				exception = run_status.formatted_exception
+				bt = Array(backtrace)
 				Mail.deliver do
        					to 'rchristensen@wesleyan.edu, mdietz@wesleyan.edu'
      					from 'chef@wesleyan.edu'
-  					subject "[CHEF FATAL] #{node.name}"
-     					body "#{run_status.formatted_exception}\n#{Array(backtrace).join("\n")}"
+  					subject "[CHEF FATAL] #{name}"
+     					body "#{exception}\n#{bt.join("\n")}"
 				end
 			end
 		end
