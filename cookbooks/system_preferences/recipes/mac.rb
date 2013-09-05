@@ -28,7 +28,7 @@ end
 
 ## Modify Remote Desktop settings
 execute "Remote Desktop preferences" do
-  command "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -users labuser -restart -agent -privs -all -clientopts -setvncpw #Cl053th3l00p!1"
+  command "/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -users labuser -restart -agent -privs -all -clientopts -setvncpw '#Cl053th3l00p\\!1'"
 end
 
 # This block of code pulls down the cscreen binary and our resolution list; using them to set the screen resolution on a per-room basis.
