@@ -23,11 +23,13 @@ module Wesleyan
 		end
 
 		def report
-			Mail.deliver do
-       			to 'rchristensen@wesleyan.edu, mdietz@wesleyan.edu'
-     			from 'chef@wesleyan.edu'
-  				subject "[CHEF FATAL] #{node.name}"
-     			body "#{run_status.formatted_exception}\n#{Array(backtrace).join("\n")}"
+			if run_status.failed?
+				Mail.deliver do
+       					to 'rchristensen@wesleyan.edu, mdietz@wesleyan.edu'
+     					from 'chef@wesleyan.edu'
+  					subject "[CHEF FATAL] #{node.name}"
+     					body "#{run_status.formatted_exception}\n#{Array(backtrace).join("\n")}"
+				end
 			end
 		end
 	end
