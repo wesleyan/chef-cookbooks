@@ -2,7 +2,7 @@
 # Cookbook Name:: printers
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -36,26 +36,26 @@ end
 dmg_package "EPSON Printer Drivers" do
   app "EPSONPrinterDrivers"
   volumes_dir "EPSON Printer Drivers"
-  dmg_name "EPSONPrinterDrivers2.14"
-  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/EPSONPrinterDrivers2.14.dmg"
-  checksum "d35792be164b2952687f7adc74187f3a62b2cc730bb11baffe183988ae3d71d6"
+  dmg_name "EPSONPrinterDrivers2.15"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/EPSONPrinterDrivers2.15.dmg"
+  checksum "f9f5658ff11b9933b9f777c15a1d433dfdb1c3131693fb8e0382a5372ba293b6"
   action :install
   type "pkg"
   package_id "com.apple.pkg.EPSONPrinterDrivers"
-  version "2.14.0"
+  version "2.15.0"
 end
 
 #install Pharos drivers
-dmg_package "Pharos Printer Client" do
+dmg_package "Pharos Popup Printer Client" do
   app "Popup"
   volumes_dir "Popup"
-  dmg_name "pharos_client_labs"
-  source "http://ims-chef.wesleyan.edu/os_x/pharos_printer/pharos_client_labs.dmg"
-  checksum "ad2645718be94bc7c3f2a7160df0858eac0006e31419c9ef59c4b3068b92925c"
+  dmg_name "pharos_client_labs-8.4.1"
+  source "http://ims-chef.wesleyan.edu/os_x/pharos_printer/pharos_client_labs-8.4.1.dmg"
+  checksum "dd25cb018bc251bc9a749508c8596f6406fa850d0bab12c473530fbabcec8bf0"
   action :install
   type "pkg"
-  #package_id "com.pharos.printerdrivers"
-  #version "1.0.1"
+  package_id "com.pharos.popup"
+  version "8.4.1"
 end
 
 dmg_package "Epson 3880 Driver" do
