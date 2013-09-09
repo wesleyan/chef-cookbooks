@@ -2,7 +2,7 @@
 # Cookbook Name:: apple_ilife
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -93,14 +93,14 @@ end
 # Install latest Digital Camera RAW update
 dmg_package "RAW Camera Update" do
   app "RAWCameraUpdate4"
-  volumes_dir "Digital Camera RAW Compatibility Update 4.07"
-  dmg_name "RAWCameraUpdate4.07"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/RAWCameraUpdate4.07.dmg"
-  checksum "ca63c98235a23531dc74660caab0d78755aef4dccdc43043b4dc95f6df50efca"
+  volumes_dir "Digital Camera RAW Compatibility Update 4.08"
+  dmg_name "RAWCameraUpdate4.08"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/RAWCameraUpdate4.08.dmg"
+  checksum "d6447d750883f2bfbc88abec33ca2392f3aa4658ccdef1a9dfe0f00a3d00ef99"
   action :install
   type "pkg"
   package_id "com.apple.pkg.RAWCameraUpdate4"
-  version "4.0.7"
+  version "4.0.8"
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iPhoto.plist"
