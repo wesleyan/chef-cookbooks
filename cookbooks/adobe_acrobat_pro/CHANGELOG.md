@@ -1,23 +1,30 @@
-# CHANGELOG for acrobat
+adobe_acrobat_pro CHANGELOG
+===========================
 
-This file is used to list changes made in each version of acrobat.
+This file is used to list changes made in each version of the adobe_acrobat_pro cookbook.
 
-## 0.4.0:
+0.5.0
+-----
+- [rchristensen] - Updated app to version 11.0.04
+- [rchristensen] - Brought README/metadata/CHANGELOG up to latest standard.
+- [rchristensen] - Commented out dock icon creation for now, as cookbook was moved to classlab role and is not always installed with other CS6 apps
 
-* Updated app to version 11.0.03, removed dependency on 11.0.01/02
-* Switched to software@wes branding
-* Updated chef package server URLs
-* Added code to maintain Preview as default PDF application
+0.4.0
+-----
+- [rchristensen] - Updated app to version 11.0.03, removed dependency on 11.0.01/02
+- [rchristensen] - Switched to software@wes branding.
+- [rchristensen] - Updated chef package server URLs.
+- [mdietz] - Added code to maintain Preview as default PDF application.
 
-## 0.3.0:
+0.3.0
+-----
+- [rchristensen] - Included updates for 11.0.01 and a security patch for 11.0.02
 
-* Included updates for 11.0.01 and a security patch for 11.0.02
+0.2.0
+-----
+- [rchristensen] - Added dock icon creation.
 
-## 0.2.0:
-
-* Added dock icon creation
-
-## 0.1.0:
-
-* Initial release of acrobat cookbook
-* Current version is 11.0.0
+0.1.0
+-----
+- [rchristensen] - Initial release of acrobat cookbook.
+- [rchristensen] - Current version is 11.0.0

@@ -20,14 +20,14 @@ end
 
 # Install latest point release update
 dmg_package "Adobe Acrobat Update" do
-  app "AcrobatUpd11003"
-  volumes_dir "AcrobatUpd11003"
-  dmg_name "AcrobatUpd11003"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11003.dmg"
-  checksum "e2260e9a30e863b40e3678a698ed2be479a0d8a4051188f0edc53822745e42ca"
+  app "AcrobatUpd11004"
+  volumes_dir "AcrobatUpd11004"
+  dmg_name "AcrobatUpd11004"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11004.dmg"
+  checksum "105ebf3ac9056b53c35b2cfae162742167fd7dd2b3590cb6f7190710f38982b8"
   action :install
   type "pkg"
-  package_id "com.adobe.acrobat.a11.AcrobatUpd11003"
+  package_id "com.adobe.acrobat.a11.AcrobatUpd11004"
 end
 
 # Download icon
