@@ -1,5 +1,5 @@
 apple_ilife CHANGELOG
-==================
+=====================
 
 This file is used to list changes made in each version of the apple_ilife cookbook.
 
