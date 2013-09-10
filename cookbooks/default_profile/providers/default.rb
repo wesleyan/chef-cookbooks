@@ -4,7 +4,9 @@ action :add do
   execute "cp '/tmp/#{new_resource.file_name}' '/System/Library/User Template/English.lproj/#{new_resource.path}/'"
   get_users_list.each do |user|
     if user.uid >= 500
-      execute "cp '/tmp/#{new_resource.file_name}' '#{user.user_dir}/#{new_resource.path}/' && chown #{user.username} '#{user.user_dir}/#{new_resource.path}/#{new_resource.file_name}'"
+      execute "cp '/tmp/#{new_resource.file_name}' '#{user.user_dir}/#{new_resource.path}/' && chown #{user.username} '#{user.user_dir}/#{new_resource.path}/#{new_resource.file_name}'" do
+        returns [0,1]
+      end
     end
   end
 end
