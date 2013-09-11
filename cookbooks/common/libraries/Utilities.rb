@@ -194,9 +194,15 @@ def copy_plist_for_user(user, plist_path)
         end
 
       #  execute "chown #{user.username}:staff /tmp/com.apple.dock.plist"
-        execute "chmod 600 #{plist_path}"
-        execute "cp #{plist_path} /Users/#{user.username}/Library/Preferences/#{basename}" 
-        execute "chown #{user.username}:staff /Users/#{user.username}/Library/Preferences/#{basename}"
+        execute "chmod 600 #{plist_path}" do
+          returns [0,1]
+        end
+        execute "cp #{plist_path} /Users/#{user.username}/Library/Preferences/#{basename}"  do
+          returns [0,1]
+        end
+        execute "chown #{user.username}:staff /Users/#{user.username}/Library/Preferences/#{basename}" do
+          returns [0,1]
+        end
     end
 end
 
