@@ -111,6 +111,6 @@ end
 # we need to make sure that ENV['HOME'] is set or brew and launchd can fail
 ruby_block "Set home" do
   block do
-    ENV['HOME'] = "Users/administrator/" unless ENV['HOME']
+    ENV['HOME'] = "/Users/administrator/" unless ENV['HOME']
   end
 end
