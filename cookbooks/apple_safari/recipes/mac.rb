@@ -23,6 +23,12 @@ dock_add "/Applications/Safari.app" do
   all_users true
 end
 
-directory "/System/Library/User Template/English.lproj/Library/Safari"
-default_profile "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.Safari.plist"
-default_profile "/System/Library/User Template/English.lproj/Library/Safari/Bookmarks.plist"
+default_profile "com.apple.Safari.plist" do
+  path "Library/Preferences"
+  cookbook 'apple_safari'
+end
+
+default_profile "Bookmarks.plist" do
+  path "Library/Safari"
+  cookbook 'apple_safari'
+end
