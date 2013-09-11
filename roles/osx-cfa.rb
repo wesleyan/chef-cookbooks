@@ -27,8 +27,6 @@ run_list  "role[osx-classlab]",
           "recipe[quark_quarkxpress::mac]",
           "recipe[extensis_utc::mac]",
           "recipe[nemetschek_vectorworks::mac]",
-          "recipe[bitnami_mamp::mac]",
-          "recipe[sencha_touch::mac]",
           "recipe[ruby_gems]",
           "recipe[aquamacs_emacs::mac]"
 
