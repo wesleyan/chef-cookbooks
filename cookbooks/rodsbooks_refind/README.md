@@ -1,27 +1,26 @@
-blackmagic_atem Cookbook
-====================
-This cookbook installs rEFInd on OS X.
+rodsbooks_refind Cookbook
+=========================
+This cookbook installs rEFInd, an EFI boot manager.
 
 Requirements
 ------------
 #### platform
-- `OS X`
-- `Linux`
+- `OS X` - 10.7.5 or above.
 
 Attributes
 ----------
 
 Usage
 -----
-#### rEFInd::mac
+#### rodsbooks_refind::mac
 
-Just include `rEFInd::mac` in your node's `run_list`:
+Just include `rodsbooks_refind:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[refind::mac]"
+    "recipe[rodsbooks_refind::mac]"
   ]
 }
 ```
@@ -38,4 +37,5 @@ Contributing
 
 License and Authors
 -------------------
-Max Dietz <mdietz@wesleyan.edu>
+Robert Christensen <rchristensen@wesleyan.edu>
+
