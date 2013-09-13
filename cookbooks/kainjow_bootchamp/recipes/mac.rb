@@ -17,3 +17,16 @@ dmg_package "BootChamp" do
   package_id "com.kainjow.bootchamp"
   version "1.5.1"
 end
+
+default_profile "com.kainjow.BootCamp.plist" do
+  path "Library/Preferences"
+  cookbook "kainjow_bootchamp"
+end
+
+cookbook_file "/Library/LaunchAgents/com.kainjow.BootChamp.login.plist" do
+  user "root"
+  group "wheel"
+  mode 0644
+end
+
+execute "launchctl list | awk '{ print $3 }' | grep BootChamp || launchctl load -w /Library/LaunchAgents/com.kainjow.BootChamp.login.plist"
