@@ -93,14 +93,14 @@ end
 # Install latest Digital Camera RAW update
 dmg_package "RAW Camera Update" do
   app "RAWCameraUpdate4"
-  volumes_dir "Digital Camera RAW Compatibility Update 4.08"
-  dmg_name "RAWCameraUpdate4.08"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/RAWCameraUpdate4.08.dmg"
-  checksum "d6447d750883f2bfbc88abec33ca2392f3aa4658ccdef1a9dfe0f00a3d00ef99"
+  volumes_dir "Digital Camera RAW Compatibility Update 4.09"
+  dmg_name "RAWCameraUpdate4.09"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_ilife/RAWCameraUpdate4.09.dmg"
+  checksum "50aa9b2316faedcb0cb00343cd9f972b61f5bc15da511d95274609f0d266fca4"
   action :install
   type "pkg"
   package_id "com.apple.pkg.RAWCameraUpdate4"
-  version "4.0.8"
+  version "4.0.9"
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.apple.iPhoto.plist"

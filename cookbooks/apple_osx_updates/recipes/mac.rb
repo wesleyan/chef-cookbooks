@@ -7,16 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-# Install 10.8.4 update, non-combo as our base has to be == 10.8.3 for hardware reasons.
+# Install 10.8.5 update, combo as our base has is currently 10.8.3 until I roll a new base.
 dmg_package "OS X Update" do
-  app "OSXUpd10.8.4"
-  volumes_dir "OS X 10.8.4 Update"
-  dmg_name "OSXUpd10.8.4"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_osx_updates/OSXUpd10.8.4.dmg"
-  checksum "07d0a381f54911c6ae4f764452d308d439c30e0a3737ea43d1cd3dd24b205296"
+  app "OSXUpdCombo10.8.5"
+  volumes_dir "OS X 10.8.5 Update Combo"
+  dmg_name "OSXUpdCombo10.8.5"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_osx_updates/OSXUpdCombo10.8.5.dmg"
+  checksum "1c0f6eef4469313fead1bd6aaf49ffb62aa82e2ab4ebe1b409ff295d121c07ff"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.update.os.10.8.4.12E55.delta"
+  package_id "com.apple.pkg.update.os.10.8.5.12F37.combo"
   restart true
 end
 
