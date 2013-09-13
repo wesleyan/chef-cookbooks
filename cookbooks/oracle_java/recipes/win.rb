@@ -8,7 +8,7 @@
 #
 # Installs Java 7 runtime for 32-bit browsers, have not decided a support plan for 64-bit browsers yet.
 windows_package "Oracle Java Runtime" do
-  source "http://ims-chef.wesleyan.edu/windows/oracle_java/jre-7u25-windows-i586.exe"
+  source "http://ims-chef.wesleyan.edu/windows/oracle_java/jre-7u40-windows-i586.exe"
   installer_type :wise
-  version "7.0.25"
+  version "7.0.40"
 end
