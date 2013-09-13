@@ -10,4 +10,7 @@
 cookbook_file "/tmp/refind-bin-0.7.4.zip"
 
 # Unzip the installer and run the install script.
-execute "unzip /tmp/refind-bin-0.7.4.zip && /tmp/refind-bin-0.7.4/install.sh"
+execute "unzip /tmp/refind-bin-0.7.4.zip -d /tmp/"
+
+# Run the install script.
+execute "/tmp/refind-bin-0.7.4/install.sh"
