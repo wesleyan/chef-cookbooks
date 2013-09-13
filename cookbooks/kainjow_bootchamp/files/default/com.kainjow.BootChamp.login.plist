@@ -11,6 +11,8 @@
 		<string>/usr/bin/open</string>
 		<string>/Applications/BootChamp.app</string>
 	</array>
+	<key>RunAtLoad</key>
+	<true/>
 	<key>KeepAlive</key>
 	<true/>
 </dict>
