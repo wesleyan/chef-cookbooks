@@ -139,6 +139,14 @@ end
 printers "STLab-color-HPCP3505" do
   model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
 end
+printers "SciLi-Color-HPCP4520" do
+  action :remove
+end
+printers "SciLi-hpm602bw" do
+  action :remove
+end
+
+
 printers "UsdanLobby-RicohBW" do
   model "drv:///sample.drv/laserjet.ppd"
 end
