@@ -18,15 +18,18 @@ dmg_package "BootChamp" do
   version "1.5.1"
 end
 
+# Seed the preference to the default profile to disable BootChamp's internal auto-launch stuff.
 default_profile "com.kainjow.BootChamp.plist" do
   path "Library/Preferences"
   cookbook "kainjow_bootchamp"
 end
 
+# Insert our own launchagent that works much better.
 cookbook_file "/Library/LaunchAgents/com.kainjow.BootChamp.login.plist" do
   user "root"
   group "wheel"
   mode 0644
 end
 
+# Execute our LaunchAgent
 execute "launchctl list | awk '{ print $3 }' | grep BootChamp || launchctl load -w /Library/LaunchAgents/com.kainjow.BootChamp.login.plist"
