@@ -18,7 +18,7 @@ dmg_package "BootChamp" do
   version "1.5.1"
 end
 
-default_profile "com.kainjow.BootCamp.plist" do
+default_profile "com.kainjow.BootChamp.plist" do
   path "Library/Preferences"
   cookbook "kainjow_bootchamp"
 end
