@@ -1,8 +1,0 @@
-name "osx-dualboot"
-description "Role for Dual-boot OS X deployments"
-
-          # Include base role.
-run_list  "role[osx-base]",
-          # Include class/lab specific recipes.
-          "recipe[kainjow_bootchamp::mac]",
-          "recipe[rodsbooks_refind::mac]"
