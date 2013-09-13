@@ -3,6 +3,9 @@ apple_ilife CHANGELOG
 
 This file is used to list changes made in each version of the apple_ilife cookbook.
 
+0.2.7
+-----
+- [rchristensen] - Updated RAW Camera to 4.09
 
 0.2.6
 -----
