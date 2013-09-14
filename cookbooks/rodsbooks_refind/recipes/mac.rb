@@ -16,5 +16,5 @@ end
 
 # Run the install script.
 execute "/tmp/refind-bin-0.7.4/install.sh && touch /var/db/receipts/com.rodsbooks.refind.plist" do
-  not_if { ::File.exists? "/var/db/receipts/com.rodsbooks.refind.plist"
+  not_if { ::File.exists? "/var/db/receipts/com.rodsbooks.refind.plist" }
 end
