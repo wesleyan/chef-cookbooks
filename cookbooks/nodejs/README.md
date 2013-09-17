@@ -1,6 +1,6 @@
 nodejs Cookbook
-=========================
-This cookbook installs Node JS.
+===============
+This cookbook installs Node.js.
 
 Requirements
 ------------
@@ -37,5 +37,5 @@ Contributing
 
 License and Authors
 -------------------
-Robert Christensen <rchristensen@wesleyan.edu>
+Max Dietz <mdietz@wesleyan.edu>
 
