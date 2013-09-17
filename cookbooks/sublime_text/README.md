@@ -1,6 +1,6 @@
-nodejs Cookbook
-===============
-This cookbook installs Node.js.
+sublime_text Cookbook
+=========================
+This cookbook installs sublime_text.
 
 Requirements
 ------------
@@ -12,15 +12,15 @@ Attributes
 
 Usage
 -----
-#### nodejs::mac
+#### sublime_text::mac
 
-Just include `nodejs::mac` in your node's `run_list`:
+Just include `sublime_text::mac` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[nodejs::mac]"
+    "recipe[sublime_text::mac]"
   ]
 }
 ```
@@ -37,5 +37,5 @@ Contributing
 
 License and Authors
 -------------------
-Max Dietz <mdietz@wesleyan.edu>
+Robert Christensen <rchristensen@wesleyan.edu>
 

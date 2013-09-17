@@ -6,7 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
 # Install Node.js
 dmg_package "Node.js" do
   app "node-v0.10.18"
