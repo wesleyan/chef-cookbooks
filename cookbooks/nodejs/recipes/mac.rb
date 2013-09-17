@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install PhoneGap
+# Install Node JS
 dmg_package "Node JS" do
   app "node-v0.10.18"
   volumes_dir "nodejs"

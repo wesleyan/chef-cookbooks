@@ -12,7 +12,7 @@ Attributes
 
 Usage
 -----
-#### phonegap::mac
+#### nodejs::mac
 
 Just include `nodejs::mac` in your node's `run_list`:
 
