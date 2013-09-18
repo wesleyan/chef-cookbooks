@@ -1,12 +1,12 @@
 #
-# Cookbook Name:: colormunki_photo
+# Cookbook Name:: xrite_colormunki_photo
 # Recipe:: mac
 #
 # Copyright 2013, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-dmg_package "BootChamp" do
+dmg_package "X-Rite ColorMunki Photo" do
   app "ColormunkiPhoto"
   volumes_dir "ColormunkiPhoto-1.1.1"
   dmg_name "ColormunkiPhoto-1.1.1"

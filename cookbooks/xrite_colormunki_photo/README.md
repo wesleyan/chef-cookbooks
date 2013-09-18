@@ -1,6 +1,6 @@
 colormunki_photo Cookbook
 ==========================
-Installs Colormunki Photo on OS X.
+Installs X-Rite ColorMunki Photo on OS X.
 
 Requirements
 ------------
@@ -37,4 +37,4 @@ Contributing
 
 License and Authors
 -------------------
-Robert Christensen <rchristensen@wesleyan.edu> 
+Max Dietz <mdietz@wesleyan.edu> 
