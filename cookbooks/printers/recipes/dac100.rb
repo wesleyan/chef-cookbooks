@@ -9,7 +9,7 @@
 # Assumes the mac.rb was already executed
 
 # copies color/luster preferences
-cookbook_file "/Library/ColorSync/Profiles/Displays/Mac_Sept 17_D65.icc" do
+cookbook_file "/Library/ColorSync/Profiles/Displays/iMac_Sept 17_D65.icc" do
   mode 0644
 end
 
