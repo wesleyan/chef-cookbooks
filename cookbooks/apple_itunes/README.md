@@ -1,5 +1,5 @@
 apple_itunes Cookbook
-====================
+=====================
 This cookbook installs Apple iTunes on OS X.
 
 Requirements
@@ -8,6 +8,7 @@ Requirements
 - `OS X` - 10.6.8 or greater.
 
 #### packages
+- `dmg` - apple_itunes needs dmg to install.
 - `oracle_java` - apple_itunes needs at least Java SE6 to run.
 
 Attributes
@@ -40,3 +41,4 @@ Contributing
 
 License and Authors
 -------------------
+Robert Christensen <rchristensen@wesleyan.edu>
