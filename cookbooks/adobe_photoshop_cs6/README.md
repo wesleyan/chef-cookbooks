@@ -1,5 +1,5 @@
 adobe_photoshop_cs6 Cookbook
-====================
+============================
 This cookbook installs Adobe Photoshop CS6 on OS X and Windows.
 
 Requirements
