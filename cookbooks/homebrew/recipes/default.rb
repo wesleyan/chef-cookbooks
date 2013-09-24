@@ -31,8 +31,12 @@ end
 
 execute "update homebrew from github" do
   user node['homebrew']['user']
-  command "/usr/local/bin/brew update || true"
-  command "/usr/local/bin/brew upgrade || true"
+  command "/usr/local/bin/brew upgrade;true"
+end
+
+execute "upgrade homebrew from github" do
+  user node['homebrew']['user']
+  command "/usr/local/bin/brew upgrade;true"
 end
 
 execute "clear taps" do

@@ -1,22 +1,11 @@
-
   def get_users_list
-    users = `dscacheutil -q user`.split("\n\n")
+    users = `ls -1 /Users | grep -v Shared`.split("\n")
     users_list = Array.new
     for user in users do
-      userObject = Dock::MacUser.new
-      lines = user.split("\n")
-   
-      for line in lines 
-        if line.split(": ")[0] == "uid"
-          userObject.uid = line.split(": ")[1].to_i
-       end
-       if(line.split(": ")[0] == "name")
-         userObject.username = line.split(": ")[1]
-       end
-       if(line.split(": ")[0] == "dir")
-         userObject.user_dir = line.split(": ")[1]
-       end
-      end
+      userObject = UserModule::MacUser.new
+      userObject.uid = `id -u -r #{user}`.to_i
+      userObject.username = user
+      userObject.user_dir = "/Users/#{user}"
       users_list.push(userObject)
     end
     users_list
@@ -65,7 +54,9 @@
     #  execute "chown #{user.username}:staff /tmp/com.apple.dock.plist"
       execute "chmod 600 /tmp/com.apple.dock.plist"
       execute "cp /tmp/com.apple.dock.plist /Users/#{user.username}/Library/Preferences/com.apple.dock.plist" 
-      execute "chown #{user.username}:staff /Users/#{user.username}/Library/Preferences/com.apple.dock.plist"
+      execute "chown #{user.username}:staff /Users/#{user.username}/Library/Preferences/com.apple.dock.plist" do
+        returns [0,1]
+      end
     end
   end
 
