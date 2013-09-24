@@ -39,6 +39,7 @@ action :install do
       path dmg_file
       source new_resource.source
       checksum new_resource.checksum if new_resource.checksum
+      backup false
       only_if { new_resource.source }
     end
 
