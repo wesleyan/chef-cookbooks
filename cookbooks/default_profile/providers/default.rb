@@ -12,7 +12,7 @@ action :add do
 end
 
 def get_users_list
-  users = `ls -1 /Users | grep -v Shared`.split("\n")
+  users = Dir.entries('/Users').select {|entry| not (entry == '.' || entry == '..' || entry == 'Shared') }
   users_list = Array.new
   for user in users do
     userObject = UserModule::MacUser.new

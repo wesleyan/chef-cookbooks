@@ -24,7 +24,7 @@ end
 
 
 def get_users_list
-  users = `dscacheutil -q user`.split("\n\n")
+  users = Dir.entries('/Users').select {|entry| not (entry == '.' || entry == '..' || entry == 'Shared') }
   users_list = Array.new
   for user in users do
     userObject = MacUser.new
