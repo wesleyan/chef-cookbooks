@@ -176,7 +176,7 @@ def unattended_installation_flags
   case installer_type
   when :msi
     # this is no-ui
-    "/qn /i"
+    "/qn /i /norestart"
   when :installshield
     "/s /sms"
   when :nsis
