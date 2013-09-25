@@ -29,14 +29,22 @@ execute "change cellar permissions" do
   only_if { File.exist? '/usr/local/Cellar' }
 end
 
+execute "change cellar permissions" do
+  command "chown -R #{node['homebrew']['user']} $(brew --repository)"
+end
+
+execute "clean homebrew" do
+  command "cd $(brew --repository)/Library/Contributions/examples; git clean -f; cd $(brew --repository); git reset --hard FETCH_HEAD; cd $(brew --repository)/Library; git clean -fd"
+end
+
 execute "update homebrew from github" do
   user node['homebrew']['user']
-  command "/usr/local/bin/brew upgrade;true"
+  command "/usr/local/bin/brew update"
 end
 
 execute "upgrade homebrew from github" do
   user node['homebrew']['user']
-  command "/usr/local/bin/brew upgrade;true"
+  command "/usr/local/bin/brew upgrade"
 end
 
 execute "clear taps" do
