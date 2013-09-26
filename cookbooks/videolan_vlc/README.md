@@ -1,5 +1,5 @@
 videolan_vlc Cookbook
-====================
+=====================
 This cookbook installs VideoLAN's VLC media player on both OS X and Windows
 
 Requirements

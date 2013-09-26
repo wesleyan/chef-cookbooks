@@ -9,12 +9,12 @@
 # Install package
 dmg_package "VideoLAN VLC" do
   app "VLC"
-  volumes_dir "vlc-2.0.8"
-  dmg_name "vlc-2.0.8-intel64"
-  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.0.8-intel64.dmg"
-  checksum "6f9a8a6a5dbb54a86ea7d70c748b9157ad4707bc58204cc049331dede2eea6ea"
+  volumes_dir "vlc-2.1.0"
+  dmg_name "vlc-2.1.0"
+  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.1.0.dmg"
+  checksum "0f837df3fa6f86e3253dfba8e49e15d29fdc4e769853cbe0aeb28a97ad9ba2b2"
   package_id "com.videolan.vlc"
-  version "2.0.8"
+  version "2.1.0"
   action :install
   type "app"
 end
