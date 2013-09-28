@@ -1,31 +1,30 @@
-apple_xcode CHANGELOG
-=====================
+# CHANGELOG for apple_xcode
 
-This file is used to list changes made in each version of the apple_xcode cookbook.
+This file is used to list changes made in each version of xcode.
 
-0.4.0
------
-- [rchristensen] - Updated to 4.6.3
-- [mdietz] - Now uses a custom script to accept the license, as plist varied in success from version to version.
-- [rchristensen] - Updated metadata and readme formats
+## 0.4.0:
 
-0.3.1
------
-- [rchristensen] - Updated Xcode to 4.6.1
-- [mdietz] - Ditched Composer package, recipe now seeds plist file for automated license acceptance
+* Updated to 4.6.3
+* Now uses a custom script to accept the license, as plist varied in success from version to version.
+* Updated metadata and readme formats
 
-0.3.0
------
-- [rchristensen] - Updated Xcode to 4.6 and Command Line Tools to January 2013
-- [rchristensen] - Xcode now comes with the EULA accepted
-- [rchristensen] - Updated package through Composer instead of .app from Apple directly
+## 0.3.1:
 
-0.2.0
------
-- [rchristensen] - Updated Xcode and Command Line Tools to 4.5.2 / November 2012
-- [rchristensen] - Included a silent acceptance of Xcode EULA
+* Updated Xcode to 4.6.1
+* Ditched Composer package, recipe now seeds plist file for automated license acceptance
 
-0.1.0
------
-- [rchristensen] - Initial release of xcode cookbook
-- [rchristensen] - Current version 4.5.1 / October 2012
+## 0.3.0
+
+* Updated Xcode to 4.6 and Command Line Tools to January 2013
+* Xcode now comes with the EULA accepted
+* Updated package through Composer instead of .app from Apple directly
+
+## 0.2.0
+
+* Updated Xcode and Command Line Tools to 4.5.2 / November 2012
+* Included a silent acceptance of Xcode EULA
+
+## 0.1.0
+
+* Initial release of xcode cookbook
+* Current version: 4.5.1 / October 2012
