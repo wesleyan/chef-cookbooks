@@ -19,8 +19,8 @@ dmg_package "ARTstor OIV" do
   version "3.1.3"
 end
 
-dock_add "/Applications/OIV.app" do
-  all_users true
-  group "OIV"
-  only_if { node['oiv']['dock'] }
-end
+#dock_add "/Applications/OIV.app" do
+#  all_users true
+#  group "OIV"
+#  only_if { node['oiv']['dock'] }
+#end
