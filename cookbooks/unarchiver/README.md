@@ -1,5 +1,5 @@
 unarchiver Cookbook
-====================
+===================
 This cookbook installs The Unarchiver and configures it's file associations on OS X.
 
 Requirements
