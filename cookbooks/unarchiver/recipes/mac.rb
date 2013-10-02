@@ -11,7 +11,7 @@ dmg_package "The Unarchiver" do
   volumes_dir "The Unarchiver"
   dmg_name "the_unarchiver-3.9"
   source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.9.dmg"
-  checksum "1bd6bc37f637884b5e98c3d63646aba8bc00dd3dbd7956175dad65baa9ffa91f "
+  checksum "1bd6bc37f637884b5e98c3d63646aba8bc00dd3dbd7956175dad65baa9ffa91f"
   action :install
   type "app"
   package_id "cx.c3.theunarchiver"
