@@ -1,5 +1,5 @@
 google_chrome Cookbook
-====================
+======================
 This cookbook installs Google Chrome on OS X and Windows.
 
 Requirements
@@ -22,6 +22,19 @@ Just include `google_chrome:` in your node's `run_list`:
   "name":"my_node",
   "run_list": [
     "recipe[google_chrome::mac]"
+  ]
+}
+```
+
+#### google_chrome::win
+
+Just include `google_chrome:` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[google_chrome::win]"
   ]
 }
 ```

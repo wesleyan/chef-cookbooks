@@ -10,13 +10,13 @@
 dmg_package "Google Chrome" do
   app "Google Chrome"
   volumes_dir "Google Chrome"
-  dmg_name "googlechrome-29.0.1547.57"
-  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-29.0.1547.57.dmg"
-  checksum "e6f3d5bbc9f59dcd18fd068030dce1c3a66b99e0736c1630c3fd7cf1582afbc3"
+  dmg_name "googlechrome-30.0.1599.66"
+  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-30.0.1599.66.dmg"
+  checksum "859179428497692b9ebe875ce8aee413e1346e53292ae99ef875c0ee586c8a22"
   action :install
   type "app"
   package_id "com.google.chrome"
-  version "29.0.154757"
+  version "30.0.159966"
 end
 
 # Add shortcut to dock
