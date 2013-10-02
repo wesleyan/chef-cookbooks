@@ -19,90 +19,11 @@ dmg_package "R" do
   version "3.0.2"
 end
 
-# Install extra packages using R's commandline package installer
-gnu_r_packages "RCurl" do
-  action :osx_install
-end
-gnu_r_packages "twitteR" do
-  action :osx_install
-end
-gnu_r_packages "doBy" do
-  action :osx_install
-end
-gnu_r_packages "mvtnorm" do
-  action :osx_install
-end
-gnu_r_packages "plyr" do
-  action :osx_install
-end
-gnu_r_packages "stringr" do
-  action :osx_install
-end
-gnu_r_packages "ggplot2" do
-  action :osx_install
-end
-gnu_r_packages "XML" do
-  action :osx_install
-end
-gnu_r_packages "tm" do
-  action :osx_install
-end
-gnu_r_packages "wordcloud" do
-  action :osx_install
-end
-gnu_r_packages "lme4" do
-  action :osx_install
-end
-gnu_r_packages "nlme" do
-  action :osx_install
-end
-gnu_r_packages "e1071" do
-  action :osx_install
-end
-gnu_r_packages "nnet" do
-  action :osx_install
-end
-gnu_r_packages "descr" do
-  action :osx_install
-end
-gnu_r_packages "reshape" do
-  action :osx_install
-end
-gnu_r_packages "foreign" do
-  action :osx_install
-end
-gnu_r_packages "class" do
-  action :osx_install
-end
-gnu_r_packages "Ecdat" do
-  action :osx_install
-end
-gnu_r_packages "Psych" do
-  action :osx_install
-end
-gnu_r_packages "DAAG" do
-  action :osx_install
-end
-gnu_r_packages "lmtest" do
-  action :osx_install
-end
-gnu_r_packages "perturb" do
-  action :osx_install
-end
-gnu_r_packages "MEMSS" do
-  action :osx_install
-end
-gnu_r_packages "mlmRev" do
-  action :osx_install
-end
-gnu_r_packages "car" do
-  action :osx_install
-end
-gnu_r_packages "ape" do
-  action :osx_install
-end
-gnu_r_packages "ade4" do
-  action :osx_install
+%w{ RCurl twitteR doBy mvtnorm plyr stringr ggplot2 XML tm wordcloud lme4 nlme e1071 nnet
+  descr reshape foreign class Ecdat psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
+  gnu_r_packages r_pkg do
+    action :osx_install
+  end
 end
 
 # Update our installed packages, if available.
