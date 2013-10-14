@@ -1,7 +1,7 @@
-name             'autodesk_maya'
+name             '9bis_kitty'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'
-description      'Installs/Configures autodesk_maya'
+description      'Installs/Configures 9bis_kitty'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'

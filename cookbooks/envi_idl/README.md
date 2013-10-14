@@ -1,6 +1,6 @@
-9bis_kitty Cookbook
+envi_idl Cookbook
 =========================
-This cookbook installs KiTTY, an SSH/Telnet Agent.
+This cookbook installs ENVI IDL.
 
 Requirements
 ------------
@@ -12,15 +12,15 @@ Attributes
 
 Usage
 -----
-#### 9bis_kitty::win
+#### envi_idl::win
 
-Just include `9bis_kitty::win` in your node's `run_list`:
+Just include `envi_idl::win` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[9bis_kitty::win]"
+    "recipe[envi_idl::win]"
   ]
 }
 ```

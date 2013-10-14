@@ -1,6 +1,6 @@
-9bis_kitty Cookbook
+autodesk_maya Cookbook
 =========================
-This cookbook installs KiTTY, an SSH/Telnet Agent.
+This cookbook installs Maya.
 
 Requirements
 ------------
@@ -12,15 +12,15 @@ Attributes
 
 Usage
 -----
-#### 9bis_kitty::win
+#### autodesk_maya::win
 
-Just include `9bis_kitty::win` in your node's `run_list`:
+Just include `autodesk_maya::win` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[9bis_kitty::win]"
+    "recipe[autodesk_maya::win]"
   ]
 }
 ```
