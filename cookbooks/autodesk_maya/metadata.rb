@@ -1,8 +1,7 @@
+name             '9bis_kitty'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'
-description      'Installs R, a statistics-oriented programming language'
+description      'Installs/Configures 9bis_kitty'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.0'
-depends			 'dmg'
-depends			 'windows'
+version          '0.1.0'
