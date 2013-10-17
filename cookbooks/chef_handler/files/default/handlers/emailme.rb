@@ -22,6 +22,20 @@ module Wesleyan
 			end
 		end
 
+		def get_users
+  			users = Dir.entries('/Users').select {|entry| not (entry == '.' || entry == '..' || entry == 'Shared') }
+  			users_list = Array.new
+  			for user in users do
+    			userObject = {}
+    			userObject['uid'] = `id -u -r #{user}`.to_i
+    			userObject['username'] = user
+    			userObject['user_dir'] = "/Users/#{user}"
+    			users_list.push(userObject)
+  			end
+  			users_list
+		end
+
+
 		def report
 			if run_status.failed?
 				name = node.name
@@ -43,7 +57,7 @@ module Wesleyan
 					f.puts "Updated Resources:"
 					f.puts updated_resources.join("\n")
 				end
-				get_users_list.each do |user|
+				get_users.each do |user|
     				if user['uid'] >= 500
     					::File.open("#{user['user_dir']}/Desktop/Revision.txt","w") do |f|
     						f.puts node.name
@@ -57,17 +71,4 @@ module Wesleyan
         	end
       	end
     end
-end
-
-def get_users_list
-  users = Dir.entries('/Users').select {|entry| not (entry == '.' || entry == '..' || entry == 'Shared') }
-  users_list = Array.new
-  for user in users do
-    userObject = {}
-    userObject['uid'] = `id -u -r #{user}`.to_i
-    userObject['username'] = user
-    userObject['user_dir'] = "/Users/#{user}"
-    users_list.push(userObject)
-  end
-  users_list
 end
