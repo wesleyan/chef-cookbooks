@@ -27,5 +27,5 @@ windows_shortcut "Add KiTTY to Start Menu" do
 	name 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\KiTTY\KiTTY.lnk'
 	description "Launches KiTTY, an SSH/Telnet Agent for Windows"
 	cwd 'C:\Program Files (x86)\KiTTY\\'
-	target 'kitty.exe'
+	target 'C:\Program Files (x86)\KiTTY\kitty.exe'
 end
