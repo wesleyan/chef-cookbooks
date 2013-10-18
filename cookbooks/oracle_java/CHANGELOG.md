@@ -5,9 +5,9 @@ This file is used to list changes made in each version of the oracle_java cookbo
 
 0.5.1
 -----
-- [rchristensen] - Updated Oracle Java to 7.0u45 on Windows & OS X
+- [rchristensen] - Updated Oracle Java to 7.0u45 on Windows & OS X.
 - [rchristensen] - Updated Apple Java to 2013-005
-- [rchristensen] - Added dependancies to METADATA
+- [rchristensen] - Added dependencies to METADATA.
 
 0.5.0
 -----
