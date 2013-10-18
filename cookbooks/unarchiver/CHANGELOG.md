@@ -3,6 +3,9 @@ unarchiver CHANGELOG
 
 This file is used to list changes made in each version of the unarchiver cookbook.
 
+0.6.1
+-----
+- [rchristensen] - Updated app to version 3.9.1
 
 0.6.0
 -----
