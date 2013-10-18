@@ -3,6 +3,11 @@ apple_osx_updates CHANGELOG
 
 This file is used to list changes made in each version of apple_osx_updates
 
+0.4.1
+-----
+- [rchristensen] - Added 10.8.5 Supplemental update.
+- [rchristensen] - Added dependencies to METADATA.
+
 0.4.0
 -----
 - [rchristensen] - Updated to 10.8.5 Combo Updater.
