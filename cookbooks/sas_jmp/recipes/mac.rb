@@ -19,7 +19,9 @@ dmg_package "SAS JMP" do
 end
 
 # Insert JMP license file within the .app container.
-cookbook_file "/Applications/JMP 10.app/Contents/Resources/JMP.per" do
+cookbook_file "osxJMP.per" do
+  path "/Applications/JMP 10.app/Contents/Resources/JMP.per"
+  backup false
   mode 0644
 end
 
