@@ -9,13 +9,13 @@
 dmg_package "The Unarchiver" do
   app "The Unarchiver"
   volumes_dir "The Unarchiver"
-  dmg_name "the_unarchiver-3.9"
-  source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.9.dmg"
-  checksum "1bd6bc37f637884b5e98c3d63646aba8bc00dd3dbd7956175dad65baa9ffa91f"
+  dmg_name "the_unarchiver-3.9.1"
+  source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.9.1.dmg"
+  checksum "d4c25801da1a5751be555ef0815c6dac84bcd9f8cb846057899a2e27e05725e9"
   action :install
   type "app"
   package_id "cx.c3.theunarchiver"
-  version "3.9.0"
+  version "3.9.1"
 end
 
 # Set the Unarchiver as the default application for most archive files.

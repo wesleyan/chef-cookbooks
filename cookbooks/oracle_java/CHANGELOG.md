@@ -3,6 +3,12 @@ oracle_java CHANGELOG
 
 This file is used to list changes made in each version of the oracle_java cookbook.
 
+0.5.1
+-----
+- [rchristensen] - Updated Oracle Java to 7.0u45 on Windows & OS X.
+- [rchristensen] - Updated Apple Java to 2013-005
+- [rchristensen] - Added dependencies to METADATA.
+
 0.5.0
 -----
 - [rchristensen] - Update Oracle Java to 7.0u40

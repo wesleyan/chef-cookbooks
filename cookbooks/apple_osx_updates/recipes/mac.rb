@@ -20,6 +20,19 @@ dmg_package "OS X Update" do
   restart true
 end
 
+# Install 10.8.5 Supplemental update.
+dmg_package "OS X Supplemental Update" do
+  app "OSXUpd10.8.5Supp"
+  volumes_dir "OS X v10.8.5 Supplemental Update"
+  dmg_name "OSXUpd10.8.5Supp"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_osx_updates/OSXUpd10.8.5Supp.dmg"
+  checksum "8f84c8d77207b16568932503f4d28437422ad686e54fc37cbede4227753a3fd5"
+  action :install
+  type "pkg"
+  package_id "com.apple.pkg.update.os.10.8.5.supplemental"
+  restart true
+end
+
 # Install current security update package, not needed right now as 2013-004 is rolled into the 10.8.5 updater.
 #dmg_package "OS X Security Update" do
 #  app "SecUpd2013-003"

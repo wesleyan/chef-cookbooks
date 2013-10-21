@@ -9,11 +9,11 @@
 dmg_package "iTunes" do
   app "Install iTunes"
   volumes_dir "iTunes"
-  dmg_name "iTunes11.1"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_itunes/iTunes11.1.dmg"
-  checksum "3f25bf6449c2c29883d6b0891b5d977ff2cf82fb778e548ced09939d53f07ab9"
+  dmg_name "iTunes11.1.1"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_itunes/iTunes11.1.1.dmg"
+  checksum "1a6ebb51e58440dc97edf69081b610596fb03bece520542868a39af5072b8505"
   action :install
   type "pkg"
   package_id "com.apple.pkg.iTunesX"
-  version "11.1.0"
+  version "11.1.1"
 end
