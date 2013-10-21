@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: statacorp_stata
-# Recipe:: mac
+# Recipe:: win
 #
 # Copyright 2013, Wesleyan University
 #
