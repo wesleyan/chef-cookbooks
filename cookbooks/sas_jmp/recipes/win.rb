@@ -27,4 +27,7 @@ windows_package "SAS JMP" do
 end
 
 # Insert JMP license file
-cookbook_file 'C:\Program Files\SAS\JMP\10\JMP.per'
+cookbook_file 'winJMP.per' do
+  path 'C:\Program Files\SAS\JMP\10\JMP.per'
+  backup false
+end
