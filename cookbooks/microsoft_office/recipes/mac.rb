@@ -20,16 +20,16 @@ dmg_package "Microsoft Office 2011 SP3" do
 end
 
 # Install latest update.
-dmg_package "Update Office 2011 2011" do
-  app "Office 2011 14.3.7 Update"
-  volumes_dir "Microsoft Office 2011 14.3.7 Update"
-  dmg_name "Office2011-1437Update_EN-US"
-  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1437Update_EN-US.dmg"
-  checksum "211025c03c43fa02884519b7245d1ea52bc783f16233bf11510baa8faaf4edeb"
+dmg_package "Update Office 2011" do
+  app "Office 2011 14.3.8 Update"
+  volumes_dir "Microsoft Office 2011 14.3.8 Update"
+  dmg_name "Office2011-1438Update_EN-US"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1438Update_EN-US.dmg"
+  checksum "16491be5922a23f3588c567e3a8cceaf13b279358defae8b22923e5edd6f9077"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
-  version "14.3.7"
+  version "14.3.8"
 end
 
 # Install customized plist files to surpress first-run dialogues

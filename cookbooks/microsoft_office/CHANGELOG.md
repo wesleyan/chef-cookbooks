@@ -3,6 +3,12 @@ microsoft_office CHANGELOG
 
 This file is used to list changes made in each version of the microsoft_office cookbook.
 
+0.6.0
+-----
+- [rchristensen] - Updated Office 2011 to 14.3.8
+- [rchristensen] - Brought METADATA up to code.
+- [mdietz] - Rewrote Windows recipe, now installs pre-activated Office 2013.
+
 0.5.0
 -----
 - [mdietz] - Updated Office 2011 to 14.3.7
