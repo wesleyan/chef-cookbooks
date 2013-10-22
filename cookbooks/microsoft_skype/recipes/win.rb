@@ -9,6 +9,6 @@
 # Install our package
 windows_package "Microsoft Skype" do
   source "http://ims-chef.wesleyan.edu/windows/microsoft_skype/SkypeSetupFull-6.7.0.102.exe"
-  checksum "da3a63e760a9b95e66b18aa80213ece021b53123c103b28c4bc54948033b9db4"
-  version "6.7.0102"
+  checksum "31ba35d9287c65b153eb589e73236e2a6bb8ca58a81330544f3bc8fc61819c08"
+  version "6.9.0"
 end
