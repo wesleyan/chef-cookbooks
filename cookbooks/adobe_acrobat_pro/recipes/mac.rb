@@ -31,23 +31,23 @@ dmg_package "Adobe Acrobat Update" do
 end
 
 # Download icon
-#cookbook_file "/tmp/adobe.png"
+cookbook_file "/tmp/adobe.png"
 
-#dock_add "Adobe Creative Suite 6" do
-#  all_users true
-#  action :folder_create
-#  show_as "list"
-#  display_as "folder"
-#  arrangement "name"
-#  icon "/tmp/adobe.png"
-#end
+dock_add "Adobe Creative Suite 6" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+  icon "/tmp/adobe.png"
+end
 
 # Add to dock
-#dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
-#  all_users true
-#  group "Adobe Creative Suite 6"
-#  restart true
-#end
+dock_add "/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app" do
+  all_users true
+  group "Adobe Creative Suite 6"
+  restart true
+end
 
 # Keep Preview as the default viewer for PDFs
 launch_association_set_file_handler "com.adobe.pdf" do

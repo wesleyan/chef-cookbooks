@@ -16,3 +16,18 @@ dmg_package "SH896.dmg" do
   type "pkg"
   package_id "com.tomErbe.soundhack0.SoundHack"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/SoundHack.app" do
+  all_users true
+  group "Center for the Arts"
+end

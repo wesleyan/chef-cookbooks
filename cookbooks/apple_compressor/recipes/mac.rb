@@ -15,3 +15,18 @@ dmg_package "compressor-4.0.7.dmg" do
   action :install
   type "app"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/Compressor.app" do
+  all_users true
+  group "Center for the Arts"
+end
