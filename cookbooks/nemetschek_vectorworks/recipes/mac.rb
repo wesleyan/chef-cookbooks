@@ -20,3 +20,18 @@ dmg_package "Vectorworks" do
   version "2013.0.0"
   not_if { `stat -f '%u' /dev/console`.to_i == 0 } # /dev/console reflects the current owner of the login window, which is only set to zero when no one is logged in
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Vectorworks2013/Vectorworks 2013.app" do
+  all_users true
+  group "Social Sciences"
+end

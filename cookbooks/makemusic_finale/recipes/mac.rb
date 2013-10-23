@@ -32,3 +32,18 @@ dmg_package "Finale 2012c Update" do
   package_id "com.makemusic.pkg.Finale2012.AppCoreUpdater2012c.r13.3"
   version "2012.3.13"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/Finale 2012.app" do
+  all_users true
+  group "Center for the Arts"
+end
