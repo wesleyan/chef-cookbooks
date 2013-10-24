@@ -13,6 +13,9 @@ dmg_package "QuarkXPress" do
 	version "9.5.1"
 end
 
+execute "Fix Quark Permissions" do
+   command "chmod -R g+r '/Applications/QuarkXPress 9/'"
+end
 
 #dmg_package "QuarkXPress" do
 #	app "QuarkXPress 9 Updater"
@@ -26,3 +29,17 @@ end
 #	version "9.5.11"
 #end
 
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/QuarkXPress 9/QuarkXPress.app" do
+  all_users true
+  group "Center for the Arts"
+end

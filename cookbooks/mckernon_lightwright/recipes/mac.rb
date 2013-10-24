@@ -35,9 +35,27 @@ cookbook_file "/Users/Shared/Lightwright/Lightwright 5 Registration.regi" do
 	mode 00766
 end
 
+# Create preferences directory
 directory "/System/Library/User Template/English.lproj/Library/Preferences/Lightwright" do
   mode 00777
   action :create
 end
 
+# Seed preferences file
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Lightwright/Lightwright 5 Settings.pref"
+
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Lightwright 5/Lightwright 5.app" do
+  all_users true
+  group "Center for the Arts"
+end

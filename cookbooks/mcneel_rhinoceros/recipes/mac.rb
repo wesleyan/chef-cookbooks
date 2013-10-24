@@ -18,3 +18,17 @@ dmg_package "McNeel Rhinoceros" do
   version "5.0.0815"
 end
 
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Rhinoceros.app" do
+  all_users true
+  group "Center for the Arts"
+end
