@@ -1,5 +1,5 @@
 adobe_flash_player CHANGELOG
-=========================
+============================
 
 This file is used to list changes made in each version of the adobe_flash_player cookbook.
 
