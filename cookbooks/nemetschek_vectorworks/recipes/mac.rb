@@ -13,11 +13,11 @@ dmg_package "Vectorworks" do
   volumes_dir "Vectorworks 2013"
   dmg_name "vectorworks_2013_sp4_classlab"
   source "http://ims-chef.wesleyan.edu/os_x/nemetschek_vectorworks/vectorworks_2013_sp4-classlab.dmg"
-  checksum "268f7ffecb0a84b8aa108bca864b9d592619ae0e536eaa60b62bc45ae4140020"
+  checksum "84ebdcace6017c2d36db8463fd0d02f09ae141d7e6a1f918cce1119067508862"
   action :install
   type "pkg"
   package_id "com.nemetschek.vectorworks"
-  version "2013.0.4"
+  version "2013.0.5"
 end
 
 # Create dock folder, if it does not exist
