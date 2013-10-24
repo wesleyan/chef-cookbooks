@@ -6,31 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install HP drivers
-dmg_package "HP Printer Drivers" do
-  app "HewlettPackardPrinterDrivers"
-  volumes_dir "HewlettPackard Printer Drivers"
-  dmg_name "HPPrinterDrivers2.14"
-  source "http://ims-chef.wesleyan.edu/os_x/hp_printer/HPPrinterDrivers2.14.dmg"
-  checksum "c14f44c8e009954870ae90fdec63fea91ea1716f06a9fefc5a2cbe139c3dc9d2"
-  action :install
-  type "pkg"
-  package_id "com.apple.pkg.HewlettPackardPrinterDrivers"
-  version "2.14.0"
-end
-
-# Install Xerox drivers
-  dmg_package "Xerox Printer Drivers" do
-  app "XeroxPrinterDrivers"
-  volumes_dir "Xerox Printer Drivers"
-  dmg_name "XeroxPrinterDrivers2.3.dmg"
-  source "http://ims-chef.wesleyan.edu/os_x/xerox_printer/XeroxPrinterDrivers2.3.dmg"
-  checksum "36c9e37bc1c7d5c3edc4273c28e6e19628de2faf2e974a0ef6fbd0fb0c70c80e"
-  action :install
-  type "pkg"
-  package_id "com.apple.pkg.XeroxPrinterDrivers"
-  version "2.3.0"
-end
 
 # Install Epson drivers
 dmg_package "EPSON Printer Drivers" do
@@ -83,25 +58,25 @@ dmg_package "Epson 9800 Driver" do
 end
 
 printers "ArtLib-HP4105" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4100 Series.gz"
+  action :remove
 end
 printers "Allb204-HP4015-BW" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
+  action :remove
 end
 printers "awks112-bw-hp5100n" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5100 Series.gz"
+  action :remove
 end
 printers "AWKS112-color-HP5550" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet 5550.gz"
+  action :remove
 end
 printers "CFA-HP5200-BW" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 5200 Series.gz"
+  action :remove
 end
 printers "cfalab-xerox7760gx-color" do
-  model "/Library/Printers/PPDs/Contents/Resources/Xerox Phaser 7760GX.gz"
+  action :remove
 end
 printers "Fisk-HP4015BW" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
+  action :remove
 end
 printers "HAS-HP4015BW" do
   action :remove
@@ -110,7 +85,7 @@ printers "HASLab_color_HP3800" do
   action :remove
 end
 printers "LRC-HP4015BW2" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
+  action :remove
 end
 printers "PAC-HP4015BW2" do
   action :remove
@@ -128,16 +103,16 @@ printers "QAC-HP4015-BW" do
   action :remove
 end
 printers "SCIC-HP4200" do
-  model "/Library/Printers/PPDs/Contents/Resources/hp LaserJet 4200 Series.gz"
+  action :remove
 end
 printers "ST-HP4015-BW2" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
+  action :remove
 end
 printers "ST-HP4015BW" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP LaserJet 4000 Series.gz"
+  action :remove
 end
 printers "STLab-color-HPCP3505" do
-  model "/Library/Printers/PPDs/Contents/Resources/HP Color LaserJet CP3505.gz"
+  action :remove
 end
 printers "SciLi-Color-HPCP4520" do
   action :remove
@@ -145,9 +120,8 @@ end
 printers "SciLi-hpm602bw" do
   action :remove
 end
-
 printers "UsdanLobby-RicohBW" do
-  model "drv:///sample.drv/laserjet.ppd"
+  action :remove
 end
 
 printers "Printers" do
