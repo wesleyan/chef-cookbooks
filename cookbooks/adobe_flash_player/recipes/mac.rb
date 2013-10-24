@@ -8,15 +8,15 @@
 #
 # Install our package, extracted from Adobe's custom installer .app.
 dmg_package "Adobe Flash Player" do
-  app "Adobe Flash Player"
-  volumes_dir "Adobe Flash Player"
-  dmg_name "adobe_flash_player-11.8.800.94"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.8.800.94.dmg"
-  checksum "d16f3ae951731b3d7a3bc900d20818557ef5cb8fe5819c97c3995df3ab08d90"
+  app "Install Adobe Flash Player"
+  volumes_dir "Flash Player"
+  dmg_name "adobe_flash_player-11.9.900.117"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-11.9.900.117.dmg"
+  checksum "92e1885970522da6b9fd67b60aa55406c1e3f0eae20ed0550614d02e0fa671be"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "11.8.80094"
+  version "11.9.900117"
 end
 
 # Create directory for mms.cfg
