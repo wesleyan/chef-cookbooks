@@ -14,7 +14,7 @@ dmg_package "QuarkXPress" do
 end
 
 execute "Fix Quark Permissions" do
-   command "chmod -R g+r '/Applications/QuarkXPress 9/'"
+   command "chmod -R a+rx '/Applications/QuarkXPress 9/'"
 end
 
 #dmg_package "QuarkXPress" do
