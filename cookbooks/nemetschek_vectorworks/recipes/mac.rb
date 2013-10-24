@@ -7,18 +7,17 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# Vectorworks source installer is a crazy Python-based GUI installer, it supports silent installation which this recipe previously supported but it requires a logged in user which is dumb.  So, we've repackaged it with Composer and included the SP4 update.
 dmg_package "Vectorworks" do
-  options "-q -u 'Information Technology Services' -c 'Wesleyan University' -d /Applications/Vectorworks2013 -s C8XUST-9ZA37T-WMZFZS-B266DF"
-  app "InstallVectorworks.app/Contents/MacOS/InstallVectorworks"
-  volumes_dir "Vectorworks"
-  dmg_name "Vectorworks2013"
-  source "http://ims-chef.wesleyan.edu/os_x/nemetschek_vectorworks/Vectorworks2013.dmg"
-  checksum "bc941131ec7f0d0ebe88c0891dd8e2f78e96f8bd72b574f32f8f99bc0ef57dd1"
+  app "Vectorworks 2013"
+  volumes_dir "Vectorworks 2013"
+  dmg_name "vectorworks_2013_sp4_classlab"
+  source "http://ims-chef.wesleyan.edu/os_x/nemetschek_vectorworks/vectorworks_2013_sp4-classlab.dmg"
+  checksum "268f7ffecb0a84b8aa108bca864b9d592619ae0e536eaa60b62bc45ae4140020"
   action :install
-  type "custom"
+  type "pkg"
   package_id "com.nemetschek.vectorworks"
-  version "2013.0.0"
-  not_if { `stat -f '%u' /dev/console`.to_i == 0 } # /dev/console reflects the current owner of the login window, which is only set to zero when no one is logged in
+  version "2013.0.4"
 end
 
 # Create dock folder, if it does not exist
