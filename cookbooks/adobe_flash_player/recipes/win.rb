@@ -6,13 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
+#
 # Flash is packaged with IE in Windows 8, so the Active X installer is not needed.
-
-windows_package "Adobe Flash Player (for non-IE)" do
-  source "http://ims-chef.wesleyan.edu/windows/adobe_flash_player/install_flash_player_11_plugin.msi"
-  checksum "1291984b96927c3115740456cae008eaa660b232b13bafca8277e301f015b824"
-  version "11.8.80094"
+windows_package "Adobe Flash Player (for plugin-based browsers)" do
+  source "http://ims-chef.wesleyan.edu/windows/adobe_flash_player/adobe_flash_player-11.9.900.117.msi"
+  checksum "4f873edac6231f12545acdcf084dd0889cf65b7457444b8a9cab210aec434033"
+  version "11.9.900117"
 end
 
 # Create directory for mms.cfg

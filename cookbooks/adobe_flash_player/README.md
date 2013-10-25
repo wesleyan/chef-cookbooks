@@ -1,11 +1,12 @@
 adobe_flash_player Cookbook
-====================
-This cookbook installs Adobe Flash Player on OS X.
+===========================
+This cookbook installs Adobe Flash Player on OS X & Windows.
 
 Requirements
 ------------
 #### platform
 - `OS X` - 10.6.8 or greater.
+- `Windows` - XP or greater.
 
 Attributes
 ----------
@@ -25,6 +26,19 @@ Just include `adobe_flash_player` in your node's `run_list`:
 }
 ```
 
+#### adobe_flash_player::win
+
+Just include `adobe_flash_player` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[adobe_flash_player::win]"
+  ]
+}
+```
+
 Contributing
 ------------
 
@@ -38,3 +52,4 @@ Contributing
 License and Authors
 -------------------
 Robert Christensen <rchristensen@wesleyan.edu>
+Max Dietz <mdietz@wesleyan.edu>
