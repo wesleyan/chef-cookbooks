@@ -49,6 +49,8 @@ default_profile "com.quark.quarkxpress.9.setup.plist" do
 	cookbook 'quark_quarkxpress'
 end
 
+cookbook_file '/setup.xml'
+
 # Create dock folder, if it does not exist
 dock_add "Center for the Arts" do
   all_users true
