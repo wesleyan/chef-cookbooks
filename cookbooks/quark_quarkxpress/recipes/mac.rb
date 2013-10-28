@@ -18,6 +18,9 @@ dmg_package "QuarkXPress" do
 	package_id "com.quark.quarkxpress.installer.quarkxpress9.QuarkXPressApplication.pkg"
 end
 
+
+cookbook_file '/setup.xml'
+
 # Install latest update.
 dmg_package "QuarkXPress Update" do
 	app "QuarkXPress 9 Updater"
@@ -42,14 +45,12 @@ cookbook_file "/Applications/QuarkXPress 9/QuarkXPress.app/Contents/Resources/Qu
 	mode 00755
 end
 
-execute "chmod a+rx -R /Applications/QuarkXPress 9"
+execute "chmod -R a+rx '/Applications/QuarkXPress 9'"
 
 default_profile "com.quark.quarkxpress.9.setup.plist" do
 	path "Library/Preferences"
 	cookbook 'quark_quarkxpress'
 end
-
-cookbook_file '/setup.xml'
 
 # Create dock folder, if it does not exist
 dock_add "Center for the Arts" do
