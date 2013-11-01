@@ -10,13 +10,13 @@
 dmg_package "ESET NOD32" do
   app "esets_remote_install"
   volumes_dir "esets_remote_install"	
-  dmg_name "eset_nod32avbe-4.1.89"
-  source "http://ims-chef.wesleyan.edu/os_x/eset_nod32/eset_nod32avbe-4.1.89.dmg"
-  checksum "db6c50a76b0ca3060a69c1ffe2a0bfefd213dbbbc3846287e1b45a3b6793eac1"
+  dmg_name "eset_nod32avbe-4.1.92"
+  source "http://ims-chef.wesleyan.edu/os_x/eset_nod32/eset_nod32avbe-4.1.92.dmg"
+  checksum "d6550b4b642c71c196a3352d1ff9dd58c85ac0c4dd8454121a8f72425d6081f4"
   action :install
   type "pkg"
   package_id "com.eset.esetNod32Antivirus.pkgid.pkg"
-  version "4.1.89"
+  version "4.1.92"
 end
 
 # Configure ESET with our fancy method

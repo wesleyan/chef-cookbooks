@@ -1,3 +1,5 @@
+# These actions correspond to the setting defined in esets_setup.sh when you generate a silent installer, this way we don't need to reiterate our settings when generating an installer and can change them from version to version.
+#
 action :configure do
   system("/Applications/.esets/Contents/MacOS/esets_set  --section=global 'av_update_server=\"#{new_resource.av_update_server}\"'")
   system("/Applications/.esets/Contents/MacOS/esets_set  --section=global 'av_update_failsafe_username=\"#{new_resource.av_update_failsafe_username}\"'")
