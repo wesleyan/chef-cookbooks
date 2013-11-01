@@ -1,5 +1,5 @@
 ocsinventory_ng Cookbook
-==================
+========================
 This cookbook installs OCS Inventory NG on OS X & Windows.
 
 Requirements
