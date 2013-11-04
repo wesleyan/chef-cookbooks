@@ -117,7 +117,7 @@ end
 printers "SciLi-Color-HPCP4520" do
   action :remove
 end
-printers "SciLi-hpm602bw" do
+printers "SciLi-hpm602-bw" do
   action :remove
 end
 printers "UsdanLobby-RicohBW" do
