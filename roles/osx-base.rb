@@ -42,6 +42,7 @@ run_list  "recipe[chef_handler]",
           "recipe[videolan_vlc::mac]",
           "recipe[profile_manager::mac]",
           "recipe[system_preferences::mac]",
+          "recipe[ocsinventory_ng::mac]",
 	        "recipe[chef-client::launchd_service]",
           # Finalize 
           "recipe[finalize::mac]"
