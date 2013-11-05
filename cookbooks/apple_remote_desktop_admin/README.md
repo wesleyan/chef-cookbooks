@@ -1,5 +1,5 @@
 apple_remote_desktop_admin Cookbook
-====================
+====================================
 This cookbook installs Apple Remote Desktop Admin.
 
 Requirements
@@ -38,3 +38,4 @@ Contributing
 License and Authors
 -------------------
 Robert Christensen <rchristensen@wesleyan.edu>
+Max Dietz <mdietz@wesleyan.edu>
