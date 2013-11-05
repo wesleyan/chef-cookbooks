@@ -19,6 +19,7 @@ run_list  "recipe[chef_handler]",
           # Core system updates and applications
           "recipe[apple_osx_updates::mac]", 
           "recipe[apple_airport::mac]",
+          "recipe[apple_remote_desktop_client::mac]",
           "recipe[oracle_java::mac]", 
           "recipe[sassafras_k2::mac]",
           "recipe[eset_nod32::mac]",
