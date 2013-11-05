@@ -8,16 +8,16 @@
 #
 # 
 # Install package
-dmg_package "firefox-24.0.dmg" do
+dmg_package "firefox-25.0.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
-  dmg_name "firefox-24.0"
-  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-24.0.dmg"
-  checksum "82efcdf613fb3bc2d0926d6aeb0310a7185267a54392971ea7a07b953310370b"
+  dmg_name "firefox-25.0"
+  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-25.0.dmg"
+  checksum "f2e9339eb8d72773258ec1f1f880b0ea209645b1cda8473db04e26a1347e0f99"
   action :install
   type "app"
   package_id "org.mozilla.firefox"
-  version "24.0.0"
+  version "25.0.0"
 end
 
 # Add to dock
