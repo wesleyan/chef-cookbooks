@@ -17,7 +17,7 @@ dmg_package "Finale 2012" do
   action :install
   type "mpkg"
   package_id "com.makemusic.pkg.Finale2012.AppCore"
-  version "2012.3.10"
+#  version "2012.3.10"
 end
 
 # Install Finale updates
@@ -30,7 +30,7 @@ dmg_package "Finale 2012c Update" do
   action :install
   type "pkg"
   package_id "com.makemusic.pkg.Finale2012.AppCoreUpdater2012c.r13.3"
-  version "2012.3.13"
+#  version "2012.3.13"
 end
 
 # Create dock folder, if it does not exist
