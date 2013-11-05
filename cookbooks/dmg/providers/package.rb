@@ -92,7 +92,7 @@ action :install do
     when "mpkg", "pkg"
       # apply user supplied choices
       choices = new_resource.xml_choices
-      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR -allowUntrusted"
       if choices
         choiceHash = []
         choices.each do |choice|

@@ -32,4 +32,20 @@ dmg_package "FreeFrame plugins for Isadora" do
   version "1.2.0"
 end
 
+# Seed preferences file.
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/Isadora Prefs 1.3.0f26.izp"
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add icon to dock
+dock_add "/Applications/Isadora/IsadoraCore.app" do
+  all_users true
+  group "Center for the Arts"
+end

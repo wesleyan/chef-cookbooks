@@ -43,3 +43,18 @@ dmg_package "QuickTime Pro Codecs" do
   package_id "com.apple.pkg.ProAppsQTCodecs"
   version "1.0.2"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/Final Cut Pro.app" do
+  all_users true
+  group "Center for the Arts"
+end

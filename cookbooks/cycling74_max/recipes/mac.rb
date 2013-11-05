@@ -17,3 +17,18 @@ dmg_package "Cycling74 Max" do
   package_id "com.cycling74.Max61.pkg"
   version "6.1.3"
 end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/Max 6.1/Max.app" do
+  all_users true
+  group "Center for the Arts"
+end

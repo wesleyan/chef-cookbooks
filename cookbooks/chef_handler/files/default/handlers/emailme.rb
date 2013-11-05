@@ -62,8 +62,6 @@ module Wesleyan
     					::File.open("#{user['user_dir']}/Desktop/Revision.txt","w") do |f|
     						f.puts node.name
 							f.puts start_time
-							f.puts "Updated Resources:"
-							f.puts updated_resources.join("\n")
 						end
 						system("chmod 444 #{user['user_dir']}/Desktop/Revision.txt")
         			end

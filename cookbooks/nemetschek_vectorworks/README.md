@@ -1,5 +1,5 @@
 nemetschek_vectorworks Cookbook
-====================
+===============================
 This cookbook installs Verdiem's Surveyor power management software on OS X.
 
 Requirements

@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install base pkg
+# Install base pkg.
 dmg_package "Apple Remote Desktop Admin" do
   app "RemoteDesktopAdmin"
   volumes_dir "RemoteDesktopAdmin"
@@ -18,18 +18,19 @@ dmg_package "Apple Remote Desktop Admin" do
   package_id "com.apple.pkg.RemoteDesktopAdmin"
 end
 
-# Install update pkg
+# Install update pkg.
 dmg_package "Apple Remote Desktop Admin Update" do
-  app "RemoteDesktopAdmin361"
-  volumes_dir "Apple Remote Desktop 3.6.1 Admin Update"
-  dmg_name "RemoteDesktopAdmin361"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin361.dmg"
-  checksum "4de8f7af20cff4817ee63b179134ef354584429951a34198cef333d1dc36c024"
+  app "RemoteDesktopAdmin370"
+  volumes_dir "Apple Remote Desktop 3.7 Admin Update"
+  dmg_name "RemoteDesktopAdmin370"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin370.dmg"
+  checksum "e87fe2c90adee430711671f5eefb2020af71fc76988521c496896f1d1518cb55"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.RemoteDesktopAdmin361"
+  package_id "com.apple.pkg.RemoteDesktopAdmin370"
 end
 
+# Drop in our settings to suppress serial prompt.
 dmg_package "Remote Desktop Settings" do
   app "ARD Settings"
   volumes_dir "ARD Settings"
