@@ -37,6 +37,11 @@ execute "clean homebrew" do
   command "cd $(brew --repository)/Library/Contributions/examples; git clean -f; cd $(brew --repository); git reset --hard FETCH_HEAD; cd $(brew --repository)/Library; git clean -fd"
 end
 
+execute "brew uninstall python" do
+  user 'administrator'
+  not_if { ::File.exists? "/usr/local/Cellar/python/2.7.6" }
+end
+
 execute "update homebrew from github" do
   user node['homebrew']['user']
   command "/usr/local/bin/brew update"
