@@ -6,13 +6,22 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
+execute "brew uninstall python"
+  user 'administrator'
+  not_if { ::File.exists? "/usr/local/Cellar/python/2.7.6" }
+end
+
 package "python" do
-  version "2.7.5"
+  version "2.7.6"
   options "--with-brewed-tk"
 end
 
 package "python3" do
   version "3.3.2"
+end
+
+execute "brew linkapps"
+  user 'administrator'
 end
 
 ruby_block "Add homebrew python to system path" do
