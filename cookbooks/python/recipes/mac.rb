@@ -6,10 +6,7 @@ package "tcl-tk" do
   options "--enable-threads --with-x11"
 end
 
-execute "brew uninstall python" do
-  user 'administrator'
-  not_if { ::File.exists? "/usr/local/Cellar/python/2.7.6" }
-end
+
 
 package "python" do
   version "2.7.6"
