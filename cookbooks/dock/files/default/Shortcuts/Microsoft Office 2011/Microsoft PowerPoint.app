@@ -1,0 +1,5 @@
+XSym
+0060
+1eb1d2ec9ae40c4546a54a6b63a7d888
+/Applications/Microsoft Office 2011/Microsoft PowerPoint.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

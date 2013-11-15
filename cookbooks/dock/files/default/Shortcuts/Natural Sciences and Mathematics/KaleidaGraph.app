@@ -1,0 +1,5 @@
+XSym
+0047
+c47ec8efca6cc4ec645f5ebb73ed1f06
+/Applications/KaleidaGraph 4.1/KaleidaGraph.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

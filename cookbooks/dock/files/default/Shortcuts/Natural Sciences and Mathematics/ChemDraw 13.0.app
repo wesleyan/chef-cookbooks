@@ -1,0 +1,5 @@
+XSym
+0031
+1b6842d7da7f42154b22327469ca05d7
+/Applications/ChemDraw 13.0.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

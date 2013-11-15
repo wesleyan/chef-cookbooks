@@ -1,0 +1,5 @@
+XSym
+0056
+7ec54d1fbabde951293a3f3aa0452353
+/Applications/Adobe Acrobat XI Pro/Adobe Acrobat Pro.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

@@ -1,0 +1,5 @@
+XSym
+0025
+3d109f936b1e987f25ed23cb5d510243
+/Applications/Chimera.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

@@ -1,0 +1,5 @@
+XSym
+0029
+be10522e15b24cf4cf7055ceaf428537
+/Applications/Finale 2012.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

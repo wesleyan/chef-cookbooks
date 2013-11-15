@@ -1,0 +1,5 @@
+XSym
+0029
+e3902bf2db4818c4238747905a897e7f
+/Applications/TeX/TeXShop.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

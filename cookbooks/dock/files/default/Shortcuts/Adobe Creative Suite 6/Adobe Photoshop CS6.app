@@ -1,0 +1,5 @@
+XSym
+0057
+736fca882609931935bfcfd392ec51f9
+/Applications/Adobe Photoshop CS6/Adobe Photoshop CS6.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

@@ -1,0 +1,5 @@
+XSym
+0055
+7fbe0aea0d3077737274bef66dd7d4e1
+/Applications/IBM/SPSS/Statistics/21/SPSSStatistics.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

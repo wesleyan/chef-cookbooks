@@ -1,0 +1,5 @@
+XSym
+0026
+500a705731f9f7372565e7dbd353fc3e
+/Applications/Aquamacs.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

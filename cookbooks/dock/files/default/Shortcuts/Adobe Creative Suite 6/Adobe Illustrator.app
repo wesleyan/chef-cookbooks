@@ -1,0 +1,5 @@
+XSym
+0057
+9dd84ee80f1cbd9fbe05b75023965c10
+/Applications/Adobe Illustrator CS6/Adobe Illustrator.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

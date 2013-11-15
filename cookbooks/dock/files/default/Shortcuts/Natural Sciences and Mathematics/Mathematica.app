@@ -1,0 +1,5 @@
+XSym
+0029
+2cfa498fdc99188c7aedffcf3770e32f
+/Applications/Mathematica.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

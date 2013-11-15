@@ -28,7 +28,7 @@ dock_add "/Applications/Mission Control.app" do
 #  restart true
 end
 
-
+remote_directory "/Library/Shortcuts"
 
 # dock_add "/Applications/TextMate.app" do
 #   all_users true
