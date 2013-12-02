@@ -42,7 +42,7 @@ module Wesleyan
 				exception = run_status.formatted_exception
 				bt = Array(backtrace)
 				Mail.deliver do
-       					to 'rchristensen@wesleyan.edu, mdietz@wesleyan.edu'
+       					to 'rchristensen@wesleyan.edu'
      					from 'chef@wesleyan.edu'
   					subject "[CHEF FATAL] #{name}"
      					body "#{exception}\n#{bt.join("\n")}"
