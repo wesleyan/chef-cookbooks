@@ -42,4 +42,9 @@ default['couch_db']['config']['httpd']['bind_address'] = "0.0.0.0"
 
 default['couch_db']['config']['log']['level'] = "info"
 
+default['couch_db']['config']['daemons']['compaction_daemon'] = "{couch_compaction_daemon, start_link, []}"
+default['couch_db']['config']['compaction_daemon']['check_interval'] = 300
+default['couch_db']['config']['compaction_daemon']['min_file_size'] = 104857600 #100 MB
+default['couch_db']['config']['compactions']['_default'] = '[{db_fragmentation, "60%"}, {from, "03:00"}, {to, "04:00"}, {strict_window, true}]'
+
 default['couch_db']['config']['admins']['roomtrol'] = "-hashed-97f5b74e6555575d486cfba2088770bf2040f527,125a6d13bec3c02819eeb4ce80b3b2a9"
