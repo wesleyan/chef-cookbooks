@@ -1,6 +1,8 @@
-maintainer       "Wesleyan University"
-maintainer_email "rchristensen@wesleyan.edu"
-license          "All rights reserved"
-description      "Installs Compressor"
+name			 'apple_compressor'
+maintainer       'Wesleyan University'
+maintainer_email 'software@wesleyan.edu'
+license          'All rights reserved'
+description      'Installs Apple Compressor'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.4.0"
+version          '0.5.0'
+depends          'dmg'

@@ -1,5 +1,5 @@
 apple_final_cut_pro CHANGELOG
-===========================
+=============================
 
 This file is used to list changes made in each version of the apple_final_cut_pro cookbook.
 
@@ -29,5 +29,5 @@ This file is used to list changes made in each version of the apple_final_cut_pr
 
 0.1.0
 -----
-- [rchristensen] - Initial release of finalcutpro cookbook
+- [rchristensen] - Initial release of apple_final_cut_pro cookbook
 - [rchristensen] - Current app version: 10.0.5
