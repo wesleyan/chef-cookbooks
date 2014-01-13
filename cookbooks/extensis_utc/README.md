@@ -1,5 +1,5 @@
 extensis_utc Cookbook
-====================
+=====================
 This cookbook installs Extensis Universal Type Client on OS X.
 
 Requirements
