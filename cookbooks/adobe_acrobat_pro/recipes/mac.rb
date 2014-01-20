@@ -2,7 +2,7 @@
 # Cookbook Name:: adobe_acrobat_pro_xi
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -21,13 +21,13 @@ end
 # Install latest point release update
 dmg_package "Adobe Acrobat Update" do
   app "AcrobatUpd11004"
-  volumes_dir "AcrobatUpd11004"
-  dmg_name "AcrobatUpd11004"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11004.dmg"
-  checksum "105ebf3ac9056b53c35b2cfae162742167fd7dd2b3590cb6f7190710f38982b8"
+  volumes_dir "AcrobatUpd11006"
+  dmg_name "AcrobatUpd11006"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11006.dmg"
+  checksum "5e2703042d29ba9df03007cbd582e1bff5a58b43abe1c637dcb891d581b25d5d"
   action :install
   type "pkg"
-  package_id "com.adobe.acrobat.a11.AcrobatUpd11004"
+  package_id "com.adobe.acrobat.a11.AcrobatUpd11006"
 end
 
 # Download icon
