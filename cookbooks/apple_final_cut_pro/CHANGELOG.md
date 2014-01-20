@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the apple_final_cut_pr
 
 0.6.0
 -----
-- [rchristensen] - Updated FCP to 10.1
+- [rchristensen] - Updated FCP to 10.1.
 - [rchristensen] - Brought metadata/changelog up to standard.
 
 0.5.0
