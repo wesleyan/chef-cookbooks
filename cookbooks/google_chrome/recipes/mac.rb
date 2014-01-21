@@ -2,7 +2,7 @@
 # Cookbook Name:: google_chrome
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -10,13 +10,13 @@
 dmg_package "Google Chrome" do
   app "Google Chrome"
   volumes_dir "Google Chrome"
-  dmg_name "googlechrome-30.0.1599.66"
-  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-30.0.1599.66.dmg"
-  checksum "859179428497692b9ebe875ce8aee413e1346e53292ae99ef875c0ee586c8a22"
+  dmg_name "googlechrome-32.0.1700.77"
+  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-32.0.1700.77dmg"
+  checksum "ba4d6fe46e5b8deef5cfe5691e2c36ac3eb15396fefeb6d708c7c426818e2f11"
   action :install
   type "app"
   package_id "com.google.chrome"
-  version "30.0.159966"
+  version "32.0.170077"
 end
 
 # Add shortcut to dock

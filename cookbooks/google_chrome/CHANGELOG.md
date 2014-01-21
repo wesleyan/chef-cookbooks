@@ -3,6 +3,10 @@ google_chrome CHANGELOG
 
 This file is used to list changes made in each version of the google_chrome cookbook.
 
+0.6.1
+-----
+- [rchristensen] - Updated app to 32.0.1700.77 on OS X.
+
 0.6.0
 -----
 - [rchristensen] - Updated app to 30.0.1599.66 on both OS X and Windows.
