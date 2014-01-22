@@ -20,7 +20,7 @@ end
 
 # Install latest point release update
 dmg_package "Adobe Acrobat Update" do
-  app "AcrobatUpd11004"
+  app "AcrobatUpd11006"
   volumes_dir "AcrobatUpd11006"
   dmg_name "AcrobatUpd11006"
   source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/AcrobatUpd11006.dmg"
