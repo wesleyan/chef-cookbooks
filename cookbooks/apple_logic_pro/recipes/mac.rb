@@ -14,7 +14,7 @@ dmg_package "Logic Pro" do
   source "http://ims-chef.wesleyan.edu/os_x/apple_logic_pro/logic_pro_x-10.0.6.dmg"
   checksum "b1294bc84ff004bff9f41f267d73f74faf2c825260b027720dca0a13f93c16af"
   action :install
-  type "pkg"
+  type "app"
   package_id "com.apple.pkg.LogicProX"
   version "10.0.6"
 end
