@@ -11,7 +11,7 @@ dmg_package "Google Chrome" do
   app "Google Chrome"
   volumes_dir "Google Chrome"
   dmg_name "googlechrome-32.0.1700.77"
-  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-32.0.1700.77dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-32.0.1700.77.dmg"
   checksum "ba4d6fe46e5b8deef5cfe5691e2c36ac3eb15396fefeb6d708c7c426818e2f11"
   action :install
   type "app"
