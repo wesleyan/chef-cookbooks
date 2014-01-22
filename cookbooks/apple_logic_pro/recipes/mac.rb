@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install base Logic package, .app captured from Mac App Store
-dmg_package "Logic Pro" do
-  app "Apple Logic Pro"
+dmg_package "Apple Logic Pro" do
+  app "Logic Pro X"
   volumes_dir "Logic Pro X"
   dmg_name "apple_logic_pro-10.0.6"
   source "http://ims-chef.wesleyan.edu/os_x/apple_logic_pro/logic_pro_x-10.0.6.dmg"
