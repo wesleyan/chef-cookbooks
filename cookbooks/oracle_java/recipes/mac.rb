@@ -2,7 +2,7 @@
 # Cookbook Name:: oracle_java
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -21,15 +21,15 @@ end
 
 # Installs Java 7 web plug-in for browsers
 dmg_package "Oracle Java" do
-  app "Java 7 Update 45"
-  volumes_dir "Java 7 Update 45"
-  dmg_name "jre-7u45-macosx-x64"
-  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u45-macosx-x64.dmg"
-  checksum "b7626e55ceb189a694ae446ebd2bc0a195030417c3ea7c009f1a9adb422b4a10"
+  app "Java 7 Update 51"
+  volumes_dir "Java 7 Update 51"
+  dmg_name "jre-7u51-macosx-x64"
+  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u51-macosx-x64.dmg"
+  checksum "8541090bf8bd7b284f07d4b1f74b5352b8addf5e0274eeb82cacdc4b2e2b66d2"
   action :install
   type "pkg"
   package_id "com.oracle.jre"
-  version "7.0.40"
+  version "7.0.51"
 end
 
 # Enable Java in Safari by default.
