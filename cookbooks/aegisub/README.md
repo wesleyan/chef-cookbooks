@@ -1,5 +1,5 @@
 aegisub Cookbook
-====================
+================
 This cookbook installs Aegisub.
 
 Requirements
