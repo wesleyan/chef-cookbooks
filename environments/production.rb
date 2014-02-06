@@ -7,4 +7,5 @@ cookbook_versions 	"apple_itunes" => "<= 0.4.3",
 				    "apple_xcode" => "<= 0.4.0",
 				    "eset_nod32" => "<= 0.2.0",
 					"mozilla_firefox" => "<= 0.4.9",
-					"opscode_chef" => "<= 0.3.0"
+					"opscode_chef" => "<= 0.3.0",
+					"prepare" => "<= 0.0.0"
