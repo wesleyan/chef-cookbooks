@@ -11,7 +11,7 @@ hostname = truncate prefix hostname_for_ip machine_ip
 
 print "Binding #{hostname} to wesad.wesleyan.edu: "
  
-command =  "sudo dsconfigad -add wesad.wesleyan.edu -username " \
+command =  "sudo dsconfigad -add adldap.wesleyan.edu -username " \
 "#{username} -password '#{password}' -preferred #{preferred_server} " \
  "-groups \"#{groups}\" -force " \
  "-computer #{hostname}"
