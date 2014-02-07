@@ -3,6 +3,10 @@ apple_safari CHANGELOG
 
 This file is used to list changes made in each version of apple_safari
 
+0.4.0
+-----
+- [rchristensen] - Updated app to 6.1.1
+
 0.3.0
 -----
 - [rchristensen] - Updated app to 6.1
