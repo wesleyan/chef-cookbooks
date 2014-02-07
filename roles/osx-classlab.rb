@@ -40,7 +40,7 @@ run_list  "role[osx-base]",
           "recipe[psyscope::mac]",
           "recipe[rstudio::mac]",
           "recipe[statacorp_stata::mac]",
-          "recipe[sas_jmp::mac]",
+          "recipe[sas_institute_jmp::mac]",
           # CFA
           "recipe[google_earth::mac]",
           "recipe[turning_technologies_turningpoint::mac]",
