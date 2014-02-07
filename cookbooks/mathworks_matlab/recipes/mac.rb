@@ -17,7 +17,7 @@ dmg_package "MathWorks MATLAB" do
   app "MATLAB_R2013b"
   volumes_dir "MATLAB"
   dmg_name "MATLAB-2013b"
-  source "http://ims-chef.wesleyan.edu/os_x/mathworks_matlab/MATLAB-2013b.dmg"
+  source "http://ims-chef.wesleyan.edu/os_x/mathworks_matlab/MATLAB-2013b-labclass.dmg"
   checksum "04010c7aa7d6f0308347e631acf0c6df049d4d17c21689c2ed83beb9e2fe4f86"
   action :install
   type "app"
