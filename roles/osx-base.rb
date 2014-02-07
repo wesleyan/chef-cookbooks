@@ -6,7 +6,7 @@ run_list  "recipe[chef_handler]",
           "recipe[prepare::mac]",
           "recipe[default_profile::mac]",
           "recipe[sudo]",
-          "recipe[opscode_chef::mac]",
+          "recipe[chef_chefclient::mac]",
           # Package providers
           "recipe[dmg]",
           # XCode
