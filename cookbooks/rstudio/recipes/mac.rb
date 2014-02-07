@@ -2,20 +2,20 @@
 # Cookbook Name:: rstudio
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 dmg_package "RStudio" do
   app "RStudio"
-  volumes_dir "RStudio-0.97.551"
-  dmg_name "RStudio-0.97.551"
-  source "http://ims-chef.wesleyan.edu/os_x/rstudio/RStudio-0.97.551.dmg"
-  checksum "ec34c96f1427a8d2b6452a0ad53741931b9bc4ec5cf6b61bc294da5c178610cc"
+  volumes_dir "RStudio-0.98.501"
+  dmg_name "RStudio-0.98.501"
+  source "http://ims-chef.wesleyan.edu/os_x/rstudio/RStudio-0.98.501.dmg"
+  checksum "26cb3059c9f40d85856c103a3a34331d31a1e099b72c2bbee2319a4e39f82f35"
   action :install
   type "app"
   package_id "com.rstudio.rstudio.ide"
-  version "0.97.551"
+  version "0.98.501"
 end
 
 # Create dock folder, if it does not exist
