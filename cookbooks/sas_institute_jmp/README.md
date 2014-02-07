@@ -1,6 +1,6 @@
-sas_jmp Cookbook
-====================
-This cookbook installs SAS JMP on OS X.
+sas_institute_jmp Cookbook
+==========================
+This cookbook installs SAS JMP on OS X and Windows.
 
 Requirements
 ------------
@@ -12,15 +12,28 @@ Attributes
 
 Usage
 -----
-#### sas_jmp::mac
+#### sas_institute_jmp::mac
 
-Just include `sas_jmp:` in your node's `run_list`:
+Just include `sas_institute_jmp:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[sas_jmp::mac]"
+    "recipe[sas_institute_jmp::mac]"
+  ]
+}
+```
+
+#### sas_institute_jmp::win
+
+Just include `sas_institute_jmp:` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[sas_institute_jmp::win]"
   ]
 }
 ```
@@ -38,3 +51,4 @@ Contributing
 License and Authors
 -------------------
 Robert Christensen <rchristensen@wesleyan.edu>
+Max Dietz <mdietz@wesleyan.edu>
