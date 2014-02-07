@@ -3,6 +3,10 @@ apple_itunes CHANGELOG
 
 This file is used to list changes made in each version of the apple_itunes cookbook.
 
+0.4.4
+-----
+- [rchristensen] - Updated app to 11.1.4
+
 0.4.3
 -----
 - [rchristensen] - Updated app to 11.1.3
