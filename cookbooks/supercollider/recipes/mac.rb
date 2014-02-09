@@ -25,18 +25,24 @@ cookbook_file "/tmp/JL_Book.zip" do
 end
 
 # Create directories within default user profile.
-directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help" do
+directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutotorials" do
   mode 00755
   action :create
   recursive true
 end
 
 # Unzip help files to default user profile.
-execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help"' do
+execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutotorials/"' do
   returns [0,1]
 end
 
 # Replace Help index with modified version to show custom help files.
 cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Help.html" do
 	mode 0755
+end
+
+# Add to dock
+dock_add "/Applications/SuperCollider/SuperCollider.app" do
+  all_users true
+  group "Center for the Arts"
 end
