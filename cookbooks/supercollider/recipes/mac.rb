@@ -25,19 +25,24 @@ cookbook_file "/tmp/JL_Book.zip" do
 end
 
 # Create directories within default user profile.
-directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutotorials" do
+directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutorials" do
   mode 00755
   action :create
   recursive true
 end
 
 # Unzip help files to default user profile.
-execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutotorials/"' do
+execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutorials/"' do
   returns [0,1]
 end
 
 # Replace Help index with modified version to show custom help files.
 cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Help.html" do
+	mode 0755
+end
+
+# Drop in file that SC needs to not overwrite our Help.html index
+cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/scdoc_version" do
 	mode 0755
 end
 
