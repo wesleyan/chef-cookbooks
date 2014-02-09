@@ -20,18 +20,23 @@ dmg_package "SuperCollider" do
 end
 
 # Copy help files to tmp directory
-#cookbook_file "/tmp/JL_Book.zip" do
-#  mode 0666
-#end
+cookbook_file "/tmp/JL_Book.zip" do
+  mode 0666
+end
+
+# Create directories within default user profile.
+directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help" do
+  mode 00755
+  action :create
+  recursive true
+end
 
 # Unzip help files to default user profile.
-#directory "/System/Library/User Template/English.lproj/Library/Application Support/"
-#directory "/System/Library/Application Support/" do
-#  mode 00755
-#  action :create
-#  recursive true
-#end
-#
-#execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/"' do
-#  returns [0,1]
-#end
+execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help"' do
+  returns [0,1]
+end
+
+# Replace Help index with modified version to show custom help files.
+cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Help.html" do
+	mode 0755
+end
