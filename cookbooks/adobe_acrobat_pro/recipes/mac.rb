@@ -12,7 +12,7 @@ dmg_package "Adobe Acrobat Pro" do
   volumes_dir "adobe_acrobat_pro_xi-11.0"
   dmg_name "adobe_acrobat_pro_xi-11.0"
   source "http://ims-chef.wesleyan.edu/os_x/adobe_acrobat_pro_xi/adobe_acrobat_pro_xi-11.0.dmg"
-  checksum "ad64d83138a3c9ad74b41617f5a3b3e55470f3115806768576ebcc07c94e8822"
+  checksum "9dc74ec4dc7fe8724d9f8db12413c54f54a9a17840b52e7af15212c8aaf3ffb3"
   action :install
   type "pkg"
   package_id "com.adobe.acrobat.11.viewer.app.pkg.MUI"
