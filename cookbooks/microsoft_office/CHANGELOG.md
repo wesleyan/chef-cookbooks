@@ -3,6 +3,10 @@ microsoft_office CHANGELOG
 
 This file is used to list changes made in each version of the microsoft_office cookbook.
 
+0.6.1
+-----
+- [rchristensen] - Updated Office 2011 to 14.3.9
+
 0.6.0
 -----
 - [rchristensen] - Updated Office 2011 to 14.3.8
