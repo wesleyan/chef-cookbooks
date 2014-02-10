@@ -133,7 +133,7 @@ action :install do
       #}
       #f.close
       #execute '/usr/bin/env expect -f /tmp/install_script'
-      ::File.delete(xmlName) if choices
+      #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
