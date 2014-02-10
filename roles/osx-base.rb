@@ -9,13 +9,6 @@ run_list  "recipe[chef_handler]",
           "recipe[chef_chefclient::mac]",
           # Package providers
           "recipe[dmg]",
-          # XCode
-          "recipe[apple_xcode::mac]",
-          "recipe[homebrew]",
-          # Desktop and Dock
-          #"recipe[preference::mac]",
-          "recipe[dock::mac]", 
-          "recipe[launch_association::mac]",
           # Core system updates and applications
           "recipe[apple_osx_updates::mac]", 
           "recipe[apple_airport::mac]",
@@ -24,6 +17,13 @@ run_list  "recipe[chef_handler]",
           "recipe[sassafras_k2::mac]",
           "recipe[eset_nod32::mac]",
           "recipe[verdiem_surveyor::mac]",
+          # XCode
+          "recipe[apple_xcode::mac]",
+          "recipe[homebrew]",
+          # Desktop and Dock
+          #"recipe[preference::mac]",
+          "recipe[dock::mac]", 
+          "recipe[launch_association::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
