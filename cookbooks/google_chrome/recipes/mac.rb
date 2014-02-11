@@ -14,7 +14,7 @@ dmg_package "Google Chrome" do
   source "http://ims-chef.wesleyan.edu/os_x/google_chrome/google_chrome-32.0.1700.107.dmg"
   checksum "80961572da2ba44341bb60db9eeddf136c87d576348d81108273c473a9aac6f7"
   action :install
-  type "app"
+  type "pkg"
   package_id "com.google.Chrome"
   version "32.1700.107"
 end
