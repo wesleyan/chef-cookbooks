@@ -6,16 +6,16 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install base Logic package, .app captured from Mac App Store
+# Install base Logic package, pkg captured from Mac App Store
 dmg_package "Apple Logic Pro" do
   app "Logic Pro X"
   volumes_dir "Logic Pro X"
   dmg_name "apple_logic_pro-10.0.6"
   source "http://ims-chef.wesleyan.edu/os_x/apple_logic_pro/logic_pro_x-10.0.6.dmg"
-  checksum "b1294bc84ff004bff9f41f267d73f74faf2c825260b027720dca0a13f93c16af"
+  checksum "8d32679d878d82feb1e6f9c19d0ff34d5fcf34133fcee6be2acf441e57ead154"
   action :install
-  type "app"
-  package_id "com.apple.pkg.LogicProX"
+  type "pkg"
+  package_id "com.apple.pkg.LogicProX_AppStore"
   version "10.0.6"
 end
 

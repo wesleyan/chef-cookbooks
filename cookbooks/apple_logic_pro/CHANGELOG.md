@@ -3,6 +3,10 @@ apple_logic_pro CHANGELOG
 
 This file is used to list changes made in each version of the apple_logic_pro cookbook.
 
+0.2.1
+-----
+- [rchristensen] - Switched from .app install to pkg captured from Mac App Store
+
 0.2.0
 -----
 - [rchristensen] - Refactored recipe, now installs Logic Pro X and base content
