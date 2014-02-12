@@ -1,6 +1,8 @@
 name "production"
 description "This is our production environment, it is for recipes and cookbooks that have been thoroughly tested for bugs and regressions"
 cookbook_versions 	"adobe_air" => "<= 0.2.1",
+					"apple_compressor" => "<= 0.4.0",
+					"apple_final_cut_pro" => "<= 0.5.0",
 					"adobe_flash_player" => "<= 0.6.1",
 					"apple_itunes" => "<= 0.4.4",
 					"apple_remote_desktop_client" => "<= 0.2.0",
