@@ -12,6 +12,6 @@ cookbook_versions 	"adobe_air" => "<= 0.2.1",
 				    "google_chrome" => "<= 0.6.2",
 				    "homebrew" => "<= 1.5.4",
 				    "mathworks_matlab" => "<= 0.2.0",
-					"mozilla_firefox" => "<= 0.4.9",
+					"mozilla_firefox" => "<= 0.4.10",
 					"prepare" => "<= 0.1.0",
 					"xorg_xquartz" => "<= 0.2.0"
