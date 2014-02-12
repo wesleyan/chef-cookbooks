@@ -17,5 +17,4 @@ run_list  "role[osx-classlab]",
           "recipe[troikatronix_isadora::mac]",
           "recipe[quark_quarkxpress::mac]",
           "recipe[extensis_utc::mac]",
-          "recipe[nemetschek_vectorworks::mac]",
-          "recipe[ruby_gems]"
+          "recipe[nemetschek_vectorworks::mac]"
