@@ -5,7 +5,8 @@ This file is used to list changes made in each version of the microsoft_skype co
 
 0.3.1
 -----
-- [rchristensen] - Updated OS X app to 6.12.60.431
+- [rchristensen] - [OS X] Updated app to 6.12.60.431
+- [rchristensen] - [OS X] Changed to autopkg generated pkg.
 
 0.3.0
 -----

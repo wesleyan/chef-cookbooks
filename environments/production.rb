@@ -16,6 +16,7 @@ cookbook_versions 	"adobe_air" => "<= 0.2.1",
 				    "hamrick_vuescan" => "<= 0.4.1",
 				    "homebrew" => "<= 1.5.4",
 				    "mathworks_matlab" => "<= 0.2.0",
+				    "microsoft_skype" => "<= 0.3.1",
 					"mozilla_firefox" => "<= 0.4.10",
 					"prepare" => "<= 0.1.0",
 					"xorg_xquartz" => "<= 0.2.0"
