@@ -2,7 +2,7 @@
 # Cookbook Name:: windows_printer_port_lpr
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #

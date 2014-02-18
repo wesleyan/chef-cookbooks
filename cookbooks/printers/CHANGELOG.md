@@ -3,6 +3,11 @@ printers CHANGELOG
 
 This file is used to list changes made in each version of the printers cookbook.
 
+0.5.5
+-----
+- [rchristensen] - Moved more DAC100 specific code to dac100.rb
+- [rchristensen] - Removed printer uninstallation entries, no longer needed.
+
 0.5.4
 -----
 - [rchristensen] - Updated Pharos Popup client to 8.4.1
