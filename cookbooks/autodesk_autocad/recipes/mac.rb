@@ -36,9 +36,5 @@ end
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.autodesk.AutoCAD.plist"
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.autodesk.AutoCAD.R18.2.ACAD-A032.409.plist"
 
-execute "Disable Welcome Screen" do
-  command "defaults write com.autodesk.AutoCAD.R18.2.ACAD-A032.409 \"HKEY_CURRENT_USER.SOFTWARE.AUTODESK.AUTOCAD.R18\u00B722.LAUNCHNFW\" -int 3"
-end
-
 # Insert license file
 #cookbook_file "/Applications/Autodesk/AutoCAD 2012/AutoCAD.app/Contents/licpath.lic"
