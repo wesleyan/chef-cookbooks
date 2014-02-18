@@ -19,5 +19,5 @@ cookbook_versions 	"adobe_air" => "<= 0.2.1",
 				    "microsoft_skype" => "<= 0.3.1",
 					"mozilla_firefox" => "<= 0.4.10",
 					"prepare" => "<= 0.1.0",
-					"printers" => "<= 0.5.5",
+					"printers" => "<= 0.6.0",
 					"xorg_xquartz" => "<= 0.2.0"

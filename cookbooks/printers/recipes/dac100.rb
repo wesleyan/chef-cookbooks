@@ -7,31 +7,44 @@
 # All rights reserved - Do Not Redistribute
 #
 # Assumes the mac.rb was already executed
+#
+# Install Epson drivers
+dmg_package "EPSON Printer Drivers" do
+  app "EPSONPrinterDrivers"
+  volumes_dir "EPSON Printer Drivers"
+  dmg_name "EPSONPrintDrivers2.16"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/EPSONPrintDrivers2.16.dmg"
+  checksum "4101430d39fd963a9316a2869bfb52e2b845219448d99265492cdf8e5f49fd52"
+  action :install
+  type "pkg"
+  package_id "com.apple.pkg.EPSONPrinterDrivers"
+  version "2.16.0"
+end
 
 # Install Epson 3880 driver
 dmg_package "Epson 3880 Driver" do
-  app "Epson3880"
-  volumes_dir "Epson"
-  dmg_name "Epson"
-  type "mpkg"
-  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/Epson.dmg"
-  checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
+  app "Epson Printer"
+  volumes_dir "Epson Printer"
+  dmg_name "epson3880-9.17"
+  type "pkg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/epson3880-9.17.dmg"
+  checksum "baf7b216a760e4c643abf7db974a70f71324f667e72b2ba693044a42647a8d40"
   action :install
-  package_id "com.epson.drivers.3880"
-  version "1.0.0"
+  package_id "com.epson.pkg.ijpdrv.epsonstyluspro3880.w.USBClassDriver_107_and_later"
+  version "9.17.0"
 end
 
 # Install Epson 9800 driver
 dmg_package "Epson 9800 Driver" do
-  app "Epson9800"
-  volumes_dir "Epson"
-  dmg_name "Epson"
-  type "mpkg"
-  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/Epson.dmg"
-  checksum "b620b0761a4ad1a5aa6a38124716aede665e6429e8d5b154cb5bb2d467eef247"
+  app "Epson Printer"
+  volumes_dir "epson15891_sp7800_9800_printer_driver_917"
+  dmg_name "epson9800-9.17"
+  type "pkg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/epson9800-9.17.dmg"
+  checksum "d6c08d10037a40940b687b096e8ed4f81c43f8bf63bc686b89d50ef7e95d9a9a"
   action :install
-  package_id "com.epson.drivers.9800"
-  version "1.0.0"
+  package_id "com.epson.pkg.ijpdrv.styluspro9800.w.USBClassDriver_107_and_later"
+  version "9.17.0"
 end
 
 # Copies color/luster preferences

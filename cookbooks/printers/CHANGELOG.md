@@ -3,10 +3,12 @@ printers CHANGELOG
 
 This file is used to list changes made in each version of the printers cookbook.
 
-0.5.5
+0.6.0
 -----
 - [rchristensen] - Moved more DAC100 specific code to dac100.rb
 - [rchristensen] - Removed printer uninstallation entries, no longer needed.
+- [rchristensen] - Updated Epson 3880/9800 drivers to 9.17
+- [rchristensen] - Updated base Epson drivers to 2.16
 
 0.5.4
 -----
