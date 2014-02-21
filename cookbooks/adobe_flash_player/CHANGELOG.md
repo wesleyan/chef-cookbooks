@@ -3,6 +3,10 @@ adobe_flash_player CHANGELOG
 
 This file is used to list changes made in each version of the adobe_flash_player cookbook.
 
+0.6.2
+-----
+- [rchristensen] - [OS X] Updated runtime to 12.0.0.70
+
 0.6.1
 -----
 - [rchristensen] - [OS X] Updated runtime to 12.0.0.4
