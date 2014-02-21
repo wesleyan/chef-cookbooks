@@ -47,6 +47,19 @@ dmg_package "Epson 9800 Driver" do
   version "9.17.0"
 end
 
+# Install Epson 9900 driver
+dmg_package "Epson 9900 Driver" do
+  app "Epson Printer"
+  volumes_dir "epson15900_sp7900_9900_printer_driver_917"
+  dmg_name "epson9900-9.17"
+  type "pkg"
+  source "http://ims-chef.wesleyan.edu/os_x/epson_printer/epson9900-9.17.dmg"
+  checksum "b442ffa414453e9809bc60e18056ba2cb834cdf6fcb66b839d2b0b1fd31bdbe3"
+  action :install
+  package_id "com.epson.pkg.ijpdrv.styluspro9900.w.USBClassDriver_107_and_later"
+  version "9.17.0"
+end
+
 # Copies color/luster preferences
 cookbook_file "/Library/ColorSync/Profiles/Displays/DAC100_iMac_Sept19_D65.icc" do
   mode 0644
@@ -75,6 +88,11 @@ end
 printers "DAC100-9800" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9800.gz"
   ip "DAC100-E9800.class.wesleyan.edu"
+end
+
+printers "DAC100-9900" do
+  model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9900.gz"
+  ip "epson-9900.art.wesleyan.edu"
 end
 
 # Set printers as default.

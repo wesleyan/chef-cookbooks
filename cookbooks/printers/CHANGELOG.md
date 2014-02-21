@@ -3,6 +3,10 @@ printers CHANGELOG
 
 This file is used to list changes made in each version of the printers cookbook.
 
+0.6.1
+-----
+- [rchristensen] - Added the Epson 9800 to DAC 100
+
 0.6.0
 -----
 - [rchristensen] - Moved more DAC100 specific code to dac100.rb
