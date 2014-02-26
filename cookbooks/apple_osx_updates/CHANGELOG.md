@@ -3,6 +3,10 @@ apple_osx_updates CHANGELOG
 
 This file is used to list changes made in each version of apple_osx_updates
 
+0.4.2
+-----
+- [rchristensen] - Added Security Update 2014-001
+
 0.4.1
 -----
 - [rchristensen] - Added 10.8.5 Supplemental update.
