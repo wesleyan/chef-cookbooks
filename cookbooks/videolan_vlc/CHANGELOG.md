@@ -3,6 +3,10 @@ videolan_vlc CHANGELOG
 
 This file is used to list changes made in each version of the videolan_vlc cookbook.
 
+0.6.3
+-----
+- [rchristensen] - Updated OS X and Windows to 2.1.2
+
 0.6.2
 -----
 - [rchristensen] - Updated OS X and Windows to 2.1.0

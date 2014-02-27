@@ -1,5 +1,5 @@
 supercollider Cookbook
-====================
+======================
 This cookbook installs SuperCollider for OS X.
 
 Requirements

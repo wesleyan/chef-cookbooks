@@ -2,7 +2,7 @@
 # Cookbook Name:: smlnj
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -11,6 +11,6 @@ include_recipe "homebrew"
 
 # Install SML/NJ via homebrew
 package "smlnj" do
-  version "110.75"
+  version "110.76"
 end
 

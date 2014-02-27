@@ -2,24 +2,23 @@
 # Cookbook Name:: schrodinger_pymol
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
-#
-# NOTE: Right now this recipe does not include PyMOL's external GUI.  Waiting on some pull requests to go through on homebrew's git.
 #
 # Include homebrew because we need it!
 include_recipe "homebrew"
 
+# Tap the homebrew science repo
 homebrew_tap "Homebrew/homebrew-science"
 
-execute "Allow homebrew permissions" do
-  command "chmod 777 /usr/local/include"
-end
+#execute "Allow homebrew permissions" do
+#  command "chmod 777 /usr/local/include"
+#end
 
 # Build and install PyMOL
 package "pymol" do
-  version "1.5"
+  version "1.6.0.0"
 end
 
 # PyMOL will fail to recognize XQuartz because its timeout is too short

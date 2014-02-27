@@ -1,7 +1,7 @@
-name             'sas_jmp'
+name             'prepare'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'
-description      'Installs SAS JMP'
+description      'Super-recipe that contains tons of initial config data'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'

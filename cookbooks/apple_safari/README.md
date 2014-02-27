@@ -5,7 +5,7 @@ Installs updates to Apple Safari.
 Requirements
 ------------
 #### platform
-- `OS X` - 10.7.5 or greater.
+- `OS X` - 10.8 or greater.
 
 Attributes
 ----------

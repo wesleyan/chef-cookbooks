@@ -2,34 +2,52 @@
 # Cookbook Name:: supercollider
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Standard release, installed in the osx-cfa role
+# Install our .app
 dmg_package "SuperCollider" do
   app "SuperCollider"
   volumes_dir "SuperCollider"
-  dmg_name "SuperCollider-3.6.5-OSX-universal"
-  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.5-OSX-universal.dmg"
-  checksum "3a942aed9d28071bd8354b387d1e436205a1c21f55667e17689d9b361af3409b"
+  dmg_name "SuperCollider-3.6.6-OSX-universal"
+  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.6-OSX.dmg"
+  checksum "4cc59a3ab70cbac60ce64b0fb7b6b86e070456e8f597229b05057ea6c4e1edb9"
   action :install
   type "dir"
   package_id "net.sourceforge.supercollider"
-  version "3.6.5"
-  not_if { node["SuperCollider"]["No-IDE"] }
+  version "3.6.6"
 end
 
-# No-IDE release, installed in the osx-nsm role
-dmg_package "SuperCollider No-IDE" do
-  app "SuperCollider"
-  volumes_dir "SuperCollider"
-  dmg_name "SuperCollider-3.6.5-OSX-universal-no-ide"
-  source "http://ims-chef.wesleyan.edu/os_x/supercollider/SuperCollider-3.6.5-OSX-universal-no-ide.dmg"
-  checksum "de3303c6ff62a64098174ec4029ef2a3691b2b39b56e0b4d1e10c1f6de3ca53b"
-  action :install
-  type "dir"
-  package_id "net.sourceforge.supercollider.no-ide"
-  version "3.6.5"
-  only_if { node["SuperCollider"]["No-IDE"] }
+# Copy help files to tmp directory
+cookbook_file "/tmp/JL_Book.zip" do
+  mode 0666
+end
+
+# Create directories within default user profile.
+directory "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutorials" do
+  mode 00755
+  action :create
+  recursive true
+end
+
+# Unzip help files to default user profile.
+execute 'unzip /tmp/JL_Book.zip -d "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Tutorials/"' do
+  returns [0,1]
+end
+
+# Replace Help index with modified version to show custom help files.
+cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/Help.html" do
+	mode 0755
+end
+
+# Drop in file that SC needs to not overwrite our Help.html index
+cookbook_file "/System/Library/User Template/English.lproj/Library/Application Support/SuperCollider/Help/scdoc_version" do
+	mode 0755
+end
+
+# Add to dock
+dock_add "/Applications/SuperCollider/SuperCollider.app" do
+  all_users true
+  group "Center for the Arts"
 end

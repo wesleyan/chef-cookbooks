@@ -2,7 +2,7 @@
 # Cookbook Name:: apple_remote_desktop_admin
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -20,14 +20,14 @@ end
 
 # Install update pkg.
 dmg_package "Apple Remote Desktop Admin Update" do
-  app "RemoteDesktopAdmin370"
-  volumes_dir "Apple Remote Desktop 3.7 Admin Update"
-  dmg_name "RemoteDesktopAdmin370"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin370.dmg"
-  checksum "e87fe2c90adee430711671f5eefb2020af71fc76988521c496896f1d1518cb55"
+  app "RemoteDesktopAdmin371"
+  volumes_dir "Apple Remote Desktop 3.7.1 Admin Update"
+  dmg_name "RemoteDesktopAdmin371"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin371.dmg"
+  checksum "02dbb4ba6e3fc09980402cf277cb02cc4373e8f41dfbad102d9c8bd939074555"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.RemoteDesktopAdmin370"
+  package_id "com.apple.pkg.RemoteDesktopAdmin371"
 end
 
 # Drop in our settings to suppress serial prompt.

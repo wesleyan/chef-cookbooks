@@ -1,5 +1,5 @@
 apple_final_cut_pro Cookbook
-====================
+============================
 This cookbook installs Final Cut Pro X.
 
 Requirements

@@ -1,7 +1,9 @@
-name             'evernote_evernote'
+name             'sas_institute_jmp'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'
-description      'Installs/Configures Evernote software'
+description      'Installs SAS JMP'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+version          '0.3.0'
+depends          'dmg'
+depends          'windows'

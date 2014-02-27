@@ -1,26 +1,26 @@
-evernote_evernote Cookbook
-====================
-This cookbook installs Evernote's Evernote note taking software on OS X.
+prepare Cookbook
+================
+This cookbook does a ton of pre-configuration that I need to document.
 
 Requirements
 ------------
 #### platform
-- `OS X` - 10.6.6 or greater.
+- `OS X` - 10.8.x or greater.
 
 Attributes
 ----------
 
 Usage
 -----
-#### evernote_evernote::mac
+#### prepare::mac
 
-Just include `evernote_evernote:` in your node's `run_list`:
+Just include `prepare:` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[evernote_evernote::mac]"
+    "recipe[prepare::mac]"
   ]
 }
 ```
@@ -37,4 +37,4 @@ Contributing
 
 License and Authors
 -------------------
-Max Dietz <mdietz@wesleyan.edu>
+Robert Christensen <rchristensen@wesleyan.edu>

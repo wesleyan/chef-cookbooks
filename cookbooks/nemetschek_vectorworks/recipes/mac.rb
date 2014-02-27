@@ -30,7 +30,7 @@ dock_add "Center for the Arts" do
 end
 
 # Add icon to dock
-dock_add "/Applications/Vectorworks2013/Vectorworks 2013.app" do
+dock_add "/Applications/Vectorworks 2013/Vectorworks 2013.app" do
   all_users true
   group "Center for the Arts"
 end

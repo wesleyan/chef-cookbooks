@@ -14,12 +14,7 @@ run_list  "role[osx-classlab]",
           "recipe[mcneel_rhinoceros::mac]",
           "recipe[mckernon_lightwright::mac]",
           "recipe[tomerbe_soundhack::mac]",
-          "recipe[supercollider::mac]",
           "recipe[troikatronix_isadora::mac]",
-          "recipe[quark_quarkxpress::mac]",
+          #"recipe[quark_quarkxpress::mac]",
           "recipe[extensis_utc::mac]",
-          "recipe[nemetschek_vectorworks::mac]",
-          "recipe[ruby_gems]"
-
-# Set SuperCollider attribute for version determination
-default_attributes("SuperCollider" => {"No-IDE" => false})
+          "recipe[nemetschek_vectorworks::mac]"
