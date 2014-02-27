@@ -20,6 +20,8 @@ include_recipe "erlang"
 
 include_recipe "build-essential"
 
+include_recipe "users"
+
 service "rsyslog" do
   supports :restart => true, :reload => true, :status => true
   action :enable
@@ -156,19 +158,7 @@ cookbook_file "/etc/rsyslog.conf" do
   notifies :restart, "service[rsyslog]"
 end
 
-#cookbook_file '/etc/apt/sources.list.d/couchdb.list' do
-#  owner "root"
-#  group "root"
-#  mode 0644
-#end
-#
-#execute "apt-get-update" do
-#  command "apt-get update"
-#end
-
-#package "grub-pc" do
-#  action :upgrade
-#  options "-o Dpkg::Options::='--force-confold'"
-#end
-
-
+users_manage "roomtrol" do
+  data_bag "cmdr"
+  group_name "wheel"
+end
