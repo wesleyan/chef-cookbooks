@@ -33,13 +33,13 @@ end
 # Install RAW camera update
 dmg_package "Adobe Camera RAW update" do
  app "Adobe DNG Converter"
- volumes_dir "DNGConverter_7_4"
- dmg_name "DNGConverter_7_4"
- source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/DNGConverter_7_4.dmg"
- checksum "89e66b32e0485c4745b360cddc7e51b0da22e98ae9d21035e67f818a6c792a6e"
+ volumes_dir "DNGConverter_8_2"
+ dmg_name "DNGConverter_8_2"
+ source "http://ims-chef.wesleyan.edu/os_x/adobe_photoshop_cs6/DNGConverter_8_2.dmg"
+ checksum "3cf9da9a121891077b1fe80cac813d538e0a07632ff1f0d5c238e2cee6ecc167"
  action :install
  type "pkg"
- package_id "com.adobe.adobeDngConverter74.AdobeDNGConverter.pkg"
+ package_id "com.adobe.adobeDngConverter82.AdobeDNGConverter.pkg"
 end
 
 # Download icon

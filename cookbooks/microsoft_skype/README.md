@@ -1,11 +1,12 @@
 microsoft_skype Cookbook
-====================
-This cookbook installs Microsoft Skype
+========================
+This cookbook installs Microsoft Skype.
 
 Requirements
 ------------
 #### platform
 - `OS X` - 10.6.8 or greater
+- `Windows` - 7 or greater
 
 Attributes
 ----------
@@ -21,6 +22,19 @@ Just include `microsoft_skype` in your node's `run_list`:
   "name":"my_node",
   "run_list": [
     "recipe[microsoft_skype::mac]"
+  ]
+}
+```
+
+#### microsoft_skype::win
+
+Just include `microsoft_skype` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[microsoft_skype::win]"
   ]
 }
 ```

@@ -1,14 +1,41 @@
 Description
 ===========
-Installs Safari updates for OS X
+Installs updates to Apple Safari.
 
 Requirements
-============
-OS X 10.8+
+------------
+#### platform
+- `OS X` - 10.8 or greater.
 
 Attributes
-==========
+----------
 
 Usage
-=====
-Use the damned cookbook buddy.
+-----
+#### apple_safari::mac
+
+Just include `apple_safari:` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[apple_safari::mac]"
+  ]
+}
+```
+
+Contributing
+------------
+
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write you change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
+
+License and Authors
+-------------------
+Robert Christensen <rchristensen@wesleyan.edu> 
+Max Dietz <mdietz@wesleyan.edu>

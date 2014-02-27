@@ -1,0 +1,5 @@
+XSym
+0041
+de9686c802ea15f7d5c4a96690c14736
+/Applications/Logger Pro 3/Logger Pro.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

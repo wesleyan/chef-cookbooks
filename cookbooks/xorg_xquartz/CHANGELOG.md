@@ -1,12 +1,18 @@
-# CHANGELOG for xorg_xquartz
+xorg_xquartz CHANGELOG
+======================
 
-This file is used to list changes made in each version of xorg_xquartz.
+This file is used to list changes made in each version of the xorg_xquartz cookbook.
 
-## 0.2.0:
+0.2.0
+-----
+- [rchristensen] - Updated app to 2.7.5
+- [rchristensen] - Brought CHANGELOG/README/metadata up to code.
 
-* Added alias so programs looking for X11.app with find XQuartz.app
+0.1.1
+-----
+- [mdietz] - Added alias so programs looking for X11.app will find XQuartz.app
 
-## 0.1.0:
-
-* Initial release of xorg_xquartz cookbook
-* Current app version: 2.7.4
+0.1.0
+-----
+- [rchristensen] - Initial release of xorg_xquartz cookbook
+- [rchristensen] - Current app version: 2.7.4

@@ -18,10 +18,19 @@ dmg_package "autocad-2012SP3.dmg" do
   package_id "com.autodesk.main.pkg"
 end
 
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
 # Add to dock
 dock_add "/Applications/Autodesk/AutoCAD 2012/AutoCAD.app" do
   all_users true
-#  restart true  
+  group "Center for the Arts"
 end
 
 cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.autodesk.AutoCAD.plist"

@@ -1,11 +1,11 @@
 apple_osx_updates Cookbook
-====================
-This cookbook installs the latest system updates for OS X
+==========================
+This cookbook installs the latest system and security updates for OS X
 
 Requirements
 ------------
 #### platform
-- `OS X` - 10.8.3, as that's our base and this is not a combo updater.
+- `OS X` - 10.8.3, as that's our base and this is a combo updater.
 
 Attributes
 ----------

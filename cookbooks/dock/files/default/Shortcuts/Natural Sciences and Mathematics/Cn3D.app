@@ -1,0 +1,5 @@
+XSym
+0022
+3f6f7a3705d9365a2c72a151f5b28e27
+/Applications/Cn3D.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

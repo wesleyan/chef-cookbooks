@@ -1,0 +1,5 @@
+XSym
+0028
+5163a96636be54a2fb0461edb55a4a03
+/Applications/Psyscope X.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

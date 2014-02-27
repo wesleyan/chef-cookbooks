@@ -1,0 +1,5 @@
+XSym
+0055
+ce7d0137ef10aff891a28b472ff392f3
+/Applications/Adobe InDesign CS6/Adobe InDesign CS6.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

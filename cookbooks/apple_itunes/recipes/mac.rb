@@ -2,18 +2,19 @@
 # Cookbook Name:: apple_itunes
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
+# Install our pkg
 dmg_package "iTunes" do
   app "Install iTunes"
   volumes_dir "iTunes"
-  dmg_name "iTunes11.0.5"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_itunes/iTunes11.0.5.dmg"
-  checksum "faea18b2c267ca279470ee690f262c6eb591ec322c9203cc81b94f6c7da5b914"
+  dmg_name "iTunes11.1.4"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_itunes/iTunes11.1.4.dmg"
+  checksum "39d0a784c771c1eb460be0b093eabc0ffaed50618119117d55cb3ce30458327f"
   action :install
   type "pkg"
   package_id "com.apple.pkg.iTunesX"
-  version "11.0.5"
+  version "11.1.4"
 end

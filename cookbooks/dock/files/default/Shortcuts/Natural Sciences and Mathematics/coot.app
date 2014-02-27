@@ -1,0 +1,5 @@
+XSym
+0022
+42a51f8915374ed52fc993fdecf90d26
+/Applications/coot.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

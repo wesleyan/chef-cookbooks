@@ -2,22 +2,22 @@
 # Cookbook Name:: mozilla_firefox
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-
+# 
 # Install package
-dmg_package "firefox-23.0.1.dmg" do
+dmg_package "firefox-27.0.1.dmg" do
   app "Firefox"
   volumes_dir "Firefox"
-  dmg_name "firefox-23.0.1"
-  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-23.0.1.dmg"
-  checksum "a806d9a73dab4cf5140e657c32af41da3b5c363f2c4e1edbb7107103c41a6736"
+  dmg_name "firefox-27.0.1"
+  source "http://ims-chef.wesleyan.edu/os_x/mozilla_firefox/firefox-27.0.1.dmg"
+  checksum "e20c49a3c396e2b8eaf3ecfce2f7824826f50a2ad92bf2bac17eeabc0dbbb1a4"
   action :install
-  type "app"
-  package_id "org.mozilla.firefox"
-  version "23.0.1"
+  type "pkg"
+  package_id "org.mozilla.firefox.pkg"
+  version "27.0.1"
 end
 
 # Add to dock
@@ -28,7 +28,7 @@ end
 
 # suppress import settings
 cookbook_file "/Applications/Firefox.app/Contents/MacOS/override.ini" do
-  mode 0666
+  mode 0755
 end
 
 # import CCK addon

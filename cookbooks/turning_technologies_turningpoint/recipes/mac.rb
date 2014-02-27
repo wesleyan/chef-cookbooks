@@ -2,7 +2,7 @@
 # Cookbook Name:: turning_technologies_turningpoint
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -10,13 +10,13 @@
 dmg_package "TurningPoint" do
   app "TurningPoint"
   volumes_dir "TurningPoint"
-  dmg_name "TurningPoint-5.2.1"
-  source "http://ims-chef.wesleyan.edu/os_x/turning_technologies_turningpoint/TurningPoint-5.2.1.dmg"
-  checksum "c2dc2d4563931cd80d8917a2167b193b382806fbb66c810f333cb50a162c6892"
+  dmg_name "TurningPoint-5.3.1"
+  source "http://ims-chef.wesleyan.edu/os_x/turning_technologies_turningpoint/TurningPoint-5.3.1.dmg"
+  checksum "ec89d22c53a2d0cf4d025e60d91e8b14608ba7e6df666211d66770ba14770f96"
   action :install
   type "app"
   package_id "com.turningtechnologies.turningpoint"
-  version "5.2.1"
+  version "5.3.1"
 end
 
 # Create directory for PowerPoint connector.

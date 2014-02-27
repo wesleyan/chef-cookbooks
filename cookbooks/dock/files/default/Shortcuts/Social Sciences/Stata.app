@@ -1,0 +1,5 @@
+XSym
+0029
+e78eba9799ad951156c990e0d82d60ec
+/Applications/Stata/Stata.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

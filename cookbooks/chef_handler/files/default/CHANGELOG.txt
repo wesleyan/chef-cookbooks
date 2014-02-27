@@ -1,0 +1,20 @@
+OS X Deployment CHANGELOG
+=========================
+
+This file is used to list changes made in the OS X software deployment.
+
+11062013
+--------
+- [mdietz] - Updated chef-client to 11.8.0
+- [rchristensen] - Updated ESET NOD32 to 4.1.92
+- [rchristensen] - Updated iTunes to 11.1.2
+- [rchristensen] - Updated Safari to 6.1
+- [rchristensen] - Updated Apple Remote Desktop Client to 3.7.0
+- [rchristensen] - Added Remote Desktop Client to osx-base role.
+- [rchristensen] - Updated Apple Remote Desktop Admin to 3.7.0
+- [rchristensen] - Updated Mozilla Firefox to 25.0
+- [rchristensen] - Added OCS Inventory NG cookbook, current version 2.1-rc1 
+- [rchristensen] - Added OCS Inventory NG to osx-base role, as we want all machines to give us inventory data.
+- [rchristensen] - Updated Adobe AIR to 3.9.0.1030
+- [rchristensen] - Updated Vectorworks to 2013 SP4
+- [mdietz] - Fixed Vectorworks silent deployment.

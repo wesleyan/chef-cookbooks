@@ -10,13 +10,13 @@
 dmg_package "Final Cut Pro X" do
   app "Final Cut Pro"
   volumes_dir "Final Cut Pro"
-  dmg_name "final_cut_pro-10.0.9"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.0.9.dmg"
-  checksum "2d5ef8a9fa2c2d785a8caa6fbcfca664298c771d7606759ccf849896a055bdad"
+  dmg_name "final_cut_pro-10.1"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.1.dmg"
+  checksum "c6ed8b1fc7505628cd1f1dc3e82aa24703428e06608355fa678dd3e66cebf440"
   action :install
   type "app"
   package_id "com.apple.FinalCut"
-  version "10.0.9"
+  version "10.1.0"
 end
 
 # Install Supplemental content
@@ -42,4 +42,19 @@ dmg_package "QuickTime Pro Codecs" do
   type "pkg"
   package_id "com.apple.pkg.ProAppsQTCodecs"
   version "1.0.2"
+end
+
+# Create dock folder, if it does not exist
+dock_add "Center for the Arts" do
+  all_users true
+  action :folder_create
+  show_as "list"
+  display_as "folder"
+  arrangement "name"
+end
+
+# Add to dock
+dock_add "/Applications/Final Cut Pro.app" do
+  all_users true
+  group "Center for the Arts"
 end

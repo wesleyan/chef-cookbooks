@@ -1,0 +1,55 @@
+SERVER mspiggy 00505696573B 27000 
+DAEMON MLM "e:\Program Files\MATLAB\R2013a\etc\win64\mlm.exe"
+# BEGIN--------------BEGIN--------------BEGIN
+# MathWorks license passcode file.
+# LicenseNo: 257154   HostID: 00505696573B
+#
+# R2013a
+#
+INCREMENT MATLAB MLM 29 01-jan-0000 40 8E129E063917374FC0F7 \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE=product=MATLAB SN=257154
+INCREMENT Signal_Blocks MLM 29 01-jan-0000 10 6E021E6682F17D0A5913 \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=DSP System Toolbox" SN=257154
+INCREMENT Data_Acq_Toolbox MLM 29 01-jan-0000 10 AE22BE26731397939EFC \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Data Acquisition Toolbox" SN=257154
+INCREMENT Image_Toolbox MLM 29 01-jan-0000 40 9ED25EF6592259F4A59D \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Image Processing Toolbox" SN=257154
+INCREMENT Optimization_Toolbox MLM 29 01-jan-0000 40 \
+	4EB28EC6DC1B82A5FD1E \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Optimization Toolbox" SN=257154
+INCREMENT Signal_Toolbox MLM 29 01-jan-0000 40 BED27E1688E128F4305D \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Signal Processing Toolbox" SN=257154
+INCREMENT Statistics_Toolbox MLM 29 01-jan-0000 40 \
+	2E329E163BE67F6D3C9B \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Statistics Toolbox" SN=257154
+INCREMENT Symbolic_Toolbox MLM 29 01-jan-0000 40 8EF22E2683DBF777C98E \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Symbolic Math Toolbox" SN=257154
+INCREMENT Wavelet_Toolbox MLM 29 01-jan-0000 10 DEE2CEC67D391AA62CA2 \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Wavelet Toolbox" SN=257154
+#
+# R2010b
+#
+INCREMENT Filter_Design_Toolbox MLM 24 01-jan-0000 10 \
+	8EE2CE6608A926B3B662 \
+	VENDOR_STRING=vi=0:at=200:ae=1:lu=200:lo=CN:ei=759093:classroom=1:lr=1: \
+	DUP_GROUP=UH asset_info=257154 ISSUED=06-Aug-2013 \
+	NOTICE="product=Filter Design Toolbox" SN=257154
+# END-----------------END-----------------END

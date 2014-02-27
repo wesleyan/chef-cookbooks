@@ -1,0 +1,5 @@
+XSym
+0025
+0d1a3132e3f0043c8f6ad7911b1476dc
+/Applications/RStudio.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

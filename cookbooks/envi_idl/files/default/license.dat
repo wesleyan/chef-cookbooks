@@ -1,0 +1,36 @@
+############ license file comments, do not delete ###############
+# License Number(s): 216959 99692 99693 
+SERVER fozzy.wesleyan.edu 0050569B21E6 1700
+USE_SERVER
+DAEMON idl_lmgrd
+INCREMENT envi_cartosat idl_lmgrd 4.500 1-jan-0000 10 \
+	8D5AAA94663CC960C920 VENDOR_STRING="99692Wesleyan University" \
+	ck=52
+INCREMENT idl idl_lmgrd 7.000 1-jan-0000 100 0DDADAE4A270D6D8F100 \
+	VENDOR_STRING="99692Wesleyan University" ck=34
+INCREMENT idl_bridge_assist idl_lmgrd 7.000 1-jan-0000 13 \
+	BD9A7A3424D5EE7A1C73 VENDOR_STRING="99693Wesleyan University" \
+	ck=107
+INCREMENT idl_wavelet idl_lmgrd 7.000 1-jan-0000 13 \
+	3D6A9A04BC65EACE5DDC VENDOR_STRING="99693Wesleyan University" \
+	ck=125
+INCREMENT envi idl_lmgrd 4.500 1-jan-0000 13 CD9A8A847EA40F0D9C1B \
+	VENDOR_STRING="99693Wesleyan University" ck=85
+INCREMENT envi_cartosat idl_lmgrd 4.500 1-jan-0000 13 \
+	4D8A6A145F93B300289A VENDOR_STRING="99693Wesleyan University" \
+	ck=249
+INCREMENT envi idl_lmgrd 4.500 1-jan-0000 10 1DBA7A84940A69A6DF8D \
+	VENDOR_STRING="99692Wesleyan University" ck=68
+INCREMENT idl idl_lmgrd 7.000 1-jan-0000 130 CD4ACA74D3D625FEC9FE \
+	VENDOR_STRING="99693Wesleyan University" ck=112
+INCREMENT envi_flaash idl_lmgrd 4.500 1-jan-0000 1 \
+	6D3A4A84ACFCD6F285F8 VENDOR_STRING="216959Wesleyan University" \
+	ck=58
+INCREMENT idl_bridge_assist idl_lmgrd 7.000 1-jan-0000 10 \
+	DD8A2A54196ED0192A05 VENDOR_STRING="99692Wesleyan University" \
+	ck=80
+INCREMENT idl_wavelet idl_lmgrd 7.000 1-jan-0000 10 \
+	6D5ACA4401E8102979B4 VENDOR_STRING="99692Wesleyan University" \
+	ck=46
+FEATURESET idl_lmgrd 7FEFF805682F946E
+##################### end of license file #######################

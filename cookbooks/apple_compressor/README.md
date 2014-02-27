@@ -1,14 +1,40 @@
-Description
-===========
-Installs Compressor on OS X.
+apple_compressor Cookbook
+=========================
+This cookbook installs Compressor.
 
 Requirements
-============
-OS X 10.6.8+
+------------
+#### platform
+- `OS X` - 10.6.8 or above.
 
 Attributes
-==========
+----------
 
 Usage
-=====
-Use the cookbook, or die?
+-----
+#### apple_compressor::mac
+
+Just include `apple_compressor:` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[apple_compressor::mac]"
+  ]
+}
+```
+
+Contributing
+------------
+
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write you change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
+
+License and Authors
+-------------------
+Robert Christensen <rchristensen@wesleyan.edu>

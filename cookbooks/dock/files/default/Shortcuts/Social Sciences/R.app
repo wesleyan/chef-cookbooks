@@ -1,0 +1,5 @@
+XSym
+0019
+b6ea2a6bdf949cfb5ecee4d9c1157f4f
+/Applications/R.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

@@ -32,3 +32,12 @@ remote_directory node['chef_handler']['handler_path'] do
   action :nothing
 end.run_action(:create)
 
+chef_gem "mail" do
+  version "2.5.3"
+end
+
+
+chef_handler "Wesleyan::EmailMe" do
+  source "#{node['chef_handler']['handler_path']}/emailme"
+  action :enable
+end

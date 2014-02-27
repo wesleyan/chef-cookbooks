@@ -5,7 +5,7 @@ This cookbook installs Apple Xcode and Command Line Tools on OS X.
 Requirements
 ------------
 #### platform
-- `OS X` - 10.6.8 or above.
+- `OS X` - 10.8 or above.
 
 Attributes
 ----------

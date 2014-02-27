@@ -1,0 +1,5 @@
+XSym
+0024
+2982dd76e5f0131258500fbf5aaef7db
+/Applications/MacVim.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

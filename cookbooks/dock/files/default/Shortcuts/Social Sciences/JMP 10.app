@@ -1,0 +1,5 @@
+XSym
+0024
+53e773b99030072578f12c8cdf9d2c8c
+/Applications/JMP 10.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

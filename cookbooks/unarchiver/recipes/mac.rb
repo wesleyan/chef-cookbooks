@@ -9,21 +9,22 @@
 dmg_package "The Unarchiver" do
   app "The Unarchiver"
   volumes_dir "The Unarchiver"
-  dmg_name "the_unarchiver-3.8"
-  source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.8.dmg"
-  checksum "3aa4dc1b72baa9a72c9e2330693ce51e0a06e3a420bc7a23e5ba45b8253995d4"
+  dmg_name "the_unarchiver-3.9.1"
+  source "http://ims-chef.wesleyan.edu/os_x/unarchiver/the_unarchiver-3.9.1.dmg"
+  checksum "d4c25801da1a5751be555ef0815c6dac84bcd9f8cb846057899a2e27e05725e9"
   action :install
   type "app"
   package_id "cx.c3.theunarchiver"
-  version "3.8.0"
+  version "3.9.1"
 end
 
-# Set the Unarchiver as the default application for most archive files
+# Set the Unarchiver as the default application for most archive files.
 launch_association_set_file_handler "public.archive" do
   bundle_id "cx.c3.theunarchiver"
   all_users true
 end
 
+# Set as default handler for tar/gz/bz, as public.archive doesn't cover these for some reason.
 launch_association_set_file_handler "public.tar-bzip2-archive" do
   bundle_id "cx.c3.theunarchiver"
   all_users true

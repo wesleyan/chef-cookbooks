@@ -2,7 +2,7 @@
 # Cookbook Name:: mrbayes
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -14,7 +14,7 @@ homebrew_tap "homebrew/science"
 
 # Install MrBayes via homebrew
 package "mrbayes" do
-  version "3.2.1"
+  version "3.2.2"
 end
 
 # Legacy binary install, keeping here just-in-case.

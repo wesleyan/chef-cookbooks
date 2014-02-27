@@ -1,5 +1,5 @@
 turning_technologies_turningpoint Cookbook
-====================
+==========================================
 This cookbook installs TurningPoint on OS X.
 
 Requirements

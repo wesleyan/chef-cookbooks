@@ -2,11 +2,11 @@
 # Cookbook Name:: apple_remote_desktop_admin
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install base pkg
+# Install base pkg.
 dmg_package "Apple Remote Desktop Admin" do
   app "RemoteDesktopAdmin"
   volumes_dir "RemoteDesktopAdmin"
@@ -18,26 +18,27 @@ dmg_package "Apple Remote Desktop Admin" do
   package_id "com.apple.pkg.RemoteDesktopAdmin"
 end
 
-# Install update pkg
+# Install update pkg.
 dmg_package "Apple Remote Desktop Admin Update" do
-  app "RemoteDesktopAdmin361"
-  volumes_dir "Apple Remote Desktop 3.6.1 Admin Update"
-  dmg_name "RemoteDesktopAdmin361"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin361.dmg"
-  checksum "4de8f7af20cff4817ee63b179134ef354584429951a34198cef333d1dc36c024"
+  app "RemoteDesktopAdmin371"
+  volumes_dir "Apple Remote Desktop 3.7.1 Admin Update"
+  dmg_name "RemoteDesktopAdmin371"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopAdmin371.dmg"
+  checksum "02dbb4ba6e3fc09980402cf277cb02cc4373e8f41dfbad102d9c8bd939074555"
   action :install
   type "pkg"
-  package_id "com.apple.pkg.RemoteDesktopAdmin361"
+  package_id "com.apple.pkg.RemoteDesktopAdmin371"
 end
 
+# Drop in our settings to suppress serial prompt.
 dmg_package "Remote Desktop Settings" do
-  app "Remote Desktop Settings"
-  volumes_dir "Remote Desktop Settings"
-  dmg_name "RemoteDesktopSettings"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/RemoteDesktopSettings.dmg"
-  checksum "fe481bbbffe197c16c86faac2023a1074976ed0b2a9f21d46e25c8edf7d556a1"
+  app "ARD Settings"
+  volumes_dir "ARD Settings"
+  dmg_name "ARDSettings"
+  source "http://ims-chef.wesleyan.edu/os_x/apple_remote_desktop_admin/ARDSettings.dmg"
+  checksum "641cedf0a26a484f0f0362e9f64e0ff338de1b80f2160cd2478cc750d80619ad"
   action :install
   type "pkg"
   version "1.0.0"
-  package_id "com.apple.pkg.settings.RemoteDesktopAdmin"
+  package_id "edu.wesleyan.ardsettings"
 end

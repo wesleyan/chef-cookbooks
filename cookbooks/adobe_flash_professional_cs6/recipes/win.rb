@@ -7,7 +7,7 @@ remote_file "C:/adobe_flash_professional_cs6.zip" do
 end
 
 execute 'Unzip Installer' do
-	command 'C:\7-zip\7z.exe x -y adobe_flash_professional_cs6.zip > nul'
+	command '"C:\Program Files (x86)\7-zip\7z.exe" x -y adobe_flash_professional_cs6.zip > nul'
 	not_if { ::File.exists? "#{Chef::Config[:file_cache_path]}/Receipts/Adobe Flash Professional CS6" }
 end
 

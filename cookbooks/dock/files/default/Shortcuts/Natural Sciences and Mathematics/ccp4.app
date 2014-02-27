@@ -1,0 +1,5 @@
+XSym
+0033
+524f073f7f95f67acacd606e5f7c074c
+/Applications/ccp4-6.3.0/ccp4.app
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

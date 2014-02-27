@@ -1,11 +1,11 @@
 #
-# Cookbook Name:: office
+# Cookbook Name:: microsoft_office
 # Recipe:: mac
 #
-# Copyright 2012, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
-
+#
 # Install Office base
 dmg_package "Microsoft Office 2011 SP3" do
   app "Microsoft Office 2011"
@@ -19,51 +19,48 @@ dmg_package "Microsoft Office 2011 SP3" do
   version "14.3.2"
 end
 
-#dmg_package "Update Office 2011-1434" do
-#  app "Office 2011 14.3.4 Update"
-#  volumes_dir "Microsoft Office 2011 14.3.4 Update"
-#  dmg_name "Office2011-1434UpdateEN"
-#  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1434UpdateEN.dmg"
-#  checksum "892769fcdd91688ff66bddd9c5577e72cdd596420d8bd35f858a7e862f62f773"
-#  action :install
-#  type "pkg"
-#  package_id "com.microsoft.office.2011"
-#  version "14.3.4"
-#end
-
-#dmg_package "Update Office 2011-1435" do
-#  app "Office 2011 14.3.5 Update"
-#  volumes_dir "Microsoft Office 2011 14.3.5 Update"
-#  dmg_name "Office2011-1435UpdateEN"
-#  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1435UpdateEN.dmg"
-#  checksum "6ddf86a7fd4cf3a3a5e0875ef5bc50178e2be0b691426e5eed997712bc9bb60e"
-#  action :install
-#  type "pkg"
-#  package_id "com.microsoft.office.2011"
-#  version "14.3.5"
-#end
-
 # Install latest update.
-dmg_package "Update Office 2011 Update" do
-  app "Office 2011 14.3.6 Update"
-  volumes_dir "Microsoft Office 2011 14.3.6 Update"
-  dmg_name "Office2011-1436Update_EN-US"
-  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1436Update_EN-US.dmg"
-  checksum "36dfc8abb3a4fd408d78910b308642482bdeb6035de88de63efdbd9e22e60e01"
+dmg_package "Update Office 2011" do
+  app "Office 2011 14.3.9 Update"
+  volumes_dir "Microsoft Office 2011 14.3.9 Update"
+  dmg_name "Office2011-1438Update_EN-US"
+  source "http://ims-chef.wesleyan.edu/os_x/microsoft_office_2011/Office2011-1439Update_EN-US.dmg"
+  checksum "9e10855139ae39de7118485e2bf45b93ad0a82e67d351040bd972ce603040129"
   action :install
   type "pkg"
   package_id "com.microsoft.office.2011"
-  version "14.3.6"
+  version "14.3.9"
 end
 
 # Install customized plist files to surpress first-run dialogues
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.autoupdate2.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.error_reporting.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.office.setupassistant.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Excel.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Powerpoint.plist"
-cookbook_file "/System/Library/User Template/English.lproj/Library/Preferences/com.microsoft.Word.plist"
+default_profile "com.microsoft.autoupdate2.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.error_reporting.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.office.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.office.setupassistant.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Excel.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Powerpoint.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
+default_profile "com.microsoft.Word.plist" do
+  path "Library/Preferences"
+  cookbook 'microsoft_office'
+end
 
 
 # Download icon

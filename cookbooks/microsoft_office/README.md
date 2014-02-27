@@ -1,5 +1,5 @@
 microsoft_office Cookbook
-====================
+=========================
 This cookbook installs Microsoft Office 2011 on OS X, 2013 on Windows
 
 Requirements

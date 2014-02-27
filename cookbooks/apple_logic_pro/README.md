@@ -1,24 +1,36 @@
 apple_logic_pro Cookbook
-===========================
-This cookbook installs Apple Logic Pro
+============================
+This cookbook installs Logic Pro X.
 
 Requirements
 ------------
-OS X 10.6.8+
+#### platform
+- `OS X` - 10.6.8 or above.
 
 Attributes
 ----------
 
 Usage
 -----
-Just include `apple_logic_pro` in your node's `run_list`
+#### apple_logic_pro::mac
 
+Just include `apple_logic_pro:` in your node's `run_list`:
+
+```json
+{
+  "name":"my_node",
+  "run_list": [
+    "recipe[apple_logic_pro::mac]"
+  ]
+}
+```
 
 Contributing
 ------------
+
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
-3. Write your change
+3. Write you change
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github

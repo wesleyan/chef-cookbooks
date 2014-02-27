@@ -39,6 +39,7 @@ action :install do
       path dmg_file
       source new_resource.source
       checksum new_resource.checksum if new_resource.checksum
+      backup false
       only_if { new_resource.source }
     end
 
@@ -91,7 +92,7 @@ action :install do
     when "mpkg", "pkg"
       # apply user supplied choices
       choices = new_resource.xml_choices
-      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR"
+      cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR -allowUntrusted"
       if choices
         choiceHash = []
         choices.each do |choice|
@@ -105,32 +106,33 @@ action :install do
         f.close
         cmd << " -applyChoiceChangesXML '#{xmlName}'"
       end
-      f = ::File.open('/tmp/install_script','w')
-      f << %Q{
-        #!/usr/bin/env expect -f
-        set timeout -1
-        set count 0
-        spawn #{cmd.gsub("'",'"')}
-        expect {
-            "Waiting for other installations to complete"
-            {
-              set count [expr $count + 1]
-              if { $count > 10 } {
-                exec /sbin/shutdown -r now
-                close
-                exit 1
-              }
-              exp_continue
-            }
-            eof
-            {
-              catch wait reason
-              exit [lindex $reason 3]
-            }
-        }
-      }
-      f.close
-      execute '/usr/bin/env expect -f /tmp/install_script'
+      execute cmd.gsub("'",'"')
+      #f = ::File.open('/tmp/install_script','w')
+      #f << %Q{
+      #  #!/usr/bin/env expect -f
+      #  set timeout -1
+      #  set count 0
+      #  spawn #{cmd.gsub("'",'"')}
+      #  expect {
+      #      "Waiting for other installations to complete"
+      #      {
+      #        set count [expr $count + 1]
+      #        if { $count > 10 } {
+      #          exec /sbin/shutdown -r now
+      #          close
+      #          exit 1
+      #        }
+      #        exp_continue
+      #      }
+      #      eof
+      #      {
+      #        catch wait reason
+      #        exit [lindex $reason 3]
+      #      }
+      #  }
+      #}
+      #f.close
+      #execute '/usr/bin/env expect -f /tmp/install_script'
       #::File.delete(xmlName) if choices
       # we assume here the pkg installer already created a receipt
       if (new_resource.version and new_resource.package_id)

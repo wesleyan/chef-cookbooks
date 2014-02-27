@@ -4,4 +4,6 @@ maintainer_email 'software@wesleyan.edu'
 license          'All rights reserved'
 description      'Installs Skype from Microsoft'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.1'
+version          '0.3.1'
+depends          'dmg'
+depends          'windows'

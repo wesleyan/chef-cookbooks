@@ -2,11 +2,21 @@ name "osx-base"
 description "Base role for OS X deployment"
 
           # Core recipes
-run_list  "recipe[prepare::mac]",
+run_list  "recipe[chef_handler]",
+          "recipe[prepare::mac]",
+          "recipe[default_profile::mac]",
           "recipe[sudo]",
-          "recipe[opscode_chef::mac]",
+          "recipe[chef_chefclient::mac]",
           # Package providers
           "recipe[dmg]",
+          # Core system updates and applications
+          "recipe[apple_osx_updates::mac]", 
+          "recipe[apple_airport::mac]",
+          "recipe[apple_remote_desktop_client::mac]",
+          "recipe[oracle_java::mac]", 
+          "recipe[sassafras_k2::mac]",
+          "recipe[eset_nod32::mac]",
+          "recipe[verdiem_surveyor::mac]",
           # XCode
           "recipe[apple_xcode::mac]",
           "recipe[homebrew]",
@@ -14,13 +24,6 @@ run_list  "recipe[prepare::mac]",
           #"recipe[preference::mac]",
           "recipe[dock::mac]", 
           "recipe[launch_association::mac]",
-          # Core system updates and applications
-          "recipe[apple_osx_updates::mac]", 
-          "recipe[apple_airport::mac]",
-          "recipe[oracle_java::mac]", 
-          "recipe[sassafras_k2::mac]",
-          "recipe[eset_nod32::mac]",
-          "recipe[verdiem_surveyor::mac]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
@@ -40,6 +43,7 @@ run_list  "recipe[prepare::mac]",
           "recipe[videolan_vlc::mac]",
           "recipe[profile_manager::mac]",
           "recipe[system_preferences::mac]",
+          "recipe[ocsinventory_ng::mac]",
 	        "recipe[chef-client::launchd_service]",
           # Finalize 
           "recipe[finalize::mac]"

@@ -1,5 +1,5 @@
 hamrick_vuescan Cookbook
-====================
+========================
 This cookbook installs Hamrick VueScan on OS X and Windows
 
 Requirements
