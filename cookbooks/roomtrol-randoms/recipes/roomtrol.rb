@@ -52,17 +52,22 @@ cookbook_file "/etc/rc.local" do
   mode 0755
 end
 
-cookbook_file "/etc/grub.d/00_header" do
-  owner "root"
-  group "root"
-  mode 0644
-end
-
-cookbook_file "/etc/default/grub" do
-  owner "root"
-  group "root"
-  mode 0644
-end
+#cookbook_file "/etc/grub.d/00_header" do
+#  owner "root"
+#  group "root"
+#  mode 0644
+#end
+#
+#cookbook_file "/etc/default/grub" do
+#  owner "root"
+#  group "root"
+#  mode 0644
+#end
+#
+#bash "regenerate grub config files" do
+#  user "root"
+#  code "update-grub"
+#end
 
 cookbook_file "/etc/logrotate.d/roomtrol" do
   owner "root"
@@ -70,10 +75,6 @@ cookbook_file "/etc/logrotate.d/roomtrol" do
   mode 0644
 end 
 
-bash "regenerate grub config files" do
-  user "root"
-  code "update-grub"
-end
 
 directory "/home/roomtrol/.ssh" do
   owner "roomtrol"
@@ -154,3 +155,20 @@ cookbook_file "/etc/rsyslog.conf" do
   mode 0755
   notifies :restart, "service[rsyslog]"
 end
+
+#cookbook_file '/etc/apt/sources.list.d/couchdb.list' do
+#  owner "root"
+#  group "root"
+#  mode 0644
+#end
+#
+#execute "apt-get-update" do
+#  command "apt-get update"
+#end
+
+#package "grub-pc" do
+#  action :upgrade
+#  options "-o Dpkg::Options::='--force-confold'"
+#end
+
+

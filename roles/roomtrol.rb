@@ -4,10 +4,10 @@ description "Base role for roomtrol deployment"
 run_list  "recipe[apt]",
           "recipe[sudo]",
           "recipe[xorg::roomtrol]",
-          "recipe[erlang]",
           "recipe[rabbitmq::roomtrol]",
-          "recipe[couchdb]",
           "recipe[roomtrol-randoms::roomtrol]",
+          "recipe[erlang]",
+          "recipe[couchdb::source]",
           "recipe[nginx::roomtrol]",
           "recipe[rvm::roomtrol]"
 

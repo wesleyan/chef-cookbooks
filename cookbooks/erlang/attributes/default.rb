@@ -16,7 +16,8 @@
 #
 
 default['erlang']['gui_tools'] = false
-default['erlang']['install_method'] = "package"
+#default['erlang']['install_method'] = "package"
+default['erlang']['install_method'] = "source"
 
 default['erlang']['source']['version'] = "R15B01"
 default['erlang']['source']['url'] = "http://erlang.org/download/otp_src_#{node['erlang']['source']['version']}.tar.gz"

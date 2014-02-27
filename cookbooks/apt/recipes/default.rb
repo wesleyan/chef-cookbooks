@@ -26,11 +26,11 @@ unless apt_installed?
   Chef::Log.debug "apt is not installed. Apt-specific resources will not be executed."
 end
 
-apt_repository 'couchdb' do
-  uri 'http://mirrors.kernel.org/ubuntu'
-  distribution  "raring"
-  components  ['main', 'universe']
-end
+#apt_repository 'couchdb' do
+#  uri 'http://mirrors.kernel.org/ubuntu'
+#  distribution  "raring"
+#  components  ['main', 'universe']
+#end
 
 # Run apt-get update to create the stamp file
 execute "apt-get-update" do
