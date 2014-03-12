@@ -1,4 +1,4 @@
-/var/log/roomtrol.log {
+/var/log/cmdr.log {
 rotate 5
 daily
 compress
@@ -6,7 +6,7 @@ missingok
 notifempty
 postrotate 
 /etc/init.d/rabbitmq-server restart
-/sbin/restart roomtrol-daemon
+/sbin/restart cmdr-daemon
 endscript
 }
 

@@ -71,29 +71,29 @@ end
 #  code "update-grub"
 #end
 
-cookbook_file "/etc/logrotate.d/roomtrol" do
+cookbook_file "/etc/logrotate.d/cmdr" do
   owner "root"
   group "root"
   mode 0644
 end 
 
 
-directory "/home/roomtrol/.ssh" do
-  owner "roomtrol"
-  group "roomtrol"
+directory "/home/cmdr/.ssh" do
+  owner "cmdr"
+  group "cmdr"
   action :create
   mode 0700
 end
 
 directory "/var/www" do
-  owner "roomtrol"
-  group "roomtrol"
+  owner "cmdr"
+  group "cmdr"
   action :create
 end
 
-cookbook_file "/home/roomtrol/.ssh/authorized_keys" do
-  owner "roomtrol"
-  group "roomtrol"
+cookbook_file "/home/cmdr/.ssh/authorized_keys" do
+  owner "cmdr"
+  group "cmdr"
   mode 0644
 end
 
@@ -115,19 +115,19 @@ cookbook_file "/etc/init/lirc.conf" do
   mode 0644
 end
 
-cookbook_file "/etc/init/roomtrol-daemon.conf" do
+cookbook_file "/etc/init/cmdr-daemon.conf" do
   owner "root"
   group "root"
   mode 0644
 end
 
-cookbook_file "/usr/local/bin/bootup_roomtrol" do
+cookbook_file "/usr/local/bin/bootup_cmdr" do
   owner "root"
   group "root"
   mode 0755
 end
 
-cookbook_file "/etc/avahi/services/roomtrol.service" do
+cookbook_file "/etc/avahi/services/cmdr.service" do
   owner "root"
   group "root"
   mode 0755
@@ -158,7 +158,7 @@ cookbook_file "/etc/rsyslog.conf" do
   notifies :restart, "service[rsyslog]"
 end
 
-users_manage "roomtrol" do
-  data_bag "cmdr"
-  group_name "wheel"
+users_manage "sysadmin" do
+  group_id 2300
+  action [:remove, :create]
 end
