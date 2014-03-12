@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-export BUNDLE_GEMFILE=/var/roomtrol-daemon/Gemfile
+export BUNDLE_GEMFILE=/var/cmdr-daemon/Gemfile
 
 if [[ -s "/usr/local/rvm/environments/default" ]] ; then
   source "/usr/local/rvm/environments/default"
-  exec /var/roomtrol-daemon/bin/roomtrol "$@"
+  exec /var/cmdr-daemon/bin/cmdr"$@"
 else
 
   echo "ERROR: Missing RVM environment file: '/usr/local/rvm/environments/default'. Please confirm that you set a defualt rvm version or do so with: 'sudo rvm --default use 1.9.2'" >&2

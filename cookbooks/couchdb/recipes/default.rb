@@ -45,6 +45,8 @@ package "couchdb" do
     "gentoo" => { "default" => "dev-db/couchdb" },
     "default" => "couchdb"
   )
+  action :upgrade
+  options "-o Dpkg::Options::='--force-confold'"
 end
 
 template "/etc/couchdb/local.ini" do
