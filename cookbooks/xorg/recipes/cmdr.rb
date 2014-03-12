@@ -1,5 +1,5 @@
 # Cookbook Name:: xorg
-# Recipe:: roomtrol
+# Recipe:: cmdr
 
 include_recipe "apt" if [ 'debian', 'ubuntu' ].member? node[:platform]
 package "xorg"
@@ -55,7 +55,7 @@ end
 cookbook_file "/usr/lib/X11/xinit/xinitrc" do
   owner "root"
   group "root"
-  source "xinitrc.roomtrol"
+  source "xinitrc.cmdr"
   mode 0755
 end
 

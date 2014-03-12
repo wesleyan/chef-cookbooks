@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: roomtrol-randoms
+# Cookbook Name:: cmdr-defaults
 # Recipe:: default
 
 include_recipe "apt" if [ 'debian', 'ubuntu' ].member? node[:platform]
