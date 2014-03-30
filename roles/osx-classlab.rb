@@ -35,6 +35,7 @@ run_list  "role[osx-base]",
           "recipe[vernier_logger_pro::mac]",
           "recipe[wolfram_mathematica::mac]",
           "recipe[perkinelmer_chemdraw_pro::mac]",
+          "recipe[kintekcorp_kintek_explorer::mac]",
           # SS
           "recipe[gnu_r::mac]",
           "recipe[ibm_spss::mac]",
