@@ -22,5 +22,6 @@ cookbook_versions 	"adobe_air" => "<= 0.2.1",
 					"mozilla_firefox" => "<= 0.4.11",
 					"prepare" => "<= 0.1.0",
 					"printers" => "<= 0.6.1",
+					"rodsbooks_refind" => "<= 0.1.1",
 					"wacom_tablet" => "<= 0.1.0",
 					"xorg_xquartz" => "<= 0.2.0"
