@@ -7,7 +7,7 @@ run_list  "recipe[apt]",
           "recipe[rabbitmq::cmdr]",
           "recipe[cmdr-defaults::cmdr]",
           "recipe[erlang]",
-          "recipe[couchdb::source]",
+          "recipe[couchdb]",
           "recipe[nginx::cmdr]",
           "recipe[rvm::cmdr]"
 
