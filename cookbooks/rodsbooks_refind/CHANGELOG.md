@@ -3,6 +3,10 @@ rodsbooks_refind CHANGELOG
 
 This file is used to list changes made in each version of the rodsbooks_refind cookbook.
 
+0.1.1
+-----
+- [rchristensen] - Updated app to 0.7.8
+
 0.1.0
 -----
 - [mdietz] - Initial release of rodsbooks_refind
