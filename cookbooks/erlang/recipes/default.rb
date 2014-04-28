@@ -20,5 +20,4 @@
 # limitations under the License.
 #
 
-#include_recipe "erlang::#{node["erlang"]["install_method"]}"
-include_recipe "erlang::package"
+include_recipe "erlang::#{node["erlang"]["install_method"]}"
