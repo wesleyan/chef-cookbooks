@@ -18,3 +18,7 @@
 	url = https://github.com/opscode-cookbooks/rabbitmq
 	path = cookbooks/rabbitmq
 	branch = master
+[subtree "cookbooks/nginx"]
+	url = https://github.com/opscode-cookbooks/nginx
+	path = cookbooks/nginx
+	branch = master
