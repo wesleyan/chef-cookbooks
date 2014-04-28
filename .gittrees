@@ -54,3 +54,7 @@
 	url = https://github.com/opscode-cookbooks/yum-erlang_solutions
 	path = cookbooks/yum-erlang_solutions
 	branch = master
+[subtree "cookbooks/rsyslog"]
+	url = https://github.com/opscode-cookbooks/rsyslog
+	path = cookbooks/rsyslog
+	branch = master
