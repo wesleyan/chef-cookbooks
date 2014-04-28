@@ -26,3 +26,7 @@
 	url = https://github.com/fnichol/chef-rvm
 	path = cookbooks/rvm
 	branch = master
+[subtree "cookbooks/bluepill"]
+	url = https://github.com/opscode-cookbooks/bluepill
+	path = cookbooks/bluepill
+	branch = master
