@@ -4,7 +4,7 @@ description "Base role for cmdr deployment"
 run_list  "recipe[apt]",
           "recipe[sudo]",
           "recipe[xorg::cmdr]",
-          "recipe[rabbitmq::cmdr]",
+          "recipe[rabbitmq]",
           "recipe[cmdr-defaults::cmdr]",
           "recipe[erlang]",
           "recipe[couchdb]",

@@ -14,3 +14,7 @@
 	url = https://github.com/wohali/couchdb-cookbook
 	path = cookbooks/couchdb
 	branch = master
+[subtree "cookbooks/rabbitmq"]
+	url = https://github.com/opscode-cookbooks/rabbitmq
+	path = cookbooks/rabbitmq
+	branch = master
