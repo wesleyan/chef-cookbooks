@@ -3,6 +3,11 @@ printers CHANGELOG
 
 This file is used to list changes made in each version of the printers cookbook.
 
+0.6.2
+-----
+- [rchristensen] - Added the HP printer drivers for DAC 100.
+- [rchristensen] - Added shared printer from dac100mac-shadow.
+
 0.6.1
 -----
 - [rchristensen] - Added the Epson 9800 to DAC 100
