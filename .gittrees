@@ -10,3 +10,7 @@
 	url = https://github.com/opscode-cookbooks/erlang
 	path = cookbooks/erlang
 	branch = master
+[subtree "cookbooks/couchdb"]
+	url = https://github.com/wohali/couchdb-cookbook
+	path = cookbooks/couchdb
+	branch = master

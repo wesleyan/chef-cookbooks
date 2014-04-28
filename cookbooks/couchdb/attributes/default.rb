@@ -20,7 +20,7 @@
 default['couch_db']['src_checksum']   = 'b54e643f3ca5f046cfd2f329a001efeaae8a3094365fa6c1cb5dcf68c1b25ccd'
 default['couch_db']['src_version']    = '1.5.0'
 default['couch_db']['src_mirror']     = "http://archive.apache.org/dist/couchdb/source/#{node['couch_db']['src_version']}/apache-couchdb-#{node['couch_db']['src_version']}.tar.gz"
-default['couch_db']['install_erlang'] = true
+default['couch_db']['install_erlang'] = false
 
 # Attributes below are used to configure your couchdb instance.
 # These defaults were extracted from this url:
@@ -38,6 +38,12 @@ default['couch_db']['config']['couchdb']['batch_save_size'] = 1000
 default['couch_db']['config']['couchdb']['batch_save_interval'] = 1000  # In ms (1 second)
 
 default['couch_db']['config']['httpd']['port'] = 5984
-default['couch_db']['config']['httpd']['bind_address'] = '127.0.0.1'
+default['couch_db']['config']['httpd']['bind_address'] = '0.0.0.0'
 
 default['couch_db']['config']['log']['level'] = 'info'
+default['couch_db']['config']['daemons']['compaction_daemon'] = "{couch_compaction_daemon, start_link, []}"
+default['couch_db']['config']['compaction_daemon']['check_interval'] = 300
+default['couch_db']['config']['compaction_daemon']['min_file_size'] = 104857600 #100 MB
+default['couch_db']['config']['compactions']['rooms'] = '[{db_fragmentation, "60%"}, {from, "03:00"}, {to, "04:00"}, {strict_window, true}]'
+
+default['couch_db']['config']['admins']['cmdr'] = "-hashed-317f8d6787658ae6b53d6265a985187adc9c1f43,fe99fbf262914dd13efbc49dc1469c40"
