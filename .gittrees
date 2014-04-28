@@ -2,3 +2,7 @@
 	url = https://github.com/opscode-cookbooks/apt
 	path = cookbooks/apt
 	branch = master
+[subtree "cookbooks/sudo"]
+	url = https://github.com/opscode-cookbooks/sudo
+	path = cookbooks/sudo
+	branch = master
