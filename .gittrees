@@ -6,3 +6,7 @@
 	url = https://github.com/opscode-cookbooks/sudo
 	path = cookbooks/sudo
 	branch = master
+[subtree "cookbooks/erlang"]
+	url = https://github.com/opscode-cookbooks/erlang
+	path = cookbooks/erlang
+	branch = master
