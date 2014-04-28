@@ -34,3 +34,7 @@
 	url = https://github.com/opscode-cookbooks/build-essential
 	path = cookbooks/build-essential
 	branch = master
+[subtree "cookbooks/runit"]
+	url = https://github.com/hw-cookbooks/runit
+	path = cookbooks/runit
+	branch = master
