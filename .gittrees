@@ -38,3 +38,7 @@
 	url = https://github.com/hw-cookbooks/runit
 	path = cookbooks/runit
 	branch = master
+[subtree "cookbooks/yum-epel"]
+	url = https://github.com/opscode-cookbooks/yum-epel
+	path = cookbooks/yum-epel
+	branch = master
