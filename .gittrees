@@ -46,3 +46,7 @@
 	url = https://github.com/hw-cookbooks/chef_gem
 	path = cookbooks/chef_gem
 	branch = master
+[subtree "cookbooks/yum"]
+	url = https://github.com/opscode-cookbooks/yum
+	path = cookbooks/yum
+	branch = master
