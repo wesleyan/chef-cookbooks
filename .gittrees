@@ -50,3 +50,7 @@
 	url = https://github.com/opscode-cookbooks/yum
 	path = cookbooks/yum
 	branch = master
+[subtree "cookbooks/yum-erlang_solutions"]
+	url = https://github.com/opscode-cookbooks/yum-erlang_solutions
+	path = cookbooks/yum-erlang_solutions
+	branch = master
