@@ -30,3 +30,7 @@
 	url = https://github.com/opscode-cookbooks/bluepill
 	path = cookbooks/bluepill
 	branch = master
+[subtree "cookbooks/build-essential"]
+	url = https://github.com/opscode-cookbooks/build-essential
+	path = cookbooks/build-essential
+	branch = master
