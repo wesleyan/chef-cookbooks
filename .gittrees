@@ -1,0 +1,4 @@
+[subtree "cookbooks/apt"]
+	url = https://github.com/opscode-cookbooks/apt
+	path = cookbooks/apt
+	branch = master
