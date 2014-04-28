@@ -3,7 +3,7 @@ description "Base role for cmdr deployment"
 
 run_list  "recipe[apt]",
           "recipe[sudo]",
-          "recipe[xorg::cmdr]",
+          #"recipe[xorg::cmdr]",
           "recipe[rabbitmq]",
           "recipe[cmdr-defaults::cmdr]",
           "recipe[erlang]",
@@ -14,11 +14,11 @@ run_list  "recipe[apt]",
 default_attributes(
 "authorization" => {
   "sudo" => {
-    "users" => ["cmdr"],
+    "users" => ["vagrant"],
     "passwordless" => true
   }
 },
 "rvm" => {
   "global_gems" => [{"name" => "bundler"},
-  {"name" => "rake","version" => "0.9.2"}]
+  {"name" => "rake"}]
 })
