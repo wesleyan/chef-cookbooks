@@ -42,3 +42,7 @@
 	url = https://github.com/opscode-cookbooks/yum-epel
 	path = cookbooks/yum-epel
 	branch = master
+[subtree "cookbooks/chef_gem"]
+	url = https://github.com/hw-cookbooks/chef_gem
+	path = cookbooks/chef_gem
+	branch = master
