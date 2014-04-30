@@ -3,7 +3,7 @@ description "This is our production environment, it is for recipes and cookbooks
 cookbook_versions 	"adobe_air" => "<= 0.2.1",
 					"apple_compressor" => "<= 0.4.0",
 					"apple_final_cut_pro" => "<= 0.5.0",
-					"adobe_flash_player" => "<= 0.6.2",
+					"adobe_flash_player" => "<= 0.6.3",
 					"apple_itunes" => "<= 0.4.4",
 					"apple_logic_pro" => "<= 0.2.1",
 					"apple_osx_updates" => "<= 0.4.2",
