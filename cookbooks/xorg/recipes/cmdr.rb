@@ -6,7 +6,7 @@ package "xorg"
 package "xorg-dev"
 package "xdg-utils"
 package "libxslt1.1"
-package "xserver-xorg-video-displaylink"
+#package "xserver-xorg-video-displaylink"
 package "awesome"
 package "libgconf2-4"
 package "chromium-browser"
@@ -20,7 +20,7 @@ template "/etc/X11/xorg.conf" do
   fb_match = (`dmesg | grep DisplayLink`).match(/(\/dev\/fb.)/)
   variables({
               :input_event => Dir.glob('/dev/input/by-id/*USB_Touch*')[0],
-              :fb_device => fb_match ? fb_match[1] : "/dev/fb0",
+              :fb_device => fb_match ? fb_match[1] : "/dev/fb1",
               :invert_x => node['xorg']['invert_x'],
               :invert_y => node['xorg']['invert_y']
             })

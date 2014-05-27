@@ -73,30 +73,30 @@ cookbook_file "/etc/logrotate.d/cmdr" do
 end 
 
 
-directory "/home/cmdr/.ssh" do
-  owner "cmdr"
-  group "cmdr"
+directory "/home/vagrant/.ssh" do
+  owner "vagrant"
+  group "vagrant"
   action :create
   mode 0700
 end
 
 directory "/var/www" do
-  owner "cmdr"
-  group "cmdr"
+  owner "vagrant"
+  group "vagrant"
   action :create
 end
 
-cookbook_file "/home/cmdr/.ssh/authorized_keys" do
-  owner "cmdr"
-  group "cmdr"
+cookbook_file "/home/vagrant/.ssh/authorized_keys" do
+  owner "vagrant"
+  group "vagrant"
   mode 0644
 end
 
-cookbook_file "/etc/udev/rules.d/91-udev-fb.rules" do
-  owner "root"
-  group "root"
-  mode 0644
-end
+#cookbook_file "/etc/udev/rules.d/91-udev-fb.rules" do
+#  owner "root"
+#  group "root"
+#  mode 0644
+#end
 
 cookbook_file "/etc/init/iguanaIR.conf" do
   owner "root"
@@ -153,7 +153,7 @@ end
 #  notifies :restart, "service[rsyslog]"
 #end
 
-users_manage "sysadmin" do
-  group_id 2300
-  action [:remove, :create]
-end
+#users_manage "sysadmin" do
+#  group_id 2300
+#  action [:remove, :create]
+#end
