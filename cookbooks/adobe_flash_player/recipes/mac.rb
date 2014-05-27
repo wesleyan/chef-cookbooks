@@ -10,13 +10,13 @@
 dmg_package "Adobe Flash Player" do
   app "AdobeFlashPlayer"
   volumes_dir "AdobeFlashPlayer"
-  dmg_name "adobe_flash_player-12.0.0.70"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-12.0.0.70.dmg"
-  checksum "f99cf64dac684013bbe05297aa7a45a3059d7a27e5b9dc0867ce57e71d465f95"
+  dmg_name "adobe_flash_player-13.0.0.206"
+  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-13.0.0.206.dmg"
+  checksum "53992cc4b8e076ebe7ae49c88cceb6b7178bacefba170a9342ee3cc635a469b4"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "12.0.070"
+  version "13.0.0206"
 end
 
 # Create directory for mms.cfg
