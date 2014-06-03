@@ -49,8 +49,8 @@ end
 dmg_package "Apple Xcode Command Line Tools" do
   app "Command Line Tools (OS X 10.9)"
   volumes_dir "Command Line Developer Tools"
-  dmg_name "xcode_cltools-201404"
-  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode_cltools-201404.dmg"
+  dmg_name "xcode_cltools_mavericks-201404"
+  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode_cltools_mavericks-201404.dmg"
   checksum "8bdb96ff5730ba4e583f7a30932ba7ad43741af944b3df675316213d54b5b4c5"
   action :install
   type "pkg"
