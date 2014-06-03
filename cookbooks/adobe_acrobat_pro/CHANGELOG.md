@@ -3,6 +3,10 @@ adobe_acrobat_pro CHANGELOG
 
 This file is used to list changes made in each version of the adobe_acrobat_pro cookbook.
 
+0.5.2
+-----
+- [rchristensen] - Updated app to version 11.0.07
+
 0.5.1
 -----
 - [rchristensen] - Updated app to version 11.0.06
