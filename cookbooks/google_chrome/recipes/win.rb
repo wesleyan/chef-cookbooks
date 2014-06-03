@@ -2,14 +2,14 @@
 # Cookbook Name:: google_chrome
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 # All rights reserved - Do Not Redistribute
 #
 # Install our MSI.
 windows_package "Google Chrome" do
-  source "http://ims-chef.wesleyan.edu/windows/google_chrome/googlechrome-30.0.1599.66.msi"
-  checksum "d1f700887d6b9dfc54eb81c507c9c1e8e791ed6678f6d575f194bb8cc8493ae5"
-  version "30.0.159966"
+  source "http://ims-chef.wesleyan.edu/windows/google_chrome/googlechrome-35.0.1916.114.msi"
+  checksum "a579f41a50b5adab149a0a9831d787625ece9df48b98e417cdcfe8519548da30"
+  version "35.0.1916114"
 end
 
 # Seed in our bookmarks file, and our master preferences.

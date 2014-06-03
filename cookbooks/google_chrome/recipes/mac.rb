@@ -10,19 +10,19 @@
 dmg_package "Google Chrome" do
   app "GoogleChrome"
   volumes_dir "GoogleChrome"
-  dmg_name "google_chrome-32.0.1700.107"
-  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/google_chrome-32.0.1700.107.dmg"
-  checksum "80961572da2ba44341bb60db9eeddf136c87d576348d81108273c473a9aac6f7"
+  dmg_name "googlechrome-35.0.1916.114"
+  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-35.0.1916.114.dmg"
+  checksum "674bae20a93423933545575228de6ca280a832ca85e4ca5f72a42a4158552293"
   action :install
   type "pkg"
   package_id "com.google.Chrome"
-  version "32.1700.107"
+  version "35.0.1916114"
 end
 
 # Add shortcut to dock
 dock_add "/Applications/Google Chrome.app" do
   all_users true
-#  restart true  
+# restart true  
 end
 
 # Set Chrome to be the default browser
