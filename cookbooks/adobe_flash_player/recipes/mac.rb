@@ -6,17 +6,17 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install our package, extracted from Adobe's custom installer .app.
+# Install our package.
 dmg_package "Adobe Flash Player" do
   app "AdobeFlashPlayer"
   volumes_dir "AdobeFlashPlayer"
-  dmg_name "adobe_flash_player-13.0.0.206"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-13.0.0.206.dmg"
-  checksum "53992cc4b8e076ebe7ae49c88cceb6b7178bacefba170a9342ee3cc635a469b4"
+  dmg_name "adobeflashplayer-13.0.0.214"
+  source "http://sw.wesleyan.edu/os_x/adobe_flash_player/adobeflashplayer-13.0.0.214.dmg"
+  checksum "0e3214aee4032c66f417bda0dd66f656caf825c824bcb3d44fb4c39cf5cbc3e5"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "13.0.0206"
+  version "13.0.0214"
 end
 
 # Create directory for mms.cfg

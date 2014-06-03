@@ -2,16 +2,16 @@
 # Cookbook Name:: adobe_flash_player
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 #
 # Flash is packaged with IE in Windows 8, so the Active X installer is not needed.
 windows_package "Adobe Flash Player (for plugin-based browsers)" do
-  source "http://ims-chef.wesleyan.edu/windows/adobe_flash_player/adobe_flash_player-11.9.900.117.msi"
-  checksum "4f873edac6231f12545acdcf084dd0889cf65b7457444b8a9cab210aec434033"
-  version "11.9.900117"
+  source "http://sw.wesleyan.edu/windows/adobe_flash_player/adobeflashplayer-13.0.0.214.msi"
+  checksum "3adf8ae8383ee5ff4ae5ddbb9e51bf186f27eb5c8fb3f0a35e00a8e26030cd1c"
+  version "13.0.0214"
 end
 
 # Create directory for mms.cfg
