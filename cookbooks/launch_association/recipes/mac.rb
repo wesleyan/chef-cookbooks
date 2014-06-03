@@ -1,12 +1,15 @@
-cookbook_file "/tmp/duti.zip"
+#
+# Cookbook Name:: launch_association
+# Recipe:: mac
+#
+# Copyright 2014, Wesleyan University
+#
+# All rights reserved - Do Not Redistribute
+#
+# Include homebrew because we need it!
+include_recipe "homebrew"
 
-execute "unzip -o /tmp/duti.zip -d /tmp/"
-
-file "/tmp/duti" do
-  mode "0755"
-end
-
-launch_association_set_file_handler "public.html" do
-  bundle_id "com.apple.Safari"
-  all_users true
+# Install duti via homebrew
+package "duti" do
+  version "1.5.2"
 end
