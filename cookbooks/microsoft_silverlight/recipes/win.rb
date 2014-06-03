@@ -2,15 +2,15 @@
 # Cookbook Name:: microsoft_silverlight
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 
 windows_package "Microsoft Silverlight" do
-  source "http://ims-chef.wesleyan.edu/windows/microsoft_silverlight/Silverlight_x64.exe"
-  checksum "97450071afad60a78e499b3f8b856aca4336ec9985c6e828c6a6ec89af7e60c9"
-  version "5.1.201250"
+  source "http://sw.wesleyan.edu/windows/microsoft_silverlight/silverlight-5.1.30317.0.exe"
+  checksum "55806d7bacf61799eaee18b0e8a6eda7bf62e384174f506ee75bfa3e898b233c"
+  version "5.1.303170"
   installer_type :custom
   options "/q"
 end
