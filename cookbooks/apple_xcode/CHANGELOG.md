@@ -3,6 +3,11 @@ apple_xcode CHANGELOG
 
 This file is used to list changes made in each version of the apple_xcode cookbook.
 
+0.5.1
+-----
+- [rchristensen] - Updated app to 5.1.1
+- [rchristensen] - Updated Command Line Tools to Mavericks, April 2014
+
 0.5.0
 -----
 - [rchristensen] - Updated app to 5.0.2
