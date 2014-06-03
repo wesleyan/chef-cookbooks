@@ -3,6 +3,15 @@ apple_ilife CHANGELOG
 
 This file is used to list changes made in each version of the apple_ilife cookbook.
 
+0.3.0
+-----
+- [rchristensen] - Ripped out legacy iLife '11 suite, now on the trio of modern applications captured from Mac App Store.
+- [rchristensen] - Updated GarageBand to 10.0.2
+- [rchristensen] - Updated iMovie to 10.0.3
+- [rchristensen] - Updated iPhoto to 9.5.1
+- [rchristensen] - Updated RAW Camera to 5.05
+
+
 0.2.8
 -----
 - [rchristensen] - Updated RAW Camera to 5.03
