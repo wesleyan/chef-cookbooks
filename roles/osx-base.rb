@@ -27,7 +27,7 @@ run_list  "recipe[chef_handler]",
           # Browsers
           "recipe[google_chrome::mac]", 
           "recipe[mozilla_firefox::mac]",
-          #"recipe[apple_safari::mac]",
+          "recipe[apple_safari::mac]",
           # Runtimes
           "recipe[adobe_flash_player::mac]",
           "recipe[adobe_air::mac]", 

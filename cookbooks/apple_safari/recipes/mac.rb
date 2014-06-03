@@ -6,17 +6,17 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install our pkg
-dmg_package "Update Safari" do
- app "Safari6.1.1MountainLion"
- volumes_dir "Safari"
- dmg_name "safari-6.1.1"
- source "http://ims-chef.wesleyan.edu/os_x/apple_safari/safari-6.1.1.dmg"
- checksum "a8fb24963ff844deca0ef9f467b852fe2c09d51ccabf535d6a2ac3388d5dbe46"
- action :install
- type "pkg"
- package_id "com.apple.pkg.Safari6.1.1MountainLion"
-end
+# Latest revision already included in base image, no need to update for now.
+#dmg_package "Update Safari" do
+# app "Safari6.1.1MountainLion"
+# volumes_dir "Safari"
+# dmg_name "safari-6.1.1"
+# source "http://ims-chef.wesleyan.edu/os_x/apple_safari/safari-6.1.1.dmg"
+# checksum "a8fb24963ff844deca0ef9f467b852fe2c09d51ccabf535d6a2ac3388d5dbe46"
+# action :install
+# type "pkg"
+# package_id "com.apple.pkg.Safari6.1.1MountainLion"
+#end
 
 # Add to dock
 dock_add "/Applications/Safari.app" do
