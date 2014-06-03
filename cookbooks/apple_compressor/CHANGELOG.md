@@ -3,6 +3,11 @@ apple_compressor CHANGELOG
 
 This file is used to list changes made in each version of the apple_compressor cookbook.
 
+0.5.1
+-----
+- [rchristensen] - Updated app to version 4.1.1
+- [rchristensen] - Switched to pkg captured from MAS.
+
 0.5.0
 -----
 - [rchristensen] - Updated app to version 4.1
