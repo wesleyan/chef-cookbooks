@@ -3,6 +3,30 @@ homebrew Cookbook CHANGELOG
 This file is used to list changes made in each version of the homebrew cookbook.
 
 
+v1.6.6 (2014-05-29)
+-------------------
+- [COOK-3283] Use homebrew_owner for cask and tap
+- [COOK-4670] homebrew_tap provider is not idempotent
+- [COOK-4671] Syntax Error in README
+
+
+v1.6.4 (2014-05-08)
+-------------------
+- Fixing cask provider correctly this time. "brew cask list"
+
+
+v1.6.2 (2014-05-08)
+-------------------
+- Fixing typo in cask provider: 's/brew brew/brew/'
+
+
+v1.6.0 (2014-04-23)
+-------------------
+- [COOK-3960] Added LWRP for brew cask
+- [COOK-4508] Add ChefSpec matchers for homebrew_tap
+- [COOK-4566] Guard against "HEAD only" formulae
+
+
 v1.5.4
 ------
 - [COOK-4023] Fix installer script's URL.
