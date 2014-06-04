@@ -1,20 +1,23 @@
-# CHANGELOG for audacity
+audacity CHANGELOG
+==================
 
-This file is used to list changes made in each version of audacity.
+This file is used to list changes made in each version of the audacity cookbook.
 
-## 0.3.0:
+0.4.0
+-----
+- [rchristensen] - Updated app to 2.0.5
+- [rchristensen] - Brought README/metadata/CHANGELOG up to code.
+- [mdietz] - Added Windows recipe
 
-* Current version: 2.0.3
+0.3.0
+-----
+- [rchristensen] - Updated app to 2.0.3
 
-## 0.2.0:
+0.2.0
+-----
+- [rchristensen] - Cookbook now installs both LAME and FFmpeg libraries.
 
-* Mac recipe now installs both LAME and FFmpeg plugins
-
-## 0.1.0:
-
-* Initial release of audacity cookbook
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
+0.1.0
+-----
+- [rchristensen] - Initial release of audacity cookbook
+- [rchristensen] - Current app version: 2.0.2
