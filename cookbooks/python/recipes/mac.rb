@@ -14,20 +14,20 @@ homebrew_tap "homebrew/dupes"
 
 # Install Tcl/Tk, needed for PyMOL.
 package "tcl-tk" do
-  version "8.5.13"
+  version "8.6.1"
   options "--enable-threads --with-x11"
 end
 
 
 # Install python with Tk extensions, needed for PyMOL.
 package "python" do
-  version "2.7.6"
+  version "2.7.7"
   options "--with-brewed-tk"
 end
 
 # Install Python3
 package "python3" do
-  version "3.3.3"
+  version "3.4.1"
 end
 
 # Link our apps!
