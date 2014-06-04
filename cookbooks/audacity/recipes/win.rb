@@ -2,7 +2,7 @@
 # Cookbook Name:: audacity
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
