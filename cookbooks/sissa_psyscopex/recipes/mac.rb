@@ -11,7 +11,7 @@ dmg_package "SISSA PsyScope X" do
 	app "PsyScope X"
 	volumes_dir "PsyScope X"
 	dmg_name "psyscope_x-b77"
-	source "http://sw.wesleyan.edu/os_x/psyscope/psyscope_x-b77.dmg"
+	source "http://sw.wesleyan.edu/os_x/sissa_psyscopex/psyscope_x-b77.dmg"
 	checksum "943a04b57180f46947cd32ba43a95e086c8bce0276c0318f2d1af7fb0445331a"
 	action :install
 	type "app"
