@@ -11,7 +11,7 @@ dmg_package "Aquamacs Emacs" do
   app "Aquamacs"
   volumes_dir "Aquamacs Emacs"
   dmg_name "Aquamacs-Emacs-3.0a"
-  source "http://ims-chef.wesleyan.edu/os_x/aquamacs_emacs/Aquamacs-Emacs-3.0a.dmg"
+  source "http://sw.wesleyan.edu/os_x/aquamacs_emacs/Aquamacs-Emacs-3.0a.dmg"
   checksum "1d833cb2e40c1af96713badc4efa7c1c9259317b91edcfe17059c73e989f9e07"
   action :install
   type "app"
