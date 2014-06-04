@@ -1,14 +1,20 @@
-# CHANGELOG for aquamacs_emacs
+aquamacs_emacs CHANGELOG
+========================
 
-This file is used to list changes made in each version of aquamacs.
+This file is used to list changes made in each version of the aquamacs_emacs cookbook.
 
-## 0.2.0:
+0.3.0
+-----
+- [rchristensen] - Updated app to 3.0a
+- [rchristensen] - Brought README/metadata/CHANGELOG up to code.
 
-* Updated app to 2.5
-* Added versioning information.
-* Brought readme/metadata/changelog in line with new standards.
+0.2.0
+-----
+- [rchristensen] - Updated app to 2.5
+- [rchristensen] - Added versioning information.
+- [rchristensen] - Brought readme/metadata/changelog in line with new standards.
 
-## 0.1.0:
-
-* Initial release of aquamacs_emacs cookbook
-* Current version: 2.4
+0.1.0
+-----
+- [rchristensen] - Initial release of aquamacs_emacs cookbook
+- [rchristensen] - Current version: 2.4
