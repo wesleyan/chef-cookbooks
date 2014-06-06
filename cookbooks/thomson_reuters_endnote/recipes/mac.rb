@@ -2,21 +2,21 @@
 # Cookbook Name:: thomson_reuters_endnote
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
 # Install the .app
 dmg_package "Thomson Reuters EndNote X7" do
   app "EndNote X7"
-  volumes_dir "EndNote X7 Installer"
-  dmg_name "endnote_x7_site-17.0.1"
-  source "http://ims-chef.wesleyan.edu/os_x/thomson_reuters_endnote/endnote_x7_site-17.0.1.dmg"
-  checksum "ca4441db0535e768d4060fee5454463de60c773de141ebc31d2289882ca927d8"
+  volumes_dir "EndNote X7.1 Installer"
+  dmg_name "endnote_x7_site-17.1"
+  source "http://sw.wesleyan.edu/os_x/thomson_reuters_endnote/endnote_x7_site-17.1.dmg"
+  checksum "a484780bdf2ad5f89efe3fde8a4947bf977b910b7a47f6d734885b86f664a127"
   action :install
   type "dir"
   package_id "com.endnote.x7"
-  version "17.0.1"
+  version "17.1.0"
 end
 
 # Install the license file inside the EndNote directory
