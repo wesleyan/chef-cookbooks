@@ -7,16 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 # Install our pkg
-dmg_package "XQuartz-2.7.5.dmg" do
+dmg_package "XQuartz-2.7.6.dmg" do
   app "XQuartz"
-  volumes_dir "XQuartz-2.7.5"
-  dmg_name "XQuartz-2.7.5"
-  source "http://ims-chef.wesleyan.edu/os_x/xorg_xquartz/XQuartz-2.7.5.dmg"
-  checksum "4382ff78cef5630fb6b8cc982da2e5a577d8cc5dddd35a493b50bad2fcf5e34a"
+  volumes_dir "XQuartz-2.7.6"
+  dmg_name "XQuartz-2.7.6"
+  source "http://sw.wesleyan.edu/os_x/xorg_xquartz/XQuartz-2.7.6.dmg"
+  checksum "02aa3268af0bd7dcd5dfbc10d673f5c6834bba6371a928d2a3fc44a8039b194e"
   action :install
   type "pkg"
   package_id "org.macosforge.xquartz.pkg"
-  version "2.7.5"
+  version "2.7.6"
 end
 
 # Here we symlink the default X11.app with XQuartz.app

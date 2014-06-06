@@ -3,6 +3,10 @@ xorg_xquartz CHANGELOG
 
 This file is used to list changes made in each version of the xorg_xquartz cookbook.
 
+0.2.1
+-----
+- [rchristensen] - Updated app to 2.7.6
+
 0.2.0
 -----
 - [rchristensen] - Updated app to 2.7.5
