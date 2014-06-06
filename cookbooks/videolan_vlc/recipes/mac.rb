@@ -9,7 +9,7 @@
 # Install package
 dmg_package "VideoLAN VLC" do
   app "VLC"
-  volumes_dir "vlc-2.1.4"
+  volumes_dir "VLC"
   dmg_name "vlc-2.1.4"
   source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.1.4.dmg"
   checksum "88a296fe89b95789d7780ec7556c6713bf0351a55d1705e523183e492e4c633c"
