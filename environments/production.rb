@@ -28,6 +28,7 @@ cookbook_versions 	"adobe_air" => "<= 0.2.1",
 					"prepare" => "<= 0.1.0",
 					"printers" => "<= 0.6.2",
 					"rodsbooks_refind" => "<= 0.1.1",
+					"schrodinger_pymol" => "<= 0.2.0",
 					"videolan_vlc" => "<= 0.6.3",
 					"wacom_tablet" => "<= 0.1.0",
 					"xorg_xquartz" => "<= 0.2.0"

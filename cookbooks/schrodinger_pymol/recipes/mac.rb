@@ -18,7 +18,7 @@ homebrew_tap "Homebrew/homebrew-science"
 
 # Build and install PyMOL
 package "pymol" do
-  version "1.6.0.0"
+  version "1.7.0.0"
 end
 
 # PyMOL will fail to recognize XQuartz because its timeout is too short
