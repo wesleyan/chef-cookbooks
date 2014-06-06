@@ -27,7 +27,7 @@ dmg_package "Adobe Acrobat Update" do
   checksum "8885e6eb5ba95e0c0d45c5ca3b7b8a6b654c5f12ed940b60416824534ca61e84"
   action :install
   type "pkg"
-  package_id "com.adobe.acrobat.a11.AcrobatUpd11007"
+  package_id "com.adobe.acrobat.viewer.11.0.07.patch.pkg"
 end
 
 # Download icon
