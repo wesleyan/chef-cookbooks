@@ -86,11 +86,11 @@ directory "/var/www" do
   action :create
 end
 
-cookbook_file "/home/vagrant/.ssh/authorized_keys" do
-  owner "vagrant"
-  group "vagrant"
-  mode 0644
-end
+#cookbook_file "/home/vagrant/.ssh/authorized_keys" do
+#  owner "vagrant"
+#  group "vagrant"
+#  mode 0644
+#end
 
 #cookbook_file "/etc/udev/rules.d/91-udev-fb.rules" do
 #  owner "root"
