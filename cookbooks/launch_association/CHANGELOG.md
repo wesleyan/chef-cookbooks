@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the launch_association
 
 0.2.0
 -----
+- [rchristensen] - Fixed providers to account for UIDs of system users created by AutoDMG.
 - [rchristensen] - Installs duti via homebrew instead of an included zip file
 - [rchristensen] - Updated duti to 1.5.2
 - [rchristensen] - Brought README/metadata/CHANGELOG up to code.
