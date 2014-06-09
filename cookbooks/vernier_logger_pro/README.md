@@ -39,3 +39,4 @@ Contributing
 License and Authors
 -------------------
 Robert Christensen <rchristensen@wesleyan.edu>
+Max Dietz <mdietz@wesleyan.edu>
