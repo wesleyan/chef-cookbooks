@@ -1,7 +1,7 @@
 chef_chefclient CHANGELOG
 =========================
 
-This file is used to list changes made in each version of the chef_chefclient.
+This file is used to list changes made in each version of the chef_chefclient cookbook.
 
 0.5.0
 -----
