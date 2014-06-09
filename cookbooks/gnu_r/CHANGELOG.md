@@ -3,6 +3,11 @@ gnu_r CHANGELOG
 
 This file is used to list changes made in each version of the gnu_r cookbook.
 
+0.4.1
+-----
+- [rchristensen] - [OS X] Updated app to version 3.1.0
+- [rchristensen] - [WIN] Updated app to version 3.1.0
+
 0.4.0
 -----
 - [rchristensen] - Updated app to version 3.0.2 on OS X and Windows.
