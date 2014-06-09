@@ -1,7 +1,10 @@
-name			 "ccp4"
-maintainer       "Wesleyan University"
-maintainer_email "software@wesleyan.edu"
-license          "All rights reserved"
-description      "Installs CCP4 and COOT"
+name			 'ccp4'
+maintainer       'Wesleyan University'
+maintainer_email 'software@wesleyan.edu'
+license          'All rights reserved'
+description      'Installs CCP4 and COOT'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.1.1"
+version          '0.2.0'
+depends			 'dmg'
+depends			 'dock'
+depends			 'xorg_xquartz'

@@ -7,6 +7,9 @@ Requirements
 #### platform
 - `OS X` - 10.6.8 or greater.
 
+#### libraries
+- `XQuartz` - 2.7 or greater.
+
 Attributes
 ----------
 
