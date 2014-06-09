@@ -28,7 +28,7 @@ dock_add "Center for the Arts" do
 end
 
 # Add to dock
-dock_add "/Applications/Finale 2012.app" do
+dock_add "/Applications/Finale 2014.app" do
   all_users true
   group "Center for the Arts"
 end
