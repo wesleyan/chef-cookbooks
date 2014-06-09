@@ -15,7 +15,7 @@ dmg_package "Finale 2014" do
   checksum "c0de56e937ee398c3931954935c08bee5f9f9184834384cc3e93c4fa97ad4e78"
   action :install
   type "pkg"
-  package_id "com.makemusic.pkg.Finale2014.AppCore"
+  package_id "com.makemusic.pkg.Finale18.AppCoreInstaller2014.1.3627.0"
 end
 
 # Create dock folder, if it does not exist
