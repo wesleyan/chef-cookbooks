@@ -2,35 +2,20 @@
 # Cookbook Name:: makemusic_finale
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-# Install Finale
-# Note: The .mpkg actually connects to MakeMusic's servers and downloads the software directly.  Pretty strange.
-dmg_package "Finale 2012" do
-  app "InstallFinale"
-  volumes_dir "InstallFinale"
-  dmg_name "Finale2012aMacFull"
-  source "http://ims-chef.wesleyan.edu/os_x/makemusic_finale/Finale2012aMacFull.dmg"
-  checksum "c0addb12e0e6e2498b922b241b8154f59b4dd30be0edd157c3cc973ff49a4c04"
-  action :install
-  type "mpkg"
-  package_id "com.makemusic.pkg.Finale2012.AppCore"
-#  version "2012.3.10"
-end
-
-# Install Finale updates
-dmg_package "Finale 2012c Update" do
-  app "UpdateFinale"
-  volumes_dir "Finale2012c"
-  dmg_name "Finale2012cMacUpdater"
-  source "http://ims-chef.wesleyan.edu/os_x/makemusic_finale/Finale2012cMacUpdater.dmg"
-  checksum "054e0601f1190ca2ed972cd823d0fd9fc38928e8db2edf5855b4d8d86ea2516e"
+# Install our pkg.
+dmg_package "Finale 2014" do
+  app "Install Finale 2014a"
+  volumes_dir "Finale2014a"
+  dmg_name "Finale2014aMacFull"
+  source "http://sw.wesleyan.edu/os_x/makemusic_finale/Finale2014aMacFull.dmg"
+  checksum "c0de56e937ee398c3931954935c08bee5f9f9184834384cc3e93c4fa97ad4e78"
   action :install
   type "pkg"
-  package_id "com.makemusic.pkg.Finale2012.AppCoreUpdater2012c.r13.3"
-#  version "2012.3.13"
+  package_id "com.makemusic.pkg.Finale2014.AppCore"
 end
 
 # Create dock folder, if it does not exist
