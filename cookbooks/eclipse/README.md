@@ -5,7 +5,7 @@ Installs the Eclipse IDE
 Requirements
 ------------
 #### platform
-- `OS X` - 10.5.x or greater.
+- `OS X` - 10.6.x or greater.
 
 Attributes
 ----------
@@ -38,3 +38,4 @@ Contributing
 License and Authors
 -------------------
 Robert Christensen <rchristensen@wesleyan.edu> 
+Max Dietz <mdietz@wesleyan.edu>

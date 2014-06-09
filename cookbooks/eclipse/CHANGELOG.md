@@ -1,21 +1,27 @@
-# CHANGELOG for eclipse
+eclipse CHANGELOG
+=================
 
-This file is used to list changes made in each version of eclipse.
+This file is used to list changes made in each version of eclipse
 
-## 0.4.0:
+0.5.0
+-----
+- [rchristensen] - Updated app to 4.3.2
+- [rchristensen] - Brought CHANGELOG/metadata up to code.
 
-* Updated app to version 4.3.0, need to check if .ini needs updating.
-* Updated readme/metadata to new format.
+0.4.0
+-----
+- [rchristensen] - Updated app to  4.3.0
+- [rchristensen] - Updated readme/metadata to new format.
 
-## 0.3.0:
+0.3.0
+-----
+- [mdietz] - Updated eclipse.ini to utilize more available memory.
 
-* Updated eclipse.ini to utilize more available memory
+0.2.0
+-----
+- [rchristensen] - Updated app to 4.2.2
 
-## 0.2.0:
-
-* Updated app to 4.2.2
-
-## 0.1.0:
-
-* Initial release of eclipse cookbook
-* Current version is 4.2.1
+0.1.0
+-----
+- [rchristensen] - Initial release of eclipse cookbook.
+- [rchristensen] - Current app version is 4.2.1
