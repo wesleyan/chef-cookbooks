@@ -43,12 +43,6 @@ cookbook_file "/etc/init.d/fcgiwrap" do
   mode 0755
 end
 
-cookbook_file "/etc/rc.local" do
-  owner "root"
-  group "root"
-  mode 0755
-end
-
 #cookbook_file "/etc/grub.d/00_header" do
 #  owner "root"
 #  group "root"

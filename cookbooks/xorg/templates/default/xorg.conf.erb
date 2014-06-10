@@ -20,16 +20,8 @@ Section "InputDevice"
         Driver      "kbd"
 EndSection
 
-Section "InputDevice"
-        Identifier "dummy"
-        Driver "void"
-        Option "Device" "/dev/input/mice"
-EndSection
-
 Section "Device"
         Identifier      "DisplayLinkDevice"
-        Driver          "displaylink"
-        Option          "fbdev" "/dev/fb4"
 EndSection
 
 Section "Screen"
@@ -37,7 +29,7 @@ Section "Screen"
         Device          "DisplayLinkDevice"
         Monitor         "monitor0"
         SubSection "Display"
-                Depth 24
+                Depth 16
                 Modes "800x480"
         EndSubSection
 EndSection
@@ -49,7 +41,6 @@ EndSection
 Section "ServerLayout"
         Identifier "Default Layout"
         Screen "screen0"
-        InputDevice "dummy"
 EndSection
 # Catchall classes for input devices
 # We don't simply match on any device since that also adds accelerometers
