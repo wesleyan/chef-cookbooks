@@ -19,6 +19,10 @@
 
 require 'chef/version_constraint'
 
+include Chef::Mixin::ShellOut
+
+use_inline_resources if defined?(use_inline_resources)
+
 def load_current_resource
   require 'plist'
   @dmgpkg = Chef::Resource::DmgPackage.new(new_resource.name)
@@ -43,28 +47,30 @@ action :install do
       only_if { new_resource.source }
     end
 
-    passphrase_cmd = new_resource.dmg_passphrase ? "-passphrase #{new_resource.dmg_passphrase}" : ""
-
-
+    passphrase_cmd = new_resource.dmg_passphrase ? "-passphrase #{new_resource.dmg_passphrase}" : ''
     ruby_block "attach #{dmg_file}" do
       block do
-          if(!::File.directory?("/Volumes/#{volumes_dir}"))
-            software_license_agreement = system("hdiutil imageinfo #{passphrase_cmd} '#{dmg_file}' | grep -q 'Software License Agreement: true'")
-            raise "Requires EULA Acceptance; add 'accept_eula true' to package resource" if software_license_agreement && !new_resource.accept_eula
-            accept_eula_cmd = new_resource.accept_eula ? "echo Y |" : ""
-            system "#{accept_eula_cmd} hdiutil attach #{passphrase_cmd} '#{dmg_file}'"
-          end
-          not_if "hdiutil info #{passphrase_cmd} | grep -q 'image-path.*#{dmg_file}'"
+        cmd = shell_out("hdiutil imageinfo #{passphrase_cmd} '#{dmg_file}' | grep -q 'Software License Agreement: true'")
+        software_license_agreement = (cmd.exitstatus == 0)
+        fail "Requires EULA Acceptance; add 'accept_eula true' to package resource" if software_license_agreement && !new_resource.accept_eula
+        accept_eula_cmd = new_resource.accept_eula ? 'echo Y | PAGER=true' : ''
+        shell_out!("#{accept_eula_cmd} hdiutil attach #{passphrase_cmd} '#{dmg_file}' -quiet")
       end
+      not_if "hdiutil info #{passphrase_cmd} | grep -q 'image-path.*#{dmg_file}'"
     end
-    
+
     case new_resource.type
+    # Case for apps contained with directories that include needed support or auxilary files such as Audacity or Eclipse
     when "dir"
-      execute "rsync --recursive --links --perms --executability --owner --group --times --force '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'"
+      execute "rsync --force --recursive --links --perms --executability --owner --group --times '/Volumes/#{volumes_dir}/#{new_resource.app}' '#{new_resource.destination}'" do
+        user new_resource.owner if new_resource.owner
+      end
+
       directory "#{new_resource.destination}/#{new_resource.app}" do
         mode 0755
         ignore_failure true
       end
+
       if new_resource.package_id and new_resource.version
         file "/var/db/receipts/#{new_resource.package_id}.plist" do
           content ({"PackageVersion" => new_resource.version}).to_plist.dump
@@ -74,12 +80,17 @@ action :install do
           action :create
         end
       end
+
     when "app"
-      execute "rsync --recursive --links --perms --executability --owner --group --times --force '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'"
+      execute "rsync --force --recursive --links --perms --executability --owner --group --times '/Volumes/#{volumes_dir}/#{new_resource.app}.app' '#{new_resource.destination}'" do
+        user new_resource.owner if new_resource.owner
+      end
+
       file "#{new_resource.destination}/#{new_resource.app}.app/Contents/MacOS/#{new_resource.app}" do
         mode 0755
         ignore_failure true
       end
+
       if new_resource.version and new_resource.package_id
         file "/var/db/receipts/#{new_resource.package_id}.plist" do        
           content ({"PackageVersion" => new_resource.version}).to_plist.dump 
@@ -89,8 +100,9 @@ action :install do
           action :create
         end
       end
+
     when "mpkg", "pkg"
-      # apply user supplied choices
+      # Apply user supplied choices via XML
       choices = new_resource.xml_choices
       cmd = "sudo installer -pkg '/Volumes/#{volumes_dir}/#{new_resource.app}.#{new_resource.type}' -target / -dumplog -verboseR -allowUntrusted"
       if choices
@@ -106,35 +118,11 @@ action :install do
         f.close
         cmd << " -applyChoiceChangesXML '#{xmlName}'"
       end
-      execute cmd.gsub("'",'"')
-      #f = ::File.open('/tmp/install_script','w')
-      #f << %Q{
-      #  #!/usr/bin/env expect -f
-      #  set timeout -1
-      #  set count 0
-      #  spawn #{cmd.gsub("'",'"')}
-      #  expect {
-      #      "Waiting for other installations to complete"
-      #      {
-      #        set count [expr $count + 1]
-      #        if { $count > 10 } {
-      #          exec /sbin/shutdown -r now
-      #          close
-      #          exit 1
-      #        }
-      #        exp_continue
-      #      }
-      #      eof
-      #      {
-      #        catch wait reason
-      #        exit [lindex $reason 3]
-      #      }
-      #  }
-      #}
-      #f.close
-      #execute '/usr/bin/env expect -f /tmp/install_script'
-      #::File.delete(xmlName) if choices
-      # we assume here the pkg installer already created a receipt
+      execute cmd.gsub("'",'"') do
+        # Prevent cfprefsd from holding up hdiutil detach for certain disk images
+        environment('__CFPREFERENCES_AVOID_DAEMON' => '1') if Gem::Version.new(node['platform_version']) >= Gem::Version.new('10.8')
+      end
+     
       if (new_resource.version and new_resource.package_id)
       ruby_block "Set Receipt Version" do
   	      block do
@@ -154,6 +142,7 @@ action :install do
 	      end
       end
       end
+    # Case for custom command line installers like SPSS and VectorWorks.
     when "custom"
       execute "'/Volumes/#{volumes_dir}/#{new_resource.app}' #{new_resource.options}"
       if new_resource.version and new_resource.package_id
@@ -175,9 +164,9 @@ action :install do
   ruby_block "unmount" do
      block do
        if(::File.directory?("/Volumes/#{volumes_dir}") && new_resource.unmount)
-         system("hdiutil detach '/Volumes/#{volumes_dir}'")
+         system("hdiutil detach '/Volumes/#{volumes_dir}' || hdiutil detach '/Volumes/#{volumes_dir}' -force")
        end
-       system("/sbin/shutdown -r now") if shouldRestart
+       system("shutdown -r now") if shouldRestart
       end
    end
 end
@@ -186,15 +175,20 @@ private
 
 def installed?
   begin
-    if new_resource.version and new_resource.package_id
+    if new_resource.version && new_resource.package_id
       result = Plist::parse_xml(`plutil -convert xml1 -o - /var/db/receipts/#{new_resource.package_id}.plist`)
       result = Plist::parse_xml(result) if result.class == String
       version_checker = Chef::VersionConstraint.new("<= #{result['PackageVersion']}")
       return version_checker.include? new_resource.version
-    elsif new_resource.package_id
-      return system("pkgutil --pkgs=#{new_resource.package_id}")
+    elsif ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
+      Chef::Log.info "Already installed; to upgrade, remove \"#{new_resource.destination}/#{new_resource.app}.app\""
+      true
+    elsif shell_out("pkgutil --pkgs='#{new_resource.package_id}'").exitstatus == 0
+      Chef::Log.info "Already installed; to upgrade, try \"sudo pkgutil --forget '#{new_resource.package_id}'\""
+      true
+    else
+      false
     end
-    return ::File.directory?("#{new_resource.destination}/#{new_resource.app}.app")
   rescue
     return false
   end
