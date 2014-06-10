@@ -2,13 +2,14 @@
 # Cookbook Name:: ucsf_chimera
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Copyright 2014, Wesleyan University
 #
 # All rights reserved - Do Not Redistribute
 #
-
-windows_package "UCSF Chimera" do
-	source 'http://ims-chef.wesleyan.edu/windows/ucsf_chimera/chimera-1.8-win64.exe'
-	checksum '5c1a633fd383e0001e008149a1fa2a7f2eebef7b3550fecdc93541c0402ec098'
-	version '1.8.0'
+# Install our package.
+windows_package 'UCSF Chimera' do
+  source 'http://sw.wesleyan.edu/windows/ucsf_chimera/chimera-1.9-win64.exe'
+  checksum 'e501276b4b62c6b51b786032b422b0362a995d7b3c772aa36819c0b74a2df70f'
+  version '1.9.0'
 end
+
