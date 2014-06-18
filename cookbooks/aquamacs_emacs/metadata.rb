@@ -1,9 +1,9 @@
-name			 'aquamacs_emacs'
+name			       'aquamacs_emacs'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
-license          'All rights reserved'
+license          'Apache 2.0'
 description      'Installs Emacs on OS X'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.3.0'
-depends			 'dmg'
-depends			 'dock'	
+depends			     'dmg'
+depends			     'dock'	

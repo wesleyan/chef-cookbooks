@@ -1,6 +1,6 @@
 rats_winrats Cookbook
 =========================
-This cookbook installs KiTTY, an SSH/Telnet Agent.
+This cookbook installs WinRATS.
 
 Requirements
 ------------

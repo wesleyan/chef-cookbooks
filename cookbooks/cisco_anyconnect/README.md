@@ -1,5 +1,5 @@
 cisco_anyconnect Cookbook
-====================
+=========================
 This cookbook installs Cisco AnyConnect VPN client on OS X and soon, Windows
 
 Requirements

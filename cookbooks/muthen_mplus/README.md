@@ -1,6 +1,6 @@
 muthen_mplus Cookbook
 ====================
-This cookbook installs TurningPoint on OS X.
+This cookbook installs Muthen Mplus on OS X.
 
 Requirements
 ------------

@@ -1,5 +1,5 @@
 autodesk_maya Cookbook
-=========================
+======================
 This cookbook installs Maya.
 
 Requirements

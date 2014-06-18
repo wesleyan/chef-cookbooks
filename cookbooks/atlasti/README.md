@@ -1,6 +1,6 @@
 atlasti Cookbook
-=========================
-This cookbook installs atlasti.
+================
+This cookbook installs Atlas.TI
 
 Requirements
 ------------
@@ -37,5 +37,5 @@ Contributing
 
 License and Authors
 -------------------
-Robert Christensen <software@wesleyan.edu>
+Robert Christensen <rchristensen@wesleyan.edu>
 

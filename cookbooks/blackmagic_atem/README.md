@@ -1,5 +1,5 @@
 blackmagic_atem Cookbook
-====================
+========================
 This cookbook installs Blackmagic's ATEM switching software on OS X.
 
 Requirements

@@ -1,6 +1,6 @@
 gnu_r Cookbook
 ====================
-This cookbook installs the R statiscal programming for OS X and Windows.
+This cookbook installs the R statistical programming for OS X and Windows.
 
 Requirements
 ------------

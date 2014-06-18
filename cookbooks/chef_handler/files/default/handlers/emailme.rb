@@ -4,6 +4,7 @@
 require 'rubygems'
 require 'mail'
 
+# Chef handler to e-mail upon failure.
 module Wesleyan
 	class EmailMe < Chef::Handler
 		def initialize
@@ -11,7 +12,7 @@ module Wesleyan
             			:port                 => 587,
             			:domain               => 'wesleyan.edu',
             			:user_name            => 'chef',
-            			:password             => '59B@DrbA6$5C@Sdp',
+            			:password             => '',
             			:authentication       => 'plain',
             			:enable_starttls_auto => true  }
 			

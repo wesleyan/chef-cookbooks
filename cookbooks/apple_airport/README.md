@@ -1,5 +1,5 @@
 apple_airport Cookbook
-====================
+======================
 This cookbook installs Apple AirPort Utility.
 
 Requirements

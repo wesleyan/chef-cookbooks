@@ -1,5 +1,5 @@
 apple_quicktime_pro Cookbook
-====================
+============================
 This cookbook installs Apple QuickTime Pro.
 
 Requirements
