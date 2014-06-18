@@ -3,9 +3,9 @@
 path = File.expand_path(File.dirname(__FILE__))
 require "#{path}/host_utilities.rb"
 
-username = "imsbind"
-password = "#r0ck3tm@n!"
-preferred_server = "palemale.wesad.wesleyan.edu"
+username = ""
+password = ""
+preferred_server = ""
 groups = "domain admins,enterprise admins,all-facstaff"
 hostname = truncate prefix hostname_for_ip machine_ip
 

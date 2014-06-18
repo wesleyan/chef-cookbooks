@@ -29,11 +29,11 @@ end
 
 # Configure ESET with our fancy method
 eset_nod32_config "ESET Settings" do
-	av_update_server "http://gloss.wesleyan.edu:2221"
-	av_update_failsafe_username "EAV-33650109"
-	av_update_failsafe_password "u2er7jnsaa"
-	av_update_server_list "http://gloss.wesleyan.edu:2221"
-	racl_server_addr "gloss.wesleyan.edu"
+	av_update_server ""
+	av_update_failsafe_username ""
+	av_update_failsafe_password ""
+	av_update_server_list ""
+	racl_server_addr ""
 	racl_server_port 2222
 	racl_interval 10
 	privileged_users "administrator:labuser:root"

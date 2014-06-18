@@ -62,6 +62,6 @@ end
 
 # Set labuser password
 system_preferences_password "labuser" do
-    password "#Cl0s3th3l00p!1"
+    password ""
 end
 

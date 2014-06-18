@@ -29,6 +29,3 @@ windows_package "Rats WinRats" do
 	source 'C:\TEMP\WinRats\WinRATS 7.00.msi'
 	version '7.0.0'
 end
-
-# Seems to work without knowing the serial number. If it complains, the
-# serial is WEA847, and we can key it if there is a problem.
