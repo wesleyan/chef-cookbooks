@@ -1,4 +1,4 @@
-name			       'adobe_flash_player'
+name			  'adobe_flash_player'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'

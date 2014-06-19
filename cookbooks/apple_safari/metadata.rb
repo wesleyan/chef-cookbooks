@@ -1,4 +1,4 @@
-name			       'apple_safari'
+name			 'apple_safari'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'

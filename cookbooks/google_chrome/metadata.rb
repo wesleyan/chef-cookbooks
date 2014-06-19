@@ -1,4 +1,4 @@
-name			       'google_chrome'
+name			 'google_chrome'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'

@@ -1,11 +1,11 @@
-name			       'microsoft_office'
+name			 'microsoft_office'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'
 description      'Installs Microsoft Office 2011 on OS X, 2013 on Windows'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.6.2'
-depends			     'dmg'
+depends			 'dmg'
 depends          'default_profile'
 depends          'dock'
 depends          'windows'

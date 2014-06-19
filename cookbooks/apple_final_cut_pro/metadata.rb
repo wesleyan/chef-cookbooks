@@ -1,4 +1,4 @@
-name			       'apple_final_cut_pro'
+name			 'apple_final_cut_pro'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'

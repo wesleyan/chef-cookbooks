@@ -1,4 +1,4 @@
-name			       'extensis_utc'
+name			 'extensis_utc'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'

@@ -1,4 +1,4 @@
-name			       'apple_life'
+name			 'apple_life'
 maintainer       'Wesleyan University'
 maintainer_email 'software@wesleyan.edu'
 license          'Apache 2.0'
