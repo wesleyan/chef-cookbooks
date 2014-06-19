@@ -2,35 +2,28 @@
 # Cookbook Name:: makemusic_finale
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# All rights reserved - Do Not Redistribute
-#
-# Install Finale
-# Note: The .mpkg actually connects to MakeMusic's servers and downloads the software directly.  Pretty strange.
-dmg_package "Finale 2012" do
-  app "InstallFinale"
-  volumes_dir "InstallFinale"
-  dmg_name "Finale2012aMacFull"
-  source "http://ims-chef.wesleyan.edu/os_x/makemusic_finale/Finale2012aMacFull.dmg"
-  checksum "c0addb12e0e6e2498b922b241b8154f59b4dd30be0edd157c3cc973ff49a4c04"
-  action :install
-  type "mpkg"
-  package_id "com.makemusic.pkg.Finale2012.AppCore"
-#  version "2012.3.10"
-end
-
-# Install Finale updates
-dmg_package "Finale 2012c Update" do
-  app "UpdateFinale"
-  volumes_dir "Finale2012c"
-  dmg_name "Finale2012cMacUpdater"
-  source "http://ims-chef.wesleyan.edu/os_x/makemusic_finale/Finale2012cMacUpdater.dmg"
-  checksum "054e0601f1190ca2ed972cd823d0fd9fc38928e8db2edf5855b4d8d86ea2516e"
+# Install our pkg.
+dmg_package "Finale 2014" do
+  app "Install Finale 2014a"
+  volumes_dir "Finale2014a"
+  dmg_name "Finale2014aMacFull"
+  source "http://sw.wesleyan.edu/os_x/makemusic_finale/Finale2014aMacFull.dmg"
+  checksum "c0de56e937ee398c3931954935c08bee5f9f9184834384cc3e93c4fa97ad4e78"
   action :install
   type "pkg"
-  package_id "com.makemusic.pkg.Finale2012.AppCoreUpdater2012c.r13.3"
-#  version "2012.3.13"
+  package_id "com.makemusic.pkg.Finale18.AppCoreInstaller2014.1.3627.0"
 end
 
 # Create dock folder, if it does not exist
@@ -43,7 +36,7 @@ dock_add "Center for the Arts" do
 end
 
 # Add to dock
-dock_add "/Applications/Finale 2012.app" do
+dock_add "/Applications/Finale 2014.app" do
   all_users true
   group "Center for the Arts"
 end

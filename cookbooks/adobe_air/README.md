@@ -1,5 +1,5 @@
 adobe_air Cookbook
-===========================
+==================
 This cookbook installs Adobe Flash Player on OS X & Windows.
 
 Requirements

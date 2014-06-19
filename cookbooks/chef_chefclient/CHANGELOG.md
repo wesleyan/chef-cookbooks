@@ -1,7 +1,12 @@
 chef_chefclient CHANGELOG
 =========================
 
-This file is used to list changes made in each version of the chef_chefclient.
+This file is used to list changes made in each version of the chef_chefclient cookbook.
+
+0.5.0
+-----
+- [rchristensen] - Moved to official chef OS X pkg installer.
+- [rchristensen] - Removed now deprecated version checking.
 
 0.4.0
 -----

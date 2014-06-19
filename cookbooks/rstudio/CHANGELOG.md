@@ -3,6 +3,11 @@ rstudio CHANGELOG
 
 This file is used to list changes made in each version of the rstudio cookbook.
 
+0.4.1
+-----
+- [rchristensen] - [OS X] Updated app to 0.98.507
+- [rchristensen] - [WIN] Updated app to 0.98.507
+
 0.4.0
 -----
 - [rchristensen] - Updated app to version 0.98.501

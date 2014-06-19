@@ -1,4 +1,4 @@
-#
+# Encoding: utf-8
 # Cookbook Name:: dmg
 # Resource:: package
 #
@@ -20,24 +20,23 @@ actions :install
 
 attribute :app, :kind_of => String, :name_attribute => true
 attribute :source, :kind_of => String, :default => nil
+attribute :owner, :kind_of => String, :default => nil
 attribute :destination, :kind_of => String, :default => "/Applications"
 attribute :checksum, :kind_of => String, :default => nil
 attribute :volumes_dir, :kind_of => String, :default => nil
 attribute :dmg_name, :kind_of => String, :default => nil
-attribute :type, :kind_of => String, :default => "app"
+attribute :type, :kind_of => String, :default => 'app'
 attribute :installed, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :package_id, :kind_of => String, :default => nil
 attribute :dmg_passphrase, :kind_of => String, :default => nil
 attribute :accept_eula, :kind_of => [TrueClass, FalseClass], :default => false
-attribute :sleep_after_install, :kind_of => Integer, :default => 0
 attribute :options, :kind_of => String, :default => nil
 attribute :version, :kind_of => String, :default => nil
 attribute :unmount, :kind_of => [TrueClass, FalseClass], :default => true
 attribute :restart, :kind_of => [TrueClass, FalseClass], :default => false
 attribute :xml_choices, :kind_of => Array, :default => nil
-#attribute :already_mounted, :kind_of => [TrueClass, FalseClass], :default => false
 
-def initialize(name, run_context=nil)
+def initialize(name, run_context = nil)
   super
   @action = :install
 end

@@ -1,4 +1,4 @@
-#
+# Encoding: utf-8
 # Cookbook Name:: dmg
 # Recipe:: default
 #
@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-chef_gem "plist"
+chef_gem 'plist'

@@ -5,7 +5,7 @@ This cookbook installs Compressor.
 Requirements
 ------------
 #### platform
-- `OS X` - 10.6.8 or above.
+- `OS X` - 10.9 or above.
 
 Attributes
 ----------

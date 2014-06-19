@@ -1,15 +1,18 @@
-# CHANGELOG for schrodinger_pymol
+schrodinger_pymol CHANGELOG
+===========================
 
-This file is used to list changes made in each version of schrodinger_pymol.
+This file is used to list changes made in each version of the schrodinger_pymol cookbook.
 
-## 0.2.0:
+0.2.1
+-----
+- [rchristensen] - Updated app to 1.7.0.0
 
-* Added an alias to avoid a race condition with the start of X11
-* all dependencies are added with python, since the python
-* installation requires a flag in order to be compatible
-* with pymol
+0.2.0
+-----
+- [mdietz] - Added an alias to avoid a race condition with the start of X11
+- [mdietz] - Dependencies moved to Python cookbook.
 
-## 0.1.0:
-
-* Initial release of schrodinger_pymol cookbook
-* Current app version: 1.5
+0.1.0
+-----
+- [rchristensen] - Initial release of schrodinger_pymol cookbook.
+- [rchristensen] - Current app version: 1.5

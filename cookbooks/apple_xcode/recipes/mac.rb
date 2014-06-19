@@ -2,60 +2,68 @@
 # Cookbook Name:: apple_xcode
 # Recipe:: mac
 #
-# Copyright 2014, Wesleyan University
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# All rights reserved - Do Not Redistribute
-#
-# Install Xcode (package capture from Mac App Store)
+# Install Xcode (package captured from Mac App Store)
 dmg_package "Apple Xcode" do
   app "Xcode"
   volumes_dir "Xcode"
-  dmg_name "xcode-5.0.2"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode-5.0.2.dmg"
-  checksum "07c454db2e7b09c7607df33b2d1d7cd3b04cdd9dfcbf9719db0bd0b0e310b69f"
+  dmg_name "xcode-5.1.1"
+  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode-5.1.1.dmg"
+  checksum "d800e1078cf592fd69983f2e9b8b743ef6494ae4b32bfe308c3e43711c77a765"
   action :install
   type "pkg"
   package_id "com.apple.pkg.XcodeMAS_iOSSDK_7_0"
-  version "5.0.2"
+  version "5.1.1"
 end
 
 # Install MobileDevice pkg required for Xcode to launch (we pull this from /Applications/Xcode.app/Contents/Resources/Packages/)
 dmg_package "Apple Xcode MobileDevice" do
   app "MobileDevice"
   volumes_dir "MobileDevice"
-  dmg_name "xcode_mobiledevice-5.0.2"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode_mobiledevice-5.0.2.dmg"
-  checksum "0b5c1a17b45e0521a142048f17b587a467f2bfebafa46721dadacb7da26e7121"
+  dmg_name "xcode_mobiledevice-5.1.1"
+  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode_mobiledevice-5.1.1.dmg"
+  checksum "29fecdbe37058c7e77779d29387ef985617eeb1ff2318c6e0c7f99d2a1754da8"
   action :install
   type "pkg"
   package_id "com.apple.pkg.MobileDevice"
-  version "5.0.2"
+  version "5.1.1"
 end
 
 # Install MobileDeviceDevelopment pkg required for Xcode to launch (we pull this from /Applications/Xcode.app/Contents/Resources/Packages/)
 dmg_package "Apple Xcode MobileDevice" do
   app "MobileDeviceDevelopment"
   volumes_dir "MobileDeviceDevelopment"
-  dmg_name "xcode_mobiledevicedev-5.0.2"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode_mobiledevicedev-5.0.2.dmg"
-  checksum "ab263cf5f1ef9a4c9c9586fb2c49c6e73d56d8045bfc500887fda441a9b94eb9"
+  dmg_name "xcode_mobiledevicedev-5.1.1"
+  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode_mobiledevicedev-5.1.1.dmg"
+  checksum "e781af940eb0cff91f855844674be26cb8cb2b215599dc38008942d23c997860"
   action :install
   type "pkg"
   package_id "com.apple.pkg.MobileDeviceDevelopment"
-  version "5.0.2"
+  version "5.1.1"
 end
 
 # Install Xcode Command Line Tools
 dmg_package "Apple Xcode Command Line Tools" do
-  app "Command Line Tools (Mountain Lion)"
-  volumes_dir "Command Line Tools (Mountain Lion)"
-  dmg_name "xcode_cltools-102013"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_xcode/xcode_cltools-102013.dmg"
-  checksum "635c1cf6c93b397ef882c27211ef01e54e5b1d9d2d92fc870f1e07efd54cfe35"
+  app "Command Line Tools (OS X 10.9)"
+  volumes_dir "Command Line Developer Tools"
+  dmg_name "xcode_cltools_mavericks-201404"
+  source "http://sw.wesleyan.edu/os_x/apple_xcode/xcode_cltools_mavericks-201404.dmg"
+  checksum "8bdb96ff5730ba4e583f7a30932ba7ad43741af944b3df675316213d54b5b4c5"
   action :install
-  type "mpkg"
+  type "pkg"
   package_id "com.apple.pkg.DeveloperToolsCLI"
-  version "2013.10"
+  version "2014.04"
 end
 
 # Silently accept Xcode license.

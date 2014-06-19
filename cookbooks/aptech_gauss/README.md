@@ -1,5 +1,5 @@
 aptech_gauss Cookbook
-=========================
+=====================
 This cookbook installs aptech_gauss.
 
 Requirements

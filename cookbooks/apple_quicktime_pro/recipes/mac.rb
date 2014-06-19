@@ -2,9 +2,17 @@
 # Cookbook Name:: apple_quicktime_pro
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Install our package
 dmg_package "Apple QuickTime Pro" do
@@ -20,5 +28,5 @@ end
 
 # Serialize QuickTime!
 execute "Serialize QuickTime Pro" do
-	command "defaults write /Library/Preferences/com.apple.QuickTime \"Pro Key\" -dict-add 'Name' 'Wesleyan Univ' 'Registration Key' 'L885-Z4ZN-R2J9-SNTH-FUJ3'"
+	command "defaults write /Library/Preferences/com.apple.QuickTime \"Pro Key\" -dict-add 'Name' 'YOURNAME' 'Registration Key' 'YOURKEY'"
 end

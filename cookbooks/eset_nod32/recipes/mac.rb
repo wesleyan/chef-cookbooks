@@ -2,9 +2,17 @@
 # Cookbook Name:: eset_nod32
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Install package
 dmg_package "ESET NOD32" do
@@ -21,11 +29,11 @@ end
 
 # Configure ESET with our fancy method
 eset_nod32_config "ESET Settings" do
-	av_update_server "http://gloss.wesleyan.edu:2221"
-	av_update_failsafe_username "EAV-33650109"
-	av_update_failsafe_password "u2er7jnsaa"
-	av_update_server_list "http://gloss.wesleyan.edu:2221"
-	racl_server_addr "gloss.wesleyan.edu"
+	av_update_server ""
+	av_update_failsafe_username ""
+	av_update_failsafe_password ""
+	av_update_server_list ""
+	racl_server_addr ""
 	racl_server_port 2222
 	racl_interval 10
 	privileged_users "administrator:labuser:root"

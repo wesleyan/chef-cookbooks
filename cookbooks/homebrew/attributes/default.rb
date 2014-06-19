@@ -19,4 +19,4 @@
 # limitations under the License.
 #
 
-default['homebrew']['owner'] = "administrator"
+default['homebrew']['owner'] = root

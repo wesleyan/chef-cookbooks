@@ -1,17 +1,20 @@
-# CHANGELOG for macvim
+macvim CHANGELOG
+================
 
-This file is used to list changes made in each version of macvim.
+This file is used to list changes made in each version of the macvim cookbook.
 
-## 0.2.0:
+0.3.0
+-----
+- [rchristensen] - Updated app to 7.4 snapshot 73
+- [rchristensen] - Added support for mvim command line wrapper.
+- [rchristensen] - Brought CHANGELOG/metadata/README up to code.
+- [rchristensen] - RuboCop style fixes.
 
-* Updated to version 7.3-snapshot 66
+0.2.0
+-----
+- [rchristensen] - Updated to app to 7.3 snapshot 66
 
-## 0.1.0:
-
-* Initial release of macvim cookbook
-* Current version: 7.3-snapshot 65
-
-- - - 
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
+0.1.0
+-----
+- [rchristensen] - Initial release of macvim cookbook
+- [rchristensen] - Current version: 7.3 snapshot 65

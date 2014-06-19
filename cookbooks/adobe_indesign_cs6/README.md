@@ -1,5 +1,5 @@
 adobe_indesign_cs6 Cookbook
-====================
+===========================
 This cookbook installs Adobe InDesign CS6 on OS X and Windows.
 
 Requirements

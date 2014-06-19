@@ -1,11 +1,11 @@
 Description
 ===========
-Installs iLife '11 and all associated updates
+Installs the trio of iLife applications and all associated updates
 
 Requirements
 ------------
 #### platform
-- `OS X` - 10.7.5 or greater.
+- `OS X` - 10.9 or greater.
 
 Attributes
 ----------

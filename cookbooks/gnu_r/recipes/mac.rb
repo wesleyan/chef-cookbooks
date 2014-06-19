@@ -2,23 +2,32 @@
 # Cookbook Name:: gnu_r
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Install our base package.
 dmg_package "R" do
-  app "R-3.0.2"
-  volumes_dir "R-3.0.2"
-  dmg_name "R-3.0.2"
-  source "http://ims-chef.wesleyan.edu/os_x/gnu_r/R-3.0.2.dmg"
-  checksum "b157709479d4f285f0978e85938b042bbebbf503c0d76b417a06c571e14bac9c"
+  app "R"
+  volumes_dir "R"
+  dmg_name "R-3.1.0-mavericks"
+  source "http://sw.wesleyan.edu/os_x/gnu_r/R-3.1.0-mavericks.dmg"
+  checksum "52c1536053eb8cd300cabdc07e6d04cfee0f7c05b69f08bac06a9a11a4316782"
   action :install
   type "pkg"
   package_id "org.r-project.R.x86_64.fw.pkg"
-  version "3.0.2"
+  version "3.1.0"
 end
 
+# Install our packages.
 %w{ RCurl twitteR doBy mvtnorm plyr stringr ggplot2 XML tm wordcloud lme4 nlme e1071 nnet
   descr reshape foreign class Ecdat psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
   gnu_r_packages r_pkg do

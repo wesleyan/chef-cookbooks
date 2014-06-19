@@ -1,5 +1,5 @@
 apple_logic_pro Cookbook
-============================
+========================
 This cookbook installs Logic Pro X.
 
 Requirements

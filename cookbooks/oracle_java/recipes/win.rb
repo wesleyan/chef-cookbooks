@@ -2,14 +2,22 @@
 # Cookbook Name:: java
 # Recipe:: win
 #
-# Copyright 2014, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Installs Java 7 runtime for 32-bit browsers, have not decided a support plan for 64-bit browsers yet.
 windows_package "Oracle Java Runtime" do
-  source "http://ims-chef.wesleyan.edu/windows/oracle_java/jre-7u51-windows-i586.exe"
-  checksum "5f6e2a00e2e720cbe012353bc0c86f9426621ee6ce7c1f47d3181546f1efbbbc"
+  source "http://ims-chef.wesleyan.edu/windows/oracle_java/jre-7u60-windows-i586.exe"
+  checksum "c950aee2f571b957f574b804701fedaf8695cab13c15b27064114339c4a423da"
   installer_type :wise
-  version "7.0.51"
+  version "7.0.60"
 end

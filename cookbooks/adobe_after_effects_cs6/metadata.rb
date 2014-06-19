@@ -1,6 +1,6 @@
-maintainer       "Wesleyan University"
-maintainer_email "rchristensen@wesleyan.edu"
-license          "All rights reserved"
-description      "Installs Adobe After Effects CS6"
+maintainer       'Wesleyan University'
+maintainer_email 'software@wesleyan.edu'
+license          'Apache 2.0'
+description      'Installs Adobe After Effects CS6'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.2.0"
+version          '0.2.0'

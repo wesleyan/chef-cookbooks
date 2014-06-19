@@ -1,5 +1,5 @@
 thomson_reuters_endnote Cookbook
-====================
+================================
 This cookbook installs Thomson Reuters EndNote X7 on OS X.
 
 Requirements

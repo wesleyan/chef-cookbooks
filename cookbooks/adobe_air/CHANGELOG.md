@@ -3,6 +3,10 @@ adobe_air CHANGELOG
 
 This file is used to list changes made in each version of the adobe_air cookbook.
 
+0.2.2
+-----
+- [rchristensen] - [OS X] Updated runtime to 13.0.0.111
+
 0.2.1
 -----
 - [rchristensen] - [OS X] Updated runtime to 4.0.0.1390

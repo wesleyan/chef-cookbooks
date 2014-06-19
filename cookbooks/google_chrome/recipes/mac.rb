@@ -2,27 +2,35 @@
 # Cookbook Name:: google_chrome
 # Recipe:: mac
 #
-# Copyright 2014, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Install Chrome
 dmg_package "Google Chrome" do
   app "GoogleChrome"
   volumes_dir "GoogleChrome"
-  dmg_name "google_chrome-32.0.1700.107"
-  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/google_chrome-32.0.1700.107.dmg"
-  checksum "80961572da2ba44341bb60db9eeddf136c87d576348d81108273c473a9aac6f7"
+  dmg_name "googlechrome-35.0.1916.114"
+  source "http://ims-chef.wesleyan.edu/os_x/google_chrome/googlechrome-35.0.1916.114.dmg"
+  checksum "674bae20a93423933545575228de6ca280a832ca85e4ca5f72a42a4158552293"
   action :install
   type "pkg"
   package_id "com.google.Chrome"
-  version "32.1700.107"
+  version "35.0.1916114"
 end
 
 # Add shortcut to dock
 dock_add "/Applications/Google Chrome.app" do
   all_users true
-#  restart true  
+# restart true  
 end
 
 # Set Chrome to be the default browser

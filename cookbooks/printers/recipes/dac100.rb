@@ -2,9 +2,17 @@
 # Cookbook Name:: printers
 # Recipe:: dac100
 #
-# Copyright 2014, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Assumes the mac.rb was already executed
 #
@@ -60,6 +68,19 @@ dmg_package "Epson 9900 Driver" do
   version "9.17.0"
 end
 
+# Install HP Printer Drivers
+dmg_package "HP Printer Drivers" do
+  app "HewlettPackardPrinterDrivers"
+  volumes_dir "HewlettPackard Printer Drivers"
+  dmg_name "HPPrinterDriver2.16.1"
+  type "pkg"
+  source "http://ims-chef.wesleyan.edu/os_x/hp_printer/HPPrinterDriver2.16.1.dmg"
+  checksum "589a697ea8186600140b5cf99ef40e92a4368f1681ba3198b5363cee47f78dae"
+  action :install
+  #package_id ""
+  #version "2.16.1"
+end 
+
 # Copies color/luster preferences
 cookbook_file "/Library/ColorSync/Profiles/Displays/DAC100_iMac_Sept19_D65.icc" do
   mode 0644
@@ -94,6 +115,22 @@ printers "DAC100-9900" do
   model "/Library/Printers/PPDs/Contents/Resources/EPSON Stylus Pro 9900.gz"
   ip "epson-9900.art.wesleyan.edu"
 end
+
+# Really fucking hacky, uses dac100mac-shadow to share out USB printer to the rest of the machines.
+# Installs base printer on dac100mac-shadow, not finished at the moment.
+#printers "DAC100-HPDJ510" do
+#  model "/Library/Printers/PPDs/Contents/Resources/HP Designjet 510 24in.ppd.gz"
+#  usb "HP%20Designjet%20510%2024in%20Printer%20(CH336A)%20%40%20dac100mac-shadow._ipps._tcp.local."
+#  only_if { node['printers']['dac100notshadow']}
+#end
+
+# lpadmin -p DAC100-HPDJ510 -v "dnssd://HP%20Designjet%20510%2024in%20Printer%20(CH336A)%20%40%20dac100mac-shadow._ipps._tcp.local." -m "/Library/Printers/PPDs/Contents/Resources/HP Designjet 510 24in.ppd.gz" -D DAC100-HPDJ510 -E
+                
+# Installs dac100mac-shadow's shared printer on everything else in DAC100.  Does actually work.
+#printers "DAC100-HPDJ510" do
+#  model "/Library/Printers/PPDs/Contents/Resources/HP Designjet 510 24in.ppd.gz"
+#  share "HP%20Designjet%20510%2024in%20Printer%20(CH336A)%20%40%20dac100mac-shadow._ipps._tcp.local."
+#end
 
 # Set printers as default.
 printers "Set Default #{node['printers']['default']}" do

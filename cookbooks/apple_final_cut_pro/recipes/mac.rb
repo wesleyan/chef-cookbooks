@@ -2,21 +2,29 @@
 # Cookbook Name:: apple_final_cut_pro
 # Recipe:: mac
 #
-# Copyright 2013, Wesleyan University
-#
-# All rights reserved - Do Not Redistribute
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 # Install FCP
 dmg_package "Final Cut Pro X" do
   app "Final Cut Pro"
   volumes_dir "Final Cut Pro"
-  dmg_name "final_cut_pro-10.1"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.1.dmg"
-  checksum "c6ed8b1fc7505628cd1f1dc3e82aa24703428e06608355fa678dd3e66cebf440"
+  dmg_name "final_cut_pro-10.1.1"
+  source "http://sw.wesleyan.edu/os_x/apple_final_cut_pro/final_cut_pro-10.1.1.dmg"
+  checksum "3f54af9ff155c4eebda766ea8d165438096626c3e08db2024ced85b8a10ecff7"
   action :install
-  type "app"
-  package_id "com.apple.FinalCut"
-  version "10.1.0"
+  type "pkg"
+  package_id "com.apple.pkg.FinalCut_AppStore"
+  version "10.1.1"
 end
 
 # Install Supplemental content
@@ -24,7 +32,7 @@ dmg_package "Final Cut Pro Supplemental Content" do
   app "FCPContent"
   volumes_dir "FCPContent"
   dmg_name "FCPContent-1.0"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/FCPContent-1.0.dmg"
+  source "http://sw.wesleyan.edu/os_x/apple_final_cut_pro/FCPContent-1.0.dmg"
   checksum "a68df0eafac96d2a6ae52fe7b08fb587e6c7216afe64c05210fcec01a0eb78a5"
   action :install
   type "pkg"
@@ -34,14 +42,14 @@ end
 # Install QT Codecs
 dmg_package "QuickTime Pro Codecs" do
   app "ProAppsQTCodecs"
-  volumes_dir "ProAppsQTCodecs 1.0.2"
-  dmg_name "ProAppsQTCodecs1.0.2.dmg"
-  source "http://ims-chef.wesleyan.edu/os_x/apple_final_cut_pro/ProAppsQTCodecs1.0.2.dmg"
-  checksum "76f88ebba783c3679942b666182d5784e7962a66ef1f5aae99aa5e58c99f1a55"
+  volumes_dir "ProAppsQTCodecs 1.0.4"
+  dmg_name "ProAppsQTCodecs1.0.4.dmg"
+  source "http://sw.wesleyan.edu/os_x/apple_final_cut_pro/ProAppsQTCodecs1.0.4.dmg"
+  checksum "69a69c0589b133e7195a5ad9eb8e011728cf53d5bff91e8e6a5c1dc97bdb9887"
   action :install
   type "pkg"
   package_id "com.apple.pkg.ProAppsQTCodecs"
-  version "1.0.2"
+  version "1.0.4"
 end
 
 # Create dock folder, if it does not exist

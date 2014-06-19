@@ -2,17 +2,26 @@
 # Cookbook Name:: gnu_r
 # Recipe:: win
 #
-# Copyright 2013, Wesleyan University
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# All rights reserved - Do Not Redistribute
-#
-# Install our base package
+# Install our base package.
 windows_package "R" do
-  source "http://ims-chef.wesleyan.edu/windows/gnu_r/R-3.0.2-win.exe"
-  checksum "e262f573bccd4b6be23002ef44dd25e3228535530da75ee6c62921675bb66fdb"
-  version "3.0.2"
+  source "http://sw.wesleyan.edu/windows/gnu_r/R-3.1.0-win.exe"
+  checksum "c3f11723b60972344ff87aed6b53a58209dd463e2c3286259624754b077f84e8"
+  version "3.1.0"
 end
 
+# Install packages.
 %w{ RCurl twitteR doBy mvtnorm plyr stringr ggplot2 XML tm wordcloud lme4 nlme e1071 nnet
   descr reshape foreign class Ecdat psych DAAG lmtest perturb MEMSS mlmRev car ape ade4 }.each do |r_pkg|
   gnu_r_packages r_pkg do

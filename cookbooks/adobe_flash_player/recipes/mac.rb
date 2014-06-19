@@ -2,21 +2,29 @@
 # Cookbook Name:: adobe_flash_player
 # Recipe:: mac
 #
-# Copyright 2014, Wesleyan University
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# All rights reserved - Do Not Redistribute
-#
-# Install our package, extracted from Adobe's custom installer .app.
+# Install our package.
 dmg_package "Adobe Flash Player" do
   app "AdobeFlashPlayer"
   volumes_dir "AdobeFlashPlayer"
-  dmg_name "adobe_flash_player-12.0.0.70"
-  source "http://ims-chef.wesleyan.edu/os_x/adobe_flash_player/adobe_flash_player-12.0.0.70.dmg"
-  checksum "f99cf64dac684013bbe05297aa7a45a3059d7a27e5b9dc0867ce57e71d465f95"
+  dmg_name "adobeflashplayer-13.0.0.214"
+  source "http://sw.wesleyan.edu/os_x/adobe_flash_player/adobeflashplayer-13.0.0.214.dmg"
+  checksum "0e3214aee4032c66f417bda0dd66f656caf825c824bcb3d44fb4c39cf5cbc3e5"
   action :install
   type "pkg"
   package_id "com.adobe.pkg.FlashPlayer"
-  version "12.0.070"
+  version "13.0.0214"
 end
 
 # Create directory for mms.cfg

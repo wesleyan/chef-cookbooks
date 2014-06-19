@@ -3,6 +3,12 @@ apple_final_cut_pro CHANGELOG
 
 This file is used to list changes made in each version of the apple_final_cut_pro cookbook.
 
+0.7.0
+-----
+- [rchristensen] - Switched to pkg captured from MAS.
+- [rchristensen] - Updated FCP to 10.1.1
+- [rchristensen] - Updated QT Codecs to 1.0.4
+
 0.6.0
 -----
 - [rchristensen] - Updated FCP to 10.1.

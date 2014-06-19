@@ -1,6 +1,6 @@
 clea_exercises Cookbook
 =========================
-This cookbook installs KiTTY, an SSH/Telnet Agent.
+This cookbook installs CLEA.
 
 Requirements
 ------------
