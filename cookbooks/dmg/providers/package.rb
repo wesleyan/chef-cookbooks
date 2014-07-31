@@ -155,10 +155,6 @@ action :install do
         end
       end
     end
-    
-    if(new_resource.sleep_after_install > 0) 
-      sleep new_resource.sleep_after_install
-    end
   end
   
   ruby_block "unmount" do
