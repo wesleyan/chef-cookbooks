@@ -23,7 +23,7 @@ dmg_package "CCP4 and Coot" do
   checksum "ae813c980b782d7e3c6165ef5d3ea3e621be271dd2b7f344c4f0a99d83ad208c"
   action :install
   type "mpkg"
-  package_id "ccp4.ac.uk.ccp4640.ccp4.app.pkg"
+  package_id "ccp4.ac.uk.ccp4640.ccp4app.pkg"
 end
 
 # Create dock folder, if it does not exist
