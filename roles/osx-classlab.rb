@@ -10,7 +10,7 @@ run_list 'role[osx-base]',
          # 'recipe[desktop_picture::mac]',
          'recipe[artstor_oiv::mac]',
          'recipe[chnm_zotero::mac]',
-         'recipe[thomson_reuters_endnote::mac]',
+         #'recipe[thomson_reuters_endnote::mac]',
          'recipe[turning_technologies_turningpoint::mac]',
          # NSM
          'recipe[ccp4::mac]',
