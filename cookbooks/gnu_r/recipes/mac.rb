@@ -16,15 +16,15 @@
 #
 # Install our base package.
 dmg_package "R" do
-  app "R"
+  app "R-3.1.1-mavericks"
   volumes_dir "R"
-  dmg_name "R-3.1.0-mavericks"
-  source "http://sw.wesleyan.edu/os_x/gnu_r/R-3.1.0-mavericks.dmg"
-  checksum "52c1536053eb8cd300cabdc07e6d04cfee0f7c05b69f08bac06a9a11a4316782"
+  dmg_name "R-3.1.1-mavericks"
+  source "http://sw.wesleyan.edu/os_x/gnu_r/R-3.1.1-mavericks.dmg"
+  checksum "c28e9820511d71b4df2f9d5c92b044b1400b4280c3f6a28665cddced4170c588"
   action :install
   type "pkg"
   package_id "org.r-project.R.x86_64.fw.pkg"
-  version "3.1.0"
+  version "3.1.1"
 end
 
 # Install our packages.
