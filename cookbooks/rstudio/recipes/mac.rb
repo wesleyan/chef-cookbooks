@@ -16,14 +16,14 @@
 #
 dmg_package "RStudio" do
   app "RStudio"
-  volumes_dir "RStudio-0.98.507"
-  dmg_name "RStudio-0.98.507"
-  source "http://sw.wesleyan.edu/os_x/rstudio/RStudio-0.98.507.dmg"
-  checksum "7df8e8791958903c6073f6269bb8ba24b763ab9ecae3ff6167723aa422f85777"
+  volumes_dir "RStudio-0.98.994"
+  dmg_name "RStudio-0.98.994"
+  source "http://sw.wesleyan.edu/os_x/rstudio/RStudio-0.98.994.dmg"
+  checksum "78855dd547fd8154a8712fc28c8a28274e8c165e3daeb896ed6e577eae60b29c"
   action :install
   type "app"
   package_id "com.rstudio.rstudio.ide"
-  version "0.98.507"
+  version "0.98.994"
 end
 
 # Create dock folder, if it does not exist
