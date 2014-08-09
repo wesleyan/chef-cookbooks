@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-cookbook_file "#{Chef::Config['file_cache_path']}\\License.dat"
+#cookbook_file "#{Chef::Config['file_cache_path']}\\License.dat"
 
 windows_package "Endnote X7" do
   source "http://ims-chef.wesleyan.edu/windows/thomson_reuters_endnote/ENX7Inst.msi"
