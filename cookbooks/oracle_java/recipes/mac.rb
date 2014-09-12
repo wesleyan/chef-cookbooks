@@ -29,15 +29,15 @@ end
 
 # Installs Java 7 web plug-in for browsers
 dmg_package "Oracle Java" do
-  app "Java 7 Update 60"
-  volumes_dir "Java 7 Update 60"
-  dmg_name "jre-7u60-macosx-x64"
-  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u60-macosx-x64.dmg"
-  checksum "53fc090e8b95c65b6736d2dd8c8c9270d8b3a5bc5891fdfa9c871659f6c5ffe4"
+  app "Java 7 Update 67"
+  volumes_dir "Java 7 Update 67"
+  dmg_name "jre-7u67-macosx-x64"
+  source "http://ims-chef.wesleyan.edu/os_x/oracle_java/jre-7u67-macosx-x64.dmg"
+  checksum "fcd0f9504ed3dabccd2f7db03ad79f919c057ce3fe6b70d7c11ad55a15b18bdf"
   action :install
   type "pkg"
   package_id "com.oracle.jre"
-  version "7.0.60"
+  version "7.0.67"
 end
 
 # Enable Java in Safari by default.
