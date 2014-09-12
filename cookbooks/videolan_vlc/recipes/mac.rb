@@ -18,13 +18,13 @@
 dmg_package "VideoLAN VLC" do
   app "VLC"
   volumes_dir "VLC"
-  dmg_name "vlc-2.1.4"
-  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.1.4.dmg"
-  checksum "88a296fe89b95789d7780ec7556c6713bf0351a55d1705e523183e492e4c633c"
+  dmg_name "vlc-2.1.5"
+  source "http://ims-chef.wesleyan.edu/os_x/videolan_vlc/vlc-2.1.5.dmg"
+  checksum "923504e296829f4253af8276b992636f72e56232ecdbdcf6003647ee662257f2"
   action :install
   type "pkg"
   package_id "org.videolan.vlc.pkg"
-  version "2.1.4"
+  version "2.1.5"
 end
 
 # Add to dock
